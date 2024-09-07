@@ -18,12 +18,17 @@ const config: Config = {
         'gradient-start': '#00c6ff', // Example color
         'gradient-end': '#0072ff', // Example color,
        'custom-blue': '#92DEED', // Define your custom color
+        'custom-black': "rgba(17, 17, 43, 1)"
+ 
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily : {
+        'sans': ['IranSans', 'ui-sans-serif', 'system-ui']
+      }
     },
   },
   plugins: [addVariablesForColors],
