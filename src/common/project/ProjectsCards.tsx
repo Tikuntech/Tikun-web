@@ -1,9 +1,15 @@
+import { useQuery } from "react-query";
 import { HoverEffect } from "../../components/ui/card-hover-effect";
+import { fetchProjects } from "@/services/api";
+import Loading from "@/components/Loading/Loading";
 
 export function ProjectCards() {
-    return (
+    const { data, error, isLoading } = useQuery('project', fetchProjects);
+    return isLoading? (
+        <Loading/>
+    ):(
         <div className="max-w-lg mx-auto px-3">
-            <HoverEffect items={projects} />
+            <HoverEffect items={data?.data? data?.data :[] } />
         </div>
     );
 }
