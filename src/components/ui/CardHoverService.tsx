@@ -39,10 +39,10 @@ export const ServiceHoverEffect = ({
                       <Card>
                           <h1 className="text-black font-normal mt-4 text-center">C Y B E R   S E C U R I T Y.</h1>
                           <FiSlack className="text-white text-center block mx-auto mt-4" />
-                          <h1 className="text-white font-bold mt-4 text-center text-3xl">Mika</h1>
-                          <h1 className="text-white font-bold text-center text-3xl">Medika</h1>
+                          <h1 className="text-white font-bold mt-4 text-center text-3xl">Cloud</h1>
+                          <h1 className="text-white font-bold text-center text-3xl">Computing</h1>
                           <p className="text-xs text-center mt-10">
-                              Mika Medika Healthcare, a large hospital network, was concerned about the security of their patient data.
+                          Provides access to scalable computing resources to optimize their operations.
                           </p>
                           <div className="flex justify-center mt-6">
                               <button className="bg-black text-white p-2 rounded-md">
