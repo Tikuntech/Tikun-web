@@ -1,3 +1,4 @@
+ "use client"
 import React from 'react';
 import Image from 'next/image';
 import BoxImg from '../../../public/aboutus/Vector (1).svg'; 
@@ -7,6 +8,8 @@ import AboutMain from '@/common/About/AboutMain';
 import AboutVideo from '@/common/About/AboutVideo';
 import NeedItSolution from '@/common/NeedItSolution';
 import LogoIcon from '@/common/LogoIcons';
+import NavbarHeader from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const images = [
   { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
@@ -24,6 +27,7 @@ const Page: React.FC = () => {
   return (
     <>
     <div>
+    <NavbarHeader/>
       <div className='bg-[#11112B] h-screen pl-4 md:pl-32 relative'>
         <div className='pt-10 md:pt-20'>
           <AboutBreadcrumbs/>
@@ -84,11 +88,13 @@ const Page: React.FC = () => {
       <div className='relative'>
         <AboutVideo />
       </div>
-      <div className=''>
+      <div>
         <LogoIcon />
       </div>
       <NeedItSolution />
       </div>
+      <Footer
+      />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { ServiceHoverEffect } from "@/components/ui/CardHoverService";
 import { HoverEffect } from "../../components/ui/card-hover-effect";
+import GlobeIcon from '../../../public/Service/Web Icon.svg'
 
 export function ServiceCards() {
   return (
@@ -11,7 +12,7 @@ export function ServiceCards() {
 
 export const services = [
   {
-    icon: "globe-alt",
+    icon: <GlobeIcon/>,
     title: "Web Development",
     description: "Create websites that are both visually appealing and functional for users.",
     link: "/web-development",

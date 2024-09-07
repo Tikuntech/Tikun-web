@@ -32,7 +32,7 @@ export const ServiceHoverEffect = ({
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
-          <AnimatePresence>
+          {/* <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
                 className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
@@ -48,7 +48,7 @@ export const ServiceHoverEffect = ({
                 }}
               />
             )}
-          </AnimatePresence>
+          </AnimatePresence> */}
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-80 w-96 p-4 overflow-hidden bg-gradient-to-b from-slate-300 to-slate-800 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-80 w-96 p-4 overflow-hidden bg-gradient-to-b from-gray-500 to-slate-800 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
     >
@@ -104,7 +104,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-10 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-10 text-white tracking-wide leading-relaxed text-sm",
         className
       )}
     >

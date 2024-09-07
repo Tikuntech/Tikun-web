@@ -1,3 +1,4 @@
+ "use client"
 import React from 'react';
 import Image from 'next/image';
 import LocationImg from '../../../public/Contact/Image Placeholder (1).png';
@@ -33,7 +34,7 @@ const ContactLocation: React.FC = () => {
           </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 

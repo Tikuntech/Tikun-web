@@ -8,12 +8,12 @@ import SonyImg from '../../public/Home/SONY.svg';
 
 const LogoIcon: React.FC = () => {
     return (
-        <div className='bg-[#11112B] flex justify-between items-center px-10 py-5'>
-            <Image src={SmasungImg} alt='Samsung logo' width={150} height={40} />
-            <Image src={GoogleImg} alt='Google logo' width={150} height={40} />
-            <Image src={AmazonImg} alt='Amazon logo' width={150} height={40} />
-            <Image src={WindowsImg} alt='Windows logo' width={150} height={80} />
-            <Image src={SonyImg} alt='Sony logo' width={150} height={40} />
+        <div className='bg-[#11112B] flex justify-between items-center px-10 py-20 '>
+            <Image src={SmasungImg} alt='Samsung logo' width={150} height={40}  className='mt-20'/>
+            <Image src={GoogleImg} alt='Google logo' width={150} height={40} className='mt-20'/>
+            <Image src={AmazonImg} alt='Amazon logo' width={150} height={40}  className='mt-20'/>
+            <Image src={WindowsImg} alt='Windows logo' width={150} height={80} className='mt-20'/>
+            <Image src={SonyImg} alt='Sony logo' width={150} height={40} className='mt-20'/>
         </div>
     );
 }

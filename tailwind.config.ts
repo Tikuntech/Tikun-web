@@ -16,7 +16,8 @@ const config: Config = {
 
       colors: {
         'gradient-start': '#00c6ff', // Example color
-        'gradient-end': '#0072ff', // Example color
+        'gradient-end': '#0072ff', // Example color,
+       'custom-blue': '#92DEED', // Define your custom color
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

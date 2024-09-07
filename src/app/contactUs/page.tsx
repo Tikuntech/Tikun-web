@@ -1,3 +1,4 @@
+ "use client"
 import React from 'react';
 import Image from 'next/image';
 import BoxImg from '../../../public/aboutus/Vector (1).svg'; 
@@ -6,6 +7,8 @@ import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid';
 import ContactLocation from '@/common/Contact/ContactLocation';
 import ContacMassage from '@/common/Contact/ContacMassage';
 import NeedItSolution from '@/common/NeedItSolution';
+import NavbarHeader from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 
 const images = [
@@ -21,6 +24,8 @@ const randomPosition = () => ({
 
 const Page: React.FC = () => {
   return (
+    <>
+     <NavbarHeader/>
     <div className='bg-[#11112B] h-full p-4 md:p-8 relative'>
       <div className='pt-10 md:pt-20 md:pl-28'>
         <ContactBreadcrumb />
@@ -85,6 +90,8 @@ const Page: React.FC = () => {
       </div>
       <NeedItSolution/>
     </div>
+    <Footer/>
+    </>
   );
 };
 
