@@ -32,7 +32,7 @@ const randomPosition = () => ({
 export default function Project() {
 
 
-  const { data, error, isLoading } = useQuery('project', fetchProjects);
+
   // useEffect(()=>{
   //   const {data} = useQuery({
   //     queryFn:async () => {
@@ -45,7 +45,7 @@ export default function Project() {
 
   // },[])
 
-  console.log("ddddddd", JSON.stringify(data?.data))
+  // console.log("ddddddd", JSON.stringify(data?.data))
   return (
     <>
       {/* <div className="flex flex-col h-full bg-[#11112B] p-6 md:p-12 ">
