@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Image from 'next/image';
 import ExpertiesImg from '../../../public/Home/Vector (3).svg'; 
@@ -42,30 +43,29 @@ const items = [
 
 const ChooseUs: React.FC = () => {
   return (
-    <div className='bg-[#11112B] md:py-12 md:px-4  '>
-   
-
-      <div className='md:flex md:flex-row md:flex-wrap md:justify-center gap-8'>
-        {items.map((item, index) => (
-          <div 
-            key={index} 
-            className='rounded-lg bg-[#1A1A3D] p-6 w-full sm:w-80 md:w-96 lg:w-80  items-center md:text-left'
-          >
-            <div className='md:flex-shrink-0 md:mr-4  '>
-              <Image
-                src={item.src}
-                alt={item.alt}
-                width={item.width}
-                height={item.height}
-                className='object-contain '
-              />
-            </div>
-            <div className='flex-grow mt-10'>
+    <div className='bg-[#11112B] py-12 px-4'>
+      <div className='flex flex-col items-center'>
+        {/* <h1 className='text-white font-bold  text-2xl md:hidden'> Why Choose Us?</h1> */}
+        <div className='grid grid-cols-1 md:flex md:flex-row md:flex-wrap gap-8'>
+          {items.map((item, index) => (
+            <div 
+              key={index} 
+              className='rounded-lg bg-[#1A1A3D] p-6 flex flex-col items-center text-center'
+            >
+              <div className='mb-4'>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                  className='object-contain'
+                />
+              </div>
               <h2 className='text-lg md:text-xl font-semibold text-white mb-2'>{item.heading}</h2>
               <p className='text-sm md:text-base text-white'>{item.description}</p>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -61,7 +61,7 @@ const HomePage: React.FC = () => {
         EXPLORE NOW <FaArrowRightLong className='ml-3 w-5 h-5' />
       </button>
       
-    <div>
+    <div className=''>
        <Image 
         src={backgroundImg} 
         alt='Background pattern' 
@@ -69,7 +69,7 @@ const HomePage: React.FC = () => {
         objectFit='cover' 
         quality={100} 
         priority 
-        className='absolute '
+       className='absolute inset-0 '
       />
     </div>
      
@@ -94,12 +94,13 @@ const HomePage: React.FC = () => {
       </div>
 
       <div className='md:mt-14   mt-10'>
-        <div className='md:text-left mb-10 flex gap-2 md:gap-0 md:flex-col '>
-          <p className='text-white md:text-6xl font-bold mb-2 md:pl-20 '>Why</p>
+        <div className=' hidden md:text-left mb-10 md:flex gap-2 md:gap-0 md:flex-col '>
+          <p className='text-white md:text-6xl font-bold mb-2 md:pl-20  '>Why</p>
           <p className='text-white md:text-6xl font-bold md:pl-20'>Choose Us?</p>
+          {/* <h1 className='text-white font-bold  text-2xl md:hidden'> Why Choose Us?</h1> */}
         </div>
 
-        
+        <h1 className='text-white font-bold text-center text-2xl md:hidden'> Why Choose Us?</h1>
         <ChooseUs/>
       </div>
 

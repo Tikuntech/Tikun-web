@@ -13,13 +13,22 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
-
-      colors: {
-        'gradient-start': '#00c6ff', // Example color
-        'gradient-end': '#0072ff', // Example color,
-       'custom-blue': '#92DEED', // Define your custom color
+      colors:{
+   'custom-blue': '#92DEED', // Define your custom color
         'custom-black': "rgba(17, 17, 43, 1)"
  
+      },
+      screens: {
+        mobile: "320px",
+        mobileM: "475px",
+        mobileL: "580px",
+        mobileXL: "640px",
+        tablet: "768px",
+        tabletL: "962px",
+        laptop: "1024px",
+        laptopM: "1280px",
+      
+    
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -33,6 +42,8 @@ const config: Config = {
         poppins: ["Poppins", "sans-serif"],
         dm: ["DM Sans", "sans-serif"],
       },
+
+      
     },
   },
   plugins: [ require("@tailwindcss/line-clamp"),addVariablesForColors],

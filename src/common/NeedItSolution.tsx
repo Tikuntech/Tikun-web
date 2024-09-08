@@ -19,7 +19,7 @@ const getRandomPosition = () => ({
 
 const NeedItSolution: React.FC = () => {
   return (
-    <div className='relative h-screen overflow-hidden flex flex-col items-center justify-center bg-[#11112B]'>
+    <div className='relative md:h-screen overflow-hidden flex flex-col items-center justify-center bg-[#11112B]'>
       <Image 
         src={backgroundImg} 
         alt='Background pattern' 
