@@ -29,18 +29,20 @@ const NeedItSolution: React.FC = () => {
         priority 
         className='absolute inset-0 '
       />
-      <h1 className="relative z-10 text-white text-6xl font-bold text-center mb-10">
+      <h1 className="relative z-10 text-white md:text-6xl text-3xl font-bold text-center md:mb-10 pt-10">
         Need IT Solutions?
       </h1>
-      <h1 className="relative z-10 text-6xl font-bold mt-5 text-white text-center ">
-        Let’s <span className='font-thin italic'>start now.</span>
+      <h1 className="relative z-10 md:text-6xl font-bold mt-5 text-white text-center text-3xl ">
+        Let’s <span className='font-thin italic '>start now.</span>
       </h1>
      
      <div className='mt-20'>
       <button className=' text-white bg-[#11112B] p-3   rounded-lg border border-white flex items-center justify-center'>
         GET FREE CONSULTATION <FaArrowRightLong className='ml-3 w-5 h-5' />
       </button>
-      </div>
+
+      <div className='hidden md:flex'>
+    
       {images.map((image, index) => (
         <div 
           key={index} 
@@ -55,6 +57,8 @@ const NeedItSolution: React.FC = () => {
           />
         </div>
       ))}
+      </div>
+      </div>
     </div>
   );
 };

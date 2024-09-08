@@ -26,12 +26,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily : {
-        'sans': ['IranSans', 'ui-sans-serif', 'system-ui']
-      }
+      // fontFamily : {
+      //   'sans': ['IranSans', 'ui-sans-serif', 'system-ui']
+      // }
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        dm: ["DM Sans", "sans-serif"],
+      },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [ require("@tailwindcss/line-clamp"),addVariablesForColors],
   
 };
 function addVariablesForColors({ addBase, theme }: any) {

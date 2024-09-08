@@ -43,15 +43,8 @@ export const HoverEffect = ({
               <h1 className="text-white font-bold mt-4 text-center text-3xl">
               {item.title}
               </h1>
-              {/* <h1 className="text-white font-bold text-center text-3xl">
-                Medika
-              </h1> */}
-
-              {/* <p className="text-xs text-center mt-10">
-                Mika Medika Healthcare, a large hospital network, was concerned
-                about the security of their patient data.
-              </p> */}
-                 <p className="text-xs text-center mt-10">
+             
+                 <p className="text-xs text-center mt-10 line-clamp-3">
                  {item.description}
               </p>
               <div className="flex justify-center mt-6">
@@ -154,7 +147,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        " text-white tracking-wide leading-relaxed text-sm ",
+        " text-white tracking-wide leading-relaxed text-sm  line-clamp-3",
         className
       )}
     >

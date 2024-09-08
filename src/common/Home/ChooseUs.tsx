@@ -42,22 +42,22 @@ const items = [
 
 const ChooseUs: React.FC = () => {
   return (
-    <div className='bg-[#11112B] py-12 px-4 '>
+    <div className='bg-[#11112B] md:py-12 md:px-4  '>
    
 
-      <div className='flex flex-row flex-wrap justify-center gap-8'>
+      <div className='md:flex md:flex-row md:flex-wrap md:justify-center gap-8'>
         {items.map((item, index) => (
           <div 
             key={index} 
-            className='rounded-lg bg-[#1A1A3D] p-6 w-full sm:w-80 md:w-96 lg:w-80  items-center text-left'
+            className='rounded-lg bg-[#1A1A3D] p-6 w-full sm:w-80 md:w-96 lg:w-80  items-center md:text-left'
           >
-            <div className='flex-shrink-0 mr-4'>
+            <div className='md:flex-shrink-0 md:mr-4  '>
               <Image
                 src={item.src}
                 alt={item.alt}
                 width={item.width}
                 height={item.height}
-                className='object-contain'
+                className='object-contain '
               />
             </div>
             <div className='flex-grow mt-10'>

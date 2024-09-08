@@ -1,5 +1,5 @@
 import { ServiceHoverEffect } from "@/components/ui/CardHoverService";
-import  GlobeIcon  from '../../../public/Service/Web Icon.svg'
+import GlobeIcon from '../../../public/Service/Web Icon.svg'
 import MobileIcon from '../../../public/Service/mobile.svg';
 import SecurityIcon from '../../../public/Service/Security Icon.svg';
 import MarketingIcon from '../../../public/Service/digitalMarketing.svg';
@@ -10,6 +10,7 @@ import DataAnalysisIcon from '../../../public/Service/Analysis Icon.svg';
 import NetworkIcon from '../../../public/Service/Network Icon.svg';
 import { IoGlobeOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { ArrowActive } from "@/components/icons/ArrowActive";
 
 export function ServiceCards() {
   return (
@@ -29,7 +30,13 @@ export const services = [
     ),
     title: "Web Development",
     description: "Create websites that are both visually appealing and functional for users.",
-    link: "/web-development",
+    link: "/servicesDetails",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
     icon: (
@@ -40,10 +47,16 @@ export const services = [
     ),
     title: "Mobile Development",
     description: "Create or enhance mobile applications, ensuring optimized user experience.",
-    link: "/mobile-development",
+    link: "/ServiceDetailPage",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
-    icon:(
+    icon: (
       <div className="flex justify-between space-x-2">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
@@ -52,6 +65,12 @@ export const services = [
     title: "Cyber Security",
     description: "Provides advanced protection for your data and systems against threats.",
     link: "/cyber-security",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
     icon: (
@@ -63,9 +82,15 @@ export const services = [
     title: "Digital Marketing",
     description: "Create solutions to help businesses achieve their digital marketing goals.",
     link: "/digital-marketing",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
-    icon:(
+    icon: (
       <div className="flex justify-between space-x-2">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
@@ -74,9 +99,15 @@ export const services = [
     title: "Cloud Computing",
     description: "Provides access to scalable computing resources to optimize their operations.",
     link: "/cloud-computing",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
-    icon:(
+    icon: (
       <div className="flex justify-between space-x-2">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
@@ -85,6 +116,12 @@ export const services = [
     title: "Software Development",
     description: "Provides customized solutions to create and maintain software applications.",
     link: "/software-development",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
     icon: (
@@ -96,6 +133,12 @@ export const services = [
     title: "IT Project Management",
     description: "Provides businesses with expert guidance and support for IT projects.",
     link: "/it-project-management",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
     icon: (
@@ -107,6 +150,12 @@ export const services = [
     title: "Data Analysis",
     description: "Provide data analysis for varied categories to help client businesses.",
     link: "/data-analysis",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
   {
     icon: (
@@ -118,5 +167,11 @@ export const services = [
     title: "Network Management",
     description: "Provide management of network infrastructure design for clients.",
     link: "/network-management",
+    activeIcon: (
+      <div className="flex justify-between  w-full">
+        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <ArrowActive />
+      </div>
+    ),
   },
 ];

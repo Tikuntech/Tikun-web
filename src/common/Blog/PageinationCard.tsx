@@ -35,6 +35,7 @@ const PageinationCard: React.FC = () => {
           }
         ].map((post, index) => (
           <div key={index} className="bg-white rounded-md shadow-md overflow-hidden ">
+
             <Image
               src={post.src}
               alt={post.title}
@@ -42,6 +43,12 @@ const PageinationCard: React.FC = () => {
               height={300}
               className="w-full h-48 object-cover"
             />
+
+            <button className="absolute mt-[-20] bg-[#11112B] text-white px-4 py-2 rounded-md shadow-lg hover:bg-blue-600">
+              DESIGN
+            </button>
+
+
             <div className="p-4">
               <h3 className="text-xl font-bold mb-2">{post.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{post.description}</p>
@@ -52,12 +59,59 @@ const PageinationCard: React.FC = () => {
                 </div>
                 <p className="text-gray-600 text-sm">{post.date}</p>
               </div>
+
+
+
+
               <div className="flex items-center justify-end mt-2">
                 <button className="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-gray-600 text-sm">
                   {post.comments}
                 </button>
+
+
               </div>
+
+
+
+
+
+
+              {/* <div className="flex min-w-0 gap-2">
+                <img alt="" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" className="h-12 w-12 flex-none rounded-full bg-gray-50" />
+                <div className="min-w-0 flex-auto">
+                  <p className="text-sm font-semibold leading-6 text-gray-900">{"Dheeraj"}</p>
+                  <p className="mt-1 truncate text-xs leading-5 text-gray-500">{"Dheeraj"}</p>
+                </div>
+              </div> */}
+
+
+
+
+              <div className="flex min-w-0 gap-x-4">
+                <img alt="" src={"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"} className="h-12 w-12 flex-none rounded-full bg-gray-50" />
+                <div className="min-w-0 flex-auto">
+                  <p className="text-sm font-semibold leading-6 text-gray-900">{"Dhiraj"}</p>
+                  <p className="mt-1 truncate text-xs leading-5 text-gray-500">{"Dhiraj"}</p>
+                </div>
+              </div>
+              <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                <p className="text-sm leading-6 text-gray-900">{"person.role"}</p>
+
+                <div className="mt-1 flex items-center gap-x-1.5">
+                  <div className="flex-none rounded-full bg-emerald-500/20 p-1">
+                    <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                  </div>
+                  <p className="text-xs leading-5 text-gray-500">Online</p>
+                </div>
+
+              </div>
+
+
+
+
             </div>
+
+
           </div>
         ))}
       </div>

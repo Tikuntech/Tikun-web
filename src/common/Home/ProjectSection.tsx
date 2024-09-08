@@ -9,25 +9,27 @@ import { CgMathMinus } from "react-icons/cg";
 
 const ProjectSection: React.FC = () => {
   return (
-    <div className='bg-[#11112B] py-12 px-4 h-[1300px]'>
-      <div className='flex flex-col md:flex-row justify-between items-center p-20 mt-40'>
-        <h1 className='text-white font-bold text-6xl md:text-6xl pl-20'>Projects</h1>
-        <p className='text-white w-full md:w-1/2 mt-4 md:mt-0'>
+  
+      <div className='bg-[#11112B] md:py-12  md:px-4 md:h-[1300px]  h-full ' style={{padding:30}}>
+      <div className='flex flex-col md:flex-row justify-between md:items-center md:p-20  '>
+        <h1 className='text-white font-bold text-3xl md:text-6xl md:pl-20 '>Projects</h1>
+        <p className='text-white w-full md:w-1/2 mt-4 md:mt-0 text-xs md:text-xl'>
           As an IT company, we pride ourselves on delivering customized solutions that meet our clients' unique needs. Our projects highlight our expertise in web & mobile development, cloud computing, cybersecurity, and digital marketing.
         </p>
       </div>
 
-      <div className='flex flex-wrap gap-6 justify-center'>
-        <div className='w-32 h-32 bg-[#D9D9D9] p-2 rounded-lg shadow-lg flex items-center justify-center relative'>
-          <Image src={ProjectCard1} alt="Project Card 1" className='object-cover' width={528} height={300} />
-          <div className='absolute top-0 left-0 p-2'>
-            <h1 className='text-start'>2 0 2 2</h1>
-            <h1>Uwang Corp.</h1>
-          </div>
-        </div>
+      <div className='md:flex md:flex-wrap gap-6 justify-center'>
+      <div className='w-32 h-32 bg-[#D9D9D9] p-2 rounded-lg shadow-lg flex items-center justify-center relative'>
+  <Image src={ProjectCard1} alt="Project Card 1" className='object-cover' width={400} height={300} />
+  <div className='absolute  '>
+    <h1 className='text-sm text-left'>2 0 2 2</h1>
+    <h1 className='text-3xl font-bold'>Uwang Corp.</h1>
+  </div>
+</div>
+
 
         <div className='w-32 h-32 bg-[#92DEED] p-2 rounded-lg shadow-lg flex items-center justify-center relative'>
-          <Image src={ProjectCard2} alt="Project Card 2" className='object-cover' width={528} height={300} />
+          <Image src={ProjectCard2} alt="Project Card 2" className='object-cover' width={400} height={300} />
           <div className='absolute inset-0 flex flex-col items-center justify-center p-4 text-white'>
             <p className='text-center text-sm mb-2'>C Y B E R   S E C U R I T Y</p>
             <p className='text-center font-bold text-4xl'>Mika</p>
@@ -41,14 +43,16 @@ const ProjectSection: React.FC = () => {
       </div>
 
 
-      <div className='flex justify-between'>
+      <div className='md:flex md:justify-between'>
 
-<div className='pl-20'>
-  <h1 className='text-white text-4xl p-40 mt-20 font-bold'>Got Any Questions?</h1>
-  <button className='border border-white text-white flex p-3 rounded-md mt-40'>ASK A QUESTION  <FaArrowRightLong className=' pl-5' /></button>
-</div>
+<div className='md:pl-20 justify-center text-center'>
+  <h1 className='text-white md:text-4xl text-2xl p-40 mt-20 font-bold'>Got Any Questions?</h1>
+ 
+  <button className='hidden border border-white text-white md:flex p-3 rounded-md mt-40'>ASK A QUESTION  <FaArrowRightLong className=' pl-5' /></button>
+  </div>
 
-<div className='pr-20 w-1/2 '>
+
+<div className='md:pr-20 md:w-1/2 '>
 <h1 className='flex text-white mt-20 justify-between font-bold mb-10'>What services does Tikuntech offer? < FaPlus className='ml-10'/></h1>
 
 <Image src={ServiceLine} alt='ServiceLine'/>
@@ -61,9 +65,11 @@ const ProjectSection: React.FC = () => {
 <Image src={ServiceLine} alt='ServiceLine'/>
 </div>
 
-
+<button className='hidden border border-white text-white flex p-3 rounded-md md:mt-40 items-center justify-center '>ASK A QUESTION  <FaArrowRightLong className=' pl-5' /></button>
       </div>
     </div>
+    
+    
   );
 };
 

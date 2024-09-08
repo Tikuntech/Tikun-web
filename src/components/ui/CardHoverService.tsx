@@ -15,6 +15,7 @@ export const ServiceHoverEffect = ({
       title: string;
       description: string;
       link: string;
+      activeIcon: JSX.Element;
   }[];
   className?: string;
 }) => {
@@ -37,9 +38,9 @@ export const ServiceHoverEffect = ({
               >
                   {hoveredIndex === idx ? (
                       <Card>
-                          <h1 className="text-black font-normal mt-4 text-center">C Y B E R   S E C U R I T Y.</h1>
+                          {/* <h1 className="text-black font-normal mt-4 text-center">C Y B E R   S E C U R I T Y.</h1>
                           <FiSlack className="text-white text-center block mx-auto mt-4" />
-                          <h1 className="text-white font-bold mt-4 text-center text-3xl">Cloud</h1>
+                          <h1 className="text-white font-bold mt-4 text-center text-3xl">{item.title}</h1>
                           <h1 className="text-white font-bold text-center text-3xl">Computing</h1>
                           <p className="text-xs text-center mt-10">
                           Provides access to scalable computing resources to optimize their operations.
@@ -48,6 +49,15 @@ export const ServiceHoverEffect = ({
                               <button className="bg-black text-white p-2 rounded-md">
                                   READ MORE
                               </button>
+                          </div> */}
+                           <CardIcon className="mb-4">
+                              {item.activeIcon}
+                          </CardIcon>
+                          <div className="h-80 flex flex-col justify-end p-4">
+                              <div className="text-black font-normal text-left">
+                                  <CardTitle>{item.title}</CardTitle>
+                                  <CardDescription>{item.description}</CardDescription>
+                              </div>
                           </div>
                       </Card>
                   ) : (
@@ -85,8 +95,8 @@ export const Card = ({
           onMouseLeave={() => setIsHovered(false)}
           className={cn(
               isHovered
-                  ? "text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer"
-                  : "bg-gradient-to-b from-slate-400 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer",
+                  ? "text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105  cursor-pointer "
+                  : "bg-gradient-to-b from-slate-400 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer",
               className
           )}
       >

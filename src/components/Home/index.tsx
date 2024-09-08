@@ -28,27 +28,30 @@ const HomePage: React.FC = () => {
     <>
 
 {/* <MainHome/> */}
-    <div className='relative h-[1300px] bg-[#11112B] overflow-hidden flex flex-col items-center justify-center'>
+    <div className='relative md:h-[1300px] bg-[#11112B] overflow-hidden flex flex-col items-center justify-center '>
       
-      <div className='text-center '>
-        <div className='relative inline-block'>
+      <div className='text-center mt-12 md:mt-0 md:w-1/2 '>
+        <div className='relative inline-block w-72 md:w-full '>
           <Image
             src={MainTextImg}
             alt='Main promotional text'
             layout='intrinsic'
             quality={100}
-            className='w-full h-auto'
+            className='items-center justify-center'
           />
         </div>
+        <div className='text-center w-64 inline-block  md:w-auto'>
         <Image
           src={SubTextImg}
           alt='Subtext highlighting benefits'
           layout='intrinsic'
           quality={100}
-          className='w-[700px] h-auto mt-4 ml-56 '
+          className='w-full h-auto mt-4   '
         />
 
-        <p className='text-white text-base w-1/2 mx-auto mt-5'>
+        </div>
+        
+        <p className='text-white md:text-base text-xs md:w-full mx-auto mt-5 w-auto'>
           From custom software development to cybersecurity, our team of experts is dedicated
           to delivering solutions that are tailored to your unique needs.
         </p>
@@ -58,8 +61,8 @@ const HomePage: React.FC = () => {
         EXPLORE NOW <FaArrowRightLong className='ml-3 w-5 h-5' />
       </button>
       
-    
-      <Image 
+    <div>
+       <Image 
         src={backgroundImg} 
         alt='Background pattern' 
         layout='fill' 
@@ -68,7 +71,12 @@ const HomePage: React.FC = () => {
         priority 
         className='absolute '
       />
+    </div>
      
+    
+    
+    
+     <div className='hidden md:flex sm:flex'>
       {images.map((image, index) => (
         <div 
           key={index} 
@@ -83,15 +91,19 @@ const HomePage: React.FC = () => {
           />
         </div>
       ))}
-      
+      </div>
 
-      <div className='mt-14'>
-        <div className='text-left mb-10'>
-          <p className='text-white text-6xl font-bold mb-2 pl-20'>Why</p>
-          <p className='text-white text-6xl font-bold pl-20'>Choose Us?</p>
+      <div className='md:mt-14   mt-10'>
+        <div className='md:text-left mb-10 flex gap-2 md:gap-0 md:flex-col '>
+          <p className='text-white md:text-6xl font-bold mb-2 md:pl-20 '>Why</p>
+          <p className='text-white md:text-6xl font-bold md:pl-20'>Choose Us?</p>
         </div>
+
+        
         <ChooseUs/>
       </div>
+
+
      
 
     </div>
