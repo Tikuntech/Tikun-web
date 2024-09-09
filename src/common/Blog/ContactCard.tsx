@@ -1,10 +1,10 @@
 import React from 'react';
-import CallIcon from '../../../public/Blog/call.svg';
-import MailIcon from '../../../public/Blog/Mail Icon.svg';
-import LocationIcon from '../../../public/Blog/Location Icon.svg';
+import CallIcon from '/public/Blog/call.svg';
+import MailIcon from '/public/Blog/Mail Icon.svg';
+import LocationIcon from '/public/Blog/Location Icon.svg';
 import Image from 'next/image';
-import BoxImg from '../../../public/aboutus/Vector (1).svg';  
-import WireImg from '../../../public/Blog/WireframeBlog.svg';
+import BoxImg from '/public/aboutus/Vector.svg';  
+import WireImg from '/public/Blog/WireframeBlog.svg';
 
 const images = [
   { src: BoxImg, alt: "Graphic 1", width: 20, height: 20 },
