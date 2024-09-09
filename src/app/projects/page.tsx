@@ -3,17 +3,17 @@ import ProjectBreadCrumb from "@/common/BreadCrumb/ProjectBreadCrumb";
 import ServiceBreadCrumb from "@/common/BreadCrumb/ServiceBreadCrumb";
 import LogoIcon from "@/common/LogoIcons";
 import NeedItSolution from "@/common/NeedItSolution";
-import BoxImg from "../../../public/aboutus/Vector (1).svg";
+import BoxImg from "/public/aboutus/Vector (1).svg";
 import { ProjectTabs } from "@/common/project/ProjectTabs";
 import { ProjectCards } from "@/common/project/ProjectsCards";
 import NavbarHeader from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import SmasungImg from "../../../public/Home/SAMSUNG.svg";
-import GoogleImg from "../../../public/Home/GOGGLE.svg";
-import AmazonImg from "../../../public/Home/AMAZON.svg";
-import WindowsImg from "../../../public/Home/WINDOWS.svg";
-import SonyImg from "../../../public/Home/SONY.svg";
+import SmasungImg from "/public/Home/SAMSUNG.svg";
+import GoogleImg from "/public/Home/GOGGLE.svg";
+import AmazonImg from "/public/Home/AMAZON.svg";
+import WindowsImg from "/public/Home/WINDOWS.svg";
+import SonyImg from "/public/Home/SONY.svg";
 // import { apiCall } from "@/network";
 
 const images = [

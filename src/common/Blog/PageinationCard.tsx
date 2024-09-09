@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import CardImg1 from "../../../public/Blog/ImageCard1.png";
-import CardImg2 from "../../../public/Blog/imgCard2.png";
-import CardImg3 from "../../../public/Blog/ImgCard3.png";
+import CardImg1 from "/public/Blog/ImageCard1.png";
+import CardImg2 from "/public/Blog/imgCard2.png";
+import CardImg3 from "/public/Blog/ImgCard3.png";
 import { FaRegHeart } from "react-icons/fa";
 import Loading from "@/app/aboutUs/loading";
 import { fetchBlogs } from "@/services/api";

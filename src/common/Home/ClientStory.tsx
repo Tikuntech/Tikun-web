@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 import Image from 'next/image';
-import SmasungImg from '../../../public/Home/SAMSUNG.svg';
-import GoogleImg from '../../../public/Home/GOGGLE.svg';
-import AmazonImg from '../../../public/Home/AMAZON.svg';
-import WindowsImg from '../../../public/Home/WINDOWS.svg';
-import SonyImg from '../../../public/Home/SONY.svg';
-import DividerLine from '../../../public/Blog/VerticalLine.svg';
+import SmasungImg from '/public/Home/SAMSUNG.svg';
+import GoogleImg from '/public/Home/GOGGLE.svg';
+import AmazonImg from '/public/Home/AMAZON.svg';
+import WindowsImg from '/public/Home/WINDOWS.svg';
+import SonyImg from '/public/Home/SONY.svg';
+import DividerLine from '/public/Blog/VerticalLine.svg';
 import LogoIcon from '../LogoIcons';
 
 const ClientStory: React.FC = () => {

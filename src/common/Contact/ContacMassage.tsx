@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import MassgImg from "../../../public/Contact/Rectangle (1).png";
+import MassgImg from "/public/Contact/Rectangle (1).png";
 
 const ContacMassage: React.FC = () => {
   const [name, setName] = useState('');

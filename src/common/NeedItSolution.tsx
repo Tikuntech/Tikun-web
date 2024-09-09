@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import BoxImg from '../../public/aboutus/Vector (1).svg'; 
-import backgroundImg from '../../public/Footer/WireframeLine.svg';
+import BoxImg from '/public/aboutus/Vector.svg'; 
+import backgroundImg from '/public/Footer/WireframeLine.svg';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 // Array of image properties

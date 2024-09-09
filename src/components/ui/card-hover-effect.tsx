@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import HoverIcon from "../../../public/Project/ProjectIsHoverd.svg";
+import HoverIcon from "/public/Project/ProjectIsHoverd.svg";
 import { FiSlack } from "react-icons/fi";
 
 export const HoverEffect = ({

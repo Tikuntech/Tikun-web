@@ -1,10 +1,10 @@
 
 import React from 'react';
 import Image from 'next/image';
-import ExpertiesImg from '../../../public/Home/Vector (3).svg'; 
-import TechnologyImg from '../../../public/Home/Vector (4).svg'; 
-import SolutionImg from '../../../public/Home/Vector (5).svg'; 
-import ResultImg from '../../../public/Home/Vector (6).svg'; 
+import ExpertiesImg from '/public/Home/Vector (3).svg'; 
+import TechnologyImg from '/public/Home/Vector (4).svg'; 
+import SolutionImg from '/public/Home/Vector (5).svg'; 
+import ResultImg from '/public/Home/Vector (6).svg'; 
 
 const items = [
   { 

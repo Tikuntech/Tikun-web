@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import BoxImg from "../../../public/aboutus/Vector (1).svg";
+import BoxImg from "/public/aboutus/Vector (1).svg";
 import Image from "next/image";
 
 import ServiceBreadCrumb from "@/common/BreadCrumb/ServiceBreadCrumb";

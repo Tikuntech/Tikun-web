@@ -1,12 +1,12 @@
 import { ServiceHoverEffect } from "@/components/ui/CardHoverService";
-import MobileIcon from '../../../public/Service/mobile.svg'
-import SecurityIcon from '../../../public/Service/Security Icon.svg';
-import MarketingIcon from '../../../public/Service/digitalMarketing.svg';
-import CloudIcon from '../../../public/Service/Cloud Icon.svg';
-import SoftwareIcon from '../../../public/Service/Coding Icon (1).svg';
-import ManagementIcon from '../../../public/Service/Rocket Icon.svg';
-import DataAnalysisIcon from '../../../public/Service/Analysis Icon.svg';
-import NetworkIcon from '../../../public/Service/Network Icon.svg';
+import MobileIcon from '/public/Service/mobile.svg'
+import SecurityIcon from '/public/Service/Security Icon.svg';
+import MarketingIcon from '/public/Service/digitalMarketing.svg';
+import CloudIcon from '/public/Service/Cloud Icon.svg';
+import SoftwareIcon from '/public/Service/Coding Icon (1).svg';
+import ManagementIcon from '/public/Service/Rocket Icon.svg';
+import DataAnalysisIcon from '/public/Service/Analysis Icon.svg';
+import NetworkIcon from '/public/Service/Network Icon.svg';
 import { IoGlobeOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { ArrowActive } from "@/components/icons/ArrowActive";

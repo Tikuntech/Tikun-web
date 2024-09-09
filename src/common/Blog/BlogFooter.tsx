@@ -96,7 +96,7 @@
 import { Button, Input } from "@nextui-org/react";
 import Link from "next/link";
 // import TikcunteckLogo from "../icons/TikcunteckIcon";
-import footerline from '../../../public/Footer/Line (4).svg'
+import footerline from '/public/Footer/Line (4).svg'
 import Image from "next/image";
 import FooterEmailInput from "@/common/footer/EmailInput";
 import MobileFooterEmail from "../MobileDevlopment/MobileFooterEmail";
