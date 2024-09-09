@@ -99,7 +99,7 @@ const PageinationCard: React.FC = () => {
                     <p className="text-sm font-semibold leading-6 text-gray-900">
                       {"Dheeraj"}
                     </p>
-                    <p className="text-gray-600 text-sm">{ moment(post.createdAt).format('MMMM D, YYYY') }</p>
+                    <p className="text-gray-600 text-sm">{ moment(post?.createdAt).format('MMMM D, YYYY') }</p>
                   </div>
                 </div>
                 <div className="flex items-center justify-end mt-2">
