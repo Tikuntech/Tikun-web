@@ -13,19 +13,50 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
-
-      colors: {
-        'gradient-start': '#00c6ff', // Example color
-        'gradient-end': '#0072ff', // Example color
+      colors:{
+   'custom-blue': '#92DEED', // Define your custom color
+        'custom-black': "rgba(17, 17, 43, 1)"
+ 
+      },
+      screens: {
+        mobile: "320px",
+        mobileM: "475px",
+        mobileL: "580px",
+        mobileXL: "640px",
+        tablet: "768px",
+        tabletL: "962px",
+        laptop: "1024px",
+        laptopM: "1280px",
+      
+    
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      // fontFamily : {
+      //   'sans': ['IranSans', 'ui-sans-serif', 'system-ui']
+      // }
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        dm: ["DM Sans", "sans-serif"],
+      },
+
+      animation: {
+        slideIn: 'slideIn 0.5s ease-out',
+      },
+      keyframes: {
+        slideIn: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
+
+      
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [ require("@tailwindcss/line-clamp"),addVariablesForColors],
   
 };
 function addVariablesForColors({ addBase, theme }: any) {

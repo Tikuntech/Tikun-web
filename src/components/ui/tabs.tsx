@@ -56,7 +56,7 @@ export const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-400 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-custom-blue dark:bg-zinc-800 rounded-full ",
                   activeTabClassName
                 )}
               />
@@ -92,7 +92,7 @@ export const FadeInDiv = ({
   const isActive = (tab: Tab) => tab.value === active.value;
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative md:w-full h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}

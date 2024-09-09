@@ -42,13 +42,13 @@ const items = [
 
 const AboutMain: React.FC = () => {
   return (
-    <div className='p-4 sm:p-6 lg:p-8'>
+    <div className='p-4 sm:p-20 lg:p-20 '>
       <div className='container mx-auto'>
-        <div className='flex flex-row flex-wrap justify-between gap-8'>
+        <div className='md:flex md:flex-row flex-wrap justify-between gap-8'>
           {items.map((item, index) => (
             <div 
               key={index} 
-              className='flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4 bg-white shadow-lg rounded-lg'
+              className='flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4 bg-white  rounded-lg'
             >
               <div className='mb-4'>
                 <Image

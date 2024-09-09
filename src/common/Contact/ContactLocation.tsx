@@ -1,3 +1,4 @@
+ "use client"
 import React from 'react';
 import Image from 'next/image';
 import LocationImg from '../../../public/Contact/Image Placeholder (1).png';
@@ -5,7 +6,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const ContactLocation: React.FC = () => {
   return (
-    <div className='flex justify-center mt-8 h-full'>
+    <div className='flex justify-center mt-8 '>
       {/* Card Container */}
       <div className='relative w-full max-w-xl'>
         {/* Image */}
@@ -24,16 +25,18 @@ const ContactLocation: React.FC = () => {
         
         {/* Overlay card */}
         
-        <div className="absolute inset-0 flex justify-start items-center ">
-       <div className="relative p-8 bg-black bg-opacity-50 rounded-lg w-2/3 h-24 ">
-            {/* <FaMapMarkerAlt className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-4xl" /> */}
-            <p className="text-left text-white  text-xs">
-              CHANDIGARH UNIVERSITY GHARUAN MOHALI PUNJAB - 140413
+        <div className="absolute inset-0 flex justify-start items-center w-40 h-20">
+       <div className="relative  bg-white bg-opacity-50 rounded-lg ">
+            <p className="text-left text-black  text-xs ">
+              CHANDIGARH UNIVERSITY GHARUAN MOHALI
+            </p>
+            <p className="text-left text-black  text-xs">
+              PUNJAB - 140413
             </p>
           </div>
         </div>
       </div>
-    // </div>
+    </div>
   );
 };
 

@@ -1,75 +1,130 @@
-// components/HowItWorks.tsx
-import React from 'react';
+import React from "react";
 import { TbWorld } from "react-icons/tb";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { IoIosPhonePortrait } from "react-icons/io";
-
-interface Step {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-}
-
-const steps: Step[] = [
-  {
-    icon: (
-      <TbWorld/>
-    ),
-    title: 'Discovery',
-    description: "We'll conduct a thorough analysis of your operations, market, and competition to identify the best solutions for you.",
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-file-earmark-text" viewBox="0 0 16 16">
-        <path d="M5.5 7a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5v-1z"/>
-        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
-        <path d="M4.5 10a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zM4 8.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5h-7z"/>
-      </svg>
-    ),
-    title: 'Planning',
-    description: 'Once we have a clear understanding, we develop a customized plan for the services and solutions we provide.',
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-code-slash" viewBox="0 0 16 16">
-        <path d="M10.478 1.647a.5.5 0 0 1 .47.412l-2.013 6.04a.5.5 0 0 1-.47.412l2.013 6.04a.5.5 0 0 1-.47.413l-2.013-6.039a.5.5 0 0 1 .47-.413l2.013-6.041zm-6.5 0a.5.5 0 0 1 .47.412l-2.013 6.04a.5.5 0 0 1-.47.412l2.013 6.04a.5.5 0 0 1-.47.413l-2.013-6.039a.5.5 0 0 1 .47-.413l2.013-6.041zm-6 10a.5.5 0 0 1-.47.412l2.013 6.04a.5.5 0 0 1 .47.412l-2.013 6.04a.5.5 0 0 1 .47.413l2.013-6.039a.5.5 0 0 1-.47-.413l-2.013-6.041zm6.5-10a.5.5 0 0 1 .47.412l2.013 6.04a.5.5 0 0 1-.47.412l-2.013 6.04a.5.5 0 0 1 .47.413l-2.013-6.039a.5.5 0 0 1-.47-.413l2.013-6.041z"/>
-        <path d="M10.867 2.825a.5.5 0 0 1 .433-.412l-2.013 6.04a.5.5 0 0 1-.433.412l2.013 6.04a.5.5 0 0 1-.433.413l-2.013-6.039a.5.5 0 0 1 .433-.413l2.013-6.041zm-6.5 0a.5.5 0 0 1 .433-.412l-2.013 6.04a.5.5 0 0 1-.433.412l2.013 6.04a.5.5 0 0 1-.433.413l-2.013-6.039a.5.5 0 0 1 .433-.413l2.013-6.041zm-6 10a.5.5 0 0 1-.433.412l2.013 6.04a.5.5 0 0 1 .433.412l-2.013 6.04a.5.5 0 0 1 .433.413l-2.013-6.039a.5.5 0 0 1-.433-.413l2.013-6.041zm6.5-10a.5.5 0 0 1 .433-.412l2.013 6.04a.5.5 0 0 1-.433.412l-2.013 6.04a.5.5 0 0 1 .433.413l-2.013-6.039a.5.5 0 0 1-.433-.413l2.013-6.041z"/>
-      </svg>
-    ),
-    title: 'Development',
-    description: 'We begin the design and development process, creating custom solutions for your specific business needs.',
-  },
-  {
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-check-circle-fill" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-1.196 3.148a.5.5 0 0 0 .708.708L8 10.293l2.898 2.898a.5.5 0 0 0 .708-.708l-3.5-3.5zm-4.646-3.148A.5.5 0 0 0 8 9.293l-2.898-2.898a.5.5 0 0 0-.708.708l3.5 3.5zm-1.5 1.5a.5.5 0 0 1-.5-.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5v2z"/>
-      </svg>
-    ),
-    title: 'Implementation',
-    description: 'We implement our solution into your business operations and integrate them with other systems and platforms.',
-  },
-];
-
+import Image from "next/image";
+import ServiceRectangle from "../../../public/Service/steperRectangle.svg";
 const ServiceWorks: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      <h1 className="text-4xl font-bold mb-8">How It Works</h1>
-      <div className="flex flex-col items-center text-center">
-        {steps.map((step, index) => (
-          <React.Fragment key={index}>
-            <div className="bg-gray-800 p-6 rounded-lg mb-8 w-80">
-              <div className="text-3xl mb-4">{step.icon}</div>
-              <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-              <p className="text-lg">{step.description}</p>
+    <div className=" bg-gray-900 text-white py-12 px-4 flex justify-center ">
+      <div className="w-full max-w-3xl">
+        <h1 className="text-4xl font-bold text-center mb-20">How It Works</h1>
+
+   
+        {/* 
+        <div className="w-[400pxw-1/2 bg-blue-500">
+      <ol className=" overflow-hidden space-y-8">
+      <li className="relative flex-1 after:content-['']  after:w-0.5 after:h-full  after:bg-indigo-600 after:inline-block after:absolute after:-bottom-11 after:left-1/2">
+      <div className="flex items-center justify-center gap-8 w-full max-w-sm">
+      <div className="flex items-center gap-3.5 bg-indigo-50 p-3.5 rounded-xl relative z-10 border border-indigo-600 w-full">
+      <div className="rounded-lg bg-indigo-600 flex items-center justify-center">
+          <span className="text-white p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                  height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                      d="M15.9998 7C15.9998 9.20914 14.2089 11 11.9998 11C9.79067 11 7.99981 9.20914 7.99981 7C7.99981 4.79086 9.79067 3 11.9998 3C14.2089 3 15.9998 4.79086 15.9998 7Z"
+                      stroke="currentColor" stroke-width="1.6" />
+                  <path
+                      d="M11.9998 14C9.15153 14 6.65091 15.3024 5.23341 17.2638C4.48341 18.3016 4.10841 18.8204 4.6654 19.9102C5.2224 21 6.1482 21 7.99981 21H15.9998C17.8514 21 18.7772 21 19.3342 19.9102C19.8912 18.8204 19.5162 18.3016 18.7662 17.2638C17.3487 15.3024 14.8481 14 11.9998 14Z"
+                      stroke="currentColor" stroke-width="1.6" />
+              </svg>
+          </span>
+          <div
+          className=" flex items-start rounded-md justify-center flex-col ">
+          <h6 className="text-base font-semibold text-black mb-0.5">
+              Personal
+              Info</h6>
+          <p className="text-xs font-normal text-gray-500">Just your
+              personal
+              information</p>
+      </div>
+      </div>
+      </div>
+      </div>
+      </li>
+      </ol>
+      </div> */}
+
+
+
+
+
+
+        <ol className="relative ">
+          {/* Step 1 */}
+          {/* <div className="rounded-xl shadow-md p-4  h-48 bg-gradient-to-b from-slate-500 to-slate-800  items-start text-white">
+  ..
+</div> */}
+          <div className="flex justify-center items-center h-screen">
+            <Image src={ServiceRectangle} alt="rectangle" />
+          </div>
+
+          <li className="relative flex justify-center items-center after:content-[''] after:w-0.5 after:h-full after:bg-indigo-600 after:absolute after:-bottom-8 after:left-1/2 after:transform after:-translate-x-1/2">
+            <div className="flex items-center justify-center gap-8 w-full max-w-sm">
+              <div className="flex items-center gap-3.5 bg-indigo-50 p-3.5 rounded-xl relative z-10 border border-indigo-600 w-full">
+                <div className="rounded-lg bg-indigo-600 flex items-center justify-center">
+                  <span className="text-white p-3">
+                    <TbWorld size={24} />
+                  </span>
+                </div>
+                <div className="flex flex-col items-start">
+                  <h6 className="text-base font-semibold text-black mb-0.5">
+                    Discovery
+                  </h6>
+                  <p className="text-xs font-normal text-gray-500">
+                    We'll conduct a thorough analysis of your operations,
+                    market, and competition to identify the best solutions for
+                    you.
+                  </p>
+                </div>
+              </div>
             </div>
-            {index < steps.length - 1 && (
-              <>
-                <div className="w-1 h-36 bg-white mb-6"></div>
-                <div className="w-5 h-5 bg-white rounded-full mb-6"></div>
-              </>
-            )}
-          </React.Fragment>
-        ))}
+          </li>
+
+          {/* Step 2 */}
+          <li className="relative flex justify-center items-center after:content-[''] after:w-0.5 after:h-full after:bg-gray-200 after:absolute after:-bottom-8 after:left-1/2 after:transform after:-translate-x-1/2">
+            <div className="flex items-center justify-center gap-8 w-full max-w-sm">
+              <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
+                <div className="rounded-lg bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-600 p-3">
+                    <FaArrowRightLong size={24} />
+                  </span>
+                </div>
+                <div className="flex flex-col items-start">
+                  <h6 className="text-base font-semibold text-black mb-0.5">
+                    Planning
+                  </h6>
+                  <p className="text-xs font-normal text-gray-500">
+                    Once we have a clear understanding, we develop a customized
+                    plan for the services and solutions we provide.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          {/* Step 3 */}
+          <li className="relative flex justify-center items-center">
+            <div className="flex items-center justify-center gap-8 w-full max-w-sm">
+              <div className="flex items-center gap-3.5 bg-gray-50 p-3.5 rounded-xl relative z-10 border border-gray-50 w-full">
+                <div className="rounded-lg bg-gray-200 flex items-center justify-center">
+                  <span className="text-gray-600 p-3">
+                    <IoIosPhonePortrait size={24} />
+                  </span>
+                </div>
+                <div className="flex flex-col items-start">
+                  <h6 className="text-base font-semibold text-black mb-0.5">
+                    Implementation
+                  </h6>
+                  <p className="text-xs font-normal text-gray-500">
+                    We implement our solution into your business operations and
+                    integrate them with other systems and platforms.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   );

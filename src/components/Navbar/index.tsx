@@ -11,7 +11,7 @@ const NavbarHeader: React.FC = () => {
 
   return (
     <nav className="bg-[#11112B] text-white relative">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 md:p-10">
         <div className="relative flex items-center justify-between h-16">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
