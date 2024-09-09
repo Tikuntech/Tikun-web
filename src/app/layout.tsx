@@ -5,6 +5,8 @@ import "./globals.css";
 import NavbarHeader from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { QueryClient, QueryClientProvider } from "react-query"
+import NextTopLoader from 'nextjs-toploader';
+
 // import { ToastContainer } from "react-toastify"
 // import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,6 +29,7 @@ export default function RootLayout({
       <body 
       className={inter.className}>
          <QueryClientProvider client={client}>
+         <NextTopLoader />
         {/* <NavbarHeader/> */}
         {children}
         </QueryClientProvider>

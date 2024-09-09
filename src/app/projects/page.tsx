@@ -3,17 +3,17 @@ import ProjectBreadCrumb from "@/common/BreadCrumb/ProjectBreadCrumb";
 import ServiceBreadCrumb from "@/common/BreadCrumb/ServiceBreadCrumb";
 import LogoIcon from "@/common/LogoIcons";
 import NeedItSolution from "@/common/NeedItSolution";
-import Image from "next/image";
 import BoxImg from '../../../public/aboutus/Vector (1).svg';
 import { ProjectTabs } from "@/common/project/ProjectTabs";
 import { ProjectCards } from "@/common/project/ProjectsCards";
 import NavbarHeader from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { useEffect } from "react";
-import { useQuery } from "react-query";
-import { httpService } from "@/services/httpService";
-import { fetchProjects, projectRoute, usersRoute } from "@/services/api";
-import { json } from "stream/consumers";
+import Image from 'next/image';
+import SmasungImg from '../../../public/Home/SAMSUNG.svg';
+import GoogleImg from '../../../public/Home/GOGGLE.svg';
+import AmazonImg from '../../../public/Home/AMAZON.svg';
+import WindowsImg from '../../../public/Home/WINDOWS.svg';
+import SonyImg from '../../../public/Home/SONY.svg';
 // import { apiCall } from "@/network";
 
 const images = [
@@ -48,50 +48,7 @@ export default function Project() {
   // console.log("ddddddd", JSON.stringify(data?.data))
   return (
     <>
-      {/* <div className="flex flex-col h-full bg-[#11112B] p-6 md:p-12 ">
-        <div className="ml-16">
-        <ServiceBreadCrumb />
-        </div>
-
-        
-        <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl text-white font-bold flex-shrink-0 ml-16">
-          Project
-          </h1>
-          <div className="relative hidden md:block w-full h-64 md:h-96">
-            {images.map((img, index) => (
-              <div
-                key={index}
-                className="absolute"
-                style={randomPosition()}
-              >
-                <Image 
-                  src={img.src} 
-                  alt={img.alt} 
-                  width={img.width} 
-                  height={img.height}
-                  className="object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-between items-start mt-8 md:mt-16">
-          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-1/2">
-            <Image 
-              src={BoxImg} 
-              alt="Box Image" 
-              width={40} 
-              height={40}
-              className="object-contain mb-4 md:mb-2 hidden md:block"
-            />
-           
-          </div>
-<ProjectTabs/>
-         
-        </div>
-      </div> */}
+      
       <NavbarHeader />
       <div className="bg-[#11112B]">
         <div className='bg-[#11112B]  pl-4 relative'>
@@ -124,13 +81,40 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className="ml-32 mt-20">
+        <div className="md:ml-20 md:mt-20">
           <ProjectTabs />
           <ProjectCards />
         </div>
-        <div className="bg-[#11112B] py-8">
-          <LogoIcon />
-        </div>
+       
+        <footer className='md:hidden flex flex-col items-center gap-5 mt-10 p-4 bg-[#11112B]'>
+  {/* First Row: 3 logos */}
+  <div className='flex justify-center gap-8 mb-4'>
+    <div className='w-24 h-12'>
+      <Image src={SmasungImg} alt='Samsung logo' width={70} height={50} />
+    </div>
+    <div className='w-24 h-12'>
+      <Image src={GoogleImg} alt='Google logo' width={70} height={50} />
+    </div>
+    <div className='w-24 h-12'>
+      <Image src={AmazonImg} alt='Amazon logo' width={70} height={50} />
+    </div>
+  </div>
+
+  {/* Second Row: 2 logos */}
+  <div className='flex justify-center gap-8'>
+    <div className='w-24 h-12'>
+      <Image src={WindowsImg} alt='Windows logo' width={70} height={50} />
+    </div>
+    <div className='w-24 h-12'>
+      <Image src={SonyImg} alt='Sony logo' width={70} height={50} />
+    </div>
+  </div>
+</footer>
+
+
+<div className='hidden md:block'>
+<LogoIcon />
+</div>
         <NeedItSolution />
       </div>
       <Footer />

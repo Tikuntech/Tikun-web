@@ -10,75 +10,29 @@ const ContacMassage: React.FC = () => {
   const [submissionStatus, setSubmissionStatus] = useState(null);
   return (
     <>
-      {/* <div className='flex justify-center mt-8 h-full bg-sky-400'> */}
-      {/* Card Container */}
-      <div className="relative w-full max-w-xl bg-sky-400 ">
+    
+      <div className="relative w-full h-full md:max-w-xl  bg-sky-400 ">
         {/* Image */}
         <Image
           src={MassgImg}
           alt="Location"
           width={600}
           height={400}
-          className="object-cover rounded-lg"
+          className="object-cover rounded-lg "
         />
         {/* Form Overlay */}
-        <div className="absolute inset-0 p-10 flex flex-col items-center justify-center">
-          {/* <form className="flex flex-col space-y-4 bg-custom-black  rounded-lg w-2/3">
-           
-            <div className="flex gap-6">
-              <div className="flex flex-col pl-10">
-                <p className="font-semibold text-black">Name</p>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="flex-1 p-2 rounded-md border border-gray-300"
-                />
-              </div>
-              <div className="flex flex-col">
-                <p className="font-semibold text-black">Email</p>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="flex-1 p-2 rounded-md border border-gray-300"
-                />
-              </div>
-            </div>
-           
-            <p className=" text-black">Message</p>
-            <textarea
-              placeholder="Message"
-              rows={4}
-              className="p-2 rounded-md border border-gray-300"
-            ></textarea>
-            <div className="flex items-center space-x-">
-              <input
-                type="checkbox"
-                id="consent"
-                className="h-4 w-4 text-blue-600 border-gray-300 rounded"
-              />
-              <p className="text-sm">
-                By ticking this box, I am consenting to be sent monthly articles
-                and promotions through tickuntech newsletter.
-              </p>
-              <button
-                type="submit"
-                className=" text-white p-2 rounded-md bg-black "
-              >
-                Send
-              </button>
-            </div>
-          </form> */}
+        <div className="absolute inset-0 md:p-10 md:flex md:flex-col items-center justify-center">
+         
 
 
 
 
-
-<div className="max-w-4xl mx-auto ">
-      <h2 className="text-2xl font-bold mb-6">Send Us Message</h2>
+<div className="md:max-w-4xl md:mx-auto ">
+      <h2 className="md:text-4xl font-bold md:mb-6 text-black">Send Us Message</h2>
 
       <h3 className=" mt-5 text-white">Have any questions regarding our services? Send us your message.</h3>
       <form onSubmit={()=>{}} className="space-y-4 mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-custom-black">
             Name
@@ -118,7 +72,7 @@ const ContacMassage: React.FC = () => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            rows="4"
+            rows={4}
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
           />
         </div>
@@ -146,7 +100,7 @@ const ContacMassage: React.FC = () => {
 
         </div>
       </div>
-      {/* </div> */}
+    
     </>
   );
 };

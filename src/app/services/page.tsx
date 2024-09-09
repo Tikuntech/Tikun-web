@@ -69,7 +69,7 @@ const Page: React.FC = () => {
        </div>  
 
        {/* <MainCardContain/> */}
-       <div className='bg-[#11112B] p-28'>
+       <div className='bg-[#11112B] md:p-28'>
         
     <ServiceCards/>
    </div> 

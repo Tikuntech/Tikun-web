@@ -31,25 +31,25 @@ const ContactCard = () => {
       </div>
 
       <div className="relative z-10">
-        <h1 className='text-white font-bold text-2xl'>Contact Card</h1>
+        <h1 className='text-white font-bold text-2xl '>Contact Card</h1>
         
         <div className='flex w-full mt-10 items-center'>
           <Image src={CallIcon} alt="Call Icon" className="w-12 h-12" />
           <div className='flex flex-col'>
-            <span className="pl-20">+XXXXXXXXXXX</span>
+            <span className="pl-20 " style={{marginLeft:20}}>+XXXXXXXXXXX</span>
           </div>
         </div>
         <div className='flex w-full mt-4 items-center'>
           <Image src={MailIcon} alt="Mail Icon" className="w-12 h-12" />
           <div className='flex flex-col'>
-            <span className="pl-20">hello@TIKUNTECH</span>
+            <span className="pl-20"style={{marginLeft:20}}>hello@TIKUNTECH</span>
           </div>
         </div>
         <div className='flex w-full mt-4 items-center'>
           <Image src={LocationIcon} alt="Location Icon" className="w-12 h-12" />
           <div className='flex flex-col'>
-            <span className="pl-20 w-1/2">XXXXXXXXXXXXXXXXXXXXXX</span>
-            <span className="pl-20 w-1/2">XXXXXXXXXXXXXXXXXX</span>
+            <span className="pl-20 w-1/2"style={{marginLeft:20}}>XXXXXXXXXXXXXXXXXXXXXX</span>
+            <span className="pl-20 w-1/2"style={{marginLeft:20}}>XXXXXXXXXXXXXXXXXX</span>
           </div>
         </div>
 

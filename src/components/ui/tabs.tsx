@@ -92,7 +92,7 @@ export const FadeInDiv = ({
   const isActive = (tab: Tab) => tab.value === active.value;
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative md:w-full h-full">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}

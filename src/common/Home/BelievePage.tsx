@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BopxImg from '../../../public/Home/Vector (7).svg';
 import LineImg from '../../../public/Home/Line.svg';
 
+
 const BelievePage: React.FC = () => {
   return (
     <main className=" px-6 md:px-12 bg-[#D5D9E5] md:h-screen">
@@ -14,11 +15,13 @@ const BelievePage: React.FC = () => {
 
         {/* Main Text Section */}
         <div className="text-center pt-10">
-          <p className="md:text-6xl text-2xl text-[#11112B] font-light">
+          <p className="md:text-6xl text-2xl text-[#11112B]  ">
             <span className="font-bold">We believe that </span>
-            <span className="font-light italic">technology</span>
+            <span className=" font-extralight" style={{fontStyle:'italic'}}>technology</span>
             <br />
-            can <span className="font-bold">change</span> the world.
+            <span className='font-bold'> can </span>
+            <span className="text-gray-400 font-bold text-xl ">change </span>
+          <span className='font-bold'>the world.</span>
           </p>
           <p className="text-lg text-gray-800 mt-10 md:mt-20 px-4">
             That's why we're committed to delivering innovative IT solutions to businesses of all sizes. Our team of experienced professionals is dedicated to helping you achieve your goals and thrive in a rapidly evolving digital landscape.
@@ -33,7 +36,7 @@ const BelievePage: React.FC = () => {
           </div>
           
           <div className="flex items-center">
-            <Image src={LineImg} alt='Line' className='h-2 w-5 mx-4' />
+            <Image src={LineImg} alt='Line'  />
           </div>
 
           <div className="flex-1 p-6 text-center border-t border-black md:border-t-0 md:border-r md:border-b-0 md:border-black">
@@ -42,7 +45,7 @@ const BelievePage: React.FC = () => {
           </div>
 
           <div className="flex items-center">
-            <Image src={LineImg} alt='Line' className='h-2 w-5 mx-4' />
+            <Image src={LineImg} alt='Line'  />
           </div>
 
           <div className="flex-1 p-6 text-center border-t border-black md:border-t-0 md:border-r md:border-b-0 md:border-black">

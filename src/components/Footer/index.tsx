@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
             </div>
 
-            <Image src={footerline} alt='ServiceLine'/>
+            <Image src={footerline} alt='ServiceLine' className=""/>
             <p className="text-center mt-5">Terms & Conditions | Privacy Policy</p>
         </footer>
     );

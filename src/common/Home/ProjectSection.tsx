@@ -11,9 +11,9 @@ const ProjectSection: React.FC = () => {
   return (
   
       <div className='bg-[#11112B] md:py-12  md:px-4 md:h-[1300px]  h-full ' style={{padding:30}}>
-      <div className='flex flex-col md:flex-row justify-between md:items-center md:p-20  '>
-        <h1 className='text-white font-bold text-3xl md:text-6xl md:pl-20 '>Projects</h1>
-        <p className='text-white w-full md:w-1/2 mt-4 md:mt-0 text-xs md:text-xl'>
+      <div className='flex flex-col md:flex-row justify-between md:items-center md:p-20 md:pt-20  md:mb-20 '>
+        <h1 className='text-white font-bold text-3xl md:text-6xl md:pl-20 md:pb-20 '>Projects</h1>
+        <p className='text-white w-full md:w-1/2 mt-4 md:mt-0 text-xs md:text-xl '>
           As an IT company, we pride ourselves on delivering customized solutions that meet our clients' unique needs. Our projects highlight our expertise in web & mobile development, cloud computing, cybersecurity, and digital marketing.
         </p>
       </div>
@@ -59,7 +59,7 @@ const ProjectSection: React.FC = () => {
 <h1 className='flex text-white mt-5 justify-between font-bold mb-10'>Which IT solution is for my business? < FaPlus className='ml-10'/></h1>
 <Image src={ServiceLine} alt='ServiceLine'/>
 <h1 className='flex text-white mt-5 justify-between font-bold '>How much do the services cost? < CgMathMinus className='ml-10'/></h1>
-<p className='text-white mt-5 text-sm w-2/12 mb-10'>Our pricing varies based on the specific services and needs of your business. We offer flexible pricing options to suit your budget and requirements. Contact us to learn more.</p>
+<p className='text-white mt-5 text-sm mb-10'>Our pricing varies based on the specific services and needs of your business. We offer flexible pricing options to suit your budget and requirements. Contact us to learn more.</p>
 <Image src={ServiceLine} alt='ServiceLine'/>  
 <h1 className='flex text-white mt-5 justify-between font-bold  mb-10'>How do I get started with the IT solutions? < FaPlus className='ml-10'/></h1>
 <Image src={ServiceLine} alt='ServiceLine'/>

@@ -22,7 +22,7 @@ const getRandomPosition = () => ({
   left: `${Math.random() * 20 + 10}%`,
 });
 
-const HomePage: React.FC = () => {
+const HeroPage: React.FC = () => {
   return (
 
     <>
@@ -51,7 +51,7 @@ const HomePage: React.FC = () => {
 
         </div>
         
-        <p className='text-white md:text-base text-xs md:w-full mx-auto mt-5 w-auto'>
+        <p className='text-white md:text-base text-sm md:w-full mx-auto mt-5 w-3/4'>
           From custom software development to cybersecurity, our team of experts is dedicated
           to delivering solutions that are tailored to your unique needs.
         </p>
@@ -113,4 +113,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default HeroPage;

@@ -18,6 +18,12 @@ export const HoverEffect = ({
   className?: string;
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const handleTouchStart = (index: number) => {
+    setActiveIndex(index);
+    // Remove active state after touch
+    setTimeout(() => setActiveIndex(null), 2000);
+  };
 
   return (
     <div
@@ -33,6 +39,7 @@ export const HoverEffect = ({
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
+          onTouchStart={() => handleTouchStart(idx)}
         >
           {hoveredIndex === idx ? (
             <Card>

@@ -1,16 +1,18 @@
 import { ServiceHoverEffect } from "@/components/ui/CardHoverService";
-import GlobeIcon from '../../../public/Service/Web Icon.svg'
-import MobileIcon from '../../../public/Service/mobile.svg';
+import MobileIcon from '../../../public/Service/mobile.svg'
 import SecurityIcon from '../../../public/Service/Security Icon.svg';
 import MarketingIcon from '../../../public/Service/digitalMarketing.svg';
 import CloudIcon from '../../../public/Service/Cloud Icon.svg';
 import SoftwareIcon from '../../../public/Service/Coding Icon (1).svg';
-import ManagementIcon from '../../../public/Service/Planner Icon.svg';
+import ManagementIcon from '../../../public/Service/Rocket Icon.svg';
 import DataAnalysisIcon from '../../../public/Service/Analysis Icon.svg';
 import NetworkIcon from '../../../public/Service/Network Icon.svg';
 import { IoGlobeOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { ArrowActive } from "@/components/icons/ArrowActive";
+import Image from "next/image";
+import Link from "next/link";
+
 
 export function ServiceCards() {
   return (
@@ -41,24 +43,27 @@ export const services = [
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+       <Image src={MobileIcon} alt="icon"/> 
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
     title: "Mobile Development",
     description: "Create or enhance mobile applications, ensuring optimized user experience.",
-    link: "/ServiceDetailPage",
+    link: "/mobileDevlopment",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={MobileIcon} alt="icon"/> 
+        <Link href={"/mobileDevlopment"}>
         <ArrowActive />
+        </Link>
       </div>
     ),
   },
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={SecurityIcon} alt="icon"/> 
+        {/* <BsShieldLock style={{ height: 60, width: 60 }} /> */}
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -67,7 +72,7 @@ export const services = [
     link: "/cyber-security",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+       <Image src={SecurityIcon} alt="icon"/> 
         <ArrowActive />
       </div>
     ),
@@ -75,7 +80,7 @@ export const services = [
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={MarketingIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -84,15 +89,16 @@ export const services = [
     link: "/digital-marketing",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+    <Image src={MarketingIcon} alt="icon"/>
         <ArrowActive />
       </div>
     ),
   },
   {
+    
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={CloudIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -101,15 +107,18 @@ export const services = [
     link: "/cloud-computing",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={CloudIcon} alt="icon"/>
+       
         <ArrowActive />
+        
+       
       </div>
     ),
   },
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={SoftwareIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -118,7 +127,7 @@ export const services = [
     link: "/software-development",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={SoftwareIcon} alt="icon"/>
         <ArrowActive />
       </div>
     ),
@@ -126,7 +135,7 @@ export const services = [
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+       <Image src={ManagementIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -135,7 +144,7 @@ export const services = [
     link: "/it-project-management",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+          <Image src={ManagementIcon} alt="icon"/>
         <ArrowActive />
       </div>
     ),
@@ -143,7 +152,7 @@ export const services = [
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={DataAnalysisIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -152,7 +161,7 @@ export const services = [
     link: "/data-analysis",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+          <Image src={DataAnalysisIcon} alt="icon"/>
         <ArrowActive />
       </div>
     ),
@@ -160,7 +169,7 @@ export const services = [
   {
     icon: (
       <div className="flex justify-between space-x-2">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+        <Image src={NetworkIcon} alt="icon"/>
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
@@ -169,7 +178,7 @@ export const services = [
     link: "/network-management",
     activeIcon: (
       <div className="flex justify-between  w-full">
-        <IoGlobeOutline style={{ height: 60, width: 60 }} />
+    <Image src={NetworkIcon} alt="icon"/>
         <ArrowActive />
       </div>
     ),

@@ -1,4 +1,4 @@
- "use client"
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import BoxImg from '../../../public/aboutus/Vector (1).svg'; 
@@ -26,8 +26,7 @@ const randomPosition = () => ({
 const Page: React.FC = () => {
   return (
     <>
-    <div>
-    <NavbarHeader/>
+      <NavbarHeader/>
       <div className='bg-[#11112B] h-screen pl-4 md:pl-32 relative'>
         <div className='pt-10 md:pt-20'>
           <AboutBreadcrumbs/>
@@ -80,21 +79,25 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-     <div className='mt-10 mb-20'>
-     <AboutMain />
-     </div>
-      {/* <OverflowCard/> */}
-     
+
+      <div className='mt-10 mb-20'>
+        <AboutMain />
+      </div>
+
       <div className='relative'>
         <AboutVideo />
+        <div className='absolute inset-0 flex items-center justify-center md:-mt-[700px] -mt-[200px] '>
+          <OverflowCard />
+        </div>
       </div>
-      <div>
+
+      <div className='text-center '>
         <LogoIcon />
       </div>
+
       <NeedItSolution />
-      </div>
-      <Footer
-      />
+      
+      <Footer />
     </>
   );
 };

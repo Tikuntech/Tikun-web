@@ -41,23 +41,7 @@ const NeedItSolution: React.FC = () => {
         GET FREE CONSULTATION <FaArrowRightLong className='ml-3 w-5 h-5' />
       </button>
 
-      <div className='hidden md:flex'>
-    
-      {images.map((image, index) => (
-        <div 
-          key={index} 
-          className='absolute'
-          style={getRandomPosition()}
-        >
-          <Image 
-            src={image.src} 
-            alt={image.alt} 
-            width={image.width} 
-            height={image.height} 
-          />
-        </div>
-      ))}
-      </div>
+      
       </div>
     </div>
   );

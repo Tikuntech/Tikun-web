@@ -6,7 +6,7 @@ import { useState } from "react";
 import BoxImg from "../../../public/Blog/colorblog.svg";
 import BlogBreadCrumb from "@/common/BreadCrumb/BlogBreadCrumb";
 import PageinationCard from "@/common/Blog/PageinationCard";
-
+import BlogFooterWire from '../../../public/Blog/BlogFooterWire.svg';
 import FlexSection from "@/common/Blog/FlexSection";
 import BlogFooter from "@/common/Blog/BlogFooter";
 import ReadyCard from "@/common/Blog/ReadyCard";
@@ -56,11 +56,11 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="flex justify-around p-20 gap-10 ">
-          <div className="w-full">
+        <div className="md:flex md:justify-around md:p-20 gap-10 ">
+          <div className="md:w-full">
             <PageinationCard />
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <FlexSection />
           </div>
         </div>
@@ -68,8 +68,10 @@ export default function page() {
         <div className="items-center justify-center">
           <ReadyCard />
         </div>
-
-        <BlogFooter />
+      
+    <BlogFooter />
+    
+        
       </main>
     </>
   );

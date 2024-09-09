@@ -5,6 +5,7 @@ import ProjectSection from "@/common/Home/ProjectSection";
 import ServiceSection from "@/common/Home/ServiceSection";
 import NeedItSolution from "@/common/NeedItSolution";
 import Footer from "@/components/Footer";
+import HeroPage from "@/components/Home";
 import HomePage from "@/components/Home";
 import NavbarHeader from "@/components/Navbar";
 import Image from "next/image";
@@ -13,7 +14,7 @@ export default function Home() {
   return (
     <>
      <NavbarHeader/>
-    <HomePage/>
+    <HeroPage/>
     <BelievePage/>
     <ClientStory/>
     <ServiceSection/>
