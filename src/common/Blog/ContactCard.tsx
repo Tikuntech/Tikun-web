@@ -1,5 +1,5 @@
 import React from 'react';
-import CallIcon from '/public/Blog/call.svg';
+import CallIcon from '/public/Blog/Call.svg';
 import MailIcon from '/public/Blog/Mail Icon.svg';
 import LocationIcon from '/public/Blog/Location Icon.svg';
 import Image from 'next/image';
