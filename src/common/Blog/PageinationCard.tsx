@@ -47,7 +47,7 @@ const PageinationCard: React.FC = () => {
         //   },
         // ].
         
-        data?.data?.map((post, index) => (
+        data?.data?.map((post:any, index:any) => (
           <div
             key={index}
             className="bg-white rounded-md shadow-md overflow-hidden relative"
