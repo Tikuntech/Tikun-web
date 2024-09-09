@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import MobileImage from '../../../public/Mobiledevlopment/Frame Photo.svg'
+import MobileImage from '/public/Mobiledevlopment/Frame Photo.svg'
 import Image from 'next/image';
-import EasyIcon from '../../../public/Mobiledevlopment/Easy Icon.svg'
-import  PersonalIcon from '../../../public/Mobiledevlopment/Heart Icon.svg'
-import HighEngagementIcon from '../../../public/Mobiledevlopment/Share Icon.svg'
-import IncreaseIcon from '../../../public/Mobiledevlopment/Increase Icon.svg'
-import OverMobileImg from '../../../public/Mobiledevlopment/mobileImg.svg'
+import EasyIcon from '/public/Mobiledevlopment/Easy Icon.svg'
+import  PersonalIcon from '/public/Mobiledevlopment/Heart Icon.svg'
+import HighEngagementIcon from '/public/Mobiledevlopment/Share Icon.svg'
+import IncreaseIcon from '/public/Mobiledevlopment/Increase Icon.svg'
+import OverMobileImg from '/public/Mobiledevlopment/mobileImg.svg'
 
 const PointsSection = () => {
  

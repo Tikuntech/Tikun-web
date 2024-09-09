@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import BoxImg from '../../../public/aboutus/Vector (1).svg'; 
+import BoxImg from '/public/aboutus/Vector (1).svg'; 
 import OverflowCard from '@/common/OverflowCard';
 import AboutBreadcrumbs from '@/common/BreadCrumb/BreadCrumbAbout';
 import AboutMain from '@/common/About/AboutMain';
@@ -10,11 +10,11 @@ import NeedItSolution from '@/common/NeedItSolution';
 import LogoIcon from '@/common/LogoIcons';
 import NavbarHeader from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SmasungImg from '../../../public/Home/SAMSUNG.svg';
-import GoogleImg from '../../../public/Home/GOGGLE.svg';
-import AmazonImg from '../../../public/Home/AMAZON.svg';
-import WindowsImg from '../../../public/Home/WINDOWS.svg';
-import SonyImg from '../../../public/Home/SONY.svg';
+import SmasungImg from '/public/Home/SAMSUNG.svg';
+import GoogleImg from '/public/Home/GOGGLE.svg';
+import AmazonImg from '/public/Home/AMAZON.svg';
+import WindowsImg from '/public/Home/WINDOWS.svg';
+import SonyImg from '/public/Home/SONY.svg';
 
 const images = [
   { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import ProjectCard1 from "../../../public/Home/projectImg-1.png";
-import ProjectCard2 from "../../../public/Home/projectImg-2.png";
+import ProjectCard1 from "/public/Home/projectImg-1.png";
+import ProjectCard2 from "/public/Home/projectImg-2.png";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaPlus } from "react-icons/fa6";
-import ServiceLine from "../../../public/Project/Line (3).svg";
+import ServiceLine from "/public/Project/Line (3).svg";
 import { CgMathMinus } from "react-icons/cg";
 
 const ProjectSection: React.FC = () => {

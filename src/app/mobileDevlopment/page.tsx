@@ -3,15 +3,15 @@ import LightNavbar from "@/components/LightNavbar";
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
-import BoxImg from "../../../public/Blog/colorblog.svg";
+import BoxImg from "/public/Blog/colorblog.svg";
 import BlogBreadCrumb from "@/common/BreadCrumb/BlogBreadCrumb";
 import PageinationCard from "@/common/Blog/PageinationCard";
-import BlogFooterWire from '../../../public/Blog/BlogFooterWire.svg';
+import BlogFooterWire from '/public/Blog/BlogFooterWire.svg';
 import FlexSection from "@/common/Blog/FlexSection";
 import BlogFooter from "@/common/Blog/BlogFooter";
 import ReadyCard from "@/common/Blog/ReadyCard";
 import Mobiledevlopmemnt from "@/common/BreadCrumb/mobiledevlopmemnt";
-import MobileDevImg from '../../../public/Mobiledevlopment/Image Placeholder (7).png'
+import MobileDevImg from '/public/Mobiledevlopment/Image Placeholder (7).png'
 import MobileFlexSection from "@/common/MobileDevlopment/MobileFlexSection";
 import PointsSection from "@/common/MobileDevlopment/PointsSection";
 

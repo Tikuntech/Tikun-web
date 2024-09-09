@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import BopxImg from '../../../public/Home/Vector (7).svg';
-import LineImg from '../../../public/Home/Line.svg';
+import BopxImg from '/public/Home/Vector (7).svg';
+import LineImg from '/public/Home/Line.svg';
 
 
 const BelievePage: React.FC = () => {

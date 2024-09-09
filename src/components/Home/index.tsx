@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import BoxImg from '../../../public/aboutus/Vector (1).svg'; 
-import backgroundImg from '../../../public/Home/Wireframe Vector.png';
+import BoxImg from '/public/aboutus/Vector.svg'; 
+import backgroundImg from '/public/Home/Wireframe Vector.png';
 import ChooseUs from '@/common/Home/ChooseUs';
 import { FaArrowRightLong } from 'react-icons/fa6';
-import MainTextImg from '../../../public/Home/YOUR BEST.png';
-import SubTextImg from '../../../public/Home/Frame 2.png';
+import MainTextImg from '/public/Home/YOUR BEST.png';
+import SubTextImg from '/public/Home/Frame 2.png';
 import BelievePage from '@/common/Home/BelievePage';
 import MainHome from '@/common/Home/MainHome';
 

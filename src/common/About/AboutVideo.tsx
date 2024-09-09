@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
-import VideoImg from '../../../public/aboutus/Image Placeholder.png'; 
+import VideoImg from '/public/aboutus/Image Placeholder.png'; 
 import { FaPlay } from "react-icons/fa";
 
 const AboutVideo: React.FC = () => {

@@ -1,7 +1,7 @@
 import React from 'react';
-import ServiceLine from '../../../public/Home/ServiceLine.svg';
+import ServiceLine from '/public/Home/ServiceLine.svg';
 import Image from 'next/image';
-import CyberImg from '../../../public/Home/Image Placeholder (2).png'
+import CyberImg from '/public/Home/Image Placeholder (2).png'
 
 import { FaArrowRightLong } from "react-icons/fa6";
 

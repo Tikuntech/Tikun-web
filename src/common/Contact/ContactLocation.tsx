@@ -1,7 +1,7 @@
  "use client"
 import React from 'react';
 import Image from 'next/image';
-import LocationImg from '../../../public/Contact/Image Placeholder (1).png';
+import LocationImg from '/public/Contact/Image Placeholder (1).png';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 
 const ContactLocation: React.FC = () => {
