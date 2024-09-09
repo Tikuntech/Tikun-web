@@ -34,7 +34,7 @@ export default function Page() {
     <>
       <main className="min-h-screen bg-[#D5D9E5]">
         <LightNavbar />
-        <div className="pt-10 md:pt-20">
+        <div className="pt-10 md:pt-20 p-5 md:p-0">
           <div className="md:ml-32">
             <Mobiledevlopmemnt />
           </div>
@@ -46,8 +46,8 @@ export default function Page() {
           </div>
         </div>
         <div className="md:flex md:justify-around md:p-20 gap-10 ">
-          <div className="md:w-full">
-            <Image src={MobileDevImg} alt="Img"/>
+          <div className="md:w-full mt-10 p-5 md:p-0">
+            <Image src={MobileDevImg} alt="Img "/>
             <p className="mt-10">
               Mobile development is a crucial service for any IT company. As technology evolves, more and more people are using mobile devices to access the internet and carry out daily activities. Therefore, having a mobile presence is essential for businesses to reach their target audience. Mobile development involves creating applications or software specifically designed for mobile devices such as smartphones and tablets. These applications can be developed for various operating systems such as iOS, Android, or Windows.
             </p>
@@ -61,15 +61,18 @@ export default function Page() {
               Our team of developers has experience in building custom applications that offer personalized experiences, helping our clients to stand out in a crowded market.
             </p>
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 p-5 md:p-0">
             <MobileFlexSection />
           </div>
         </div>
 <PointsSection/>
-        <div className="items-center justify-center">
+        <div className="items-center justify-center p-5 md:p-0">
           <ReadyCard />
         </div>
+        <div className='p-5 md:p-0'>
         <BlogFooter />
+        </div>
+      
       </main>
     </>
   );
