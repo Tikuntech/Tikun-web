@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import ExpertiesImg from './public/aboutus/Expert.svg'; 
+import ExpertiesImg from '/public/aboutus/Expert.svg'; 
 import TechnologyImg from '/public/aboutus/technology.svg'; 
 import SolutionImg from '/public/aboutus/solution.svg'; 
 import ResultImg from '/public/aboutus/result.svg'; 
