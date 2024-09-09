@@ -1,5 +1,5 @@
 import React from 'react';
-import BoxImg from '/public/aboutus/Vector (1).svg'; 
+import BoxImg from '/public/aboutus/Vector.svg'; 
 import Image from 'next/image';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';

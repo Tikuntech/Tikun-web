@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import BoxImg from '/public/aboutus/Vector (1).svg'; 
+import BoxImg from '/public/aboutus/Vector.svg'; 
 import OverflowCard from '@/common/OverflowCard';
 import AboutBreadcrumbs from '@/common/BreadCrumb/BreadCrumbAbout';
 import AboutMain from '@/common/About/AboutMain';
