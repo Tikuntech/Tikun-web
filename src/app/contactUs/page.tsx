@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import BoxImg from "../../../public/aboutus/Vector (1).svg";
+import BoxImg from "../../../public/aboutus/Vector.svg";
 import ContactBreadcrumb from "@/common/BreadCrumb/ContactBreadCrumb";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 import ContactLocation from "@/common/Contact/ContactLocation";

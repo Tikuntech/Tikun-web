@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import BoxImg from '/public/aboutus/Vector (1).svg'; 
+import BoxImg from '/public/aboutus/Vector.svg'; 
 import backgroundImg from '../../../public/Home/Wireframe Vector.png';
 import ChooseUs from '@/common/Home/ChooseUs';
 import { FaArrowRightLong } from 'react-icons/fa6';
