@@ -1,8 +1,8 @@
 "use client";
+import { useState } from "react";
 import LightNavbar from "@/components/LightNavbar";
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
 import BoxImg from "../../../public/Blog/colorblog.svg";
 import BlogBreadCrumb from "@/common/BreadCrumb/BlogBreadCrumb";
 import PageinationCard from "@/common/Blog/PageinationCard";
@@ -27,7 +27,7 @@ const randomPosition = () => ({
 });
 
 export default function page() {
-  const [searchTerm, setSearchTerm] = useState("");
+
  
   return   (
     <>
