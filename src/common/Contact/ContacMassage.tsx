@@ -27,7 +27,7 @@ const ContacMassage: React.FC = () => {
 
 
 
-<div className="md:max-w-4xl md:mx-auto ">
+<div className="md:max-w-4xl md:mx-auto p-20 ">
       <h2 className="md:text-4xl font-bold md:mb-6 text-black">Send Us Message</h2>
 
       <h3 className=" mt-5 text-white">Have any questions regarding our services? Send us your message.</h3>

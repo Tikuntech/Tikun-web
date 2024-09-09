@@ -23,6 +23,6 @@ export const fetchProjects = async () => {
 
 
 export const fetchBlogs= async () => {
-    const { data } = await axiosInstance.get('/project'); // Adjust endpoint as needed
+    const { data } = await axiosInstance.get('/blog'); // Adjust endpoint as needed
     return data;
   };

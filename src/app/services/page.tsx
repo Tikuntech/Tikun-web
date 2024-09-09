@@ -1,19 +1,14 @@
- "use client"
-import React from 'react';
-import BoxImg from '../../../public/aboutus/Vector (1).svg';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import BoxImg from "../../../public/aboutus/Vector (1).svg";
+import Image from "next/image";
 
-import ServiceBreadCrumb from '@/common/BreadCrumb/ServiceBreadCrumb';
-import MainCardContain from '@/common/Service/MainCardContain';
-import ServiceWorks from '@/common/Service/ServiceWorks';
-import { ServiceCards } from '@/common/Service/ServiceCards';
-import NavbarHeader from '@/components/Navbar';
-import Footer from '@/components/Footer';
-
-
-
-
-
+import ServiceBreadCrumb from "@/common/BreadCrumb/ServiceBreadCrumb";
+import MainCardContain from "@/common/Service/MainCardContain";
+import ServiceWorks from "@/common/Service/ServiceWorks";
+import { ServiceCards } from "@/common/Service/ServiceCards";
+import NavbarHeader from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const images = [
   { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
@@ -36,49 +31,44 @@ const cardData = Array.from({ length: 9 }, (_, index) => ({
 const Page: React.FC = () => {
   return (
     <>
-     <NavbarHeader/>
-      <div className='bg-[#11112B]  pl-4 relative'>
-        <div className='pt-10 md:pt-20'>
-          <div className='md:ml-32'>
+      <NavbarHeader />
+      <div className="bg-[#11112B]  pl-4 relative">
+        <div className="pt-10 md:pt-20">
+          <div className="md:ml-32">
             <ServiceBreadCrumb />
           </div>
 
-          <div className='flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0'>
-            <h1 className='text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-32'>
+          <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
+            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-32">
               Services
             </h1>
-            <div className='relative hidden md:block w-full  '>
+            <div className="relative hidden md:block w-full  ">
               {images.map((img, index) => (
-                <div
-                  key={index}
-                  className='absolute'
-                  style={randomPosition()}
-                >
+                <div key={index} className="absolute" style={randomPosition()}>
                   <Image
                     src={img.src}
                     alt={img.alt}
                     width={img.width}
                     height={img.height}
-                    className='object-contain'
+                    className="object-contain"
                   />
                 </div>
               ))}
             </div>
-            </div>
-     </div>
-       </div>  
+          </div>
+        </div>
+      </div>
 
-       {/* <MainCardContain/> */}
-       <div className='bg-[#11112B] md:p-28'>
-        
-    <ServiceCards/>
-   </div> 
-   <div className='bg-[#11112B]'>
-   <ServiceWorks/>
-   </div>
-   <Footer/>
+      {/* <MainCardContain/> */}
+      <div className="bg-[#11112B] md:p-28">
+        <ServiceCards />
+      </div>
+      <div className="bg-[#11112B]">
+        <ServiceWorks />
+      </div>
+      <Footer />
     </>
   );
-}
+};
 
 export default Page;

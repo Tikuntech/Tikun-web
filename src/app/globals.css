@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body {
+  font-family: 'Poppins', sans-serif;
+}
 h2 {
   color: #92DEED; /* This could override Tailwind's text color */
 }
