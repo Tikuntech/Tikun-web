@@ -3,6 +3,7 @@ import { HoverEffect } from "../../components/ui/card-hover-effect";
 import { fetchProjects } from "@/services/api";
 import Loading from "@/components/Loading/Loading";
 
+
 export function ProjectCards() {
     const { data, error, isLoading } = useQuery('project', fetchProjects);
     return isLoading? (

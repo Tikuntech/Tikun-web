@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LoadingPage() {
   return (
-    <div className="fixed inset-0 w-full h-screen bg-slate-100 z-50 backdrop-blur flex flex-col justify-center items-center">
+    <div className="fixed inset-0 w-full h-screen bg-[#11112B] z-50 backdrop-blur flex flex-col justify-center items-center">
       
         <svg
           className=" size-20 sm:size-28 -translate-y-28"
@@ -27,7 +27,7 @@ export default function LoadingPage() {
               d="M24.3 30C11.4 30 5 43.3 5 50s6.4 20 19.3 20c19.3 0 32.1-40 51.4-40C88.6 30 95 43.3 95 50s-6.4 20-19.3 20C56.4 70 43.6 30 24.3 30z"
               strokeDasharray="42.76482137044271 42.76482137044271"
               strokeWidth="20"
-              stroke="#0ea5e9"
+              stroke="#92DEED"
               fill="none"
             >
               <animate
@@ -40,7 +40,7 @@ export default function LoadingPage() {
             </path>
           </g>
         </svg>
-        <p className="text-sm sm:text-base md:text-xl  -translate-y-24">Loading...</p>
+        <p className="text-sm sm:text-base md:text-xl  -translate-y-24 text-white">Loading...</p>
       
     </div>
   );

@@ -6,10 +6,13 @@ import { useState } from "react";
 import BoxImg from "../../../public/Blog/colorblog.svg";
 import BlogBreadCrumb from "@/common/BreadCrumb/BlogBreadCrumb";
 import PageinationCard from "@/common/Blog/PageinationCard";
-import BlogFooterWire from '../../../public/Blog/BlogFooterWire.svg';
+import BlogFooterWire from "../../../public/Blog/BlogFooterWire.svg";
 import FlexSection from "@/common/Blog/FlexSection";
 import BlogFooter from "@/common/Blog/BlogFooter";
 import ReadyCard from "@/common/Blog/ReadyCard";
+import { fetchBlogs } from "@/services/api";
+import { useQuery } from "react-query";
+import Loading from "./loading";
 
 const images = [
   { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
@@ -25,8 +28,8 @@ const randomPosition = () => ({
 
 export default function page() {
   const [searchTerm, setSearchTerm] = useState("");
-
-  return (
+ 
+  return   (
     <>
       <main className="min-h-screen bg-[#D5D9E5]">
         <LightNavbar />
@@ -49,8 +52,6 @@ export default function page() {
                     height={img.height}
                     className="object-contain"
                   />
-
-
                 </div>
               ))}
             </div>
@@ -68,10 +69,8 @@ export default function page() {
         <div className="items-center justify-center">
           <ReadyCard />
         </div>
-      
-    <BlogFooter />
-    
-        
+
+        <BlogFooter />
       </main>
     </>
   );

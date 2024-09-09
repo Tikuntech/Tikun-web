@@ -29,12 +29,12 @@ const ClientStory: React.FC = () => {
               “Tikuntech’s cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”
             </p>
             <div className='flex items-end justify-end w-full'>
-              <div className='flex text-right'>
+              <div className='flex text-right gap-2'>
                 <div className='text-white'>
                   <span className='block text-lg font-semibold'>Tom Johnson</span>
                   <span className='block text-sm'>CIO of Mika Medika Healthcare</span>
                 </div>
-                <div className='h-12 w-12 rounded-full bg-white ml-4'></div>
+                <div className='h-12 w-12 rounded-full bg-white ml-10'></div>
               </div>
             </div>
           </div>
@@ -50,9 +50,9 @@ const ClientStory: React.FC = () => {
             </p>
             <div className='flex items-end justify-end w-full'>
               <div className='flex items-center justify-end w-full'>
-                <div className='text-right'>
+                <div className='text-right  gap-2'>
                   <span className='block text-lg font-semibold'>Jane Doe</span>
-                  <span className='block text-sm'>COO of DEF Manufacturing</span>
+                  <span className='block text-sm'>COO of  Manufacturing</span>
                 </div>
                 <div className='h-12 w-12 rounded-full bg-white ml-4'></div>
               </div>
