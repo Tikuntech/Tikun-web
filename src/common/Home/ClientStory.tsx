@@ -43,7 +43,7 @@ const ClientStory: React.FC = () => {
                     CIO of Mika Medika Healthcare
                   </span>
                 </div>
-                <div className="h-12 w-12 rounded-full bg-white ml-10"></div>
+                <div className="h-12 w-12 rounded-full bg-white ml-5"></div>
               </div>
             </div>
           </div>
@@ -63,12 +63,12 @@ const ClientStory: React.FC = () => {
               improve efficiency, saving us time and money.”
             </p>
             <div className="flex items-end justify-end w-full">
-              <div className="flex items-center justify-end w-full">
-                <div className="text-right  gap-2 mr-4">
+              <div className="flex items-center justify-end w-full md:gap-2">
+                <div className="text-right ">
                   <span className="block text-lg font-semibold">Jane Doe</span>
                   <span className="block md:text-sm text-xs">COO of Manufacturing</span>
                 </div>
-                <div className="h-12 w-12 rounded-full bg-white ml-4"></div>
+                <div className="h-12 w-12 rounded-full bg-white ml-5"></div>
               </div>
             </div>
           </div>

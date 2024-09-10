@@ -6,7 +6,6 @@
 
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-/* @import './base.css'; */
 @import 'tailwindcss/utilities';
 
 
@@ -15,6 +14,16 @@ body {
 }
 h2 {
   color: #92deed; /* This could override Tailwind's text color */
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+
+*:before,
+*:after {
+  @apply cursor-default;
 }
 /* 
 @media (prefers-color-scheme: light) {

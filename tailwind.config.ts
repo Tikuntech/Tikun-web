@@ -10,15 +10,22 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/common/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/Home/**/*.{js,ts,jsx,tsx,mdx}',
+    
   ],
  
   darkMode: 'class',
   theme: {
     extend: {
+      cursor: {
+        default: 'default',
+        pointer: 'pointer',
+      },
       colors: {
         'custom-blue': '#92DEED', // Define your custom color
         'custom-black': 'rgba(17, 17, 43, 1)',
       },
+      
       // screens: {
       //   mobile: '320px',
       //   mobileM: '475px',
@@ -29,11 +36,11 @@ const config: Config = {
       //   laptop: '1024px',
       //   laptopM: '1280px',
       // },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      // backgroundImage: {
+      //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      //   'gradient-conic':
+      //     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      // },
       // fontFamily : {
       //   'sans': ['IranSans', 'ui-sans-serif', 'system-ui']
       // }
@@ -53,8 +60,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-  // plugins: [require('@tailwindcss/line-clamp'), addVariablesForColors],
+  // plugins: [],
+  plugins: [require('@tailwindcss/line-clamp'), addVariablesForColors],
 }
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme('colors'))
