@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const ContactForm: React.FC = () => {
   return (
@@ -27,7 +27,10 @@ const ContactForm: React.FC = () => {
           aria-label="Enter Your Email Address"
         />
       </div>
-      <label htmlFor="message" className="z-10 mt-2 text-xs font-bold leading-3">
+      <label
+        htmlFor="message"
+        className="z-10 mt-2 text-xs font-bold leading-3"
+      >
         Message
       </label>
       <textarea
@@ -44,12 +47,15 @@ const ContactForm: React.FC = () => {
             promotions through tickuntech newsletter.
           </span>
         </label>
-        <button type="submit" className="px-4 py-2.5 text-xs font-bold leading-none whitespace-nowrap rounded-md bg-slate-900">
+        <button
+          type="submit"
+          className="px-4 py-2.5 text-xs font-bold leading-none whitespace-nowrap rounded-md bg-slate-900"
+        >
           SUBMIT
         </button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

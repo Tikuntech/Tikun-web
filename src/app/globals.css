@@ -1,14 +1,20 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* @import './base.css'; */
+@import 'tailwindcss/utilities';
+
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 h2 {
-  color: #92DEED; /* This could override Tailwind's text color */
+  color: #92deed; /* This could override Tailwind's text color */
 }
 /* 
 @media (prefers-color-scheme: light) {

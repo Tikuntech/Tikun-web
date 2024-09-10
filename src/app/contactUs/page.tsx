@@ -1,26 +1,26 @@
-"use client";
-import React from "react";
-import Image from "next/image";
-import BoxImg from "../../../public/aboutus/Vector.svg";
-import ContactBreadcrumb from "@/common/BreadCrumb/ContactBreadCrumb";
-import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import ContactLocation from "@/common/Contact/ContactLocation";
-import ContacMassage from "@/common/Contact/ContacMassage";
-import NeedItSolution from "@/common/NeedItSolution";
-import NavbarHeader from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import ContactMobile from "@/common/Contact/contactMobile";
+'use client'
+import React from 'react'
+import Image from 'next/image'
+import BoxImg from '../../../public/aboutus/Vector.svg'
+import ContactBreadcrumb from '@/common/BreadCrumb/ContactBreadCrumb'
+import { PhoneIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
+import ContactLocation from '@/common/Contact/ContactLocation'
+import ContacMassage from '@/common/Contact/ContacMassage'
+import NeedItSolution from '@/common/NeedItSolution'
+import NavbarHeader from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import ContactMobile from '@/common/Contact/contactMobile'
 
 const images = [
-  { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
-  { src: BoxImg, alt: "Graphic 2", width: 40, height: 40 },
-  { src: BoxImg, alt: "Graphic 3", width: 70, height: 50 },
-];
+  { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
+  { src: BoxImg, alt: 'Graphic 2', width: 40, height: 40 },
+  { src: BoxImg, alt: 'Graphic 3', width: 70, height: 50 },
+]
 
 const randomPosition = () => ({
   top: `${Math.random() * 20 + 10}%`,
   left: `${Math.random() * 60 + 10}%`,
-});
+})
 
 const Page: React.FC = () => {
   return (
@@ -88,7 +88,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

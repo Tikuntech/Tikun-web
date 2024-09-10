@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import React from 'react'
+import Link from 'next/link'
+import { RiArrowRightSLine } from 'react-icons/ri'
 
 const ProjectBreadCrumb: React.FC = () => {
   return (
@@ -16,12 +16,10 @@ const ProjectBreadCrumb: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-gray-500" />
         </li>
-        <li className="text-gray-500 text-sm font-medium">
-        Project
-        </li>
+        <li className="text-gray-500 text-sm font-medium">Project</li>
       </ol>
     </nav>
-  );
-};
+  )
+}
 
-export default ProjectBreadCrumb;
+export default ProjectBreadCrumb

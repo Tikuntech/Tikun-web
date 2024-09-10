@@ -1,32 +1,32 @@
-"use client";
-import React from "react";
-import BoxImg from "/public/aboutus/Vector.svg";
-import Image from "next/image";
+'use client'
+import React from 'react'
+import BoxImg from '/public/aboutus/Vector.svg'
+import Image from 'next/image'
 
-import ServiceBreadCrumb from "@/common/BreadCrumb/ServiceBreadCrumb";
-import MainCardContain from "@/common/Service/MainCardContain";
-import ServiceWorks from "@/common/Service/ServiceWorks";
-import { ServiceCards } from "@/common/Service/ServiceCards";
-import NavbarHeader from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import ServiceBreadCrumb from '@/common/BreadCrumb/ServiceBreadCrumb'
+import MainCardContain from '@/common/Service/MainCardContain'
+import ServiceWorks from '@/common/Service/ServiceWorks'
+import { ServiceCards } from '@/common/Service/ServiceCards'
+import NavbarHeader from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const images = [
-  { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
-  { src: BoxImg, alt: "Graphic 2", width: 40, height: 40 },
+  { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
+  { src: BoxImg, alt: 'Graphic 2', width: 40, height: 40 },
 
   // Add more images as needed
-];
+]
 
 const randomPosition = () => ({
   top: `${Math.random() * 10 + 10}%`,
   left: `${Math.random() * 80 + 10}%`,
-});
+})
 
 const cardData = Array.from({ length: 9 }, (_, index) => ({
   title: `Card ${index + 1}`,
   description: `Description for card ${index + 1}`,
   imageUrl: BoxImg.src,
-}));
+}))
 
 const Page: React.FC = () => {
   return (
@@ -34,12 +34,12 @@ const Page: React.FC = () => {
       <NavbarHeader />
       <div className="bg-[#11112B]  pl-4 relative">
         <div className="pt-10 md:pt-20">
-          <div className="md:ml-32">
+          <div className="md:ml-20">
             <ServiceBreadCrumb />
           </div>
 
-          <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-32">
+          <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-4 md:space-y-0">
+            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-20">
               Services
             </h1>
             <div className="relative hidden md:block w-full  ">
@@ -60,7 +60,7 @@ const Page: React.FC = () => {
       </div>
 
       {/* <MainCardContain/> */}
-      <div className="bg-[#11112B] md:p-28">
+      <div className="bg-[#11112B] ">
         <ServiceCards />
       </div>
       <div className="bg-[#11112B]">
@@ -68,7 +68,7 @@ const Page: React.FC = () => {
       </div>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
