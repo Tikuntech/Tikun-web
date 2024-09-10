@@ -20,7 +20,7 @@ const getRandomPosition = () => ({
 
 const NeedItSolution: React.FC = () => {
   return (
-    <div className="relative md:h-screen overflow-hidden flex flex-col items-center justify-center bg-[#11112B]">
+    <div className="relative md:h-full overflow-hidden flex flex-col items-center justify-center bg-[#11112B]">
       <Image
         src={backgroundImg}
         alt="Background pattern"
@@ -30,20 +30,25 @@ const NeedItSolution: React.FC = () => {
         priority
         className="absolute inset-0 "
       />
-      <h1 className="relative z-10 text-white md:text-6xl text-3xl font-bold text-center md:mb-10 pt-10">
+      <h1 className="relative z-10 text-white md:text-6xl text-3xl font-bold text-center md:mb-10 pt-20">
         Need IT Solutions?
       </h1>
       <h1 className="relative z-10 md:text-6xl font-bold mt-5 text-white text-center text-3xl ">
         Let’s <span className="font-thin italic ">start now.</span>
       </h1>
 
-      <div className="mt-20">
-        <button className="cursor-pointer  text-white bg-[#11112B] p-3   rounded-lg border border-white flex items-center justify-center">
+    
+        {/* <button className="cursor-pointer  text-white bg-[#11112B] p-3   rounded-lg border border-white flex items-center justify-center">
           GET FREE CONSULTATION 
           <Image src={HomeArrowIcon} alt='HomeArrowIcon ' className='ml-2'/>
+        </button> */}
+         <button className="cursor-pointer mt-10  md:mb-28  text-white p-3 bg-[#11112B]   rounded-lg border border-white flex items-center justify-center">
+         GET FREE CONSULTATION  
+          <Image src={HomeArrowIcon} alt='HomeArrowIcon' className='pl-4'/>
+       
         </button>
       </div>
-    </div>
+   
   )
 }
 

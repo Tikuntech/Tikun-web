@@ -31,7 +31,7 @@ export default function page() {
     <>
       <main className="min-h-screen bg-[#D5D9E5]">
         <LightNavbar />
-        <div className="pt-10 md:pt-20 p-4">
+        <div className="pt-10 md:pt-20 p-5">
           <div className="md:ml-20">
             <BlogBreadCrumb />
           </div>
@@ -59,16 +59,18 @@ export default function page() {
           <div className="md:w-full">
             <PageinationCard />
           </div>
-          <div className="md:w-1/2 p-4">
+          <div className="md:w-1/2 p-6">
             <FlexSection />
           </div>
         </div>
 
-        <div className="items-center justify-center">
+        <div className="items-center justify-center p-6">
           <ReadyCard />
         </div>
-
-        <BlogFooter />
+<div className='p-6'>
+<BlogFooter />
+</div>
+       
       </main>
     </>
   )

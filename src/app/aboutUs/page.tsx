@@ -102,7 +102,7 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-      <footer className="md:hidden flex flex-col items-center gap-5  p-10 bg-[#11112B]  ">
+      <footer className="md:hidden flex flex-col items-center gap-5  p-10 bg-[#11112B] -mb-10 md:-mb-0 ">
         {/* First Row: 3 logos */}
         <div className="flex justify-center gap-8 mb-4 ml">
           <div className="w-24 h-12">

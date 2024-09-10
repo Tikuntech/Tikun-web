@@ -32,7 +32,7 @@ const LeaveComment: React.FC = () => {
     <>
       {/* Form Overlay */}
       <div className="inset-0 p-4 md:p-10 flex flex-col items-center justify-center">
-        <div className="bg-[#11112B] p-8 rounded-lg shadow-md w-full max-w-lg">
+        <div className="bg-[#11112B] p-8 rounded-lg shadow-md w-full ">
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-white">
             Leave A Comment
           </h2>
@@ -41,7 +41,7 @@ const LeaveComment: React.FC = () => {
           <form onSubmit={handleSubmit} className="md:space-y-4 md:p-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h2 className="block text-sm font-medium text-custom-blue md:mb-4 md:pt-5">
+                <h2 className="block text-sm font-medium text-custom-blue ">
                   Name
                 </h2>
                 <input
@@ -55,7 +55,7 @@ const LeaveComment: React.FC = () => {
                 />
               </div>
               <div>
-                <h2 className="block text-sm font-medium text-custom-blue md:mb-4 md:pt-5">
+                <h2 className="block text-sm font-medium text-custom-blue ">
                   Email
                 </h2>
                 <input
@@ -72,8 +72,8 @@ const LeaveComment: React.FC = () => {
 
             <div>
               <h2
-                className="block text-sm font-medium text-custom-blue md:mb-4 md:pt-10"
-                style={{ marginTop: 20 }}
+                className="block text-sm font-medium text-custom-blue "
+              
               >
                 Message
               </h2>
@@ -99,7 +99,7 @@ const LeaveComment: React.FC = () => {
                 />
                 <label
                   htmlFor="consent"
-                  className="text-white text-xs md:text-base pl-5"
+                  className="text-white text-xs md:text-sm pl-5"
                 >
                   By ticking this box, I am consenting to be sent monthly
                   articles and promotions through Tickuntech newsletter.
@@ -109,7 +109,7 @@ const LeaveComment: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`px-4 py-2 w-full md:w-0 text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
+                className={`px-4 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
                   isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-custom-blue focus:ring-2'

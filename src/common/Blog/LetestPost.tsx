@@ -8,7 +8,7 @@ const LetestPost = () => {
 
         <div className="flex  w-full mt-4 gap-5">
           <div className="rounded-2xl shadow-md p-8 w-20 bg-[#11112B]  mt-4 flex flex-col items-start text-black" />
-          <div className="flex flex-col mt-5 md:pl-20">
+          <div className="flex flex-col mt-5 ">
             <span className="text-[#11112B] text-sm md:text-base">
               10 July 2023
             </span>
@@ -20,7 +20,7 @@ const LetestPost = () => {
         </div>
         <div className="flex  w-full mt-4 gap-5">
           <div className="rounded-2xl shadow-md p-8 w-20 bg-[#11112B]  mt-4 flex flex-col items-start text-black" />
-          <div className="flex flex-col mt-5 md:pl-20">
+          <div className="flex flex-col mt-5 ">
             <span className="text-[#11112B] text-sm md:text-base">
               29 March 2023
             </span>
@@ -34,7 +34,7 @@ const LetestPost = () => {
         </div>
         <div className="flex  w-full mt-4 gap-5">
           <div className="rounded-2xl shadow-md p-8 w-20 bg-[#11112B]  mt-4 flex flex-col items-start text-black" />
-          <div className="flex flex-col mt-5 md:pl-20">
+          <div className="flex flex-col mt-5">
             <span className="text-[#11112B] text-sm md:text-base">
               10 December 2023
             </span>
