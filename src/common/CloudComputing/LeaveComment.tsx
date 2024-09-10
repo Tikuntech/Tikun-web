@@ -36,8 +36,6 @@ const LeaveComment: React.FC = () => {
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-white">
             Leave A Comment
           </h2>
-
-          {/* Form */}
           <form onSubmit={handleSubmit} className="md:space-y-4 md:p-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
