@@ -88,12 +88,12 @@ export const Card = ({
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
         isHovered
-          ? 'text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105  cursor-pointer '
-          : 'bg-gradient-to-b from-slate-400 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
+          ? 'text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue  hover:shadow-lg  cursor-pointer '
+          : 'bg-gradient-to-b from-slate-400 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue  hover:shadow-lg  cursor-pointer',
         className
       )}
     >
-      <div className="relative z-50">
+      <div className="relative ">
         <div className="p-4">{children}</div>
       </div>
     </div>

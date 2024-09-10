@@ -6,13 +6,11 @@ import ServiceSection from '@/common/Home/ServiceSection'
 import NeedItSolution from '@/common/NeedItSolution'
 import Footer from '@/components/Footer'
 import HeroPage from '@/components/Home'
-import HomePage from '@/components/Home'
 import NavbarHeader from '@/components/Navbar'
-import Image from 'next/image'
-
+import './globals.css'
 export default function Home() {
   return (
-    <>
+    <main>
       <NavbarHeader />
       <HeroPage />
       <BelievePage />
@@ -22,6 +20,6 @@ export default function Home() {
       <BlogSection />
       <NeedItSolution />
       <Footer />
-    </>
+    </main>
   )
 }

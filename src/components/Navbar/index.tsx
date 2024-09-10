@@ -14,7 +14,7 @@ const NavbarHeader: React.FC = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 md:p-10">
         <div className="relative flex items-center justify-between h-16">
           {/* Mobile menu button */}
-          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden ">
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -104,10 +104,10 @@ const NavbarHeader: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed drawer inset-0 bg-black bg-opacity-50 z-40 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         id="mobile-menu"
       >
-        <div className="relative w-64 bg-[#11112B] h-full">
+        <div className="relative w-64 bg-[#11112B] h-full z-50"> {/* High z-index for the drawer */}
           <button
             type="button"
             className="absolute top-4 right-4 text-gray-400 hover:text-white"

@@ -7,8 +7,6 @@ import Footer from '@/components/Footer'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import NextTopLoader from 'nextjs-toploader'
 import { Poppins } from 'next/font/google'
-// import { ToastContainer } from "react-toastify"
-// import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ['latin'] })
 const client = new QueryClient()
@@ -47,11 +45,7 @@ export default function RootLayout({
           {/* <NavbarHeader/> */}
           {children}
         </QueryClientProvider>
-        {/* <ToastContainer 
-                className='h-[80vh]' 
-                newestOnTop={true}
-            /> */}
-        {/* <Footer/> */}
+    
       </body>
     </html>
   )
