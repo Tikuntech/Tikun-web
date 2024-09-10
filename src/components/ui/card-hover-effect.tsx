@@ -1,34 +1,34 @@
-"use client";
-import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import Link from "next/link";
-import { useState } from "react";
-import HoverIcon from "/public/Project/ProjectIsHoverd.svg";
-import { FiSlack } from "react-icons/fi";
+'use client'
+import { cn } from '@/lib/utils'
+import { AnimatePresence, motion } from 'framer-motion'
+import Link from 'next/link'
+import { useState } from 'react'
+import HoverIcon from '/public/Project/ProjectIsHoverd.svg'
+import { FiSlack } from 'react-icons/fi'
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
-    title: string;
-    description: string;
-    Link: string;
-  }[];
-  className?: string;
+    title: string
+    description: string
+    Link: string
+  }[]
+  className?: string
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
   const handleTouchStart = (index: number) => {
-    setActiveIndex(index);
+    setActiveIndex(index)
     // Remove active state after touch
-    setTimeout(() => setActiveIndex(null), 2000);
-  };
+    setTimeout(() => setActiveIndex(null), 2000)
+  }
 
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10",
+        'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10',
         className
       )}
     >
@@ -44,15 +44,15 @@ export const HoverEffect = ({
           {hoveredIndex === idx ? (
             <Card>
               <h1 className="text-black font-normal mt-4 text-center">
-              {item.title}
+                {item.title}
               </h1>
               <FiSlack className="text-white text-center block mx-auto mt-4" />
               <h1 className="text-white font-bold mt-4 text-center text-3xl">
-              {item.title}
+                {item.title}
               </h1>
-             
-                 <p className="text-xs text-center mt-10 line-clamp-3">
-                 {item.description}
+
+              <p className="text-xs text-center mt-10 line-clamp-3">
+                {item.description}
               </p>
               <div className="flex justify-center mt-6">
                 <button className="bg-black text-white p-2 rounded-md">
@@ -73,17 +73,17 @@ export const HoverEffect = ({
         </Link>
       ))}
     </div>
-  );
-};
+  )
+}
 
 export const Card = ({
   className,
   children,
 }: {
-  className?: string;
-  children: React.ReactNode;
+  className?: string
+  children: React.ReactNode
 }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false)
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
@@ -95,11 +95,11 @@ export const Card = ({
       className={
         isHovered
           ? cn(
-              "  text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer",
+              '  text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer',
               className
             )
           : cn(
-              " bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer",
+              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer',
               className
             )
       }
@@ -125,40 +125,40 @@ export const Card = ({
                 </div>
             )} */}
     </div>
-  );
-};
+  )
+}
 
 export const CardTitle = ({
   className,
   children,
 }: {
-  className?: string;
-  children: React.ReactNode;
+  className?: string
+  children: React.ReactNode
 }) => {
   return (
     <h4
-      className={cn("text-white text-3xl font-bold tracking-wide", className)}
+      className={cn('text-white text-3xl font-bold tracking-wide', className)}
     >
       {children}
     </h4>
-  );
-};
+  )
+}
 
 export const CardDescription = ({
   className,
   children,
 }: {
-  className?: string;
-  children: React.ReactNode;
+  className?: string
+  children: React.ReactNode
 }) => {
   return (
     <p
       className={cn(
-        " text-white tracking-wide leading-relaxed text-sm  line-clamp-3",
+        ' text-white tracking-wide leading-relaxed text-sm  line-clamp-3',
         className
       )}
     >
       {children}
     </p>
-  );
-};
+  )
+}

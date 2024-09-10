@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import React from 'react'
+import Link from 'next/link'
+import { RiArrowRightSLine } from 'react-icons/ri'
 
 const ContactBreadcrumb: React.FC = () => {
   return (
@@ -16,12 +16,10 @@ const ContactBreadcrumb: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-gray-500" />
         </li>
-        <li className="text-gray-500 text-sm font-medium">
-          Contact Us
-        </li>
+        <li className="text-gray-500 text-sm font-medium">Contact Us</li>
       </ol>
     </nav>
-  );
-};
+  )
+}
 
-export default ContactBreadcrumb;
+export default ContactBreadcrumb

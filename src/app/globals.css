@@ -1,36 +1,46 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* 
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
+button {
+  /* background-color: blue !important;
+  color: white !important; */
+}
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 h2 {
-  color: #92DEED; /* This could override Tailwind's text color */
-}
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-/* 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #92deed; /* This could override Tailwind's text color */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
+button {
+  @apply cursor-pointer;
+  cursor: pointer !important;
+}
+
+.button {
+  cursor: pointer !important;
+}
+
+
+*:before,
+*:after {
+  @apply cursor-default;
+}
+
+button:disabled {
+  cursor: not-allowed; /* Override default disabled behavior */
+}

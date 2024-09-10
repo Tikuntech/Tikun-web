@@ -1,21 +1,21 @@
-"use client";
-import React, { useState } from 'react';
-import { FaArrowRightLong } from 'react-icons/fa6';
+'use client'
+import React, { useState } from 'react'
+import { FaArrowRightLong } from 'react-icons/fa6'
 
 const MobileFooterEmail: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
+  const [email, setEmail] = useState<string>('')
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
-  };
+    setEmail(event.target.value)
+  }
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Email submitted:', email);
-  };
+    event.preventDefault()
+    console.log('Email submitted:', email)
+  }
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex items-center">
+    <form onSubmit={handleSubmit} className="relative flex items-center w-full">
       <input
         type="email"
         placeholder="Enter your email"
@@ -31,7 +31,7 @@ const MobileFooterEmail: React.FC = () => {
         <FaArrowRightLong className="text-[#11112B]" />
       </button>
     </form>
-  );
-};
+  )
+}
 
-export default MobileFooterEmail;
+export default MobileFooterEmail

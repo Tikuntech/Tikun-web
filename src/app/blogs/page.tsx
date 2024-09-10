@@ -1,45 +1,43 @@
-"use client";
-import { useState } from "react";
-import LightNavbar from "@/components/LightNavbar";
-import Head from "next/head";
-import Image from "next/image";
-import BoxImg from "/public/Blog/colorblog.svg";
-import BlogBreadCrumb from "@/common/BreadCrumb/BlogBreadCrumb";
-import PageinationCard from "@/common/Blog/PageinationCard";
-import BlogFooterWire from "/public/Blog/BlogFooterWire.svg";
-import FlexSection from "@/common/Blog/FlexSection";
-import BlogFooter from "@/common/Blog/BlogFooter";
-import ReadyCard from "@/common/Blog/ReadyCard";
-import { fetchBlogs } from "@/services/api";
-import { useQuery } from "react-query";
-import Loading from "./loading";
+'use client'
+import { useState } from 'react'
+import LightNavbar from '@/components/LightNavbar'
+import Head from 'next/head'
+import Image from 'next/image'
+import BoxImg from '/public/Blog/colorblog.svg'
+import BlogBreadCrumb from '@/common/BreadCrumb/BlogBreadCrumb'
+import PageinationCard from '@/common/Blog/PageinationCard'
+import BlogFooterWire from '/public/Blog/BlogFooterWire.svg'
+import FlexSection from '@/common/Blog/FlexSection'
+import BlogFooter from '@/common/Blog/BlogFooter'
+import ReadyCard from '@/common/Blog/ReadyCard'
+import { fetchBlogs } from '@/services/api'
+import { useQuery } from 'react-query'
+import Loading from './loading'
 
 const images = [
-  { src: BoxImg, alt: "Graphic 1", width: 30, height: 40 },
-  { src: BoxImg, alt: "Graphic 2", width: 40, height: 40 },
-  { src: BoxImg, alt: "Graphic 3", width: 40, height: 40 },
+  { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
+  { src: BoxImg, alt: 'Graphic 2', width: 40, height: 40 },
+  { src: BoxImg, alt: 'Graphic 3', width: 40, height: 40 },
   // Add more images as needed
-];
+]
 
 const randomPosition = () => ({
   top: `${Math.random() * 60 + 10}%`,
   left: `${Math.random() * 50 + 10}%`,
-});
+})
 
 export default function page() {
-
- 
-  return   (
+  return (
     <>
       <main className="min-h-screen bg-[#D5D9E5]">
         <LightNavbar />
-        <div className="pt-10 md:pt-20">
-          <div className="md:ml-32">
+        <div className="pt-10 md:pt-20 p-5">
+          <div className="md:ml-20">
             <BlogBreadCrumb />
           </div>
 
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-7xl text-[#11112B] font-bold flex-shrink-0 md:ml-32 mt-5">
+            <h1 className="text-4xl md:text-7xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
               Blog
             </h1>
             <div className="relative hidden md:block w-full">
@@ -61,17 +59,19 @@ export default function page() {
           <div className="md:w-full">
             <PageinationCard />
           </div>
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 p-6">
             <FlexSection />
           </div>
         </div>
 
-        <div className="items-center justify-center">
+        <div className="items-center justify-center p-6">
           <ReadyCard />
         </div>
-
-        <BlogFooter />
+<div className='p-6'>
+<BlogFooter />
+</div>
+       
       </main>
     </>
-  );
+  )
 }

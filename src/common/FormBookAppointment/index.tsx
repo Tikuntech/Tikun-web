@@ -1,45 +1,45 @@
-import React, { useState } from "react";
-import InputForm from "../InputForm/InputForm";
+import React, { useState } from 'react'
+import InputForm from '../InputForm/InputForm'
 
 type BookAppointmentData = {
-  name: string;
-  email: string;
-  service: string;
-  department: string;
-  message: string;
-};
+  name: string
+  email: string
+  service: string
+  department: string
+  message: string
+}
 
 type FormBookAppointmentProps = {
-  addStylesToForm?: string;
-};
+  addStylesToForm?: string
+}
 
 const FormBookAppointment = ({
-  addStylesToForm = "",
+  addStylesToForm = '',
 }: FormBookAppointmentProps) => {
   const [appointmentData, setAppointmentData] = useState<BookAppointmentData>({
-    name: "",
-    email: "",
-    service: "",
-    department: "",
-    message: "",
-  });
+    name: '',
+    email: '',
+    service: '',
+    department: '',
+    message: '',
+  })
 
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
     >
   ) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    setAppointmentData({ ...appointmentData, [field]: value });
-  };
+    const field = e.target.name
+    const value = e.target.value
+    setAppointmentData({ ...appointmentData, [field]: value })
+  }
 
   const handleSubmit = () => {
     // processing here...
-    console.log(JSON.stringify(appointmentData));
+    console.log(JSON.stringify(appointmentData))
 
     // navigate("/navy-landing-page")
-  };
+  }
 
   return (
     <>
@@ -47,7 +47,6 @@ const FormBookAppointment = ({
         onSubmit={(e) => e.preventDefault()}
         className={`flex flex-col gap-y-10 ${addStylesToForm}`}
       >
-     
         <div>
           {/* name, email, services and department */}
           <div className="grid grid-cols-1 mobileL:grid-cols-2 gap-x-10 gap-y-8">
@@ -149,7 +148,7 @@ const FormBookAppointment = ({
         </div>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default FormBookAppointment;
+export default FormBookAppointment

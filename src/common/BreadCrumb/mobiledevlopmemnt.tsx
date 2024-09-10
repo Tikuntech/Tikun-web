@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import React from 'react'
+import Link from 'next/link'
+import { RiArrowRightSLine } from 'react-icons/ri'
 
 const Mobiledevlopmemnt: React.FC = () => {
   return (
@@ -16,18 +16,16 @@ const Mobiledevlopmemnt: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-[#11112B]" />
         </li>
-        <li className="text-[#11112B] text-sm font-medium">
-        Services
-        </li>
+        <li className="text-[#11112B] text-sm font-medium">Services</li>
         <li>
           <RiArrowRightSLine className="text-[#11112B]" />
         </li>
         <li className="text-[#11112B] text-sm font-medium">
-        Mobile Development
+          Mobile Development
         </li>
       </ol>
     </nav>
-  );
-};
+  )
+}
 
-export default Mobiledevlopmemnt;
+export default Mobiledevlopmemnt

@@ -1,23 +1,23 @@
-import React from "react";
-import Image from "next/image";
-import CardImg1 from "/public/Blog/ImageCard1.png";
-import CardImg2 from "/public/Blog/imgCard2.png";
-import CardImg3 from "/public/Blog/ImgCard3.png";
-import { FaRegHeart } from "react-icons/fa";
-import Loading from "@/app/aboutUs/loading";
-import { fetchBlogs } from "@/services/api";
-import { useQuery } from "react-query";
-const moment = require('moment');
+import React from 'react'
+import Image from 'next/image'
+import CardImg1 from '/public/Blog/ImageCard1.png'
+import CardImg2 from '/public/Blog/imgCard2.png'
+import CardImg3 from '/public/Blog/ImgCard3.png'
+import { FaRegHeart } from 'react-icons/fa'
+
+import { fetchBlogs } from '@/services/api'
+import { useQuery } from 'react-query'
+import Loading from '@/components/Loading/Loading'
+const moment = require('moment')
 const PageinationCard: React.FC = () => {
-  const { data, error, isLoading } = useQuery("blog", fetchBlogs);
-  console.log("datadatadata",JSON.stringify(data?.data))
+  const { data, error, isLoading } = useQuery('blog', fetchBlogs)
+  console.log('datadatadata', JSON.stringify(data?.data))
   return isLoading ? (
     <Loading />
   ) : (
     <>
       <div className="flex flex-col gap-6 p-4">
-        {
-        // [
+        {// [
         //   {
         //     src: CardImg1,
         //     title: "The Benefits of Responsive Web Design for Business",
@@ -46,8 +46,8 @@ const PageinationCard: React.FC = () => {
         //     comments: 300,
         //   },
         // ].
-        
-        data?.data?.map((post:any, index:any) => (
+
+        data?.data?.map((post: any, index: any) => (
           <div
             key={index}
             className="bg-white rounded-md shadow-md overflow-hidden relative"
@@ -97,9 +97,11 @@ const PageinationCard: React.FC = () => {
                   />
                   <div className="min-w-0 flex-auto">
                     <p className="text-sm font-semibold leading-6 text-gray-900">
-                      {"Dheeraj"}
+                      {'Dheeraj'}
                     </p>
-                    <p className="text-gray-600 text-sm">{ moment(post?.createdAt).format('MMMM D, YYYY') }</p>
+                    <p className="text-gray-600 text-sm">
+                      {moment(post?.createdAt).format('MMMM D, YYYY')}
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-center justify-end mt-2">
@@ -128,7 +130,7 @@ const PageinationCard: React.FC = () => {
         </button>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default PageinationCard;
+export default PageinationCard

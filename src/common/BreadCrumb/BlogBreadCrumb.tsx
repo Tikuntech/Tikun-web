@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import React from 'react'
+import Link from 'next/link'
+import { RiArrowRightSLine } from 'react-icons/ri'
 
 const BlogBreadCrumb: React.FC = () => {
   return (
@@ -16,12 +16,10 @@ const BlogBreadCrumb: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-[#11112B]" />
         </li>
-        <li className="text-[#11112B] text-sm font-medium">
-        Blog
-        </li>
+        <li className="text-[#11112B] text-sm font-medium">Blog</li>
       </ol>
     </nav>
-  );
-};
+  )
+}
 
-export default BlogBreadCrumb;
+export default BlogBreadCrumb

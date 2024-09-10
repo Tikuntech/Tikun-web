@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 const ContactForm: React.FC = () => {
   return (
-    <form className="flex flex-col items-start self-center px-3.5 py-3.5 mt-12 w-full bg-teal-200 rounded-lg text-slate-900">
+    <form className="flex flex-col items-start self-center px-3.5 py-3.5 mt-12 w-full bg-teal-200 rounded-lg text-slate-900 h-full">
       <h2 className="text-xl font-bold">Send Us Message</h2>
       <p className="mt-1.5 text-xs leading-normal text-white">
         Have any questions regarding our services? Send us your message.
@@ -27,7 +27,10 @@ const ContactForm: React.FC = () => {
           aria-label="Enter Your Email Address"
         />
       </div>
-      <label htmlFor="message" className="z-10 mt-2 text-xs font-bold leading-3">
+      <label
+        htmlFor="message"
+        className="z-10 mt-2 text-xs font-bold leading-3"
+      >
         Message
       </label>
       <textarea
@@ -44,12 +47,15 @@ const ContactForm: React.FC = () => {
             promotions through tickuntech newsletter.
           </span>
         </label>
-        <button type="submit" className="px-4 py-2.5 text-xs font-bold leading-none whitespace-nowrap rounded-md bg-slate-900">
+        <button
+          type="submit"
+          className="px-4 py-2.5 text-xs font-bold leading-none whitespace-nowrap rounded-md bg-slate-900"
+        >
           SUBMIT
         </button>
       </div>
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

@@ -1,17 +1,17 @@
-import React, { HTMLInputTypeAttribute } from "react";
+import React, { HTMLInputTypeAttribute } from 'react'
 
 type InputFormProps = {
-  type?: HTMLInputTypeAttribute | undefined;
-  id: string;
-  name?: string;
-  placeholder: string;
-  label: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  value: string;
-};
+  type?: HTMLInputTypeAttribute | undefined
+  id: string
+  name?: string
+  placeholder: string
+  label: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  value: string
+}
 
 const InputForm = ({
-  type = "text",
+  type = 'text',
   id,
   name,
   placeholder,
@@ -41,7 +41,7 @@ const InputForm = ({
         duration-200 placeholder-primary"
       />
     </div>
-  );
-};
+  )
+}
 
-export default InputForm;
+export default InputForm

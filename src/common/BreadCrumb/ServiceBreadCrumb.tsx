@@ -1,6 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
-import { RiArrowRightSLine } from 'react-icons/ri';
+import React from 'react'
+import Link from 'next/link'
+import { RiArrowRightSLine } from 'react-icons/ri'
 
 const ServiceBreadCrumb: React.FC = () => {
   return (
@@ -16,12 +16,10 @@ const ServiceBreadCrumb: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-gray-500" />
         </li>
-        <li className="text-gray-500 text-sm font-medium">
-        Service
-        </li>
+        <li className="text-gray-500 text-sm font-medium">Service</li>
       </ol>
     </nav>
-  );
-};
+  )
+}
 
-export default ServiceBreadCrumb;
+export default ServiceBreadCrumb
