@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactForm: React.FC = () => {
   return (
-    <form className="flex flex-col items-start self-center px-3.5 py-3.5 mt-12 w-full bg-teal-200 rounded-lg text-slate-900">
+    <form className="flex flex-col items-start self-center px-3.5 py-3.5 mt-12 w-full bg-teal-200 rounded-lg text-slate-900 h-full">
       <h2 className="text-xl font-bold">Send Us Message</h2>
       <p className="mt-1.5 text-xs leading-normal text-white">
         Have any questions regarding our services? Send us your message.

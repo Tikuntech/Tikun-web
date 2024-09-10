@@ -15,7 +15,7 @@ const MobileFooterEmail: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="relative flex items-center">
+    <form onSubmit={handleSubmit} className="relative flex items-center w-full">
       <input
         type="email"
         placeholder="Enter your email"

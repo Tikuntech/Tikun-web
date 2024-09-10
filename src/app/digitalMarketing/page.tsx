@@ -39,7 +39,7 @@ export default function Home() {
         <Image src={DigitalMarketingImg} alt="Img " />
       </div>
 
-      <div className=" hidden md:flex justify-between p-5">
+      <div className=" hidden md:flex justify-between pl-12 pr-12">
         <div>
           <p className="text-xs">Y E A R</p>
           <p className="text-gray-500 font-medium">2022 - 2023</p>
@@ -87,7 +87,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="md:grid md:grid-cols-2 md:p-20 md:gap-10">
+      <div className="md:grid md:grid-cols-2 md:p-20 md:gap-10 p-2">
         <div className=" rounded-lg p-10">
           <h3 className="text-2xl font-bold mb-4 text-gray-800">Solutions</h3>
           <ul className="list-disc text-gray-600">
@@ -106,9 +106,9 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className=" rounded-xl shadow-md p-6">
+        <div className=" rounded-xl shadow-md p-4">
           <h3 className="text-2xl font-bold mb-4 text-gray-800">Strategy</h3>
-          <ul className="list-disc text-xl text-[#2D646E]">
+          <ul className="list-disc text-xl text-[#2D646E] p-6">
             <li>Marketing Data Analysis</li>
             <li>Search Engine Optimization</li>
             <li>Social Media Marketing</li>
@@ -119,7 +119,7 @@ export default function Home() {
 
       <main className="container mx-auto ">
         <section>
-          <h2 className="md:text-3xl text-2xl font-bold mb-4 text-gray-800 mt-10">
+          <h2 className="md:text-3xl text-2xl font-bold mb-4 text-gray-800 mt-10 p-4">
             Results
           </h2>
           <div className="md:grid md:grid-cols-3 md:gap-8">

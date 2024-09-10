@@ -35,7 +35,7 @@ const ProjectSection: React.FC = () => {
     width={600}
     height={300}
   />
-  <div className="absolute bottom-0 left-0 md:p-10">
+  <div className="absolute bottom-0 left-0 md:p-10 p-4">
     <h1 className="text-sm text-left md:mb-2">2 0 2 2</h1>
     <h1 className="text-3xl mb-5 font-bold">Uwang Corp.</h1>
   </div>

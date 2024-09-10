@@ -39,7 +39,7 @@ const ContactCard = () => {
         <div className="flex w-full mt-10 items-center">
           <Image src={CallIcon} alt="Call Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className="md:pl-20 " style={{ marginLeft: 20 }}>
+            <span className="md:pl-4 " >
               +XXXXXXXXXXX
             </span>
           </div>
@@ -47,7 +47,7 @@ const ContactCard = () => {
         <div className="flex w-full mt-4 items-center">
           <Image src={MailIcon} alt="Mail Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className="md:pl-20" style={{ marginLeft: 20 }}>
+            <span className="md:pl-4 " >
               hello@TIKUNTECH
             </span>
           </div>
@@ -55,10 +55,10 @@ const ContactCard = () => {
         <div className="flex w-full mt-4 items-center">
           <Image src={LocationIcon} alt="Location Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className="md:pl-20 w-1/2" style={{ marginLeft: 20 }}>
+            <span className=" w-1/2 md:pl-4 " >
               XXXXXXXXXXXXXXXXXXXXXX
             </span>
-            <span className="md:pl-20 w-1/2" style={{ marginLeft: 20 }}>
+            <span className=" w-1/2 md:pl-4 ">
               XXXXXXXXXXXXXXXXXX
             </span>
           </div>
