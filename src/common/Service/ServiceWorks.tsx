@@ -7,9 +7,9 @@ import ServiceRectangle from '../../../public/Service/steperRectangle.svg'
 import { Stepper } from '../stepper'
 const ServiceWorks: React.FC = () => {
   return (
-    <div className=" bg-gray-900 text-white py-12 px-4 flex justify-center ">
+    <div className=" bg-[#11112B] text-white py-12 px-4 flex justify-center ">
       <div className="w-full max-w-3xl">
-        <h1 className="text-4xl font-bold text-center mb-20">How It Works</h1>
+        <h1 className="text-4xl font-bold text-center mb-5">How It Works</h1>
         <Stepper/>
 
        

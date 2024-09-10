@@ -1,236 +1,162 @@
+
+import Image from 'next/image'
+import NotePadBox from '/public/Service/notepad.svg'
+import DescoveryIcon from '/public/Service/descovery_icon.svg'
+import PlanningIcon from '/public/Service/planningIcon.svg'
+import ConfirmIcon from '/public/Service/confirmIcon.svg'
+
 export const Stepper = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-[screen-xl] md:px-24 lg:px-8 lg:py-20 bg-[#11112B]">
+
+
+<div className="flex flex-col items-center">
+ 
+  <div className="w-7 h-7 bg-custom-blue rounded-full"></div>
+
+ 
+  <div className="w-1 h-32 bg-custom-blue"></div>
+
+  
+  <div className="w-7 h-7 bg-custom-blue rounded-full "></div>
+
+
+  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
+
+
+  <Image
+          src={DescoveryIcon}
+          alt="Location"
+          width={70}
+          height={70}
+          className="object-cover rounded-lg "
+        />
+</div>
+<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">01</h2>
+<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Discovery</h1>
+  
+
+
+<h2 className="text-xl  text-center mb-20  text-gray-200">We'll conduct a thorough analysis of your operations, market, and competition to
+identify the best solutions for you.</h2>
+
+</div>
+
+
+
+
+
+<div className="flex flex-col items-center">
+ 
+  <div className="w-7 h-7 bg-white rounded-full"></div>
+
+ 
+  <div className="w-1 h-32 bg-white"></div>
+
+  
+  <div className="w-7 h-7 bg-white rounded-full "></div>
+
+
+  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
+
+
+  <Image
+          src={PlanningIcon}
+          alt="Location"
+          width={70}
+          height={70}
+          className="object-cover rounded-lg "
+        />
+</div>
+<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">02</h2>
+<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Planning</h1>
+  
+
+
+<h2 className="text-xl  text-center mb-20  text-gray-200">Once we have a clear understanding,
+we develop a customized plan for the services and solutions we provide.</h2>
+
+</div>
+
+
+
+
+
+
+<div className="flex flex-col items-center">
+ 
+  <div className="w-7 h-7 bg-white rounded-full"></div>
+
+ 
+  <div className="w-1 h-32 bg-white"></div>
+
+  
+  <div className="w-7 h-7 bg-white rounded-full "></div>
+
+
+  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
+
+
+  <Image
+          src={NotePadBox}
+          alt="Location"
+          width={70}
+          height={70}
+          className="object-cover rounded-lg "
+        />
+</div>
+<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">03</h2>
+<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Development</h1>
+  
+
+
+<h2 className="text-xl  text-center mb-20  text-gray-200">We begin the design and development process, creating custom solutions for your specific business needs.</h2>
+
+</div>
+
+
+
+
+
+
+
+<div className="flex flex-col items-center">
+ 
+  <div className="w-7 h-7 bg-white rounded-full"></div>
+
+ 
+  <div className="w-1 h-32 bg-white"></div>
+
+  
+  <div className="w-7 h-7 bg-white rounded-full "></div>
+
+
+  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
+
+
+  <Image
+          src={ConfirmIcon}
+          alt="Location"
+          width={70}
+          height={70}
+          className="object-cover rounded-lg "
+        />
+</div>
+<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">04</h2>
+<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Implementation</h1>
+  
+
+
+<h2 className=" text-xl text-center mb-20  text-gray-200">We implement our solution into your business operations and integrate them with other systems and platforms.</h2>
+
+</div>
+
+
+
+
       
-      <div className="grid gap-6 row-gap-10 lg:grid-cols-2">
-        
-        <div className="lg:py-6 lg:pr-16">
-         
-          <div className="flex">
-           
-            <div className="flex flex-col items-center mr-4">
-        
-              <div>
-               
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full bg-black">
-                  
-                  <svg
-                    className="w-4 text-gray-600"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                  >
-                  
-                    <line
-                      fill="none"
-                      strokeMiterlimit="10"
-                      x1="12"
-                      y1="2"
-                      x2="12"
-                      y2="22"
-                    />
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit="10"
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="w-2 h-full bg-black " />
-            </div>
-            <div className="pt-1 pb-8">
-             
-              <p className="mb-2 text-lg font-bold">Step 1</p>{' '}
-              <p className="text-gray-700">
-               
-                All recipes are written using certain conventions, which define
-                the characteristics of common ingredients. The rules vary from
-                place to place.
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-            
-            <div className="flex flex-col items-center mr-4">
-              
-              <div>
-               
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full bg-black">
-                  
-                  <svg
-                    className="w-4 text-gray-600"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                  >
-                   
-                    <line
-                      fill="none"
-                      strokeMiterlimit="10"
-                      x1="12"
-                      y1="2"
-                      x2="12"
-                      y2="22"
-                    />
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit="10"
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="w-2 h-full bg-black" />
-            </div>
-            <div className="pt-1 pb-8">
-              
-              <p className="mb-2 text-lg font-bold">Step 2</p>
-              <p className="text-gray-700">
-                
-                The first mate and his Skipper too will do their very best to
-                make the others comfortable in their tropic island nest. Michael
-                Knight a young loner.
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-          
-            <div className="flex flex-col items-center mr-4">
-             
-              <div>
-               
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                 
-                  <svg
-                    className="w-4 text-gray-600"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                  >
-                    
-                    <line
-                      fill="none"
-                      strokeMiterlimit="10"
-                      x1="12"
-                      y1="2"
-                      x2="12"
-                      y2="22"
-                    />
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit="10"
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="w-px h-full bg-gray-300" />
-            </div>
-            <div className="pt-1 pb-8">
-             
-              <p className="mb-2 text-lg font-bold">Step 3</p>
-              <p className="text-gray-700">
-               
-                Tell them I hate them. Is the Space Pope reptilian!? Tell her
-                she looks thin. Hello, little man. I will destroy you!
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-           
-            <div className="flex flex-col items-center mr-4">
-             
-              <div>
-              
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                  
-                  <svg
-                    className="w-4 text-gray-600"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    viewBox="0 0 24 24"
-                  >
-                    
-                    <line
-                      fill="none"
-                      strokeMiterlimit="10"
-                      x1="12"
-                      y1="2"
-                      x2="12"
-                      y2="22"
-                    />
-                    <polyline
-                      fill="none"
-                      strokeMiterlimit="10"
-                      points="19,15 12,22 5,15"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div className="w-px h-full bg-gray-300" />
-            </div>
-            <div className="pt-1 pb-8">
-             
-              <p className="mb-2 text-lg font-bold">Step 4</p>
-              <p className="text-gray-700">
-               
-                If one examines precultural libertarianism, one is faced with a
-                choice: either accept rationalism or conclude that context is a
-                product.
-              </p>
-            </div>
-          </div>
-          <div className="flex">
-            
-            <div className="flex flex-col items-center mr-4">
-             
-              <div>
-               
-                <div className="flex items-center justify-center w-10 h-10 border rounded-full">
-                  
-                  <svg
-                    className="w-6 text-gray-600"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                   
-                    <polyline
-                      fill="none"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeMiterlimit="10"
-                      points="6,12 10,16 18,8"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="pt-1">
-            
-              <p className="mb-2 text-lg font-bold">Success</p>
-              <p className="text-gray-700" />
-            </div>
-          </div>
-        </div>
-        <div className="relative">
-         
-          <img
-            className="inset-0 object-cover object-bottom w-full rounded shadow-lg h-96 lg:absolute lg:h-full"
-            src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
-          />
-        </div>
-      </div>
+
     </div>
   )
 }

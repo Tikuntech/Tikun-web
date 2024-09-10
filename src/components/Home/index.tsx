@@ -9,6 +9,7 @@ import SubTextImg from '/public/Home/Frame 2.png'
 import BelievePage from '@/common/Home/BelievePage'
 // import MainHome from '@/common/Home/MainHome'
 import HomeArrowIcon from '../../../public/Home/HomeArrowIcon.svg'
+import { ExploreNowButton } from '@/common/ExploreNowButton'
 
 // Array of image properties
 const images = [
@@ -56,11 +57,8 @@ const HeroPage: React.FC = () => {
           </p>
         </div>
 
-        <button className="cursor-pointer   mt-20 text-white p-3 bg-[#11112B]   rounded-lg border border-white flex items-center justify-center">
-          EXPLORE NOW 
-          <Image src={HomeArrowIcon} alt='HomeArrowIcon' className='pl-4'/>
-          {/* <HomeArrowIcon /> */}
-        </button>
+
+        <ExploreNowButton/>
 
         <div className="">
           <Image
