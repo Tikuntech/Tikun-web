@@ -18,7 +18,7 @@ import SonyImg from '/public/Home/SONY.svg'
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
-  { src: BoxImg, alt: 'Graphic 2', width: 40, height: 40 },
+
   { src: BoxImg, alt: 'Graphic 3', width: 70, height: 50 },
   // Add more images as needed
 ]
@@ -32,11 +32,13 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] md:h-screen pl-4 md:pl-32 relative p-4">
-        <div className="pt-10">
-          <AboutBreadcrumbs />
+      <div className="bg-[#11112B] md:h-screen  md:pl-32 relative p-4">
+        <div className="pt-10 ">
+
+    <div className='pl-4 md:pl-0'>  <AboutBreadcrumbs  /></div>
+         
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0">
+            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 pl-4">
               About Us
             </h1>
             <div className="relative hidden md:block w-full  ">
@@ -54,7 +56,7 @@ const Page: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:mt-40">
+          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56 p-5 ">
             <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2">
               <Image
                 src={BoxImg}
@@ -63,12 +65,12 @@ const Page: React.FC = () => {
                 height={40}
                 className="object-contain mb-4 md:mb-2 hidden md:block"
               />
-              <h1 className="text-2xl md:text-xl text-white font-bold md:mt-20 ">
+              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20  ">
                 We believe that technology can change the world.
               </h1>
             </div>
 
-            <div className="text-white md:w-1/2">
+            <div className="text-white md:w-1/2 ">
               <p className="mb-4 text-sm md:text-base">
                 That's why we're committed to delivering innovative IT solutions
                 to businesses of all sizes. Our team of experienced
@@ -97,7 +99,7 @@ const Page: React.FC = () => {
 
       <div className="relative">
         <AboutVideo />
-        <div className="absolute inset-0 flex items-center justify-center md:-mt-[700px] -mt-36  ">
+        <div className="absolute inset-0 flex items-center justify-center md:-mt-[700px] -mt-44  ">
           <OverflowCard />
         </div>
       </div>
@@ -127,7 +129,7 @@ const Page: React.FC = () => {
         </div>
       </footer>
 
-      <div className="hidden md:block">
+      <div className="hidden md:block md:-mb-20 -mb-20 md:-mt-10">
         <LogoIcon />
       </div>
       <NeedItSolution />

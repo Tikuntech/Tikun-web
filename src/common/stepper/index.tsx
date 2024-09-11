@@ -33,15 +33,52 @@ export const Stepper = () => {
           className="object-cover rounded-lg "
         />
 </div>
-<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">01</h2>
-<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Discovery</h1>
+<h2 className="text-4xl font-bold text-center mb-7 text-white mt-10">01</h2>
+<h1 className="text-4xl font-bold text-center mb-8 text-custom-blue">Discovery</h1>
   
 
 
-<h2 className="text-xl  text-center mb-20  text-gray-200">We'll conduct a thorough analysis of your operations, market, and competition to
+<h2 className="text-base  text-center mb-14  text-gray-200 w-1/2">We'll conduct a thorough analysis of your operations, market, and competition to
 identify the best solutions for you.</h2>
 
 </div>
+
+
+
+
+
+<div className="flex flex-col items-center">
+ 
+  <div className="w-7 h-7 bg-white rounded-full"></div>
+
+ 
+  <div className="w-1 h-32 bg-white"></div>
+
+  
+  <div className="w-7 h-7 bg-white rounded-full "></div>
+
+
+  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
+
+
+  <Image
+          src={NotePadBox} 
+          alt="Location"
+          width={70}
+          height={70}
+          className="object-cover rounded-lg "
+        />
+</div>
+<h2 className="text-4xl font-bold text-center mb-5 text-white mt-10">02</h2>
+<h1 className="text-4xl font-bold text-center mb-8 text-custom-blue">Planning</h1>
+  
+
+
+<h2 className="text-base  text-center mb-10 w-1/2 text-gray-200">Once we have a clear understanding,
+we develop a customized plan for the services and solutions we provide.</h2>
+
+</div>
+
 
 
 
@@ -69,49 +106,12 @@ identify the best solutions for you.</h2>
           className="object-cover rounded-lg "
         />
 </div>
-<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">02</h2>
-<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Planning</h1>
+<h2 className="text-4xl font-bold text-center mb-5 text-white mt-10">03</h2>
+<h1 className="text-4xl font-bold text-center mb-8 text-custom-blue">Development</h1>
   
 
 
-<h2 className="text-xl  text-center mb-20  text-gray-200">Once we have a clear understanding,
-we develop a customized plan for the services and solutions we provide.</h2>
-
-</div>
-
-
-
-
-
-
-<div className="flex flex-col items-center">
- 
-  <div className="w-7 h-7 bg-white rounded-full"></div>
-
- 
-  <div className="w-1 h-32 bg-white"></div>
-
-  
-  <div className="w-7 h-7 bg-white rounded-full "></div>
-
-
-  <div className="bg-gradient-to-r from-[#505063] to-[#2d2d43] p-10 mt-10  rounded-md">
-
-
-  <Image
-          src={NotePadBox}
-          alt="Location"
-          width={70}
-          height={70}
-          className="object-cover rounded-lg "
-        />
-</div>
-<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">03</h2>
-<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Development</h1>
-  
-
-
-<h2 className="text-xl  text-center mb-20  text-gray-200">We begin the design and development process, creating custom solutions for your specific business needs.</h2>
+<h2 className="text-base  text-center mb-10 w-1/2  text-gray-200">We begin the design and development process, creating custom solutions for your specific business needs.</h2>
 
 </div>
 
@@ -143,12 +143,12 @@ we develop a customized plan for the services and solutions we provide.</h2>
           className="object-cover rounded-lg "
         />
 </div>
-<h2 className="text-4xl font-bold text-center mb-20 text-white mt-10">04</h2>
-<h1 className="text-4xl font-bold text-center mb-20 text-custom-blue">Implementation</h1>
+<h2 className="text-4xl font-bold text-center mb-5 text-white mt-10">04</h2>
+<h1 className="text-4xl font-bold text-center mb-10 text-custom-blue">Implementation</h1>
   
 
 
-<h2 className=" text-xl text-center mb-20  text-gray-200">We implement our solution into your business operations and integrate them with other systems and platforms.</h2>
+<h2 className=" text-base w-1/2 text-center mb-20  text-gray-200">We implement our solution into your business operations and integrate them with other systems and platforms.</h2>
 
 </div>
 

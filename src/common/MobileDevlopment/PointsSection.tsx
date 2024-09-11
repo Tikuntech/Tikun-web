@@ -11,10 +11,10 @@ const PointsSection = () => {
   return (
     <>
       <div
-        className="p-6 md:p-12 lg:p-24 flex justify-between flex-col   md:flex-row  w-full "
+        className="p-6 md:p-12 lg:p-24 flex justify-between flex-col bg-[#D5D9E5]  md:flex-row  w-full "
         style={{ padding: 90 }}
       >
-        <div className="flex flex-col w-full md:w-1/2">
+        <div className="flex flex-col w-full md:w-1/2 ">
           <div className="rounded-2xl mt-10 shadow-md  p-6 bg-[#D5D9E5]      flex flex-col items-start">
             <Image src={EasyIcon} alt="EasyIcon" />
             <h2 className="md:text-2xl text-xl mt-10 md:font-semibold font-bold mb-2 text-black">
@@ -36,6 +36,8 @@ const PointsSection = () => {
             </p>
           </div>
         </div>
+
+        <div></div>
         <div className="relative w-full    mt-10">
           {/* Image Container */}
           <div className="relative w-full">

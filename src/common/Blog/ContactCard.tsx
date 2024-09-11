@@ -20,8 +20,8 @@ const randomPosition = () => ({
 const ContactCard = () => {
   return (
     <div
-      className="relative rounded-2xl shadow-md p-8  bg-[#11112B] mt-4 flex flex-col items-start text-white overflow-hidden h-screen"
-      style={{ height: 550 }}
+      className="relative rounded-2xl shadow-md p-8  h-[500px] bg-[#11112B] mt-4 flex flex-col items-start text-white overflow-hidden "
+     
     >
       {/* Wireframe image background */}
       <div className="absolute inset-0 z-0 -mt-40">
@@ -33,7 +33,7 @@ const ContactCard = () => {
         />
       </div>
 
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <h1 className="text-white font-bold text-2xl ">Contact Card</h1>
 
         <div className="flex w-full mt-10 items-center">

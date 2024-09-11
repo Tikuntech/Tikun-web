@@ -7,11 +7,10 @@ const {
 const config: Config = {
   content: [
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/common/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/home/**/*.{js,ts,jsx,tsx,mdx}',
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/app/*.{js,ts,jsx,tsx}",
     './src/app/page.tsx',
     './src/app/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',

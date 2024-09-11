@@ -23,7 +23,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 h2 {
-  color: #92deed; /* This could override Tailwind's text color */
+  color: #92deed; 
 }
 
 button {
@@ -33,6 +33,11 @@ button {
 
 .button {
   cursor: pointer !important;
+}
+
+.stroke-text {
+  -webkit-text-stroke: 1px black; 
+  color: transparent; 
 }
 
 

@@ -39,7 +39,7 @@ const ServiceSection: React.FC = () => {
         </div>
         <div className="md:flex ">
           <div className="md:pt-10">
-            <h1 className="font-semibold text-2xl md:ml-3">Cyber Security</h1>
+            <p className="font-semibold text-3xl md:ml-3">Cyber Security</p>
             <p className="mt-5 w-2/3 md:ml-3">
               Our cyber security service provides advanced protection for your
               data and systems against potential threats and attacks, ensuring

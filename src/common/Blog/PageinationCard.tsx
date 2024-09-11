@@ -120,7 +120,7 @@ const PageinationCard: React.FC = () => {
         {[1, 2, 3].map((num) => (
           <button
             key={num}
-            className="bg-gray-800 hover:bg-gray-300 px-4 py-2 rounded-md text-gray-600 text-sm mr-2 border border-black"
+            className="bg-[#D5D9E5] px-4 py-2 rounded-md text-gray-600 text-sm mr-2 border border-black"
           >
             {num}
           </button>

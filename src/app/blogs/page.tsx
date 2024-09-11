@@ -13,6 +13,7 @@ import ReadyCard from '@/common/Blog/ReadyCard'
 import { fetchBlogs } from '@/services/api'
 import { useQuery } from 'react-query'
 import Loading from './loading'
+import BackgroundImg from '../../../public/Blog/BlogFooterWire.svg'
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
@@ -29,7 +30,7 @@ const randomPosition = () => ({
 export default function page() {
   return (
     <>
-      <main className="min-h-screen bg-[#D5D9E5]">
+      <main className="min-h-screen bg-[#D5D9E5] relative">
         <LightNavbar />
         <div className="pt-10 md:pt-20 p-5">
           <div className="md:ml-20">
@@ -67,10 +68,12 @@ export default function page() {
         <div className="items-center justify-center p-6">
           <ReadyCard />
         </div>
-<div className='p-6'>
-<BlogFooter />
-</div>
+
        
+  
+          <BlogFooter />
+          
+        
       </main>
     </>
   )

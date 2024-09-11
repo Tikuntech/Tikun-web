@@ -60,25 +60,25 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={SecurityIcon} alt="icon" />
-        {/* <BsShieldLock style={{ height: 60, width: 60 }} /> */}
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'Cyber Security',
-    description:
-      'Provides advanced protection for your data and systems against threats.',
-    link: '/cyber-security',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={SecurityIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={SecurityIcon} alt="icon" />
+  //       {/* <BsShieldLock style={{ height: 60, width: 60 }} /> */}
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'Cyber Security',
+  //   description:
+  //     'Provides advanced protection for your data and systems against threats.',
+  //   link: '/cyber-security',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={SecurityIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
   {
     icon: (
       <div className="flex justify-between space-x-2">
@@ -134,24 +134,24 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={ManagementIcon} alt="icon" />
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'IT Project Management',
-    description:
-      'Provides businesses with expert guidance and support for IT projects.',
-    link: '/it-project-management',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={ManagementIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={ManagementIcon} alt="icon" />
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'IT Project Management',
+  //   description:
+  //     'Provides businesses with expert guidance and support for IT projects.',
+  //   link: '/it-project-management',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={ManagementIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
   {
     icon: (
       <div className="flex justify-between space-x-2">
@@ -170,22 +170,22 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={NetworkIcon} alt="icon" />
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'Network Management',
-    description:
-      'Provide management of network infrastructure design for clients.',
-    link: '/network-management',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={NetworkIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={NetworkIcon} alt="icon" />
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'Network Management',
+  //   description:
+  //     'Provide management of network infrastructure design for clients.',
+  //   link: '/network-management',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={NetworkIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
 ]

@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import BopxImg from '/public/Home/Vector (7).svg'
 import LineImg from '/public/Home/Line.svg'
+import BelieveLineImg from '../../../public/Home/BelieveLine.svg'
 
 const BelievePage: React.FC = () => {
   return (
@@ -13,54 +14,63 @@ const BelievePage: React.FC = () => {
         </div>
 
         {/* Main Text Section */}
-        <div className="text-center pt-10">
+        <div className="text-center pt-10  ">
           <p className="md:text-6xl text-2xl text-[#11112B]  ">
             <span className="font-bold">We believe that </span>
             <span className=" font-extralight" style={{ fontStyle: 'italic' }}>
               technology
             </span>
             <br />
-            <span className="font-bold"> can </span>
-            <span className="text-gray-400 font-bold md:text-6xl text-2xl ">change </span>
+            <span className="font-bold "> can </span>
+            <span className="relative md:text-6xl text-transparent text-2xl font-bold stroke-text stroke-cyan-500">change </span>
             <span className="font-bold">the world.</span>
           </p>
-          <p className="text-lg text-gray-800 mt-10 md:mt-20 px-4">
-            That's why we're committed to delivering innovative IT solutions to
-            businesses of all sizes. Our team of experienced professionals is
-            dedicated to helping you achieve your goals and thrive in a rapidly
-            evolving digital landscape.
-          </p>
+          <div className="flex justify-center items-center">
+  <p className="md:text-lg text-sm text-gray-800 mt-10 md:mt-20 md:w-2/3 text-center">
+    That's why we're committed to delivering innovative IT solutions to
+    businesses of all sizes. Our team of experienced professionals is
+    dedicated to helping you achieve your goals and thrive in a rapidly
+    evolving digital landscape.
+  </p>
+</div>
         </div>
 
         {/* Stats Section */}
-        <div className="flex  md:flex-row items-center justify-center mt-20 gap-4 md:gap-8 ">
-          <div className=" flex-1 p-6 text-center ">
+        <div className="flex  md:flex-row items-center justify-center mt-20 pb-10 gap-4 ">
+          <div className=" flex-1 text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               500+
             </h2>
-            <p className="text-black mt-2 text-sm">Successful Projects</p>
+            <p className="text-black mt-2 md:text-sm text-xs">Successful Projects</p>
           </div>
 
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             <Image src={LineImg} alt="Line" />
           </div>
+          <div className="flex items-center">
+            <Image src={BelieveLineImg} alt="Line" />
+          </div>
 
-          <div className="flex-1 p-6 text-center ">
+
+          <div className="flex-1  text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               98%
             </h2>
-            <p className="text-black mt-2 text-sm">Satisfied Clients</p>
+            <p className="text-black mt-2  md:text-sm text-xs">Satisfied Clients</p>
           </div>
 
-          <div className="flex items-center">
+          <div className="hidden md:flex items-center">
             <Image src={LineImg} alt="Line" />
           </div>
+          <div className="flex items-center">
+            <Image src={BelieveLineImg} alt="Line" />
+          </div>
 
-          <div className="flex-1 p-6 text-center ">
+          <div className="flex-1  text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               35+
             </h2>
-            <p className="text-black mt-2 text-sm">Handled Countries</p>
+            <p className="text-black mt-2  md:text-sm text-xs">Handled Countries</p>
           </div>
         </div>
       </section>

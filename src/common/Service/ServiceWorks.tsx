@@ -8,9 +8,9 @@ import { Stepper } from '../stepper'
 import { ExploreNowButton } from '../ExploreNowButton'
 const ServiceWorks: React.FC = () => {
   return (
-    <div className=" bg-[#11112B] text-white py-12 px-4 flex justify-center ">
+    <div className=" bg-[#11112B] text-white  px-4 flex justify-center ">
       <div className="w-full max-w-3xl">
-        <h1 className="text-4xl font-bold text-center mb-5">How It Works</h1>
+        <h1 className="text-4xl font-bold text-center ">How It Works</h1>
         <Stepper/>
         
 

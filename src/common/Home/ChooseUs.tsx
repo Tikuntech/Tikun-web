@@ -44,16 +44,18 @@ const items = [
   },
 ];
 
+
+
 const ChooseUs: React.FC = () => {
   return (
     
     <div className=" py-12 px-4">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item, index) => (
             <div
               key={index}
-              className="rounded-lg p-6 flex flex-col md:items-left md:text-left text-center items-center "
+              className="rounded-lg p-6 flex flex-col md:items-start md:text-left text-center items-center "
             >
               <div className="mb-4">
                 <Image

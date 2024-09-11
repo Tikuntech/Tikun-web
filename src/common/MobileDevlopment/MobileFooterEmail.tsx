@@ -21,7 +21,7 @@ const MobileFooterEmail: React.FC = () => {
         placeholder="Enter your email"
         value={email}
         onChange={handleChange}
-        className="flex-1 p-2 md:pl-4 pr-12 border border-black rounded-lg bg-[#D5D9E5] text-[#11112B] placeholder-gray-400"
+        className="w-full flex-grow px-4 py-3  border-b-2 bottom-1 border-b-custom-black  bg-[#D5D9E5] focus:border-transparent  border border-[#D5D9E5]"
         required
       />
       <button

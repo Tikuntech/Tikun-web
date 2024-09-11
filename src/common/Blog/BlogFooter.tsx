@@ -1,105 +1,106 @@
-
-import Link from 'next/link'
-import footerline from '/public/Footer/Line (4).svg'
-import Image from 'next/image'
-import MobileFooterEmail from '../MobileDevlopment/MobileFooterEmail'
+import Link from 'next/link';
+import Image from 'next/image';
+import MobileFooterEmail from '../MobileDevlopment/MobileFooterEmail';
+import CtaButton from '/public/Blog/CTAButton.svg';
+import BackgroundImg from '/public/Blog/BlogFooterWire.svg';
+import { FaTwitter, FaFacebookF } from 'react-icons/fa';
+import { AiFillInstagram } from 'react-icons/ai';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#D5D9E5] text-[#11112B] py-8 p-4">
-      <div className="container mx-auto md:px-4 flex flex-col items-center md:flex-row md:justify-between">
-        {/* Logo and Copyright Section */}
-        <div className="hidden md:flex flex-col items-center md:items-start md:space-y-28 space-y-2 mb-10 md:mb-0">
-          {/* <TikcunteckLogo /> */}
+    <footer >
+
+
+{/* <div className="relative w-80 h-80">
+    <div className="absolute inset-0 bg-blue-500 opacity-75 z-10 flex items-center justify-center">
+      <p className="text-white font-bold">Background 1</p>
+    </div>
+
+ 
+    <div className="absolute inset-0 bg-red-500 opacity-75 z-20 flex items-center justify-center">
+      <p className="text-white font-bold">Background 2</p>
+    </div>
+  </div> */}
+        
+      <div className="relative bg-[#D5D9E5] text-[#11112B] py-8 px-4 mt-20 h-screen  md:h-80">
+
+
+           
+      <div className="absolute bottom-0 left-0   p-4  ">
+        <Image
+          src={BackgroundImg}
+          alt="Background pattern"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+
+          priority
+         
+          className=" hidden md:block  " 
+        />
+      </div>
+
+
+      {/* Footer Content */}
+      <div className="relative z-10 container mx-auto md:px-4 flex flex-col md:flex-row justify-between items-start">
+        {/* Logo and Call to Action Button */}
+        <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0 md:space-y-28">
           <h1 className="font-bold text-2xl">Tikcunteck</h1>
-          <p className="text-sm">Copyright © Tarun Dixit</p>
+          <Image src={CtaButton} alt="CtaButton" className="w-24 hidden md:block" />
         </div>
 
+
+
         {/* Links Section */}
-        <div className="flex flex-col md:flex-row md:space-x-10 space-y-8 md:space-y-0 w-full md:w-auto md:ml-96 md:mb-5">
+        <div className="flex flex-col md:flex-row md:space-x-16 w-full md:w-auto">
+          {/* Newsletter Section */}
+          <div className="flex flex-col md:w-64 mb-8 md:mb-0">
+            <h3 className="text-lg font-bold mb-2">Newsletter</h3>
+            <div className="flex items-center md:-ml-2 mt-10">
+              <MobileFooterEmail />
+            </div>
+            <div className="flex mt-10 space-x-8 ">
+              <AiFillInstagram className="h-8 w-8 hover:text-blue-500" />
+              <FaFacebookF className="h-8 w-8 hover:text-blue-500" />
+              <FaTwitter className="h-8 w-8 hover:text-blue-500" />
+            </div>
+          </div>
+
+
+          
+
           {/* Explore Section */}
-          <div className="flex flex-col w-full md:w-24 mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-4">Explore</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">
-                    About Us
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">
-                    Services
-                  </span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Pricing</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Blog</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Contact</span>
-                </Link>
-              </li>
+          <div className="flex flex-col mb-8 md:mb-0">
+            <h3 className="text-lg font-bold mb-2">Explore</h3>
+            <ul className="space-y-2">
+              <li><Link href="#"><span className="hover:text-blue-500">About Us</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Services</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Pricing</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Blog</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Contact</span></Link></li>
             </ul>
           </div>
 
           {/* Contact Section */}
-          <div className="flex flex-col w-full md:w-24 mb-8 md:mb-0">
-            <h3 className="text-lg font-bold mb-4">Contact</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Email</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Phone</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">Address</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="#">
-                  <span className="hover:text-blue-500 font-thin">
-                    Social Media
-                  </span>
-                </Link>
-              </li>
+          <div className="flex flex-col">
+            <h3 className="text-lg font-bold mb-2">Contact</h3>
+            <ul className="space-y-2">
+              <li><Link href="#"><span className="hover:text-blue-500">Email</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Phone</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Address</span></Link></li>
+              <li><Link href="#"><span className="hover:text-blue-500">Social Media</span></Link></li>
             </ul>
           </div>
-
-          {/* Newsletter Section */}
-          <div className="flex flex-col w-full md:w-64">
-            <h3 className="text-lg font-bold mb-4">Newsletter</h3>
-            <p className="text-sm mb-4">
-              Subscribe to our newsletter to stay informed about our latest
-              products, services, and promotions. Feel free to unsubscribe
-              anytime!
-            </p>
-            <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
-              {/* Email Input and Button */}
-              <MobileFooterEmail />
-            </div>
-          </div>
         </div>
+      
       </div>
 
-      <Image src={footerline} alt="ServiceLine" className="" />
-      <p className="text-center mt-5">Terms & Conditions | Privacy Policy</p>
+
+
+      </div>
+      {/* Background Image */}
+    
+
     </footer>
-  )
+  );
 }
