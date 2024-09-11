@@ -2,7 +2,7 @@ import React from 'react'
 import ServiceLine from '/public/Home/ServiceLine.svg'
 import Image from 'next/image'
 import CyberImg from '/public/Home/ImagePlaceholder.png'
-import ServiceArrowIcon from '../../../public/Service/ServiceArrowIcon.svg'
+import ServiceArrowIcon from '/public/Service/ServiceArrowIcon.svg'
 
 import { FaArrowRightLong } from 'react-icons/fa6'
 
@@ -19,10 +19,10 @@ const ServiceSection: React.FC = () => {
             <h1 className="md:text-4xl mb-8 font-thin text-2xl md:ml-3">
               Web Development
             </h1>
-            <div className='text-black'>
-            <Image src={ServiceArrowIcon} alt='HomeArrowIcon' />
+            <div className="text-black">
+              <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
             </div>
-            
+
             {/* <HomeArrowIcon className="md:text-4xl text-2xl" /> */}
           </div>
 
@@ -31,8 +31,10 @@ const ServiceSection: React.FC = () => {
 
         <div>
           <div className="flex justify-between md:mt-14 font-extralight ">
-            <h1 className="md:text-4xl text-2xl mb-8 md:ml-3">Mobile Development</h1>
-            <Image src={ServiceArrowIcon} alt='HomeArrowIcon' />
+            <h1 className="md:text-4xl text-2xl mb-8 md:ml-3">
+              Mobile Development
+            </h1>
+            <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
           </div>
 
           <Image src={ServiceLine} alt="Line" />
@@ -53,12 +55,12 @@ const ServiceSection: React.FC = () => {
 
         <div className="flex justify-between md:mt-20 font-extralight ">
           <h1 className="md:text-4xl text-2xl  mb-10 font-thin md:ml-3">
-            Digital  Marketing
+            Digital Marketing
           </h1>
-          <Image src={ServiceArrowIcon} alt='HomeArrowIcon' />
+          <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
         </div>
 
-        <Image src={ServiceLine} alt='Line' className='pb-10'/>
+        <Image src={ServiceLine} alt="Line" className="pb-10" />
       </section>
     </main>
   )

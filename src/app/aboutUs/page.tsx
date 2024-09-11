@@ -34,9 +34,11 @@ const Page: React.FC = () => {
       <NavbarHeader />
       <div className="bg-[#11112B] md:h-screen  md:pl-32 relative p-4">
         <div className="pt-10 ">
+          <div className="pl-4 md:pl-0">
+            {' '}
+            <AboutBreadcrumbs />
+          </div>
 
-    <div className='pl-4 md:pl-0'>  <AboutBreadcrumbs  /></div>
-         
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
             <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 pl-4">
               About Us
@@ -91,11 +93,9 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-   <div className='p-12'>
-   <AboutMain />
-   </div>
-      
-
+      <div className="p-12">
+        <AboutMain />
+      </div>
 
       <div className="relative">
         <AboutVideo />

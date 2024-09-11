@@ -7,11 +7,7 @@ export function ProjectTabs() {
     {
       title: 'All',
       value: 'product',
-      content: (
-        <div className="w-full ">
-          {/* <ProjectCards /> */}
-        </div>
-      ),
+      content: <div className="w-full ">{/* <ProjectCards /> */}</div>,
     },
     {
       title: 'Development',
@@ -52,7 +48,4 @@ export function ProjectTabs() {
   )
 }
 
-const DummyContent = () => (
- 
- <></>
-)
+const DummyContent = () => <></>

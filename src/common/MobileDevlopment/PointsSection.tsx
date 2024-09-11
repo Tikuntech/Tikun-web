@@ -40,13 +40,12 @@ const PointsSection = () => {
         <div></div>
         <div className="relative w-full    mt-10">
           {/* Image Container */}
-          <div className="relative w-full">
+          <div className="relative md:w-full w-80 -ml-16 md:-ml-0 ">
             <Image
               src={MobileImage}
               alt="MobileImage"
               layout="responsive"
-              width={900}
-              height={600}
+            
             />
 
             {/* Centered Text */}
@@ -84,7 +83,6 @@ const PointsSection = () => {
 }
 
 export default PointsSection
-
 ;<div className="p-6 md:p-12 lg:p-24 flex flex-col md:flex-row justify-between w-full">
   {/* Left Column */}
   <div className="flex flex-col w-full md:w-1/2 space-y-6">

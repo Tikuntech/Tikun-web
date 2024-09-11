@@ -3,13 +3,13 @@ import Image from 'next/image'
 import BoxImg from '/public/aboutus/Vector.svg'
 import backgroundImg from '/public/Footer/WireframeLine.svg'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import HomeArrowIcon from '../../public/Home/HomeArrowIcon.svg'
+import HomeArrowIcon from '/public/Home/HomeArrowIcon.svg'
 
 // Array of image properties
 const images = [
   { src: BoxImg, alt: 'Decorative graphic 1', width: 20, height: 20 },
   { src: BoxImg, alt: 'Decorative graphic 2', width: 40, height: 40 },
- 
+
   // Add more images as needed
 ]
 
@@ -39,27 +39,24 @@ const NeedItSolution: React.FC = () => {
       </h1>
 
       <div className="hidden md:flex sm:flex">
-          {images.map((image, index) => (
-            <div key={index} className="absolute" style={getRandomPosition()}>
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={image.width}
-                height={image.height}
-              />
-            </div>
-          ))}
-        </div>
-        <div className='relative z-10'>
-        <button className="cursor-pointer mt-14  md:mb-28  text-white p-4 bg-[#11112B]   rounded-md border border-white flex items-center justify-center">
-         GET FREE CONSULTATION  
-          <Image src={HomeArrowIcon} alt='HomeArrowIcon' className='pl-4'/>
-       
-        </button>
-        </div>
-        
+        {images.map((image, index) => (
+          <div key={index} className="absolute" style={getRandomPosition()}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+            />
+          </div>
+        ))}
       </div>
-   
+      <div className="relative z-10">
+        <button className="cursor-pointer mt-14  md:mb-28  text-white p-4 bg-[#11112B]   rounded-md border border-white flex items-center justify-center">
+          GET FREE CONSULTATION
+          <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
+        </button>
+      </div>
+    </div>
   )
 }
 

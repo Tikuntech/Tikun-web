@@ -14,7 +14,9 @@ const ClientStory: React.FC = () => {
     <div className="bg-[#11112B] flex flex-col min-h-screen ">
       {/* Header */}
       <header className="text-white flex md:justify-between md:items-center p-8 md:pt-20 md:-mb-20  ">
-        <h1 className="text-4xl md:text-6xl md:pl-7 font-semibold">Client Stories</h1>
+        <h1 className="text-4xl md:text-6xl md:pl-7 font-semibold">
+          Client Stories
+        </h1>
         {/* <FaArrowRightLong className="hidden md:block text-2xl" /> */}
       </header>
 
@@ -66,7 +68,9 @@ const ClientStory: React.FC = () => {
               <div className="flex items-center justify-end w-full md:gap-2">
                 <div className="text-right ">
                   <span className="block text-lg font-semibold">Jane Doe</span>
-                  <span className="block md:text-sm text-xs">COO of Manufacturing</span>
+                  <span className="block md:text-sm text-xs">
+                    COO of Manufacturing
+                  </span>
                 </div>
                 <div className="h-12 w-12 rounded-full bg-white ml-5"></div>
               </div>

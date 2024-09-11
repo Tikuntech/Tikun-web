@@ -69,10 +69,7 @@ const LeaveComment: React.FC = () => {
             </div>
 
             <div>
-              <h2
-                className="block text-sm font-medium text-custom-blue "
-              
-              >
+              <h2 className="block text-sm font-medium text-custom-blue ">
                 Message
               </h2>
               <textarea

@@ -32,7 +32,7 @@ export const services = [
     title: 'Web Development',
     description:
       'Create websites that are both visually appealing and functional for users.',
-    link: '/servicesDetails',
+    link: '/webDevlopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
@@ -126,7 +126,7 @@ export const services = [
     title: 'Software Development',
     description:
       'Provides customized solutions to create and maintain software applications.',
-    link: '/software-development',
+    link: '/softwereDevlopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={SoftwareIcon} alt="icon" />
@@ -162,7 +162,7 @@ export const services = [
     title: 'Data Analysis',
     description:
       'Provide data analysis for varied categories to help client businesses.',
-    link: '/data-analysis',
+    link: '/dataAnalysis',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={DataAnalysisIcon} alt="icon" />

@@ -22,17 +22,19 @@ const BelievePage: React.FC = () => {
             </span>
             <br />
             <span className="font-bold "> can </span>
-            <span className="relative md:text-6xl text-transparent text-2xl font-bold stroke-text stroke-cyan-500">change </span>
+            <span className="relative md:text-6xl text-transparent text-2xl font-bold stroke-text stroke-cyan-500">
+              change{' '}
+            </span>
             <span className="font-bold">the world.</span>
           </p>
           <div className="flex justify-center items-center">
-  <p className="md:text-lg text-sm text-gray-800 mt-10 md:mt-20 md:w-2/3 text-center">
-    That's why we're committed to delivering innovative IT solutions to
-    businesses of all sizes. Our team of experienced professionals is
-    dedicated to helping you achieve your goals and thrive in a rapidly
-    evolving digital landscape.
-  </p>
-</div>
+            <p className="md:text-lg text-sm text-gray-800 mt-10 md:mt-20 md:w-2/3 text-center">
+              That's why we're committed to delivering innovative IT solutions
+              to businesses of all sizes. Our team of experienced professionals
+              is dedicated to helping you achieve your goals and thrive in a
+              rapidly evolving digital landscape.
+            </p>
+          </div>
         </div>
 
         {/* Stats Section */}
@@ -41,7 +43,9 @@ const BelievePage: React.FC = () => {
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               500+
             </h2>
-            <p className="text-black mt-2 md:text-sm text-xs">Successful Projects</p>
+            <p className="text-black mt-2 md:text-sm text-xs">
+              Successful Projects
+            </p>
           </div>
 
           <div className="hidden md:flex items-center">
@@ -51,12 +55,13 @@ const BelievePage: React.FC = () => {
             <Image src={BelieveLineImg} alt="Line" />
           </div>
 
-
           <div className="flex-1  text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               98%
             </h2>
-            <p className="text-black mt-2  md:text-sm text-xs">Satisfied Clients</p>
+            <p className="text-black mt-2  md:text-sm text-xs">
+              Satisfied Clients
+            </p>
           </div>
 
           <div className="hidden md:flex items-center">
@@ -70,7 +75,9 @@ const BelievePage: React.FC = () => {
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               35+
             </h2>
-            <p className="text-black mt-2  md:text-sm text-xs">Handled Countries</p>
+            <p className="text-black mt-2  md:text-sm text-xs">
+              Handled Countries
+            </p>
           </div>
         </div>
       </section>
@@ -79,6 +86,5 @@ const BelievePage: React.FC = () => {
 }
 
 export default BelievePage
-
 
 // flex-1 p-6 text-center border-t border-black md:border-t-0 md:border-r md:border-b-0 md:border-black

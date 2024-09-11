@@ -1,28 +1,26 @@
 import React from 'react'
 import Image from 'next/image'
 import BoxImg from '/public/aboutus/Vector.svg'
-import backgroundImg from '../../../public/Home/WireframeHeroPage.svg'
+import backgroundImg from '/public/Home/WireframeHeroPage.svg'
 import ChooseUs from '@/common/home/ChooseUs'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import MainTextImg from '/public/Home/YOUR BEST.png'
 import SubTextImg from '/public/Home/Frame 2.png'
 import BelievePage from '@/common/home/BelievePage'
 // import MainHome from '@/common/Home/MainHome'
-import HomeArrowIcon from '../../../public/Home/HomeArrowIcon.svg'
+import HomeArrowIcon from '/public/Home/HomeArrowIcon.svg'
 import { ExploreNowButton } from '@/common/ExploreNowButton'
 
 // Array of image properties
 const images = [
   { src: BoxImg, alt: 'Decorative graphic 1', width: 30, height: 40 },
   { src: BoxImg, alt: 'Decorative graphic 2', width: 50, height: 50 },
-  
 ]
 
 // Function to generate random position
 const getRandomPosition = () => ({
   top: `${Math.random() * 10 + 10}%`,
   left: `${Math.random() * 90 + 10}%`,
-
 })
 
 const HeroPage: React.FC = () => {
@@ -30,7 +28,6 @@ const HeroPage: React.FC = () => {
     <>
       {/* <MainHome/> */}
       <div className="relative  bg-[#11112B] overflow-hidden flex flex-col items-center justify-center ">
-
         <div className="text-center pt-20 md:mt-0 md:w-1/2 ">
           <div className="relative inline-block w-72 md:w-full ">
             <Image
@@ -58,8 +55,7 @@ const HeroPage: React.FC = () => {
           </p>
         </div>
 
-
-        <div className='hidden md:block md:pt-10'>
+        <div className="hidden md:block md:pt-10">
           <Image
             src={backgroundImg}
             alt="Background pattern"
@@ -74,8 +70,6 @@ const HeroPage: React.FC = () => {
         <div className="relative z-10 md:-top-14">
           <ExploreNowButton />
         </div>
-
-
 
         <div className="hidden md:flex sm:flex">
           {images.map((image, index) => (
@@ -98,7 +92,6 @@ const HeroPage: React.FC = () => {
             <p className="text-white md:text-6xl font-bold md:pl-20">
               Choose Us?
             </p>
-
           </div>
 
           <h1 className="text-white font-bold text-center text-2xl md:hidden">

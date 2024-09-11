@@ -19,10 +19,7 @@ const randomPosition = () => ({
 
 const ContactCard = () => {
   return (
-    <div
-      className="relative rounded-2xl shadow-md p-8  h-[500px] bg-[#11112B] mt-4 flex flex-col items-start text-white overflow-hidden "
-     
-    >
+    <div className="relative rounded-2xl shadow-md p-8  h-[500px] bg-[#11112B] mt-4 flex flex-col items-start text-white overflow-hidden ">
       {/* Wireframe image background */}
       <div className="absolute inset-0 z-0 -mt-40">
         <Image
@@ -39,28 +36,20 @@ const ContactCard = () => {
         <div className="flex w-full mt-10 items-center">
           <Image src={CallIcon} alt="Call Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className="md:pl-4 " >
-              +XXXXXXXXXXX
-            </span>
+            <span className="md:pl-4 pl-3 ">+XXXXXXXXXXX</span>
           </div>
         </div>
         <div className="flex w-full mt-4 items-center">
           <Image src={MailIcon} alt="Mail Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className="md:pl-4 " >
-              hello@TIKUNTECH
-            </span>
+            <span className="md:pl-4 pl-3">hello@TIKUNTECH</span>
           </div>
         </div>
         <div className="flex w-full mt-4 items-center">
           <Image src={LocationIcon} alt="Location Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className=" w-1/2 md:pl-4 " >
-              XXXXXXXXXXXXXXXXXXXXXX
-            </span>
-            <span className=" w-1/2 md:pl-4 ">
-              XXXXXXXXXXXXXXXXXX
-            </span>
+            <span className=" w-1/2 md:pl-4 pl-3">XXXXXXXXXXXXXXXXXXXXXX</span>
+            <span className=" w-1/2 md:pl-4 pl-3">XXXXXXXXXXXXXXXXXX</span>
           </div>
         </div>
 

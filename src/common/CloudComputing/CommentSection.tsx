@@ -38,7 +38,7 @@ export default function CommentSection() {
       </div>
 
       <div className="p-5 md:pl-32">
-        <div  className="bg-gray-200 rounded-xl p-4">
+        <div className="bg-gray-200 rounded-xl p-4">
           <div className=" rounded-2xl md:pt-5  mx-auto p-5">
             <div className="">
               <p className="md:text-sm text-gray-500  text-xs">

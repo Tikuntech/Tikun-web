@@ -69,11 +69,7 @@ export default function page() {
           <ReadyCard />
         </div>
 
-       
-  
-          <BlogFooter />
-          
-        
+        <BlogFooter />
       </main>
     </>
   )

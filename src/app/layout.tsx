@@ -45,7 +45,6 @@ export default function RootLayout({
           {/* <NavbarHeader/> */}
           {children}
         </QueryClientProvider>
-    
       </body>
     </html>
   )

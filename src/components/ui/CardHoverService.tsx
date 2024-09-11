@@ -36,7 +36,6 @@ export const ServiceHoverEffect = ({
         >
           {hoveredIndex === idx ? (
             <Card>
-              
               <CardIcon className="mb-4">{item.activeIcon}</CardIcon>
               <div className="h-80 flex flex-col justify-end p-4">
                 <div className="text-black font-normal text-left">

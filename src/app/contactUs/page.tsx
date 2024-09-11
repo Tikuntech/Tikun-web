@@ -80,15 +80,13 @@ const Page: React.FC = () => {
             <ContactLocation />
             <div className="absolute md:pl-96 md:mt-40  md:pr-24">
               <ContacMassage />
-              
             </div>
           </div>
         </div>
 
-        <div className='mt-60 md:mt-0'>
-        <NeedItSolution />
+        <div className="mt-60 md:mt-0">
+          <NeedItSolution />
         </div>
-     
       </div>
       <Footer />
     </>

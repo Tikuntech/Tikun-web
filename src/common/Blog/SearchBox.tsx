@@ -19,25 +19,24 @@ const BlogSearchBar = () => {
       <p className="text-black font-semibold text-lg">Search</p>
       <form
         onSubmit={handleSubmit}
-        className="md:w-full flex md:items-center mt-2"
+        className="md:w-full  w-full flex md:items-center mt-2"
       >
-        <div className='  relative w-full max-w-md'>
-        <input
-          type="text"
-          className=" w-full flex-grow px-4 py-3  border-b-2 bottom-1 border-b-custom-black  bg-[#D5D9E5] focus:border-transparent  border border-[#D5D9E5]"
-          placeholder="Enter your keywords..."
-          value={searchTerm}
-          onChange={handleChange}
-        />
-        <button
-          type="submit"
-          aria-label="Search"
-          className="  absolute right-3 top-1/2 transform -translate-y-1/2 ml-2 text-black font-bold px-4 py-2 rounded-md  flex items-center"
-        >
-          <FaSearch />
-        </button>
+        <div className="  relative w-full max-w-md">
+          <input
+            type="text"
+            className=" w-full flex-grow px-4 py-3  border-b-2 bottom-1 border-b-custom-black  bg-[#D5D9E5] focus:border-transparent  border border-[#D5D9E5]"
+            placeholder="Enter your keywords..."
+            value={searchTerm}
+            onChange={handleChange}
+          />
+          <button
+            type="submit"
+            aria-label="Search"
+            className="  absolute right-3 top-1/2 transform -translate-y-1/2 ml-2 text-black font-bold px-4 py-2 rounded-md  flex items-center"
+          >
+            <FaSearch />
+          </button>
         </div>
-        
       </form>
     </div>
   )

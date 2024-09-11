@@ -10,7 +10,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/common/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/home/**/*.{js,ts,jsx,tsx,mdx}',
-    "./src/app/*.{js,ts,jsx,tsx}",
+    './src/app/*.{js,ts,jsx,tsx}',
     './src/app/page.tsx',
     './src/app/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
@@ -18,9 +18,8 @@ const config: Config = {
     './components/**/*.{js,ts,tsx}',
     './layouts/**/*.{js,ts,tsx}',
     './data/**/*.mdx',
-    
   ],
- 
+
   darkMode: 'class',
   theme: {
     extend: {
@@ -32,7 +31,7 @@ const config: Config = {
         'custom-blue': '#92DEED', // Define your custom color
         'custom-black': 'rgba(17, 17, 43, 1)',
       },
-      
+
       // screens: {
       //   mobile: '320px',
       //   mobileM: '475px',

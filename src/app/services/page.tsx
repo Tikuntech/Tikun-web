@@ -31,7 +31,7 @@ const cardData = Array.from({ length: 9 }, (_, index) => ({
 
 const Page: React.FC = () => {
   return (
-    < div className="bg-[#11112B] ">
+    <div className="bg-[#11112B] ">
       <NavbarHeader />
       <div className="bg-[#11112B]  pl-4 relative">
         <div className="pt-10 md:pt-20">
