@@ -106,8 +106,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className=" rounded-xl shadow-md p-4">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800">Strategy</h3>
+        <div className=" rounded-xl shadow-md p-4 md:p-10">
+          <h3 className="text-2xl font-bold mb-4 text-gray-800 ">Strategy</h3>
           <ul className="list-disc text-xl text-[#2D646E] p-6">
             <li>Marketing Data Analysis</li>
             <li>Search Engine Optimization</li>
@@ -127,10 +127,10 @@ export default function Home() {
               <div className="flex justify-center items-center h-20 w-20 rounded-full bg-[#16A4C0] text-white font-bold text-3xl">
                 01
               </div>
-              <h3 className="text-xl font-bold mb-4 mt-5 text-gray-800">
+              <h3 className="text-xl w-1/2 text-left font-bold mb-4 mt-5 text-gray-800 ml-20">
                 Increased Web Traffic
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left ml-20">
                 We were able to increase website traffic by 40% within the first
                 6 months of the campaign.
               </p>
@@ -139,10 +139,10 @@ export default function Home() {
               <div className="flex justify-center items-center h-20 w-20 rounded-full bg-[#16A4C0] text-white font-bold text-3xl">
                 02
               </div>
-              <h3 className="text-xl font-bold mb-4 mt-5 text-gray-800">
+              <h3 className="text-xl w-1/2 text-left font-bold mb-4 mt-5 text-gray-800 ml-20">
                 Higher Search Engine Ranking
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left ml-20">
                 We were able to improve the website's search engine rankings
                 significantly to the first page.
               </p>
@@ -151,10 +151,10 @@ export default function Home() {
               <div className="flex justify-center items-center h-20 w-20 rounded-full bg-[#16A4C0] text-white font-bold text-3xl">
                 03
               </div>
-              <h3 className="text-xl font-bold mb-4 mt-5 text-gray-800">
+              <h3 className="text-xl w-1/2 text-left font-bold mb-4 mt-5 text-gray-800 ml-20">
                 Improved Engagement
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 text-left ml-20">
                 Our social media and email marketing campaigns led to 80%
                 increase in engagement rates.
               </p>

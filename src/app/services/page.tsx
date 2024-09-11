@@ -9,6 +9,7 @@ import ServiceWorks from '@/common/Service/ServiceWorks'
 import { ServiceCards } from '@/common/Service/ServiceCards'
 import NavbarHeader from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import NeedItSolution from '@/common/NeedItSolution'
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
@@ -30,7 +31,7 @@ const cardData = Array.from({ length: 9 }, (_, index) => ({
 
 const Page: React.FC = () => {
   return (
-    < div className="bg-[#11112B] ">
+    <div className="bg-[#11112B] ">
       <NavbarHeader />
       <div className="bg-[#11112B]  pl-4 relative">
         <div className="pt-10 md:pt-20">
@@ -58,14 +59,9 @@ const Page: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* <MainCardContain/> */}
-      <div className="bg-[#11112B] ">
-        <ServiceCards />
-      </div>
-      <div className="bg-[#11112B]">
-        <ServiceWorks />
-      </div>
+      <ServiceCards />
+      <ServiceWorks />
+      <NeedItSolution />
       <Footer />
     </div>
   )

@@ -32,7 +32,7 @@ export const services = [
     title: 'Web Development',
     description:
       'Create websites that are both visually appealing and functional for users.',
-    link: '/servicesDetails',
+    link: '/webDevlopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
@@ -60,25 +60,25 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={SecurityIcon} alt="icon" />
-        {/* <BsShieldLock style={{ height: 60, width: 60 }} /> */}
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'Cyber Security',
-    description:
-      'Provides advanced protection for your data and systems against threats.',
-    link: '/cyber-security',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={SecurityIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={SecurityIcon} alt="icon" />
+  //       {/* <BsShieldLock style={{ height: 60, width: 60 }} /> */}
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'Cyber Security',
+  //   description:
+  //     'Provides advanced protection for your data and systems against threats.',
+  //   link: '/cyber-security',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={SecurityIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
   {
     icon: (
       <div className="flex justify-between space-x-2">
@@ -126,7 +126,7 @@ export const services = [
     title: 'Software Development',
     description:
       'Provides customized solutions to create and maintain software applications.',
-    link: '/software-development',
+    link: '/softwereDevlopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={SoftwareIcon} alt="icon" />
@@ -134,24 +134,24 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={ManagementIcon} alt="icon" />
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'IT Project Management',
-    description:
-      'Provides businesses with expert guidance and support for IT projects.',
-    link: '/it-project-management',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={ManagementIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={ManagementIcon} alt="icon" />
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'IT Project Management',
+  //   description:
+  //     'Provides businesses with expert guidance and support for IT projects.',
+  //   link: '/it-project-management',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={ManagementIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
   {
     icon: (
       <div className="flex justify-between space-x-2">
@@ -162,7 +162,7 @@ export const services = [
     title: 'Data Analysis',
     description:
       'Provide data analysis for varied categories to help client businesses.',
-    link: '/data-analysis',
+    link: '/dataAnalysis',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={DataAnalysisIcon} alt="icon" />
@@ -170,22 +170,22 @@ export const services = [
       </div>
     ),
   },
-  {
-    icon: (
-      <div className="flex justify-between space-x-2">
-        <Image src={NetworkIcon} alt="icon" />
-        <FaArrowRightLong style={{ height: 60, width: 60 }} />
-      </div>
-    ),
-    title: 'Network Management',
-    description:
-      'Provide management of network infrastructure design for clients.',
-    link: '/network-management',
-    activeIcon: (
-      <div className="flex justify-between  w-full">
-        <Image src={NetworkIcon} alt="icon" />
-        <ArrowActive />
-      </div>
-    ),
-  },
+  // {
+  //   icon: (
+  //     <div className="flex justify-between space-x-2">
+  //       <Image src={NetworkIcon} alt="icon" />
+  //       <FaArrowRightLong style={{ height: 60, width: 60 }} />
+  //     </div>
+  //   ),
+  //   title: 'Network Management',
+  //   description:
+  //     'Provide management of network infrastructure design for clients.',
+  //   link: '/network-management',
+  //   activeIcon: (
+  //     <div className="flex justify-between  w-full">
+  //       <Image src={NetworkIcon} alt="icon" />
+  //       <ArrowActive />
+  //     </div>
+  //   ),
+  // },
 ]

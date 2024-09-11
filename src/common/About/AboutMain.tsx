@@ -46,13 +46,13 @@ const items = [
 
 const AboutMain: React.FC = () => {
   return (
-    <div className=" md:h-full md:p-24 ">
+    <div className=" md:h-full md:p-12 ">
       <div className="container mx-auto">
         <div className="md:flex md:flex-row flex-wrap justify-between ">
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-full sm:w-1/2 md:w-1/4 p-4 bg-white  rounded-lg"
+              className="flex flex-col items-center md:items-start w-full sm:w-1/2 md:w-1/4 p-4 bg-white  rounded-lg"
             >
               <div className="mb-4">
                 <Image
@@ -63,7 +63,7 @@ const AboutMain: React.FC = () => {
                   className="object-contain"
                 />
               </div>
-              <div className="text-center">
+              <div className="text-center md:text-left">
                 <h2 className="text-lg font-semibold text-gray-800 mb-2">
                   {item.heading}
                 </h2>

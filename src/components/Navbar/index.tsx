@@ -107,7 +107,9 @@ const NavbarHeader: React.FC = () => {
         className={`fixed drawer inset-0 bg-black bg-opacity-50 z-40 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
         id="mobile-menu"
       >
-        <div className="relative w-64 bg-[#11112B] h-full z-50"> {/* High z-index for the drawer */}
+        <div className="relative w-64 bg-[#11112B] h-full z-50">
+          {' '}
+          {/* High z-index for the drawer */}
           <button
             type="button"
             className="absolute top-4 right-4 text-gray-400 hover:text-white"

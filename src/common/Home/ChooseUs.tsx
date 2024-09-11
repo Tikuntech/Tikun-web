@@ -1,9 +1,9 @@
-import React from 'react';
-import Image from 'next/image';
-import ExpertiesImg from '/public/Home/Vector (3).svg';
-import TechnologyImg from '/public/Home/Vector (4).svg';
-import SolutionImg from '/public/Home/Vector (5).svg';
-import ResultImg from '/public/Home/Vector (6).svg';
+import React from 'react'
+import Image from 'next/image'
+import ExpertiesImg from '/public/Home/Vector (3).svg'
+import TechnologyImg from '/public/Home/Vector (4).svg'
+import SolutionImg from '/public/Home/Vector (5).svg'
+import ResultImg from '/public/Home/Vector (6).svg'
 
 const items = [
   {
@@ -42,18 +42,17 @@ const items = [
     description:
       "Our track record speaks for itself – we've helped businesses of all sizes and industries achieve their goals with our IT solutions.",
   },
-];
+]
 
 const ChooseUs: React.FC = () => {
   return (
-    
     <div className=" py-12 px-4">
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col ">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item, index) => (
             <div
               key={index}
-              className="rounded-lg p-6 flex flex-col md:items-left md:text-left text-center items-center "
+              className="rounded-lg p-6 flex flex-col md:items-start md:text-left text-center items-center "
             >
               <div className="mb-4">
                 <Image
@@ -75,7 +74,7 @@ const ChooseUs: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ChooseUs;
+export default ChooseUs

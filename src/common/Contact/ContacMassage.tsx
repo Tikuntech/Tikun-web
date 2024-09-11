@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from 'react'
 
 const ContacMassage: React.FC = () => {
@@ -34,20 +31,18 @@ const ContacMassage: React.FC = () => {
   return (
     <>
       {/* Form Overlay */}
-    
-      <div className="inset-0 p-2 md:p-10 h-full flex flex-col items-center justify-center">
+
+      <div className="inset-0 pt-5 md:p-10 h-full flex flex-col items-center justify-center">
         <div className="bg-custom-blue p-8 rounded-lg shadow-md w-full ">
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-black">
-          Send Us Message
+            Send Us Message
           </h2>
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="md:space-y-4 md:p-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h2 className="block text-sm font-bold text-black ">
-                  Name
-                </h2>
+                <h2 className="block text-sm font-bold text-black ">Name</h2>
                 <input
                   placeholder="Enter Your Name ..."
                   type="text"
@@ -59,9 +54,7 @@ const ContacMassage: React.FC = () => {
                 />
               </div>
               <div>
-                <h2 className="block text-sm font-bold text-black ">
-                  Email
-                </h2>
+                <h2 className="block text-sm font-bold text-black ">Email</h2>
                 <input
                   placeholder="Enter Your Email Address ..."
                   type="email"
@@ -75,12 +68,7 @@ const ContacMassage: React.FC = () => {
             </div>
 
             <div>
-              <h2
-                className="block text-sm font-bold text-black "
-              
-              >
-                Message
-              </h2>
+              <h2 className="block text-sm font-bold text-black ">Message</h2>
               <textarea
                 id="message"
                 placeholder="Enter Your Message ..."
@@ -136,10 +124,8 @@ const ContacMassage: React.FC = () => {
           </form>
         </div>
       </div>
-      
     </>
   )
 }
 
-export default ContacMassage;
-
+export default ContacMassage
