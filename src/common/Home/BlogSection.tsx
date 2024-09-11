@@ -1,9 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import ServiceLine from '/public/Project/Line (2).svg'
-import BgImg from '/public/Project/Rectangle (3).png'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import HomeArrowIcon from '../../../public/Home/HomeArrowIconBlack.svg'
+import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg'
 
 const BlogSection: React.FC = () => {
   return (
