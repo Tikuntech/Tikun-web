@@ -41,7 +41,7 @@ const ContactForm: React.FC = () => {
       ></textarea>
       <div className="flex gap-10 mt-2 ml-3 text-white">
         <label className="text-xs leading-loose">
-          <input type="checkbox" className="sr-only" />
+          <input type="checkbox" className="sr-only " />
           <span className="ml-2">
             By ticking this box, I am consenting to be sent monthly articles and
             promotions through tickuntech newsletter.

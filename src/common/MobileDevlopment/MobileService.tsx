@@ -23,12 +23,12 @@ const MobileService = () => {
           {items.map((item, index) => (
             <li
               key={index}
-              className="flex items-center text-lg py-2 relative group transition-transform duration-300 ease-in-out hover:translate-x-2"
+              className="flex items-center text-lg py-2 relative group transition-transform  duration-300 ease-in-out hover:translate-x-2"
             >
-              <span className="mr-2 text-gray-600 group-hover:text-blue-500 transition-transform duration-300 ease-in-out">
+              <span className="mr-2 text-gray-600 group-hover:text-[#92DEED] transition-transform duration-300 ease-in-out">
                 <FaAngleRight />
               </span>
-              <span className="transition-transform duration-300 ease-in-out group-hover:translate-x-1">
+              <span className="transition-transform duration-300 group-hover:text-[#92DEED] ease-in-out group-hover:translate-x-1">
                 {item}
               </span>
             </li>

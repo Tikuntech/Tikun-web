@@ -32,13 +32,13 @@ export default function Page() {
     <>
       <main className="min-h-screen bg-[#D5D9E5]">
         <LightNavbar />
-        <div className="pt-10 md:pt-20 p-5 md:p-0">
-          <div className="md:ml-32">
+        <div className="pt-10 md:pt-10 p-5 md:p-0">
+          <div className="md:ml-20">
             <Webdevlopmemnt />
           </div>
 
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-32 mt-5">
+            <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
               Web Development
             </h1>
           </div>

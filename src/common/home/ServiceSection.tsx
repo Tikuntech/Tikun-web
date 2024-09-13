@@ -5,6 +5,7 @@ import CyberImg from '/public/Home/ImagePlaceholder.png'
 import ServiceArrowIcon from '/public/Service/ServiceArrowIcon.svg'
 
 import { FaArrowRightLong } from 'react-icons/fa6'
+import Link from 'next/link'
 
 const ServiceSection: React.FC = () => {
   return (
@@ -15,28 +16,33 @@ const ServiceSection: React.FC = () => {
           <p className="font-bold md:text-6xl mt-20 text-4xl">Service</p>
         </div>
         <div>
+        <Link href="/webDevlopment">
           <div className="flex justify-between mt-10 font-extralight ">
-            <h1 className="md:text-4xl mb-8 font-thin text-2xl md:ml-3">
-              Web Development
-            </h1>
-            <div className="text-black">
-              <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
-            </div>
-
-            {/* <HomeArrowIcon className="md:text-4xl text-2xl" /> */}
+          
+              <h1 className="md:text-4xl mb-8 font-thin text-2xl md:ml-3">
+                Web Development
+              </h1>
+           
+          
+              <div className="text-black">
+                <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
+              </div>
+         
           </div>
-
+</Link>
           <Image src={ServiceLine} alt="Line" />
         </div>
 
         <div>
+        <Link href="/mobileDevlopment">
           <div className="flex justify-between md:mt-14 font-extralight ">
+            
             <h1 className="md:text-4xl text-2xl mb-8 md:ml-3">
               Mobile Development
             </h1>
             <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
           </div>
-
+          </Link>
           <Image src={ServiceLine} alt="Line" />
         </div>
         <div className="md:flex ">
@@ -53,13 +59,14 @@ const ServiceSection: React.FC = () => {
         </div>
         <Image src={ServiceLine} alt="Line" className="mt-5" />
 
+ <Link href="/digitalMarketing">
         <div className="flex justify-between md:mt-20 font-extralight ">
           <h1 className="md:text-4xl text-2xl  mb-10 font-thin md:ml-3">
             Digital Marketing
           </h1>
           <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
         </div>
-
+</Link>
         <Image src={ServiceLine} alt="Line" className="pb-10" />
       </section>
     </main>

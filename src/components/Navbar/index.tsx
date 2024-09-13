@@ -66,35 +66,35 @@ const NavbarHeader: React.FC = () => {
             </div>
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
-                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   ABOUT US
                 </span>
               </Link>
               <Link href="/services">
-                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SERVICES
                 </span>
               </Link>
               <Link href="/projects">
-                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   PROJECT
                 </span>
               </Link>
               <Link href="/blogs">
-                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   BLOG
                 </span>
               </Link>
               <Link href="/contactUs">
-                <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   CONTACT
                 </span>
               </Link>
             </div>
             <div className="hidden sm:block">
-              <Link href="/signup">
-                <span className="text-gray-300 border border-white hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                  SIGN IN
+              <Link href="/contactUs">
+                <span className="text-gray-300 border border-white hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                SCHEDULE CALL
                 </span>
               </Link>
             </div>
@@ -130,7 +130,7 @@ const NavbarHeader: React.FC = () => {
               />
             </svg>
           </button>
-          <div className="px-4 py-6 space-y-4">
+          <div className="px-4 py-12 space-y-8 p-10 pl-9">
             <Link href="/aboutUs">
               <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 ABOUT US
@@ -156,9 +156,9 @@ const NavbarHeader: React.FC = () => {
                 CONTACT
               </span>
             </Link>
-            <Link href="/signup">
+            <Link href="/contactUs">
               <span className="text-gray-300 border border-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                SIGN IN
+              SCHEDULE CALL
               </span>
             </Link>
           </div>

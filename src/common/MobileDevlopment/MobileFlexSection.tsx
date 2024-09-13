@@ -9,7 +9,7 @@ import MobileService from './MobileService'
 const MobileFlexSection = () => {
   return (
     <>
-      <BlogSearchBar />
+      {/* <BlogSearchBar /> */}
       {/* <CategorySection/> */}
       {/* <LetestPost/> */}
       <MobileService />

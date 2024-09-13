@@ -24,12 +24,12 @@ export default function Home() {
     <div className="min-h-screen bg-[#D5D9E5]">
       <LightNavbar />
 
-      <div className="pt-10 md:pt-20 p-5 md:p-0">
+      <div className="pt-10 md:pt-10 p-5 md:p-0">
         <div className="md:ml-20">
           <DigitalMarketingBrad />
         </div>
 
-        <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
+        <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0">
           <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
             Digital Marketing
           </h1>
@@ -60,7 +60,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="md:p-10 p-5">
+      <div className="md:p-10 p-5 md:pl-14">
         <p className="font-bold text-2xl mb-4">Challenge</p>
         <p className="md:text-base text-xs text-slate-700 mb-4">
           In today's digital age, having a strong online presence is crucial for

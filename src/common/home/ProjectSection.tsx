@@ -1,15 +1,24 @@
+'use client'
+import React, { useState } from 'react';
 import Image from 'next/image'
-import React from 'react'
 import ProjectCard1 from '/public/Home/projectImg-1.png'
 import ProjectCard2 from '/public/Home/projectImg-2.png'
 import { FaArrowRightLong } from 'react-icons/fa6'
-import { FaPlus } from 'react-icons/fa6'
+import { FaPlus,FaMinus } from 'react-icons/fa6'
 import ServiceLine from '/public/Project/Line (3).svg'
 import { CgMathMinus } from 'react-icons/cg'
 import HomeArrowIcon from '/public/Home/HomeArrowIcon.svg'
 import ProjectLine from '/public/Home/ProjectLine.svg'
+import Link from 'next/link'
 
 const ProjectSection: React.FC = () => {
+  const [expanded, setExpanded] = useState<number | null>(null);
+
+  const handleToggle = (index: number) => {
+    setExpanded(expanded === index ? null : index); // Toggle current selection
+  };
+
+
   return (
     <div className="bg-[#11112B]  md:h-full  ">
       <div className="flex flex-col md:flex-row justify-between md:items-center  md:pt-10 p-4  ">
@@ -70,68 +79,101 @@ const ProjectSection: React.FC = () => {
 
       <div className="md:flex md:justify-between md:mt-5 md:pl-20 p-5 ">
         <div className=" justify-center text-center">
-          <h1 className="text-white md:text-6xl text-2xl w-1/2  text-left mt-20 font-medium">
+          <h1 className="text-white md:text-6xl text-2xl md:w-1/2  text-left mt-20 font-medium">
             Got Any Questions?
           </h1>
+          <Link href={"/contactUs"}>
+            <div className='hidden md:block'>
+              <button className="cursor-pointer flex mt-5  md:mt-48 text-white p-3 bg-[#11112B]   rounded-lg border border-white  items-center justify-center">
+                ASK A QUESTION
+                <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
+              </button>
 
-          <button className=" cursor-pointer mt-5  md:mt-48 text-white p-3 bg-[#11112B]   rounded-lg border border-white flex items-center justify-center">
-            ASK A QUESTION
-            <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
-          </button>
+            </div>
+          </Link>
         </div>
 
-        <div className="md:pr-20 md:w-1/2 ">
-          <h1 className="flex text-white mt-20 justify-between font-bold md:mb-10 mb-5 md:pl-2">
-            What services does Tikuntech offer? <FaPlus className="ml-10" />
-          </h1>
-          <div className="hidden md:block">
-            <Image src={ServiceLine} alt="ServiceLine" />
-          </div>
 
-          <div>
-            <Image src={ProjectLine} alt="ServiceLine" />
-          </div>
-
-          <h1 className="flex text-white mt-5 justify-between font-bold mb-10 md:pl-2">
-            Which IT solution is for my business? <FaPlus className="ml-10" />
-          </h1>
-          <div className="hidden md:block">
-            <Image src={ServiceLine} alt="ServiceLine" />
-          </div>
-
-          <div>
-            <Image src={ProjectLine} alt="ServiceLine" />
-          </div>
-          <h1 className="flex mt-5 justify-between font-bold md:pl-2  text-custom-blue">
-            How much do the services cost? <CgMathMinus className="ml-10" />
-          </h1>
-          <p className="text-white mt-5 text-sm mb-10 md:pl-2 md:w-2/3">
-            Our pricing varies based on the specific services and needs of your
-            business. We offer flexible pricing options to suit your budget and
-            requirements. Contact us to learn more.
-          </p>
-          <div className="hidden md:block">
-            <Image src={ServiceLine} alt="ServiceLine" />
-          </div>
-
-          <div>
-            <Image src={ProjectLine} alt="ServiceLine" />
-          </div>
-          <h1 className="flex text-white mt-5 justify-between font-bold  mb-10 md:pl-2">
-            How do I get started with the IT solutions?{' '}
-            <FaPlus className="ml-10" />
-          </h1>
-          <div className="hidden md:block">
-            <Image src={ServiceLine} alt="ServiceLine" />
-          </div>
-
-          <div>
-            <Image src={ProjectLine} alt="ServiceLine" />
-          </div>
+       
+         <div className="md:pr-20 md:w-1/2">
+      {/* Accordion Item 1 */}
+      <h1
+        className="flex text-white mt-20 justify-between font-bold md:mb-10 mb-5 md:pl-2 cursor-pointer"
+        onClick={() => handleToggle(1)}
+      >
+        What services does Tikuntech offer? 
+        {expanded === 1 ? <FaMinus className="ml-10" /> : <FaPlus className="ml-10" />}
+      </h1>
+      {expanded === 1 && (
+        <div className="text-white text-sm md:pl-2 mb-5">
+          {/* Add expanded content here */}
+          <p>Tikuntech offers a variety of IT solutions, including software development, IT consulting, and more.</p>
+          {/* <Image src={ProjectLine} alt="ServiceLine" /> */}
         </div>
+      )}
+      <div className="hidden md:block">
+        <Image src={ServiceLine} alt="ServiceLine" />
+      </div>
 
-        <button className=" hidden border border-white text-white flex p-3 rounded-md md:mt-40 items-center justify-center ">
-          ASK A QUESTION <FaArrowRightLong className=" pl-5" />
+      {/* Accordion Item 2 */}
+      <h1
+        className="flex text-white mt-5 justify-between font-bold mb-10 md:pl-2 cursor-pointer"
+        onClick={() => handleToggle(2)}
+      >
+        Which IT solution is for my business?
+        {expanded === 2 ? <FaMinus className="ml-10" /> : <FaPlus className="ml-10" />}
+      </h1>
+      {expanded === 2 && (
+        <div className="text-white text-sm md:pl-2 mb-5">
+          {/* Add expanded content here */}
+          <p>Our solutions are tailored to fit various business needs. Contact us for a custom recommendation.</p>
+          {/* <Image src={ProjectLine} alt="ServiceLine" /> */}
+        </div>
+      )}
+      <div className="hidden md:block">
+        <Image src={ServiceLine} alt="ServiceLine" />
+      </div>
+
+      {/* Accordion Item 3 */}
+      <h1
+        className="flex  mt-5 justify-between font-bold md:pl-2 text-custom-blue cursor-pointer"
+        onClick={() => handleToggle(3)}
+      >
+        How much do the services cost?
+        {expanded === 3 ? <FaMinus className="ml-10" /> : <FaPlus className="ml-10" />}
+      </h1>
+      {expanded === 3 && (
+        <p className="text-white mt-5 text-sm mb-10 md:pl-2 md:w-2/3">
+          Our pricing varies based on the specific services and needs of your business. We offer flexible pricing options to suit your budget and requirements. Contact us to learn more.
+        </p>
+      )}
+      <div className="hidden md:block">
+        <Image src={ServiceLine} alt="ServiceLine" />
+      </div>
+
+      {/* Accordion Item 4 */}
+      <h1
+        className="flex text-white mt-5 justify-between font-bold mb-10 md:pl-2 cursor-pointer"
+        onClick={() => handleToggle(4)}
+      >
+        How do I get started with the IT solutions?
+        {expanded === 4 ? <FaMinus className="ml-10" /> : <FaPlus className="ml-10" />}
+      </h1>
+      {expanded === 4 && (
+        <div className="text-white text-sm md:pl-2 mb-5">
+          {/* Add expanded content here */}
+          <p>Getting started is simple. Contact us to discuss your project requirements and we'll help you with the onboarding process.</p>
+          {/* <Image src={ProjectLine} alt="ServiceLine" /> */}
+        </div>
+      )}
+      <div className="hidden md:block">
+        <Image src={ServiceLine} alt="ServiceLine" />
+      </div>
+    </div>
+
+        <button className=" md:hidden border border-white text-white flex p-3 rounded-md md:mt-40 items-center justify-center ">
+          ASK A QUESTION
+          <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
         </button>
       </div>
     </div>
