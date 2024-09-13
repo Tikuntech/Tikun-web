@@ -13,15 +13,15 @@ export default function Footer() {
     <>
       <footer className="bg-[#11112B] text-white py-8 p-4     ">
         <div className="container mx-auto md:px-4 flex flex-col items-center md:flex-row md:justify-between">
-          {/* Logo and Copyright Section */}
+         
           <div className="hidden md:flex flex-col items-center md:items-start md:space-y-28 space-y-2 mb-10 md:mb-0">
             <TikcunteckLogo />
-            {/* <p className="text-sm">Copyright © Tarun Dixit</p> */}
+          
 
             <div className="flex flex-row gap-8">
-              <AiFillInstagram className="h-10 w-10" />
-              <FaFacebookF className="h-8 w-8 mt-1" />
-              <FaTwitter className="h-10 w-10 pt-1" />
+              <AiFillInstagram className="h-10 w-10 hover:text-[#92DEED]" />
+              <FaFacebookF className="h-8 w-8 mt-1 hover:text-[#92DEED]" />
+              <FaTwitter className="h-10 w-10 pt-1 hover:text-[#92DEED]" />
             </div>
           </div>
 
@@ -32,34 +32,34 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-4">Explore</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                  <Link href="/aboutUs">
+                    <span className="hover:text-[#92deed] font-thin">
                       About Us
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                  <Link href="/services">
+                    <span className="hover:text-[#92deed] font-thin">
                       Services
                     </span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                    <span className="hover:text-[#92deed] font-thin">
                       Pricing
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">Blog</span>
+                  <Link href="/blogs">
+                    <span className="hover:text-[#92deed] font-thin">Blog</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                  <Link href="/contactUs">
+                    <span className="hover:text-[#92deed] font-thin">
                       Contact
                     </span>
                   </Link>
@@ -68,29 +68,29 @@ export default function Footer() {
             </div>
 
             {/* Contact Section */}
-            <div className="flex flex-col w-full md:w-24 mb-8 md:mb-0">
+            <div className="flex flex-col w-full md:w-28 mb-8 md:mb-0">
               <h3 className="text-lg font-bold mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">Email</span>
+                    <span className="hover:text-[#92deed] font-thin">Email</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">Phone</span>
+                    <span className="hover:text-[#92deed] font-thin">Phone</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                    <span className="hover:text-[#92deed] font-thin">
                       Address
                     </span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500 font-thin">
+                    <span className="hover:text-[#92deed] font-thin">
                       Social Media
                     </span>
                   </Link>
@@ -114,9 +114,12 @@ export default function Footer() {
 
         <Image src={footerline} alt="ServiceLine" className="" />
 
-        <div className=" md:flex justify-between md:p-5 pl-2 pt-4 md:pt-0 md:pl-0 ">
-          <p className="md:text-sm text-xs">Copyright © Tarun Dixit</p>
-          <p className="md:text-sm text-xs">Terms & Conditions | Privacy Policy</p>
+        <div className=" md:flex justify-between md:p-5 pl-2 pt-4 md:pt-5 md:pl-0  ">
+          <p className="md:text-sm text-xs">Copyright © Tikunteck</p>
+          <Link href={'/privacyPolicy'}>
+          <p className="md:text-sm hover:text-[#92deed] text-xs">Terms & Conditions | Privacy Policy</p>
+          </Link>
+          
         </div>
       </footer>
     </>

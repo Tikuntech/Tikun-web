@@ -34,13 +34,13 @@ const Page: React.FC = () => {
     <div className="bg-[#11112B] ">
       <NavbarHeader />
       <div className="bg-[#11112B]  pl-4 relative">
-        <div className="pt-10 md:pt-20">
-          <div className="md:ml-20">
+        <div className="pt-10 md:pt-2">
+          <div className="md:ml-14">
             <ServiceBreadCrumb />
           </div>
 
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-4 md:space-y-0">
-            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-20">
+            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-14">
               Services
             </h1>
             <div className="relative hidden md:block w-full  ">

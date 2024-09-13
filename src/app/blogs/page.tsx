@@ -10,10 +10,8 @@ import BlogFooterWire from '/public/Blog/BlogFooterWire.svg'
 import FlexSection from '@/common/Blog/FlexSection'
 import BlogFooter from '@/common/Blog/BlogFooter'
 import ReadyCard from '@/common/Blog/ReadyCard'
-import { fetchBlogs } from '@/services/api'
-import { useQuery } from 'react-query'
-import Loading from './loading'
-import BackgroundImg from '../../../public/Blog/BlogFooterWire.svg'
+
+
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },

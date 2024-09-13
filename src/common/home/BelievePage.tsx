@@ -51,7 +51,7 @@ const BelievePage: React.FC = () => {
           <div className="hidden md:flex items-center">
             <Image src={LineImg} alt="Line" />
           </div>
-          <div className="flex items-center">
+          <div className="md:hidden flex items-center">
             <Image src={BelieveLineImg} alt="Line" />
           </div>
 
@@ -67,7 +67,7 @@ const BelievePage: React.FC = () => {
           <div className="hidden md:flex items-center">
             <Image src={LineImg} alt="Line" />
           </div>
-          <div className="flex items-center">
+          <div className="md:hidden  flex items-center">
             <Image src={BelieveLineImg} alt="Line" />
           </div>
 

@@ -9,16 +9,7 @@ import { AiFillInstagram } from 'react-icons/ai'
 export default function Footer() {
   return (
     <footer>
-      {/* <div className="relative w-80 h-80">
-    <div className="absolute inset-0 bg-blue-500 opacity-75 z-10 flex items-center justify-center">
-      <p className="text-white font-bold">Background 1</p>
-    </div>
-
- 
-    <div className="absolute inset-0 bg-red-500 opacity-75 z-20 flex items-center justify-center">
-      <p className="text-white font-bold">Background 2</p>
-    </div>
-  </div> */}
+    
 
       <div className="relative bg-[#D5D9E5] text-[#11112B] py-8 px-4 mt-20 h-full md:h-80">
         <div className="absolute bottom-0 left-0   p-4  ">
@@ -54,9 +45,9 @@ export default function Footer() {
                 <MobileFooterEmail />
               </div>
               <div className="flex mt-10 space-x-8 ">
-                <AiFillInstagram className="h-8 w-8 hover:text-blue-500" />
-                <FaFacebookF className="h-8 w-8 hover:text-blue-500" />
-                <FaTwitter className="h-8 w-8 hover:text-blue-500" />
+                <AiFillInstagram className="h-8 w-8 hover:text-[#92DEED]" />
+                <FaFacebookF className="h-8 w-8 hover:text-[#92DEED]" />
+                <FaTwitter className="h-8 w-8 hover:text-[#92DEED]" />
               </div>
             </div>
 
@@ -65,28 +56,28 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-2">Explore</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500">About Us</span>
+                  <Link href="/aboutUs">
+                    <span className="hover:text-[#92DEED]">About Us</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/services">
+                    <span className="hover:text-[#92DEED]">Services</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500">Services</span>
+                    <span className="hover:text-[#92DEED]">Pricing</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500">Pricing</span>
+                  <Link href="/blogs">
+                    <span className="hover:text-[#92DEED]">Blog</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500">Blog</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#">
-                    <span className="hover:text-blue-500">Contact</span>
+                  <Link href="/contactUs">
+                    <span className="hover:text-[#92DEED]">Contact</span>
                   </Link>
                 </li>
               </ul>
@@ -98,22 +89,22 @@ export default function Footer() {
               <ul className="space-y-2">
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500">Email</span>
+                    <span className="hover:text-[#92DEED]">Email</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500">Phone</span>
+                    <span className="hover:text-[#92DEED]">Phone</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500">Address</span>
+                    <span className="hover:text-[#92DEED]">Address</span>
                   </Link>
                 </li>
                 <li>
                   <Link href="#">
-                    <span className="hover:text-blue-500">Social Media</span>
+                    <span className="hover:text-[#92DEED]">Social Media</span>
                   </Link>
                 </li>
               </ul>

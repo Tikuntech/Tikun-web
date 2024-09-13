@@ -33,7 +33,7 @@ const ContacMassage: React.FC = () => {
       {/* Form Overlay */}
 
       <div className="inset-0 pt-5 md:p-10 h-full flex flex-col items-center justify-center">
-        <div className="bg-custom-blue p-8 rounded-lg shadow-md w-full ">
+        <div className="bg-custom-blue p-8 rounded-lg shadow-md md:w-[700px] ">
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-black">
             Send Us Message
           </h2>

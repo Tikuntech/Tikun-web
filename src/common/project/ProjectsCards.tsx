@@ -18,7 +18,7 @@ export const projects = [
     description: '2 0 2 2',
     title: 'Uwang Corp.',
 
-    link: 'https://stripe.com',
+    link: '/projectdetailPage',
   },
   {
     description: '2 0 2 2',

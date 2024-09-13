@@ -9,7 +9,7 @@ import BlogContactCard from './ContactCard'
 const FlexSection = () => {
   return (
     <>
-      <BlogSearchBar />
+      {/* <BlogSearchBar /> */}
       <CategorySection />
       <LetestPost />
       <BlogContactCard />

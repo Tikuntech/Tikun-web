@@ -10,7 +10,7 @@ const LightNavbar: React.FC = () => {
   const closeMenu = () => setIsOpen(false)
 
   return (
-    <nav className="bg-white text-black relative">
+    <nav className="bg-[#D5D9E5] text-black relative">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* Mobile menu button */}
@@ -66,35 +66,35 @@ const LightNavbar: React.FC = () => {
             </div>
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
-                <span className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   ABOUT US
                 </span>
               </Link>
               <Link href="/services">
-                <span className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SERVICES
                 </span>
               </Link>
               <Link href="/projects">
-                <span className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   PROJECT
                 </span>
               </Link>
               <Link href="/blogs">
-                <span className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   BLOG
                 </span>
               </Link>
               <Link href="/contactUs">
-                <span className="text-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   CONTACT
                 </span>
               </Link>
             </div>
             <div className="hidden sm:block">
-              <Link href="/signup">
-                <span className="text-black border border-black hover:bg-gray-200 hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                  SIGN IN
+              <Link href="/contactUs">
+                <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                SCHEDULE CALL
                 </span>
               </Link>
             </div>
@@ -130,33 +130,33 @@ const LightNavbar: React.FC = () => {
           </button>
           <div className="px-4 py-6 space-y-4">
             <Link href="/aboutUs">
-              <span className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 ABOUT US
               </span>
             </Link>
             <Link href="/services">
-              <span className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 SERVICES
               </span>
             </Link>
             <Link href="/projects">
-              <span className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 PROJECT
               </span>
             </Link>
             <Link href="/blogs">
-              <span className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 BLOG
               </span>
             </Link>
             <Link href="/contactUs">
-              <span className="text-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 CONTACT
               </span>
             </Link>
-            <Link href="/signup">
-              <span className="text-black border border-black hover:bg-gray-200 hover:text-black block px-3 py-2 rounded-md text-base font-medium">
-                SIGN IN
+            <Link href="/contactUs">
+              <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              SCHEDULE CALL
               </span>
             </Link>
           </div>
