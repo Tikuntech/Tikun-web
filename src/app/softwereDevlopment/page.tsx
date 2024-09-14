@@ -98,7 +98,7 @@ export default function Home() {
       <main className="container mx-auto ">
        
 
-        <div className="items-center justify-center p-5 mt-20 md:p-0">
+        <div className="items-center justify-center p-5 mt-20 md:mb-20 md:p-0">
           <ReadyCard />
         </div>
       </main>
