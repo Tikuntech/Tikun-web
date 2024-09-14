@@ -32,7 +32,7 @@ const Page: React.FC = () => {
             <h1 className="hidden md:block text-4xl md:text-7xl text-white font-bold flex-shrink-0">
               Contact Us
             </h1>
-            <div className="relative hidden md:block w-full h-64 md:h-60">
+            <div className="relative hidden md:block w-full h-64 md:h-40">
               {images.map((img, index) => (
                 <div key={index} className="absolute" style={randomPosition()}>
                   <Image
