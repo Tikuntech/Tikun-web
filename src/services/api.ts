@@ -8,7 +8,7 @@ import axios from 'axios'
 
 const axiosInstance = axios.create({
   // baseURL: 'http://52.165.81.79:5000/api/v1',
-  baseURL:'https://32f3-2401-4900-8847-5b8a-19e2-fea-26c7-8ac9.ngrok-free.app',
+  baseURL:'https://api.bixid.in/api/v1',
   timeout: 1000,
   headers: {
     'Access-Control-Allow-Origin': '*',

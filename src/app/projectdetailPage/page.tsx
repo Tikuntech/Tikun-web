@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import BoxImg from '/public/aboutus/Vector.svg'
 import OverflowCard from '@/common/OverflowCard'
@@ -15,7 +15,12 @@ import GoogleImg from '/public/Home/GOGGLE.svg'
 import AmazonImg from '/public/Home/AMAZON.svg'
 import WindowsImg from '/public/Home/WINDOWS.svg'
 import SonyImg from '/public/Home/SONY.svg'
+// import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
+import { useParams, usePathname } from 'next/navigation'
 
+// import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
 
@@ -29,6 +34,31 @@ const randomPosition = () => ({
 })
 
 const Page: React.FC = () => {
+  const searchParams = useSearchParams();
+  const data =JSON.parse(searchParams.get('data'))
+  // console.log("data?.title",data?.title); // Logs "search"
+  // const AAAA = searchParams.get('search');
+  // const pathname = usePathname();
+
+  // const router = useRouter();
+
+  // const params = useParams()
+
+// console.log("pathname",params)
+  // const router = useRouter();
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   // if (router?.query?.data) {
+  //   //   alert(router?.query?.data)
+  //   //   // Parse the JSON string back into an object
+  //   //   const parsedData = JSON.parse(router?.query?.data);
+  //   //   setData(parsedData);
+  //   // }
+  // }, [router?.query]);
+
+  
+
   return (
     <>
       <NavbarHeader />
@@ -41,7 +71,7 @@ const Page: React.FC = () => {
 
           <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0">
             <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 pl-4">
-              Project Details Page
+            {data?.title? data?.title:  "Project Details Page"}
               
             </h1>
             <div className="relative hidden md:block w-full  ">
@@ -68,17 +98,15 @@ const Page: React.FC = () => {
                 height={40}
                 className="object-contain mb-4 md:mb-2 hidden md:block"
               />
-              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20  ">
-                We believe that technology can change the world.
+              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20   line-clamp-3 ">
+               {data?.description ? data?.description :"We believe that technology can change the world."}
               </h1>
             </div>
 
             <div className="text-white md:w-1/2 ">
               <p className="mb-4 text-sm md:text-base">
-                That's why we're committed to delivering innovative IT solutions
-                to businesses of all sizes. Our team of experienced
-                professionals is dedicated to helping you achieve your goals and
-                thrive in a rapidly evolving digital landscape.
+              {data?.description ? data?.description :" That's why we're committed to delivering innovative IT solutions to businesses of all sizes. Our team of experienced professionals is dedicated to helping you achieve your goals and thrive in a rapidly evolving digital landscape."}
+               
               </p>
 
               <p className="text-sm md:text-base">

@@ -8,7 +8,7 @@ export function ProjectCards() {
   return isLoading ? (
     <Loading />
   ) : (
-    <div className="max-w-lg mx-auto px-3">
+    <div className=" mx-auto px-3">
       <HoverEffect items={data?.data ? data?.data : []} />
     </div>
   )

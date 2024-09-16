@@ -42,7 +42,7 @@ export function ProjectTabs() {
   ]
 
   return (
-    <div className=" md:h-[40rem] [perspective:1000px] text-xs md:text-lg relative flex flex-col  mx-auto md:w-full items-start justify-start my-5">
+    <div className=" md:h-20 [perspective:1000px] text-xs md:text-lg relative flex flex-col  mx-auto md:w-full items-start justify-start my-5 md:ml-14">
       <Tabs tabs={tabs} />
     </div>
   )
