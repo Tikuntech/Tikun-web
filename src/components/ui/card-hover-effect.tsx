@@ -28,13 +28,15 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10',
+        'md:flex w-full',
         className
       )}
     >
       {items.map((item, idx) => (
         <Link
-          href={item?.Link}
+          // href={'/projectdetailPage'}
+          href={{ pathname: '/projectdetailPage', query: { data: JSON.stringify(item) } }}
+          // href={`/projectdetailPage?data=${encodeURIComponent(item)}`}
           key={item?.Link}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -62,7 +64,7 @@ export const HoverEffect = ({
             </Card>
           ) : (
             <Card>
-              <div className="h-80 flex flex-col justify-end p-4">
+              <div className="h-80 flex flex-col justify-end p-4 w-full">
                 <div className="text-black font-normal text-left">
                   <CardDescription>{item.description}</CardDescription>
                   <CardTitle>{item.title}</CardTitle>
@@ -95,11 +97,11 @@ export const Card = ({
       className={
         isHovered
           ? cn(
-              '  text-white px-4 py-2 rounded-md h-full hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer',
+              '  text-white h-full px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
               className
             )
           : cn(
-              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 rounded-md hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer',
+              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 h-full  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer',
               className
             )
       }
