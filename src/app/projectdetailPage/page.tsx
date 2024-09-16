@@ -35,27 +35,12 @@ const randomPosition = () => ({
 
 const Page: React.FC = () => {
   const searchParams = useSearchParams();
-  const data =JSON.parse(searchParams.get('data'))
-  // console.log("data?.title",data?.title); // Logs "search"
-  // const AAAA = searchParams.get('search');
-  // const pathname = usePathname();
+  searchParams?.get('data')
+  // const data = searchParams.get('data') ? JSON.parse(searchParams?.get('data') || null) : null;
+  const dataParam: string | null =searchParams?.get('data');
+  const data = dataParam ? JSON.parse(dataParam) : null;
 
-  // const router = useRouter();
-
-  // const params = useParams()
-
-// console.log("pathname",params)
-  // const router = useRouter();
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   // if (router?.query?.data) {
-  //   //   alert(router?.query?.data)
-  //   //   // Parse the JSON string back into an object
-  //   //   const parsedData = JSON.parse(router?.query?.data);
-  //   //   setData(parsedData);
-  //   // }
-  // }, [router?.query]);
+  
 
   
 
