@@ -86,7 +86,7 @@ export const services = [
         <FaArrowRightLong style={{ height: 60, width: 60 }} />
       </div>
     ),
-    title: 'Digital Marketing',
+    title: ' Digital Marketing',
     description:
       'Create solutions to help businesses achieve their digital marketing goals.',
     link: '/digitalMarketing',

@@ -44,8 +44,13 @@ const BlogSection: React.FC = () => {
             <p className="text-white font-thin text-sm mt-5">
               12 April 2023 | Dheeraj
             </p>
-            <button className="bg-[#92deed] md:mt-8 mt-5 text-[#11112B] px-6 py-2 rounded-lg shadow-md">
+            <button className="bg-[#92deed] flex md:mt-8 mt-5 text-[#11112B] px-6 py-2 rounded-lg shadow-md">
               READ MORE
+              <Image
+                src={HomeArrowIcon}
+                alt="White Arrow"
+                className="pl-4 pt-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              />
             </button>
           </div>
         </div>

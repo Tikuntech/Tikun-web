@@ -9,8 +9,6 @@ import { AiFillInstagram } from 'react-icons/ai'
 export default function Footer() {
   return (
     <footer>
-    
-
       <div className="relative bg-[#D5D9E5] text-[#11112B] py-8 px-4 mt-20 h-full md:h-80">
         <div className="absolute bottom-0 left-0   p-4  ">
           <Image
@@ -45,8 +43,12 @@ export default function Footer() {
                 <MobileFooterEmail />
               </div>
               <div className="flex mt-10 space-x-8 ">
+                <Link href='https://instagram.com/tikuntech'>
                 <AiFillInstagram className="h-8 w-8 hover:text-[#92DEED]" />
+                </Link>
+                <Link href="https://www.facebook.com/profile.php?id=61564258707403">
                 <FaFacebookF className="h-8 w-8 hover:text-[#92DEED]" />
+                </Link>
                 <FaTwitter className="h-8 w-8 hover:text-[#92DEED]" />
               </div>
             </div>
@@ -88,24 +90,36 @@ export default function Footer() {
               <h3 className="text-lg font-bold mb-2">Contact</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92DEED]">Email</span>
+                <Link href="mailto:business@tikuntech.com">
+                    <span className="hover:text-[#92DEED]">  Email - business@tikuntech.com</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92DEED]">Phone</span>
+                <Link href="tel:+14709099027">
+                    <span className="hover:text-[#92DEED]"> Phone - 470-909-9027</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92DEED]">Address</span>
+                  <Link href="https://www.google.com/maps?q=702+Lakeshore+Circle+NE,+Atlanta,+GA+30324">
+                    <span className="hover:text-[#92DEED]">  Address: 702 Lakeshore Circle NE Atlanta, GA 30324</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92DEED]">Social Media</span>
+                <li>
+                  <Link href="https://www.yoursocialmedia.com">
+                    <span className="font-thin">
+                      <div className="flex flex-row gap-8">
+                        <Link href="https://instagram.com/tikuntech">
+                          <AiFillInstagram className="h-7 w-7 hover:text-[#92DEED] cursor-pointer" />
+                        </Link>
+                        <Link href="https://www.facebook.com/profile.php?id=61564258707403">
+                          <FaFacebookF className="h-6 w-6 mt-1 hover:text-[#92DEED] cursor-pointer" />
+                        </Link>
+                        <FaTwitter className="h-7 w-7 pt-1 hover:text-[#92DEED] cursor-pointer" />
+                      </div>
+                    </span>
                   </Link>
+                </li>
                 </li>
               </ul>
             </div>

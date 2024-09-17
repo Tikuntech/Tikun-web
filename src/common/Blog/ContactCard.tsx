@@ -48,8 +48,9 @@ const ContactCard = () => {
         <div className="flex w-full mt-4 items-center">
           <Image src={LocationIcon} alt="Location Icon" className="w-12 h-12" />
           <div className="flex flex-col">
-            <span className=" w-full md:pl-4 pl-3">702 Lakeshore Circle NE Atlanta GA 30324</span>
-            
+            <span className=" w-full md:pl-4 pl-3">
+              702 Lakeshore Circle NE Atlanta GA 30324
+            </span>
           </div>
         </div>
 

@@ -26,16 +26,14 @@ export const HoverEffect = ({
   }
 
   return (
-    <div
-      className={cn(
-        'md:flex w-full',
-        className
-      )}
-    >
+    <div className={cn('md:flex w-full', className)}>
       {items.map((item, idx) => (
         <Link
           // href={'/projectdetailPage'}
-          href={{ pathname: '/projectdetailPage', query: { data: JSON.stringify(item) } }}
+          href={{
+            pathname: '/projectdetailPage',
+            query: { data: JSON.stringify(item) },
+          }}
           // href={`/projectdetailPage?data=${encodeURIComponent(item)}`}
           key={item?.Link}
           className="relative group block p-2 h-full w-full"

@@ -93,7 +93,7 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-12">
+      <div className="p-10 pb-20 md:pt-20 md:pb-24">
         <AboutMain />
       </div>
 

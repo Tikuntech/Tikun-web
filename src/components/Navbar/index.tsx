@@ -1,13 +1,26 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import TikcunteckIcon from '../icons/TikcunteckIcon'
+import Image from 'next/image'
+import HomeArrowIcon from '/public/Home/HomeArrowIcon.svg'
+import HomeArrowBlackIcon from '/public/Home/HomeArrowIconBlack.svg'
+import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 
 const NavbarHeader: React.FC = () => {
+  const pathname = usePathname(); // Get the current pathname
+
   const [isOpen, setIsOpen] = useState(false)
+  
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
+
+  console.log('pathnamepathname:',pathname);
+
+
+
 
   return (
     <nav className="bg-[#11112B] text-white relative">
@@ -66,35 +79,73 @@ const NavbarHeader: React.FC = () => {
             </div>
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
-                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                
+                // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium"
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/aboutUs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
                   ABOUT US
                 </span>
               </Link>
               <Link href="/services">
-                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/services'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+                }`}>
                   SERVICES
                 </span>
               </Link>
               <Link href="/projects">
-                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/projects'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+                }`}>
                   PROJECT
                 </span>
               </Link>
               <Link href="/blogs">
-                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/blogs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+                }`}>
                   BLOG
                 </span>
               </Link>
               <Link href="/contactUs">
-                <span className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/blogs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+                }`}>
                   CONTACT
                 </span>
               </Link>
             </div>
             <div className="hidden sm:block">
               <Link href="/contactUs">
-                <span className="text-gray-300 border border-white hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                SCHEDULE CALL
+                <span className="text-white border border-white flex px-3 py-2 rounded-md text-sm font-medium hover:text-black hover:bg-[#92DEED] transition-colors duration-300">
+                  SCHEDULE CALL
+                  <Image
+                    src={HomeArrowIcon}
+                    alt="White Arrow"
+                    className="pl-4 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+                  />
+                  {/* <Image src={HomeArrowBlackIcon} alt="Black Arrow" className="pl-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100" /> */}
                 </span>
               </Link>
             </div>
@@ -158,7 +209,7 @@ const NavbarHeader: React.FC = () => {
             </Link>
             <Link href="/contactUs">
               <span className="text-gray-300 border border-white hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-              SCHEDULE CALL
+                SCHEDULE CALL
               </span>
             </Link>
           </div>

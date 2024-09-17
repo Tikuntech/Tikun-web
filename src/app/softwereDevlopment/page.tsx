@@ -45,24 +45,60 @@ export default function Home() {
         />
       </div>
 
-     
       <div className="md:p-10 p-5">
-     
         <p className="md:text-base text-xs text-slate-700 mb-4">
-        At Tikunteck, we pride ourselves on delivering innovative and customized software solutions that drive business success and transform operations. Our software development services are meticulously designed to address the unique needs of each client, harnessing the power of cutting-edge technology and best practices to create scalable, efficient, and reliable applications. With a dedicated team of software engineers, project managers, and quality assurance experts, we ensure that every project is executed with precision and excellence, resulting in software that not only meets but exceeds expectations.
-
-
+          At Tikunteck, we pride ourselves on delivering innovative and
+          customized software solutions that drive business success and
+          transform operations. Our software development services are
+          meticulously designed to address the unique needs of each client,
+          harnessing the power of cutting-edge technology and best practices to
+          create scalable, efficient, and reliable applications. With a
+          dedicated team of software engineers, project managers, and quality
+          assurance experts, we ensure that every project is executed with
+          precision and excellence, resulting in software that not only meets
+          but exceeds expectations.
         </p>
         <p className="md:text-base text-xs text-slate-700 mb-4">
-        Understanding that every business is unique, we start by gaining a deep understanding of your objectives, processes, and challenges. Our approach begins with comprehensive consultations and needs assessments to identify the core requirements and desired outcomes of your software project. This initial phase is critical as it allows us to design a solution that aligns perfectly with your business goals, whether it’s a custom enterprise application, a specialized tool, or an integrated system.
+          Understanding that every business is unique, we start by gaining a
+          deep understanding of your objectives, processes, and challenges. Our
+          approach begins with comprehensive consultations and needs assessments
+          to identify the core requirements and desired outcomes of your
+          software project. This initial phase is critical as it allows us to
+          design a solution that aligns perfectly with your business goals,
+          whether it’s a custom enterprise application, a specialized tool, or
+          an integrated system.
         </p>
         <p className="md:text-base text-xs text-slate-700 mb-4">
-        Our development team is proficient in a diverse array of technologies and frameworks, enabling us to deliver solutions that are both innovative and robust. We work with modern programming languages and platforms such as Java, Python, C#, and JavaScript, as well as frameworks and libraries like React, Angular, and Django. By leveraging these technologies, we create software that is not only powerful but also adaptable to future technological advancements. Our commitment to using the latest tools and methodologies ensures that your software remains competitive and relevant in an ever-evolving digital landscape.        </p>
+          Our development team is proficient in a diverse array of technologies
+          and frameworks, enabling us to deliver solutions that are both
+          innovative and robust. We work with modern programming languages and
+          platforms such as Java, Python, C#, and JavaScript, as well as
+          frameworks and libraries like React, Angular, and Django. By
+          leveraging these technologies, we create software that is not only
+          powerful but also adaptable to future technological advancements. Our
+          commitment to using the latest tools and methodologies ensures that
+          your software remains competitive and relevant in an ever-evolving
+          digital landscape.{' '}
+        </p>
         <p className="md:text-base text-xs text-slate-700 mb-4">
-        Security is a fundamental aspect of our software development process. We implement robust security measures to protect your software from vulnerabilities and threats. This includes secure coding practices, data encryption, and regular security audits. Additionally, we ensure that our solutions comply with relevant industry standards and regulations, safeguarding your data and maintaining compliance with legal requirements.
-
-</p>
-<p className="md:text-base text-xs text-slate-700 mb-4">At Tikunteck, our commitment to excellence in software development drives our approach to every project. We combine technical expertise with a customer-centric focus to deliver solutions that not only solve problems but also create opportunities for growth and innovation. Whether you’re looking to develop a new software application or enhance an existing one, our team is dedicated to providing the expertise and support you need to achieve success in the digital world.</p>
+          Security is a fundamental aspect of our software development process.
+          We implement robust security measures to protect your software from
+          vulnerabilities and threats. This includes secure coding practices,
+          data encryption, and regular security audits. Additionally, we ensure
+          that our solutions comply with relevant industry standards and
+          regulations, safeguarding your data and maintaining compliance with
+          legal requirements.
+        </p>
+        <p className="md:text-base text-xs text-slate-700 mb-4">
+          At Tikunteck, our commitment to excellence in software development
+          drives our approach to every project. We combine technical expertise
+          with a customer-centric focus to deliver solutions that not only solve
+          problems but also create opportunities for growth and innovation.
+          Whether you’re looking to develop a new software application or
+          enhance an existing one, our team is dedicated to providing the
+          expertise and support you need to achieve success in the digital
+          world.
+        </p>
       </div>
 
       <div className="md:grid md:grid-cols-2 md:p-20 md:gap-10 p-2">
@@ -96,13 +132,11 @@ export default function Home() {
       </div>
 
       <main className="container mx-auto ">
-       
-
         <div className="items-center justify-center p-5 mt-20 md:mb-20 md:p-0">
           <ReadyCard />
         </div>
       </main>
-      <NeedItSolution/>
+      <NeedItSolution />
       <LightFooter />
     </div>
   )

@@ -20,9 +20,7 @@ const Webdevlopmemnt: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-[#11112B]" />
         </li>
-        <li className="text-[#11112B] text-sm font-medium">
-          Web Development
-        </li>
+        <li className="text-[#11112B] text-sm font-medium">Web Development</li>
       </ol>
     </nav>
   )
