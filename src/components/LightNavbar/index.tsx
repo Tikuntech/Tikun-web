@@ -2,12 +2,16 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import TikcunteckIcon from '../icons/LightTikcunteckIcon'
+import { usePathname } from 'next/navigation'
 
 const LightNavbar: React.FC = () => {
+  const pathname = usePathname(); 
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
+
+  console.log('pathnamepathname:',pathname);
 
   return (
     <nav className="bg-[#D5D9E5] text-black relative">
@@ -66,35 +70,70 @@ const LightNavbar: React.FC = () => {
             </div>
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
-                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/aboutUs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
                   ABOUT US
                 </span>
               </Link>
               <Link href="/services">
-                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span 
+                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/services'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
                   SERVICES
                 </span>
               </Link>
               <Link href="/projects">
-                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                  PROJECT
+                <span 
+                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/projects'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
+                PROJECT
                 </span>
               </Link>
               <Link href="/blogs">
-                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                  BLOG
+                <span 
+                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/blogs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
+                BLOG
                 </span>
               </Link>
               <Link href="/contactUs">
-                <span className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                  CONTACT
+                <span 
+                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                  pathname === '/contactUs'
+                    ? 'bg-[#92DEED] text-black' // Highlight when active
+                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                }`}
+                >
+                CONTACT
                 </span>
               </Link>
             </div>
             <div className="hidden sm:block">
               <Link href="/contactUs">
                 <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                SCHEDULE CALL
+                  SCHEDULE CALL
                 </span>
               </Link>
             </div>
@@ -156,7 +195,7 @@ const LightNavbar: React.FC = () => {
             </Link>
             <Link href="/contactUs">
               <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
-              SCHEDULE CALL
+                SCHEDULE CALL
               </span>
             </Link>
           </div>

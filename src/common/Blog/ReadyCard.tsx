@@ -16,17 +16,17 @@ const ReadyCard: React.FC = () => {
 
         {/* Button Section */}
         <Link href={'/contactUs'}>
-        <div className="ml-6 md:mt-32 mt-10">
-          <button
-            className="bg-white text-[#11112B] py-3 px-6 rounded-lg font-bold md:text-lg text-xs flex items-center"
-            aria-label="Get free consultation"
-          >
-            GET FREE CONSULTATION
-            <span className="ml-2" aria-hidden="true">
-              &#8594;
-            </span>
-          </button>
-        </div>
+          <div className="ml-6 md:mt-32 mt-10">
+            <button
+              className="bg-white text-[#11112B] py-3 px-6 rounded-lg font-bold md:text-lg text-xs flex items-center"
+              aria-label="Get free consultation"
+            >
+              GET FREE CONSULTATION
+              <span className="ml-2" aria-hidden="true">
+                &#8594;
+              </span>
+            </button>
+          </div>
         </Link>
       </div>
     </div>

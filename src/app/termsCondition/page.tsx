@@ -7,54 +7,14 @@ export default function Page() {
       <main className="min-h-screen bg-[#11112B]">
         <NavbarHeader />
         <h1 className="text-4xl md:text-6xl text-white font-medium flex-shrink-0 md:ml-10 md:mt-5">
-          Privacy Policy
+          Terms & Condition
         </h1>
 
-        {/* <div className="md:flex md:justify-around md:p-10 gap-10 ">
-          <div className="md:w-full mt-4 p-5 md:p-0">
-        
-            <p className="mt-4">
-          
-              Welcome to Tikunteck . We are dedicated to protecting your personal information and ensuring transparency about how we handle it. This Privacy Policy outlines how we collect, use, disclose, and safeguard your information when you visit our website , use our software, or interact with our services.
-            </p>
-            <p className="mt-10">
-            We collect personal information that you provide directly, such as:
-
-Contact Information: Name, email address, phone number.
-Account Information: Username, password, preferences.
-Payment Information: Credit card details, billing address (when applicable).
-
-            </p>
-            <p className="mt-10">
-              Our approach to web development emphasizes the importance of
-              design and user experience (UX). We believe that a website should
-              be visually appealing, intuitive to navigate, and optimized for
-              performance. Our design team employs the latest UI/UX principles
-              to create user interfaces that are both aesthetically pleasing and
-              highly functional. We use wireframes and prototypes to visualize
-              the design early in the process, allowing for iterative feedback
-              and refinements to ensure that the end result meets your
-              expectations.
-            </p>
-            <p>
-              We utilize a diverse range of technologies and frameworks to build
-              robust web applications. Whether you need a custom-built website,
-              a content management system (CMS), or an e-commerce platform, we
-              have the expertise to deliver high-quality solutions. Our
-              development stack includes popular technologies such as React,
-              Angular, Node.js, and PHP, as well as content management systems
-              like WordPress and Drupal. By staying current with the latest
-              trends and advancements in web development, we ensure that our
-              solutions are both cutting-edge and reliable.
-            </p>
-          </div>
-         
-        </div> */}
         <div className="mx-auto px-4 py-8 md:p-10">
           <section className="mb-6">
             <h2 className="text-2xl font-medium mb-4"> Introduction</h2>
             <p className="text-gray-300">
-              Welcome to <span className="font-bold">Tikunteck</span> . We are
+              Welcome to <span className="font-bold">Tikuntech</span> . We are
               dedicated to protecting your personal information and ensuring
               transparency about how we handle it. This Privacy Policy outlines
               how we collect, use, disclose, and safeguard your information when

@@ -11,8 +11,6 @@ import FlexSection from '@/common/Blog/FlexSection'
 import BlogFooter from '@/common/Blog/BlogFooter'
 import ReadyCard from '@/common/Blog/ReadyCard'
 
-
-
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
   { src: BoxImg, alt: 'Graphic 2', width: 40, height: 40 },

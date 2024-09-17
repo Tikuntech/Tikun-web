@@ -41,12 +41,7 @@ const PointsSection = () => {
         <div className="relative w-full    mt-10">
           {/* Image Container */}
           <div className="relative md:w-full w-80 -ml-16 md:-ml-0 ">
-            <Image
-              src={MobileImage}
-              alt="MobileImage"
-              layout="responsive"
-            
-            />
+            <Image src={MobileImage} alt="MobileImage" layout="responsive" />
 
             {/* Centered Text */}
             <h1 className="absolute inset-0 flex items-center justify-center text-black md:text-4xl font-bold bg-opacity-50  rounded-lg">

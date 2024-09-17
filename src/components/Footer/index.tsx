@@ -13,15 +13,17 @@ export default function Footer() {
     <>
       <footer className="bg-[#11112B] text-white py-8 p-4     ">
         <div className="container mx-auto md:px-4 flex flex-col items-center md:flex-row md:justify-between">
-         
           <div className="hidden md:flex flex-col items-center md:items-start md:space-y-28 space-y-2 mb-10 md:mb-0">
             <TikcunteckLogo />
-          
 
             <div className="flex flex-row gap-8">
-              <AiFillInstagram className="h-10 w-10 hover:text-[#92DEED]" />
-              <FaFacebookF className="h-8 w-8 mt-1 hover:text-[#92DEED]" />
-              <FaTwitter className="h-10 w-10 pt-1 hover:text-[#92DEED]" />
+              <Link href="https://instagram.com/tikuntech">
+                <AiFillInstagram className="h-10 w-10 hover:text-[#92DEED] cursor-pointer" />
+              </Link>
+              <Link href="https://www.facebook.com/profile.php?id=61564258707403">
+                <FaFacebookF className="h-8 w-8 mt-1 hover:text-[#92DEED] cursor-pointer" />
+              </Link>
+              <FaTwitter className="h-10 w-10 pt-1 hover:text-[#92DEED] cursor-pointer" />
             </div>
           </div>
 
@@ -68,30 +70,42 @@ export default function Footer() {
             </div>
 
             {/* Contact Section */}
-            <div className="flex flex-col w-full md:w-28 mb-8 md:mb-0">
+            <div className="flex flex-col w-full md:w-80 mb-8 md:mb-0">
               <h3 className="text-lg font-bold mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92deed] font-thin">Email</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#">
-                    <span className="hover:text-[#92deed] font-thin">Phone</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#">
+                  <Link href="mailto:business@tikuntech.com">
                     <span className="hover:text-[#92deed] font-thin">
-                      Address
+                      Email - business@tikuntech.com
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#">
+                  <Link href="tel:+14709099027">
                     <span className="hover:text-[#92deed] font-thin">
-                      Social Media
+                      Phone - 470-909-9027
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.google.com/maps?q=702+Lakeshore+Circle+NE,+Atlanta,+GA+30324">
+                    <span className="hover:text-[#92deed] font-thin">
+                      Address: 702 Lakeshore Circle NE Atlanta, GA 30324
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://www.yoursocialmedia.com">
+                    <span className="font-thin">
+                      <div className="flex flex-row gap-8">
+                        <Link href="https://instagram.com/tikuntech">
+                          <AiFillInstagram className="h-7 w-7 hover:text-[#92DEED] cursor-pointer" />
+                        </Link>
+                        <Link href="https://www.facebook.com/profile.php?id=61564258707403">
+                          <FaFacebookF className="h-6 w-6 mt-1 hover:text-[#92DEED] cursor-pointer" />
+                        </Link>
+                        <FaTwitter className="h-7 w-7 pt-1 hover:text-[#92DEED] cursor-pointer" />
+                      </div>
                     </span>
                   </Link>
                 </li>
@@ -105,7 +119,7 @@ export default function Footer() {
                 products, services, and promotions. Feel free to unsubscribe
                 anytime!
               </p>
-              <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4 ">
+              <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4  ">
                 <FooterEmailInput />
               </div>
             </div>
@@ -115,11 +129,17 @@ export default function Footer() {
         <Image src={footerline} alt="ServiceLine" className="" />
 
         <div className=" md:flex justify-between md:p-5 pl-2 pt-4 md:pt-5 md:pl-0  ">
-          <p className="md:text-sm text-xs">Copyright © Tikunteck</p>
-          <Link href={'/privacyPolicy'}>
-          <p className="md:text-sm hover:text-[#92deed] text-xs">Terms & Conditions | Privacy Policy</p>
-          </Link>
-          
+          <p className="md:text-sm text-xs">Copyright © Tikuntech</p>
+
+          <p className="md:text-sm  text-xs">
+            <Link href={'/termsCondition'}>
+              <span className="hover:text-[#92deed]"> Terms & Conditions </span>
+              |
+            </Link>
+            <Link href={'/privacyPolicy'}>
+              <span className="hover:text-[#92deed]"> Privacy Policy</span>
+            </Link>
+          </p>
         </div>
       </footer>
     </>

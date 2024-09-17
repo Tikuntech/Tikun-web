@@ -26,9 +26,8 @@ const ContactLocation: React.FC = () => {
         {/* Overlay card (Bottom left position) */}
         <div className="absolute -mt-20 left-4 bg-white bg-opacity-50 rounded-lg p-2 w-48">
           <p className="text-left text-black text-xs">
-          702 Lakeshore Circle NE Atlanta GA 30324
+            702 Lakeshore Circle NE Atlanta GA 30324
           </p>
-        
         </div>
       </div>
     </div>

@@ -22,7 +22,7 @@ const AboutVideo: React.FC = () => {
         className="absolute inset-0 flex items-center justify-center cursor-pointer "
         onClick={handleOpen}
       >
-        <FaPlay className="text-white text-4xl" />
+        {/* <FaPlay className="text-white text-4xl" /> */}
       </div>
     </div>
   )
