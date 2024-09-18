@@ -162,10 +162,12 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="items-center justify-center p-5 mt-20 md:p-0">
+
+      </main>
+
+      <div className="items-center justify-center p-5 mt-20 md:p-0">
           <ReadyCard />
         </div>
-      </main>
       <LightFooter />
     </div>
   )

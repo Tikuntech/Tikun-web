@@ -26,7 +26,7 @@ export const HoverEffect = ({
   }
 
   return (
-    <div className={cn('md:flex w-full', className)}>
+    <div className={cn('md:flex w-full ', className)}>
       {items.map((item, idx) => (
         <Link
           // href={'/projectdetailPage'}
@@ -95,11 +95,11 @@ export const Card = ({
       className={
         isHovered
           ? cn(
-              '  text-white h-full px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
+              '  text-white md:h-96  px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
               className
             )
           : cn(
-              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 h-full  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer',
+              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 md:h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer',
               className
             )
       }

@@ -18,7 +18,7 @@ const ReadyCard: React.FC = () => {
         <Link href={'/contactUs'}>
           <div className="ml-6 md:mt-32 mt-10">
             <button
-              className="bg-white text-[#11112B] py-3 px-6 rounded-lg font-bold md:text-lg text-xs flex items-center"
+              className="bg-white text-[#11112B] hover:bg-custom-blue hover:text-black hover:border-black py-3 px-6 rounded-lg font-bold md:text-lg text-xs flex items-center"
               aria-label="Get free consultation"
             >
               GET FREE CONSULTATION
