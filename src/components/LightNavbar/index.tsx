@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import TikcunteckIcon from '../icons/LightTikcunteckIcon'
 import { usePathname } from 'next/navigation'
+import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg'
+import Image from 'next/image'
 
 const LightNavbar: React.FC = () => {
   const pathname = usePathname(); 
@@ -132,8 +134,10 @@ const LightNavbar: React.FC = () => {
             </div>
             <div className="hidden sm:block">
               <Link href="/contactUs">
-                <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                <span className="text-black flex border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SCHEDULE CALL
+                  {/* import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg' */}
+                  <Image src={HomeArrowIcon} alt="HomeArrowIcon" className='pl-2'/>
                 </span>
               </Link>
             </div>
@@ -194,8 +198,9 @@ const LightNavbar: React.FC = () => {
               </span>
             </Link>
             <Link href="/contactUs">
-              <span className="text-black border border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black border  border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 SCHEDULE CALL
+               
               </span>
             </Link>
           </div>

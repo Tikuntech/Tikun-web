@@ -71,7 +71,7 @@ const BlogSection: React.FC = () => {
 
       {/* Centered Button */}
       <div className="text-center md:mt-10  md:mb-20 mt-5 pb-10">
-        <button className="text-[#11112B] bg-[#D5D9E5] py-3 px-6 rounded-lg border border-[#000000] flex items-center justify-center mx-auto text-base">
+        <button className="text-[#11112B] hover:bg-custom-blue hover:text-black  bg-[#D5D9E5] py-3 px-6 rounded-lg border border-[#000000] flex items-center justify-center mx-auto text-base">
           READ MORE ARTICLES
           <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
         </button>

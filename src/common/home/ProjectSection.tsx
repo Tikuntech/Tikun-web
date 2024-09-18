@@ -69,7 +69,7 @@ const ProjectSection: React.FC = () => {
               Mika Medika Healthcare, a large hospital network, was concerned
               about the security of their patient data.
             </p>
-            <button className="bg-white text-black font-bold mt-10 px-4 py-2 rounded-lg">
+            <button className="bg-white text-black hover:bg-[#11112B] hover:text-white  font-bold mt-10 px-4 py-2 rounded-lg">
               READ MORE
             </button>
           </div>
@@ -83,7 +83,7 @@ const ProjectSection: React.FC = () => {
           </h1>
           <Link href={'/contactUs'}>
             <div className="hidden md:block">
-              <button className="cursor-pointer flex mt-5  md:mt-48 text-white p-3 bg-[#11112B]   rounded-lg border border-white  items-center justify-center">
+              <button className="cursor-pointer hover:bg-custom-blue hover:text-black hover:border-black flex mt-5  md:mt-48 text-white p-3 bg-[#11112B]   rounded-lg border border-white  items-center justify-center">
                 ASK A QUESTION
                 <Image
                   src={HomeArrowIcon}
@@ -198,7 +198,7 @@ const ProjectSection: React.FC = () => {
           </div>
         </div>
 
-        <button className=" md:hidden border border-white text-white flex p-3 rounded-md md:mt-40 items-center justify-center ">
+        <button className=" md:hidden hover:bg-custom-blue hover:text-black hover:border-black border border-white text-white flex p-3 rounded-md md:mt-40 items-center justify-center ">
           ASK A QUESTION
           <Image src={HomeArrowIcon} alt="HomeArrowIcon" className="pl-4" />
         </button>

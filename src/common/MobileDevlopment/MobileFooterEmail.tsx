@@ -86,7 +86,7 @@ const MobileFooterEmail: React.FC = () => {
               value={value}
               onChange={onChange}
               onBlur={onBlur}
-              className="w-full md:w-64 flex-grow px-4 py-3  border-b-2 bottom-1 border-b-custom-black  bg-[#D5D9E5] focus:border-transparent  border border-[#D5D9E5]"
+              className="w-72 md:w-64 flex-grow px-4 py-3  border-b-2 bottom-1 border-b-custom-black  bg-[#D5D9E5] focus:border-transparent  border border-[#D5D9E5]"
               required
             />
           )}
