@@ -1,32 +1,74 @@
+import { postContactUs, PostContactUsData } from '@/services/api'
 import React, { useState } from 'react'
+import { useMutation } from 'react-query'
+import { useForm, SubmitHandler, Controller } from 'react-hook-form'
+import { toast } from 'react-toastify'
+
+
+
+
+interface IFormInput {
+  email: string
+  name: string
+  message: string
+}
+
 
 const ContacMassage: React.FC = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [name, setName] = useState<string>('')
+  const [email, setEmail] = useState<string>('')
+  const [message, setMessage] = useState<string>('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submissionStatus, setSubmissionStatus] = useState<
-    'success' | 'error' | null
-  >(null)
+  const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null)
   const [isChecked, setIsChecked] = useState(false)
+  const {
+    control,
+    reset,
+    setValue,
+    handleSubmit,
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+    formState: { errors },
+  } = useForm<IFormInput>()
 
-    // Simulating form submission (API call here)
-    setTimeout(() => {
-      // Randomly simulating success or error for demo
-      const isSuccess = Math.random() > 0.5
 
-      if (isSuccess) {
-        setSubmissionStatus('success')
-      } else {
-        setSubmissionStatus('error')
-      }
-      setIsSubmitting(false)
-    }, 2000)
+  const mutation = useMutation(postContactUs, {
+    onSuccess: (data) => {
+    
+      console.log('Form successfully submitted:', data);
+      // setSubmissionStatus('success');
+      reset();
+      toast.success("Form submitted successfully!");
+    },
+    onError: (error) => {
+      console.error('Error submitting form:', error);
+      setSubmissionStatus('error');
+      toast.error("Failed to submit the form. Please try again.");
+
+    },
+  });
+
+
+
+  const onSubmit: SubmitHandler<IFormInput> = (data) => {
+    // setIsSubmitting(true);
+  
+   
+
+    const postData: PostContactUsData = {
+      "Subject": "New Query form Tikuntech",
+      message: data?.message,
+      email: data?.email,
+      "Website": "Tikuntech",
+      recipient_email: "jbrown@tikuntech.com",
+      phone: "",
+      name:data?.name
+
+    };
+
+    mutation.mutate(postData)
+
   }
+ 
 
   return (
     <>
@@ -39,45 +81,66 @@ const ContacMassage: React.FC = () => {
           </h2>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="md:space-y-4 md:p-5">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="md:space-y-4 md:p-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
               <div>
+
                 <h2 className="block text-sm font-bold text-black ">Name</h2>
-                <input
-                  placeholder="Enter Your Name ..."
-                  type="text"
-                  id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                <Controller
+                  name="name"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      {...field}
+                      placeholder="Enter Your Name ..."
+                      type="text"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    />
+                  )}
                 />
               </div>
               <div>
                 <h2 className="block text-sm font-bold text-black ">Email</h2>
-                <input
-                  placeholder="Enter Your Email Address ..."
-                  type="email"
-                  id="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                <Controller
+                  name="email"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      {...field}
+                      placeholder="Enter Your Email Address ..."
+                      type="email"
+                      required
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    />
+                  )}
                 />
               </div>
             </div>
 
             <div>
               <h2 className="block text-sm font-bold text-black ">Message</h2>
-              <textarea
-                id="message"
-                placeholder="Enter Your Message ..."
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                rows={4}
-                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+              <Controller
+                name="message"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <textarea
+                    {...field}
+                    id="message"
+                    placeholder="Enter Your Message ..."
+                    required
+                    rows={4}
+                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  />
+                )}
               />
+
             </div>
             <div className="md:flex">
               <div className="flex items-center gap-3 mt-5">
@@ -101,11 +164,10 @@ const ContacMassage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
-                  isSubmitting
+                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-[#11112B] focus:ring-2'
-                }`}
+                  }`}
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>

@@ -27,3 +27,24 @@ export const fetchBlogs = async () => {
   const { data } = await axiosInstance.get('/blog') // Adjust endpoint as needed
   return data
 }
+
+
+export interface PostContactUsData {
+  Subject: string;
+  message: string;
+  phone: string;
+  email: string;
+  Website: string;
+  recipient_email:string;
+  name:string;
+}
+
+
+
+
+
+export const postContactUs = async (body:PostContactUsData) => {
+  const { data } = await axiosInstance.post('https://bixid.in/form-response',body) // Adjust endpoint as needed
+  return data
+}
+
