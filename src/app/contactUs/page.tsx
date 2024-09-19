@@ -63,23 +63,31 @@ const Page: React.FC = () => {
             </div>
 
             <div className="md:flex flex-row gap-6 md:w-1/2 ">
+
+           
               <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-2/3 rounded-2xl ">
+
+              <Link href="tel:+14709099027">
                 <div className="rounded-2xl hover:bg-custom-blue shadow-md p-8 h-44 flex flex-col hover:text-black items-start text-white">
-                  <Link href="tel:+14709099027">
+                  
                     <PhoneIcon className="w-12 h-12 border border-white  hover:border-black rounded-full p-2" />
-                  </Link>
+                
                   <p className="mt-4">Phone</p>
                   <p className="text-center">+1 470-909-9027</p>
                 </div>
+                </Link>
               </div>
+              
               <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-5/6 rounded-2xl ">
+              <Link href="mailto:business@tikuntech.com">
                 <div className="mt-10 md:mt-0 rounded-2xl shadow-md p-8 hover:bg-custom-blue  h-44 hover:text-black flex flex-col items-start text-white">
-                  <Link href="mailto:business@tikuntech.com">
+                  
                     <EnvelopeIcon className="w-12 h-12 border border-white  hover:border-black rounded-full p-2" />
-                  </Link>
+             
                   <p className="mt-5 ">Email</p>
                   <p className="text-center">business@tikuntech.com</p>
                 </div>
+                </Link>
               </div>
             </div>
           </div>

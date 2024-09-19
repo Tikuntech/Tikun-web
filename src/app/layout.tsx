@@ -9,6 +9,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { Poppins } from 'next/font/google'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { DataProvider } from '@/context/DataProjectContext'
 const inter = Inter({ subsets: ['latin'] })
 const client = new QueryClient()
 const poppins = Poppins({
@@ -29,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <QueryClientProvider client={client}>
+        <DataProvider>
           <NextTopLoader
             showSpinner={false}
             color="rgba(146, 222, 237, 1)"
@@ -46,6 +48,7 @@ export default function RootLayout({
           {/* <NavbarHeader/> */}
           {children}
           <ToastContainer />
+          </DataProvider>
         </QueryClientProvider>
       </body>
     </html>

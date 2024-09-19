@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import HoverIcon from '/public/Project/ProjectIsHoverd.svg'
 import { FiSlack } from 'react-icons/fi'
+import { useDataContext } from '@/context/DataProjectContext'
 
 export const HoverEffect = ({
   items,
@@ -14,11 +15,14 @@ export const HoverEffect = ({
     title: string
     description: string
     Link: string
+   
   }[]
   className?: string
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const { setData } = useDataContext();
   const handleTouchStart = (index: number) => {
     setActiveIndex(index)
     // Remove active state after touch
@@ -29,11 +33,16 @@ export const HoverEffect = ({
     <div className={cn('md:flex w-full ', className)}>
       {items.map((item, idx) => (
         <Link
-          // href={'/projectdetailPage'}
-          href={{
-            pathname: '/projectdetailPage',
-            query: { data: JSON.stringify(item) },
-          }}
+        onClick={()=>{
+          setData(item)
+        }}
+        href={`/project/${item._id}`}
+          // href={'/project${items?._id}'}
+          
+          // href={{
+          //   pathname: `/project${items?._id}`,
+          //   query: { data: JSON.stringify(item) },
+          // }}
           // href={`/projectdetailPage?data=${encodeURIComponent(item)}`}
           key={item?.Link}
           className="relative group block p-2 h-full w-full"
