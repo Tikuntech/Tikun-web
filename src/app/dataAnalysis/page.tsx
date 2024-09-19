@@ -9,9 +9,10 @@ import BlogFooter from '@/common/Blog/BlogFooter'
 import ReadyCard from '@/common/Blog/ReadyCard'
 
 import DataAnalysismg from '../../../public/dataAnalysis/DataAnalysis.webp'
-import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
+
 
 import DataAnalysis from '@/common/BreadCrumb/DataAnalysis'
+import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },

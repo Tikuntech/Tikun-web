@@ -72,7 +72,7 @@ const MobileFooterEmail: React.FC = () => {
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log('Form Data:', data)
     // toast(`Email "${data.email}" submitted successfully!`)
-    setValue('email', '')
+
 
 
     const postData: PostContactUsData = {
@@ -98,7 +98,8 @@ const MobileFooterEmail: React.FC = () => {
       console.log('Form successfully submitted:', data);
       // setSubmissionStatus('success');
       reset();
-      toast.success("Newsletter successfully!");
+      setValue('email', '')
+      toast.success("Successfully Signed Up for the Newsletter!");
     },
     onError: (error) => {
       console.error('Error submitting form:', error);

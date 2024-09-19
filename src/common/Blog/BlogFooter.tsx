@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import MobileFooterEmail from '../MobileDevlopment/MobileFooterEmail'
+
 import CtaButton from '/public/Blog/CTAButton.svg'
 import BackgroundImg from '/public/Blog/BlogFooterWire.svg'
 import { FaTwitter, FaFacebookF } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
+import MobileFooterEmail from '../MobileDevlopment/MobileFooterEmail'
 
 export default function Footer() {
   return (

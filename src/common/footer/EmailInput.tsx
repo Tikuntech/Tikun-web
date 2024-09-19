@@ -51,7 +51,7 @@ const FooterEmailInput: React.FC = () => {
       console.log('Form successfully submitted:', data);
       // setSubmissionStatus('success');
       reset();
-      toast.success("Newsletter successfully!");
+      toast.success("Successfully Signed Up for the Newsletter!");
     },
     onError: (error) => {
       console.error('Error submitting form:', error);
