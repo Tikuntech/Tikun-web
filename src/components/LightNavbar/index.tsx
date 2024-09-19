@@ -107,7 +107,7 @@ const LightNavbar: React.FC = () => {
                 PROJECT
                 </span>
               </Link>
-              <Link href="/blogs">
+              {/* <Link href="/blogs">
                 <span 
                 // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
@@ -118,7 +118,7 @@ const LightNavbar: React.FC = () => {
                 >
                 BLOG
                 </span>
-              </Link>
+              </Link> */}
               <Link href="/contactUs">
                 <span 
                 // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">

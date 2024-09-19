@@ -16,13 +16,13 @@ const ServiceSection: React.FC = () => {
           <p className="font-bold md:text-6xl mt-20 text-4xl">Service</p>
         </div>
         <div>
-          <Link href="/webDevlopment">
+          <Link href="/webDevelopment">
             <div className="flex justify-between mt-10 font-extralight ">
-              <h1 className="md:text-4xl mb-8 font-thin text-2xl md:ml-3">
+              <h1 className="md:text-4xl hover:text-custom-blue mb-8 font-thin text-2xl md:ml-3">
                 Web Development
               </h1>
 
-              <div className="text-black">
+              <div className="text-black ">
                 <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
               </div>
             </div>
@@ -31,9 +31,9 @@ const ServiceSection: React.FC = () => {
         </div>
 
         <div>
-          <Link href="/mobileDevlopment">
+          <Link href="/mobileDevelopment">
             <div className="flex justify-between md:mt-14 font-extralight ">
-              <h1 className="md:text-4xl text-2xl mb-8 md:ml-3">
+              <h1 className="md:text-4xl text-2xl hover:text-custom-blue  mb-8 md:ml-3">
                 Mobile Development
               </h1>
               <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
@@ -57,7 +57,7 @@ const ServiceSection: React.FC = () => {
 
         <Link href="/digitalMarketing">
           <div className="flex justify-between md:mt-20 font-extralight ">
-            <h1 className="md:text-4xl text-2xl  mb-10 font-thin md:ml-3">
+            <h1 className="md:text-4xl text-2xl hover:text-custom-blue   mb-10 font-thin md:ml-3">
               Digital Marketing
             </h1>
             <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />

@@ -12,8 +12,9 @@ import BlogFooter from '@/common/Blog/BlogFooter'
 import ReadyCard from '@/common/Blog/ReadyCard'
 import Mobiledevlopmemnt from '@/common/BreadCrumb/mobiledevlopmemnt'
 import MobileDevImg from '/public/Mobiledevlopment/Image Placeholder (7).png'
-import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
+
 import PointsSection from '@/common/MobileDevlopment/PointsSection'
+import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },

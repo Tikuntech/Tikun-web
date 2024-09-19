@@ -32,7 +32,7 @@ export const services = [
     title: 'Web Development',
     description:
       'Create websites that are both visually appealing and functional for users.',
-    link: '/webDevlopment',
+    link: '/webDevelopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <IoGlobeOutline style={{ height: 60, width: 60 }} />
@@ -50,11 +50,11 @@ export const services = [
     title: 'Mobile Development',
     description:
       'Create or enhance mobile applications, ensuring optimized user experience.',
-    link: '/mobileDevlopment',
+    link: '/mobileDevelopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={MobileIcon} alt="icon" />
-        <Link href={'/mobileDevlopment'}>
+        <Link href={'/mobileDevelopment'}>
           <ArrowActive />
         </Link>
       </div>

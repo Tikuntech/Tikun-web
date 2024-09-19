@@ -2,8 +2,8 @@ import React from 'react'
 import { FaAngleRight } from 'react-icons/fa'
 
 const items = [
-  { name: 'Web Development', url: '/webDevlopment' },
-  { name: 'Mobile Development', url: '/mobileDevlopment' },
+  { name: 'Web Development', url: '/webDevelopment' },
+  { name: 'Mobile Development', url: '/mobileDevelopment' },
   // { name: 'Cyber Security', url: '/cyber-security' },
   { name: 'Digital Marketing', url: '/digitalMarketing' },
   { name: 'Cloud Computing', url: '/cloudComputing' },

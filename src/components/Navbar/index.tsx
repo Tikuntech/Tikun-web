@@ -113,7 +113,7 @@ const NavbarHeader: React.FC = () => {
                   PROJECT
                 </span>
               </Link>
-              <Link href="/blogs">
+              {/* <Link href="/blogs">
                 <span 
                 // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
@@ -123,7 +123,7 @@ const NavbarHeader: React.FC = () => {
                 }`}>
                   BLOG
                 </span>
-              </Link>
+              </Link> */}
               <Link href="/contactUs">
                 <span 
                 // className="text-gray-300 hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">

@@ -47,18 +47,18 @@ export default function Footer() {
                     </span>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="#">
                     <span className="hover:text-[#92deed] font-thin">
                       Pricing
                     </span>
                   </Link>
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <Link href="/blogs">
                     <span className="hover:text-[#92deed] font-thin">Blog</span>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/contactUs">
                     <span className="hover:text-[#92deed] font-thin">
