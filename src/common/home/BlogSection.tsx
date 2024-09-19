@@ -3,6 +3,8 @@ import Image from 'next/image'
 import ServiceLine from '/public/Project/Line (2).svg'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg'
+import HomeArrowwhiteIcon from '/public/Home/HomeArrowIcon.svg'
+
 
 const BlogSection: React.FC = () => {
   return (
@@ -44,10 +46,10 @@ const BlogSection: React.FC = () => {
             <p className="text-white font-thin text-sm mt-5">
               12 April 2023 | Dheeraj
             </p>
-            <button className="bg-[#92deed] flex md:mt-8 mt-5 text-[#11112B] px-6 py-2 rounded-lg shadow-md">
+            <button className="hover:bg-[#92deed] bg-[#11112B] flex md:mt-8 mt-5 text-white hover:text-[#11112B] border px-6 py-2 rounded-lg shadow-md">
               READ MORE
               <Image
-                src={HomeArrowIcon}
+                src={HomeArrowwhiteIcon}
                 alt="White Arrow"
                 className="pl-4 pt-1 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
               />
