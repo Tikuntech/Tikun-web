@@ -12,9 +12,10 @@ export const HoverEffect = ({
   className,
 }: {
   items: {
-    title: string
-    description: string
-    Link: string
+    title: string;
+    description: string;
+    Link: string;
+    _id: string;
    
   }[]
   className?: string
