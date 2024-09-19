@@ -126,7 +126,7 @@ export const services = [
     title: 'Software Development',
     description:
       'Provides customized solutions to create and maintain software applications.',
-    link: '/softwereDevlopment',
+    link: '/softwereDevelopment',
     activeIcon: (
       <div className="flex justify-between  w-full">
         <Image src={SoftwareIcon} alt="icon" />
