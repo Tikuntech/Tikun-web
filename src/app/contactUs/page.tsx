@@ -92,7 +92,7 @@ const Page: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        <div className='mt-64 md:mt-0'>
           <NeedItSolution />
         </div>
       </div>
