@@ -26,7 +26,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#D5D9E5]">
       <LightNavbar />
 
-      <div className="pt-10 md:pt-20 p-5 md:p-0">
+      <div className="pt-16 md:pt-28 p-5 md:p-0">
         <div className="md:ml-20">
           <SoftwareDevlopment />
         </div>

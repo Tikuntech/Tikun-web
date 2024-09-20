@@ -7,7 +7,7 @@ const items = [
   // { name: 'Cyber Security', url: '/cyber-security' },
   { name: 'Digital Marketing', url: '/digitalMarketing' },
   { name: 'Cloud Computing', url: '/cloudComputing' },
-  { name: 'Software Development', url: '/softwereDevlopment' },
+  { name: 'Software Development', url: '/softwereDevelopment' },
   // { name: 'IT Project Management', url: '/it-project-management' },
   { name: 'Data Analysis', url: '/dataAnalysis' },
   // { name: 'Network Management', url: '/network-management' },

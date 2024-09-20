@@ -33,9 +33,9 @@ export default function Page() {
 
   return (
     <>
-      <main className="min-h-screen bg-[#D5D9E5]">
+      <main className="min-h-screen bg-[#D5D9E5] md:pt-20">
         <LightNavbar />
-        <div className="pt-10 md:pt-10 p-5 md:p-0">
+        <div className="pt-16 md:pt-10 p-5 md:p-0">
           <div className="md:ml-20">
             <Mobiledevlopmemnt />
           </div>

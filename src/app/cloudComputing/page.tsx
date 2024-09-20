@@ -23,7 +23,7 @@ export default function page() {
     <>
       <main className="min-h-screen bg-[#D5D9E5] ">
         <LightNavbar />
-        <div className="pt-10 md:pt-20 p-4">
+        <div className="pt-16 md:pt-28 p-4">
           <div className="md:ml-20">
             <CloudComuputingBread />
           </div>
