@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import TikcunteckIcon from '../icons/LightTikcunteckIcon'
 import { usePathname } from 'next/navigation'
@@ -9,14 +9,55 @@ import Image from 'next/image'
 const LightNavbar: React.FC = () => {
   const pathname = usePathname(); 
   const [isOpen, setIsOpen] = useState(false)
+  const drawerRef = useRef<HTMLDivElement>(null); // Reference for the drawer
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
 
-  console.log('pathnamepathname:',pathname);
+  // Disable scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('overflow-hidden')
+    } else {
+      document.body.classList.remove('overflow-hidden')
+    }
+    return () => {
+      document.body.classList.remove('overflow-hidden') // Cleanup on unmount
+    }
+  }, [isOpen])
+
+  // Close the drawer if clicked outside of it
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
+        closeMenu();
+      }
+    }
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('touchstart', handleClickOutside);
+    } else {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, [isOpen]);
+
+
+  const handleClickOutside = (e: React.MouseEvent) => {
+    if (e.target === e.currentTarget) {
+      closeMenu();
+    }
+  };
+
 
   return (
-    <nav className="bg-[#D5D9E5] text-black relative">
+    <nav className="bg-[#D5D9E5] text-black fixed top-0 w-full z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* Mobile menu button */}
@@ -73,7 +114,6 @@ const LightNavbar: React.FC = () => {
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
                 <span 
-                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === '/aboutUs'
                     ? 'bg-[#92DEED] text-black' // Highlight when active
@@ -85,7 +125,6 @@ const LightNavbar: React.FC = () => {
               </Link>
               <Link href="/services">
                 <span 
-                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === '/services'
                     ? 'bg-[#92DEED] text-black' // Highlight when active
@@ -97,7 +136,6 @@ const LightNavbar: React.FC = () => {
               </Link>
               <Link href="/projects">
                 <span 
-                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === '/projects'
                     ? 'bg-[#92DEED] text-black' // Highlight when active
@@ -107,21 +145,8 @@ const LightNavbar: React.FC = () => {
                 PROJECT
                 </span>
               </Link>
-              {/* <Link href="/blogs">
-                <span 
-                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === '/blogs'
-                    ? 'bg-[#92DEED] text-black' // Highlight when active
-                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
-                }`}
-                >
-                BLOG
-                </span>
-              </Link> */}
               <Link href="/contactUs">
                 <span 
-                // className="text-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   pathname === '/contactUs'
                     ? 'bg-[#92DEED] text-black' // Highlight when active
@@ -136,7 +161,6 @@ const LightNavbar: React.FC = () => {
               <Link href="/contactUs">
                 <span className="text-black flex border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SCHEDULE CALL
-                  {/* import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg' */}
                   <Image src={HomeArrowIcon} alt="HomeArrowIcon" className='pl-2'/>
                 </span>
               </Link>
@@ -147,7 +171,10 @@ const LightNavbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-white bg-opacity-90 z-40 transform transition-transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-transform ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+        onClick={handleClickOutside}
         id="mobile-menu"
       >
         <div className="relative w-64 bg-white h-full">
@@ -187,20 +214,19 @@ const LightNavbar: React.FC = () => {
                 PROJECT
               </span>
             </Link>
-            <Link href="/blogs">
+            {/* <Link href="/blogs">
               <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 BLOG
               </span>
-            </Link>
+            </Link> */}
             <Link href="/contactUs">
               <span className="text-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 CONTACT
               </span>
             </Link>
             <Link href="/contactUs">
-              <span className="text-black border  border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
+              <span className="text-black border  mt-2 border-black hover:bg-[#92DEED] hover:text-black block px-3 py-2 rounded-md text-base font-medium">
                 SCHEDULE CALL
-               
               </span>
             </Link>
           </div>
@@ -210,4 +236,4 @@ const LightNavbar: React.FC = () => {
   )
 }
 
-export default LightNavbar
+export default LightNavbar;

@@ -68,7 +68,7 @@ export default function Footer() {
                     <span className="hover:text-[#92DEED]">Services</span>
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link href="#">
                     <span className="hover:text-[#92DEED]">Pricing</span>
                   </Link>
@@ -77,7 +77,7 @@ export default function Footer() {
                   <Link href="/blogs">
                     <span className="hover:text-[#92DEED]">Blog</span>
                   </Link>
-                </li>
+                </li> */}
                 <li>
                   <Link href="/contactUs">
                     <span className="hover:text-[#92DEED]">Contact</span>

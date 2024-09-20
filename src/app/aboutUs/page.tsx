@@ -34,7 +34,7 @@ const Page: React.FC = () => {
       <NavbarHeader />
       <div className="bg-[#11112B] md:h-screen  md:pl-20 relative p-4">
         <div className="pt-10 ">
-          <div className="pl-4 md:pl-0">
+          <div className="pl-4 md:pt-20">
             {' '}
             <AboutBreadcrumbs />
           </div>

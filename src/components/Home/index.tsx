@@ -28,7 +28,7 @@ const HeroPage: React.FC = () => {
     <>
       {/* <MainHome/> */}
       <div className="relative  bg-[#11112B] overflow-hidden flex flex-col items-center justify-center ">
-        <div className="text-center pt-20 md:mt-0 md:w-1/2 ">
+        <div className="text-center pt-48 md:mt-0 md:w-1/2 ">
           <div className="relative inline-block w-72 md:w-full ">
             <Image
               src={MainTextImg}

@@ -34,8 +34,8 @@ export default function Project() {
       <NavbarHeader />
       <div className="bg-[#11112B] p-4">
         <div className="bg-[#11112B]  pl-4 relative">
-          <div className="pt- ">
-            <div className="md:ml-14">
+          <div className="md:pt-20 ">
+            <div className="md:ml-14 pt-16">
               <ProjectBreadCrumb />
             </div>
 
