@@ -64,52 +64,40 @@ const MobileFooterEmail: React.FC = () => {
   //   console.log('Form Data:', data)
   //   toast(`Email "${data.email}" submitted successfully!`)
   //   setValue('email', '')
-    
-  // }
 
-  
+  // }
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     console.log('Form Data:', data)
     // toast(`Email "${data.email}" submitted successfully!`)
 
-
-
     const postData: PostContactUsData = {
-      "Subject": "New Query form Tikuntech",
-      message: "Newsletter",
+      Subject: 'New Query form Tikuntech',
+      message: 'Newsletter',
       email: data?.email,
-      "Website": "Tikuntech",
-      recipient_email: "jbrown@tikuntech.com",
-      phone: "",
-      name: "Newsletter",
-
-    };
+      Website: 'Tikuntech',
+      recipient_email: 'jbrown@tikuntech.com',
+      phone: '',
+      name: 'Newsletter',
+    }
 
     mutation.mutate(postData)
-    
   }
-
-
 
   const mutation = useMutation(postContactUs, {
     onSuccess: (data) => {
-    
-      console.log('Form successfully submitted:', data);
+      console.log('Form successfully submitted:', data)
       // setSubmissionStatus('success');
-      reset();
+      reset()
       setValue('email', '')
-      toast.success("Successfully Signed Up for the Newsletter!");
+      toast.success('Successfully Signed Up for the Newsletter!')
     },
     onError: (error) => {
-      console.error('Error submitting form:', error);
-    
-      toast.error("Failed to submit the form. Please try again.");
+      console.error('Error submitting form:', error)
 
+      toast.error('Failed to submit the form. Please try again.')
     },
-  });
-
-
+  })
 
   return (
     <form

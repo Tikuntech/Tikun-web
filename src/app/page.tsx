@@ -16,7 +16,7 @@ export default function Home() {
       <ClientStory />
       <ServiceSection />
       <ProjectSection />
-      <BlogSection />
+      {/* <BlogSection /> */}
       <NeedItSolution />
       <Footer />
     </main>

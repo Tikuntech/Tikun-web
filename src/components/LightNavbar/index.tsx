@@ -7,9 +7,9 @@ import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg'
 import Image from 'next/image'
 
 const LightNavbar: React.FC = () => {
-  const pathname = usePathname(); 
+  const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const drawerRef = useRef<HTMLDivElement>(null); // Reference for the drawer
+  const drawerRef = useRef<HTMLDivElement>(null) // Reference for the drawer
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
@@ -29,32 +29,33 @@ const LightNavbar: React.FC = () => {
   // Close the drawer if clicked outside of it
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
-      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
-        closeMenu();
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target as Node)
+      ) {
+        closeMenu()
       }
     }
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside)
+      document.addEventListener('touchstart', handleClickOutside)
     } else {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
-    };
-  }, [isOpen]);
-
+      document.removeEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('touchstart', handleClickOutside)
+    }
+  }, [isOpen])
 
   const handleClickOutside = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      closeMenu();
+      closeMenu()
     }
-  };
-
+  }
 
   return (
     <nav className="bg-[#D5D9E5] text-black fixed top-0 w-full z-50">
@@ -113,47 +114,47 @@ const LightNavbar: React.FC = () => {
             </div>
             <div className="hidden sm:flex sm:space-x-8 flex-grow justify-center">
               <Link href="/aboutUs">
-                <span 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === '/aboutUs'
-                    ? 'bg-[#92DEED] text-black' // Highlight when active
-                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
-                }`}
+                <span
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    pathname === '/aboutUs'
+                      ? 'bg-[#92DEED] text-black' // Highlight when active
+                      : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                  }`}
                 >
                   ABOUT US
                 </span>
               </Link>
               <Link href="/services">
-                <span 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === '/services'
-                    ? 'bg-[#92DEED] text-black' // Highlight when active
-                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
-                }`}
+                <span
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    pathname === '/services'
+                      ? 'bg-[#92DEED] text-black' // Highlight when active
+                      : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                  }`}
                 >
                   SERVICES
                 </span>
               </Link>
               <Link href="/projects">
-                <span 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === '/projects'
-                    ? 'bg-[#92DEED] text-black' // Highlight when active
-                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
-                }`}
+                <span
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    pathname === '/projects'
+                      ? 'bg-[#92DEED] text-black' // Highlight when active
+                      : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                  }`}
                 >
-                PROJECT
+                  PROJECT
                 </span>
               </Link>
               <Link href="/contactUs">
-                <span 
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
-                  pathname === '/contactUs'
-                    ? 'bg-[#92DEED] text-black' // Highlight when active
-                    : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
-                }`}
+                <span
+                  className={`px-3 py-2 rounded-md text-sm font-medium ${
+                    pathname === '/contactUs'
+                      ? 'bg-[#92DEED] text-black' // Highlight when active
+                      : 'text-gray-800 hover:bg-[#92DEED] hover:text-black'
+                  }`}
                 >
-                CONTACT
+                  CONTACT
                 </span>
               </Link>
             </div>
@@ -161,7 +162,11 @@ const LightNavbar: React.FC = () => {
               <Link href="/contactUs">
                 <span className="text-black flex border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SCHEDULE CALL
-                  <Image src={HomeArrowIcon} alt="HomeArrowIcon" className='pl-2'/>
+                  <Image
+                    src={HomeArrowIcon}
+                    alt="HomeArrowIcon"
+                    className="pl-2"
+                  />
                 </span>
               </Link>
             </div>
@@ -236,4 +241,4 @@ const LightNavbar: React.FC = () => {
   )
 }
 
-export default LightNavbar;
+export default LightNavbar

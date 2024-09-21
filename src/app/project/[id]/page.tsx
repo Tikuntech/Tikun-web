@@ -16,6 +16,8 @@ import AmazonImg from '/public/Home/AMAZON.svg'
 import WindowsImg from '/public/Home/WINDOWS.svg'
 import SonyImg from '/public/Home/SONY.svg'
 import { useDataContext } from '@/context/DataProjectContext'
+import Slider from '@/components/Slider'
+import BreadCrumbProjectdetails from '@/common/BreadCrumb/BreadCrumbProjectdetails'
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
 
@@ -29,81 +31,29 @@ const randomPosition = () => ({
 })
 
 const Page: React.FC = () => {
-  const { data } = useDataContext();
+  const { data } = useDataContext()
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] md:h-screen  md:pl-20 relative p-4">
+      <div className="bg-[#11112B]   md:pl-20 relative p-4">
         <div className="pt-10 ">
-          <div className="pl-4 md:pl-0">
+          <div className="pl-4 md:pl-9  md:pt-10">
             {' '}
-            <AboutBreadcrumbs />
+            <BreadCrumbProjectdetails />
           </div>
+{
+  data?.images?.length &&
+  <Slider  data={data}/>
+}
 
-          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 pl-4">
-              {data?.title ? data?.title : 'Project Details Page'}
-            </h1>
-            <div className="relative hidden md:block w-full  ">
-              {images.map((img, index) => (
-                <div key={index} className="absolute" style={randomPosition()}>
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={img.width}
-                    height={img.height}
-                    className="object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56 p-5 ">
-            <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2">
-              <Image
-                src={BoxImg}
-                alt="Box Image"
-                width={40}
-                height={40}
-                className="object-contain mb-4 md:mb-2 hidden md:block"
-              />
-              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20   line-clamp-3 ">
-                {data?.description
-                  ? data?.description
-                  : 'We believe that technology can change the world.'}
-              </h1>
-            </div>
-
-            <div className="text-white md:w-1/2 ">
-              <p className="mb-4 text-sm md:text-base">
-                {data?.description
-                  ? data?.description
-                  : " That's why we're committed to delivering innovative IT solutions to businesses of all sizes. Our team of experienced professionals is dedicated to helping you achieve your goals and thrive in a rapidly evolving digital landscape."}
-              </p>
-
-              <p className="text-sm md:text-base">
-                We are an IT company that offers a wide range of services to
-                help businesses succeed in the digital world. Our expertise
-                includes web development, mobile development, cloud computing,
-                cybersecurity, and digital marketing. We provide customized
-                solutions to meet the unique needs of each of our clients’
-                business from every size and nation.
-              </p>
-            </div>
-          </div>
+          
         </div>
       </div>
 
-      <div className="p-12">
-        <AboutMain />
-      </div>
+      
 
       <div className="relative">
         <AboutVideo />
-        <div className="absolute inset-0 flex items-center justify-center md:-mt-[700px] -mt-44  ">
-          <OverflowCard />
-        </div>
       </div>
 
       <footer className="md:hidden flex flex-col items-center gap-5  p-10 bg-[#11112B] -mb-10 md:-mb-0 ">

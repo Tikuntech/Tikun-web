@@ -7,18 +7,17 @@ import HomeArrowIcon from '/public/Home/HomeArrowIcon.svg'
 import { usePathname } from 'next/navigation'
 
 const NavbarHeader: React.FC = () => {
-  const pathname = usePathname(); 
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
 
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const toggleMenu = () => setIsOpen(!isOpen)
+  const closeMenu = () => setIsOpen(false)
 
- 
   const handleClickOutside = (e: React.MouseEvent) => {
     if (e.target === e.currentTarget) {
-      closeMenu();
+      closeMenu()
     }
-  };
+  }
 
   return (
     <nav className="bg-[#11112B] text-white fixed top-0 w-full z-50 ">
@@ -145,7 +144,10 @@ const NavbarHeader: React.FC = () => {
         onClick={handleClickOutside}
         id="mobile-menu"
       >
-        <div className="relative w-64 bg-[#11112B] h-full z-50" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="relative w-64 bg-[#11112B] h-full z-50"
+          onClick={(e) => e.stopPropagation()}
+        >
           <button
             type="button"
             className="absolute top-4 right-4 text-gray-400 hover:text-white"
@@ -196,7 +198,7 @@ const NavbarHeader: React.FC = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavbarHeader;
+export default NavbarHeader

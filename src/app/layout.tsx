@@ -30,24 +30,24 @@ export default function RootLayout({
     <html lang="en">
       <body className={poppins.className}>
         <QueryClientProvider client={client}>
-        <DataProvider>
-          <NextTopLoader
-            showSpinner={false}
-            color="rgba(146, 222, 237, 1)"
-            initialPosition={0.08}
-            crawlSpeed={200}
-            height={10}
-            crawl={true}
-            easing="ease"
-            speed={200}
-            shadow="0 0 0px hsl(229 100% 62%),0 0 0px hsl(229 100% 62%)"
-            template='<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
-            zIndex={1600}
-            showAtBottom={false}
-          />
-          {/* <NavbarHeader/> */}
-          {children}
-          <ToastContainer />
+          <DataProvider>
+            <NextTopLoader
+              showSpinner={false}
+              color="rgba(146, 222, 237, 1)"
+              initialPosition={0.08}
+              crawlSpeed={200}
+              height={10}
+              crawl={true}
+              easing="ease"
+              speed={200}
+              shadow="0 0 0px hsl(229 100% 62%),0 0 0px hsl(229 100% 62%)"
+              template='<div class="bar" role="bar"><div class="peg"></div></div><div class="spinner" role="spinner"><div class="spinner-icon"></div></div>'
+              zIndex={1600}
+              showAtBottom={false}
+            />
+            {/* <NavbarHeader/> */}
+            {children}
+            <ToastContainer />
           </DataProvider>
         </QueryClientProvider>
       </body>
