@@ -13,7 +13,10 @@ import Image from 'next/image'
 //   { src: SliderImg4, alt: 'Slider Image 4' },
 // ]
 
-const Slider: React.FC = (data:any) => {
+type MyComponentProps = {
+  data: any;  // Specify the type of data as necessary
+}
+const Slider:  React.FC<MyComponentProps> = ({ data })=> {
 //   useEffect(()=>{
 // console.log(data)
 //   },[data?.data?.images])
