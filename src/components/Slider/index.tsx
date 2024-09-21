@@ -1,17 +1,17 @@
 'use client'
 import React, {  useState } from 'react'
 import Image from 'next/image'
-import SliderImg1 from '/public/Slider/sliderImg1.jpg'
-import SliderImg2 from '/public/Slider/sliderImg2.jpg'
-import SliderImg3 from '/public/Slider/SliderImg3.webp'
-import SliderImg4 from '/public/Slider/slierImg4.jpeg'
+// import SliderImg1 from '/public/Slider/sliderImg1.jpg'
+// import SliderImg2 from '/public/Slider/sliderImg2.jpg'
+// import SliderImg3 from '/public/Slider/SliderImg3.webp'
+// import SliderImg4 from '/public/Slider/slierImg4.jpeg'
 
-const images = [
-  { src: SliderImg1, alt: 'Slider Image 1' },
-  { src: SliderImg2, alt: 'Slider Image 2' },
-  { src: SliderImg3, alt: 'Slider Image 3' },
-  { src: SliderImg4, alt: 'Slider Image 4' },
-]
+// const images = [
+//   { src: SliderImg1, alt: 'Slider Image 1' },
+//   { src: SliderImg2, alt: 'Slider Image 2' },
+//   { src: SliderImg3, alt: 'Slider Image 3' },
+//   { src: SliderImg4, alt: 'Slider Image 4' },
+// ]
 
 const Slider: React.FC = (data:any) => {
 //   useEffect(()=>{
@@ -21,12 +21,12 @@ const Slider: React.FC = (data:any) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data?.data?.images?.length)
   }
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + data?.data?.images?.length) % data?.data?.images?.length
     )
   }
 
