@@ -12,18 +12,17 @@ export const HoverEffect = ({
   className,
 }: {
   items: {
-    title: string;
-    description: string;
-    Link: string;
-    _id: string;
-   
+    title: string
+    description: string
+    Link: string
+    _id: string
   }[]
   className?: string
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
-  const { setData } = useDataContext();
+  const { setData } = useDataContext()
   const handleTouchStart = (index: number) => {
     setActiveIndex(index)
     // Remove active state after touch
@@ -34,12 +33,12 @@ export const HoverEffect = ({
     <div className={cn('md:flex w-full ', className)}>
       {items.map((item, idx) => (
         <Link
-        onClick={()=>{
-          setData(item)
-        }}
-        href={`/project/${item._id}`}
+          onClick={() => {
+            setData(item)
+          }}
+          href={`/project/${item._id}`}
           // href={'/project${items?._id}'}
-          
+
           // href={{
           //   pathname: `/project${items?._id}`,
           //   query: { data: JSON.stringify(item) },

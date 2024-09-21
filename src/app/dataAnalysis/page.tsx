@@ -10,7 +10,6 @@ import ReadyCard from '@/common/Blog/ReadyCard'
 
 import DataAnalysismg from '../../../public/dataAnalysis/DataAnalysis.webp'
 
-
 import DataAnalysis from '@/common/BreadCrumb/DataAnalysis'
 import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
 

@@ -5,7 +5,6 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 import HomeArrowIcon from '/public/Home/HomeArrowIconBlack.svg'
 import HomeArrowwhiteIcon from '/public/Home/HomeArrowIcon.svg'
 
-
 const BlogSection: React.FC = () => {
   return (
     <main className=" bg-[#D5D9E5] md:h-screen h-full ">

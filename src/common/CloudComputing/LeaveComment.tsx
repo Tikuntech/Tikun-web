@@ -28,48 +28,35 @@ const LeaveComment: React.FC = () => {
   } = useForm<IFormInput>()
   const [isChecked, setIsChecked] = useState(false)
 
- 
-
-
   const mutation = useMutation(postContactUs, {
     onSuccess: (data) => {
-    
-      console.log('Form successfully submitted:', data);
+      console.log('Form successfully submitted:', data)
       // setSubmissionStatus('success');
-      reset();
-      toast.success("Form submitted successfully!");
+      reset()
+      toast.success('Form submitted successfully!')
     },
     onError: (error) => {
-      console.error('Error submitting form:', error);
-      setSubmissionStatus('error');
-      toast.error("Failed to submit the form. Please try again.");
-
+      console.error('Error submitting form:', error)
+      setSubmissionStatus('error')
+      toast.error('Failed to submit the form. Please try again.')
     },
-  });
-
-
+  })
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     // setIsSubmitting(true);
-  
-   
 
     const postData: PostContactUsData = {
-      "Subject": "New Query form Tikuntech",
+      Subject: 'New Query form Tikuntech',
       message: data?.message,
       email: data?.email,
-      "Website": "Tikuntech",
-      recipient_email: "jbrown@tikuntech.com",
-      phone: "",
-      name:data?.name
-
-    };
+      Website: 'Tikuntech',
+      recipient_email: 'jbrown@tikuntech.com',
+      phone: '',
+      name: data?.name,
+    }
 
     mutation.mutate(postData)
-
   }
-
-
 
   return (
     <>
@@ -79,10 +66,10 @@ const LeaveComment: React.FC = () => {
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-white">
             Leave A Comment
           </h2>
-          <form 
-        onSubmit={handleSubmit(onSubmit)}
-          
-          className="md:space-y-4 md:p-5">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="md:space-y-4 md:p-5"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h2 className="block text-sm font-medium text-custom-blue ">
@@ -95,18 +82,15 @@ const LeaveComment: React.FC = () => {
                   defaultValue=""
                   render={({ field }) => (
                     <input
-                    placeholder="Enter Your Name ..."
-                    type="text"
-                    id="name"
-                    {...field}
-                    required
-                    className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  />
-                   
+                      placeholder="Enter Your Name ..."
+                      type="text"
+                      id="name"
+                      {...field}
+                      required
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    />
                   )}
                 />
-
-               
               </div>
               <div>
                 <h2 className="block text-sm font-medium text-custom-blue ">
@@ -119,17 +103,15 @@ const LeaveComment: React.FC = () => {
                   defaultValue=""
                   render={({ field }) => (
                     <input
-                  placeholder="Enter Your Email Address ..."
-                  type="email"
-                  id="email"
-                  {...field}
-                  required
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                />
-                    
+                      placeholder="Enter Your Email Address ..."
+                      type="email"
+                      id="email"
+                      {...field}
+                      required
+                      className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    />
                   )}
                 />
-                
               </div>
             </div>
 

@@ -10,10 +10,8 @@ import ReadyCard from '@/common/Blog/ReadyCard'
 import Mobiledevlopmemnt from '@/common/BreadCrumb/mobiledevlopmemnt'
 import WebDevImg from '/public/WebDevlopment/web_development.jpg'
 
-
 import Webdevlopmemnt from '@/common/BreadCrumb/WebDevlopment'
 import MobileFlexSection from '@/common/MobileDevlopment/MobileFlexSection'
-
 
 const images = [
   { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },

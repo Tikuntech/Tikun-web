@@ -4,22 +4,20 @@ import { useMutation } from 'react-query'
 import { useForm, SubmitHandler, Controller } from 'react-hook-form'
 import { toast } from 'react-toastify'
 
-
-
-
 interface IFormInput {
   email: string
   name: string
   message: string
 }
 
-
 const ContacMassage: React.FC = () => {
   const [name, setName] = useState<string>('')
   const [email, setEmail] = useState<string>('')
   const [message, setMessage] = useState<string>('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submissionStatus, setSubmissionStatus] = useState<'success' | 'error' | null>(null)
+  const [submissionStatus, setSubmissionStatus] = useState<
+    'success' | 'error' | null
+  >(null)
   const [isChecked, setIsChecked] = useState(false)
   const {
     control,
@@ -30,45 +28,35 @@ const ContacMassage: React.FC = () => {
     formState: { errors },
   } = useForm<IFormInput>()
 
-
   const mutation = useMutation(postContactUs, {
     onSuccess: (data) => {
-    
-      console.log('Form successfully submitted:', data);
+      console.log('Form successfully submitted:', data)
       // setSubmissionStatus('success');
-      reset();
-      toast.success("Form submitted successfully!");
+      reset()
+      toast.success('Form submitted successfully!')
     },
     onError: (error) => {
-      console.error('Error submitting form:', error);
-      setSubmissionStatus('error');
-      toast.error("Failed to submit the form. Please try again.");
-
+      console.error('Error submitting form:', error)
+      setSubmissionStatus('error')
+      toast.error('Failed to submit the form. Please try again.')
     },
-  });
-
-
+  })
 
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     // setIsSubmitting(true);
-  
-   
 
     const postData: PostContactUsData = {
-      "Subject": "New Query form Tikuntech",
+      Subject: 'New Query form Tikuntech',
       message: data?.message,
       email: data?.email,
-      "Website": "Tikuntech",
-      recipient_email: "jbrown@tikuntech.com",
-      phone: "",
-      name:data?.name
-
-    };
+      Website: 'Tikuntech',
+      recipient_email: 'jbrown@tikuntech.com',
+      phone: '',
+      name: data?.name,
+    }
 
     mutation.mutate(postData)
-
   }
- 
 
   return (
     <>
@@ -83,11 +71,10 @@ const ContacMassage: React.FC = () => {
           {/* Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="md:space-y-4 md:p-5">
+            className="md:space-y-4 md:p-5"
+          >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
               <div>
-
                 <h2 className="block text-sm font-bold text-black ">Name</h2>
                 <Controller
                   name="name"
@@ -140,7 +127,6 @@ const ContacMassage: React.FC = () => {
                   />
                 )}
               />
-
             </div>
             <div className="md:flex">
               <div className="flex items-center gap-3 mt-5">
@@ -164,10 +150,11 @@ const ContacMassage: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${isSubmitting
+                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
+                  isSubmitting
                     ? 'bg-gray-400 cursor-not-allowed'
                     : 'bg-[#11112B] focus:ring-2'
-                  }`}
+                }`}
               >
                 {isSubmitting ? 'Submitting...' : 'Submit'}
               </button>

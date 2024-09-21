@@ -65,7 +65,7 @@ export default function Project() {
         </div>
         <div className=" ">
           <ProjectTabs />
-          <ProjectCards />
+          <ProjectCards isHome={false} />
         </div>
 
         <footer className="md:hidden flex flex-col items-center gap-5  p-4 bg-[#11112B]">
