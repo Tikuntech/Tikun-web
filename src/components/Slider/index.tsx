@@ -1,5 +1,5 @@
 'use client'
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import Image from 'next/image'
 // import SliderImg1 from '/public/Slider/sliderImg1.jpg'
 // import SliderImg2 from '/public/Slider/sliderImg2.jpg'
@@ -18,24 +18,24 @@ type MyComponentProps = {
 }
 const Slider:  React.FC<MyComponentProps> = ({ data })=> {
 //   useEffect(()=>{
-// console.log(data)
-//   },[data?.data?.images])
+// console.log(data?.images)
+//   },[data?.images])
 
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % data?.data?.images?.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data?.images?.length)
   }
 
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + data?.data?.images?.length) % data?.data?.images?.length
+      (prevIndex) => (prevIndex - 1 + data?.images?.length) % data?.images?.length
     )
   }
 
   
   
-  return data?.data?.images?.length ?
+  return data?.images?.length ?
   
   
   (
@@ -52,7 +52,7 @@ const Slider:  React.FC<MyComponentProps> = ({ data })=> {
 
       <div className="flex-shrink-0 w-80 md:w-3/4 p-4 md:p-4">
         <Image
-          src={data?.data?.images[currentIndex]}
+          src={data?.images[currentIndex]}
           alt={"images[currentIndex]"}
           className="rounded-lg shadow-lg object-cover"
           width={300}
@@ -70,11 +70,11 @@ const Slider:  React.FC<MyComponentProps> = ({ data })=> {
 
     <div className="text-white  p-5 max-w-full md:max-w-2xl mx-auto text-center">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-        {data?.data?.title}
+        {data?.title}
         {/* Beautiful Design for Your Inspiration */}
       </h2>
       <p className="leading-relaxed text-base md:text-lg">
-      {data?.data?.description}
+      {data?.description}
         {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi a
         consequuntur cum quos itaque... */}
       </p>
