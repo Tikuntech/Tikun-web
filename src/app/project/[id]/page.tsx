@@ -41,16 +41,16 @@ const Page: React.FC = () => {
             {' '}
             <BreadCrumbProjectdetails />
           </div>
-{
-  data?.images?.length &&
-  <Slider  data={data}/>
-}
+          {
+            data?.images?.length &&
+            <Slider data={data} />
+          }
 
-          
+
         </div>
       </div>
 
-      
+
 
       <div className="relative">
         <AboutVideo />
