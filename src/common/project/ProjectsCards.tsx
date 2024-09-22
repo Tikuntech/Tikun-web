@@ -16,7 +16,7 @@ export function ProjectCards({isHome=false}:ProjectCardProps) {
     <Loading />
   ) : (
     <div className=" mx-auto px-3">
-      {isHome ? <HoverEffect items={data?.data?.slice(0, 2) ? data?.data?.slice(0, 2) : []} /> : <HoverEffect items={data?.data ? data?.data : []} />}
+      {isHome ? <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} /> : <HoverEffect items={data?.data ? data?.data : []} />}
     </div>
   )
 }

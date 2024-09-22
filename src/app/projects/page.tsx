@@ -64,7 +64,7 @@ export default function Project() {
           </div>
         </div>
         <div className=" ">
-          <ProjectTabs />
+          {/* <ProjectTabs /> */}
           <ProjectCards isHome={false} />
         </div>
 
