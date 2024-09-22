@@ -164,12 +164,12 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
           {`Year Of Project   :  ${data?.yearOfProject}`}
         </p>
 
-        {data?.Links?.website && <Link href={data?.Links?.website}>
+        {data?.Links?.playstore && <Link href={data?.Links?.playstore}>
           <button className="border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
             Android Link
           </button>
         </Link>}
-        {data?.Links?.playstore && <Link href={data?.Links?.playstore}>
+        {data?.Links?.ios && <Link href={data?.Links?.ios}>
           <button className=" ml-2 border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
             IOS Link
           </button>
