@@ -32,6 +32,7 @@ const randomPosition = () => ({
 
 const Page: React.FC = () => {
   const { data } = useDataContext()
+  console.log("datadatadatadata",JSON.stringify(data))
   return (
     <>
       <NavbarHeader />

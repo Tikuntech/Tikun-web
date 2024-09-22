@@ -29,21 +29,18 @@ export const HoverEffect = ({
     setTimeout(() => setActiveIndex(null), 2000)
   }
 
+
+
+
   return (
-    <div className={cn('md:flex w-full ', className)}>
+    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10' , className)}>
       {items.map((item, idx) => (
         <Link
           onClick={() => {
             setData(item)
           }}
           href={`/project/${item._id}`}
-          // href={'/project${items?._id}'}
-
-          // href={{
-          //   pathname: `/project${items?._id}`,
-          //   query: { data: JSON.stringify(item) },
-          // }}
-          // href={`/projectdetailPage?data=${encodeURIComponent(item)}`}
+       
           key={item?.Link}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
