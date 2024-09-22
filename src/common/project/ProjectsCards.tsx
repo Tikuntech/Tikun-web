@@ -10,6 +10,8 @@ interface ProjectCardProps {
 
 export function ProjectCards({isHome=false}:ProjectCardProps) {
   const { data, error, isLoading } = useQuery('project', fetchProjects)
+
+  
   return isLoading ? (
     <Loading />
   ) : (
