@@ -4,7 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-
+import { CarouselState } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
+import './slider.css';
 type LinksProps = {
   ios: string,
   playstore: string,
@@ -16,13 +17,19 @@ type MyComponentProps = {
     title: string;
     description: string;
     Links: LinksProps,
-    yearOfProject:string
+    yearOfProject: string
   };
 };
 
 const Slider: React.FC<MyComponentProps> = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+
+
+
+
+
+;
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % data.images.length);
@@ -34,9 +41,31 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
     );
   };
 
-  const handleChange = (index :number) => {
+  const handleChange = (index: number) => {
     setActiveIndex(index);
-};
+  };
+
+
+
+
+
+  const renderThumbs = () => {
+    return data?.images.map((image, index) => (
+    
+      <Image
+        src={image}
+        alt={`Slide ${currentIndex}`}
+        className={`w-30 h-30 object-cover border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500'
+          }`}
+        width={100}
+        height={100}
+        loading="lazy" // Optional: adds lazy loading
+        placeholder="blur"
+        layout="responsive"
+        blurDataURL="https://media.istockphoto.com/id/1226328533/vector/black-and-white-loading-circle-indicator-on-white-background.jpg"
+      />
+    ));
+  };
 
   return data.images.length ? (
     <div className="bg-gradient-to-br from-[#0A0A23] to-[#11112B] p-6 md:p-12 flex flex-col md:flex-row md:space-x-10 rounded-lg shadow-xl items-center justify-center space-y-6 md:space-y-0">
@@ -50,8 +79,8 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
           ❮
         </button> */}
 
-        <div 
-        className="w-full md:w-[350px] relative"
+        <div
+          className="w-full md:w-[350px] relative"
         >
           {/* <Image
           //  loader={localImageLoader}
@@ -71,49 +100,32 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
 
 
 
-          <Carousel 
-          onClickThumb={()=>{}} 
-          showArrows={true}
+          <Carousel
+            onClickThumb={() => { }}
+            showArrows={true}
             infiniteLoop={true}
             dynamicHeight={true}
             showThumbs={true}
             thumbWidth={100}
            
             
+// animationHandler={myAnimationHandler}
+
 
             selectedItem={activeIndex}   // Set the selected slide
             onChange={handleChange}      // Handle slide changes
-      
-            
-            renderArrowNext={()=>{
+
+
+            renderArrowNext={() => {
               return null
             }}
-            renderArrowPrev={()=>{
+            renderArrowPrev={() => {
               return null
             }}
+         
+            renderThumbs={renderThumbs}
+          >
 
-            renderThumbs={(children) =>
-
-              
-              children.map((img, index) =>{  
-                return(
-                  <div key={index}  
-                  // className="h-20 w-20 object-cover rounded-lg hover:ring-2 transition duration-300 justify-center"
-                  className={`h-16 w-16 object-cover rounded-lg cursor-pointer 
-                    ${activeIndex === index ? 'ring-2 ring-indigo-500' : 'opacity-50 hover:opacity-100'}
-                    transition duration-300`}
-                  >
-                    {img}
-                 
-              </div>
-
-             
-              )}
-            
-            )
-          }
-            >
-              
 
             {data.images?.map((items, index) => {
               return (<div>
@@ -128,7 +140,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
                   layout="responsive"
                   blurDataURL="https://media.istockphoto.com/id/1226328533/vector/black-and-white-loading-circle-indicator-on-white-background.jpg"
                 />
-                
+
               </div>
               )
             })}
