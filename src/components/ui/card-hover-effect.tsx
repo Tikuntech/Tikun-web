@@ -6,6 +6,7 @@ import { useState } from 'react'
 import HoverIcon from '/public/Project/ProjectIsHoverd.svg'
 import { FiSlack } from 'react-icons/fi'
 import { useDataContext } from '@/context/DataProjectContext'
+import Image from 'next/image'
 
 export const HoverEffect = ({
   items,
@@ -16,6 +17,7 @@ export const HoverEffect = ({
     description: string
     Link: string
     _id: string
+    images: any[]
   }[]
   className?: string
 }) => {
@@ -33,14 +35,14 @@ export const HoverEffect = ({
 
 
   return (
-    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10' , className)}>
+    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10', className)}>
       {items.map((item, idx) => (
         <Link
           onClick={() => {
             setData(item)
           }}
           href={`/project/${item._id}`}
-       
+
           key={item?.Link}
           className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -67,7 +69,15 @@ export const HoverEffect = ({
               </div>
             </Card>
           ) : (
-            <Card>
+            <Card className={`bg-[url(${item?.images?.length ? item?.images[0] : ""})] bg-cover bg-center`}>
+              <Image
+                src={item?.images?.length ? item?.images[0] : ""}
+                alt="Background Image"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                className="z-[-1] opacity-80" // Ensure the image is behind the content
+              />
               <div className="h-80 flex flex-col justify-end p-4 w-full">
                 <div className="text-black font-normal text-left">
                   <CardDescription>{item.description}</CardDescription>
@@ -101,35 +111,20 @@ export const Card = ({
       className={
         isHovered
           ? cn(
-              '  text-white md:h-96  px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
-              className
-            )
+            '  text-white md:h-96  px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
+            className
+          )
           : cn(
-              ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 md:h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer',
-              className
-            )
+            ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 md:h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer ',
+            className
+          )
       }
-      // className=""
+
     >
       <div className="relative z-50">
         <div className="p-4">{children}</div>
       </div>
-      {/* {isHovered ? (
-                <div className="relative z-50">
-                    <div className="p-4">{children}</div>
-                </div>
-            ) : (
 
-                <div className=" flex justify-center items-center h-80">
-                    <div className="bg-gray-200 text-gray-800 p-6 rounded-lg shadow-md
-                        transition-transform transform duration-300 ease-in-out
-                        hover:bg-blue-500 hover:text-white
-                        hover:shadow-lg hover:scale-105 hover:rotate-1 cursor-pointer">
-                        <h2 className="text-2xl font-bold mb-4">Hover Effect</h2>
-                        <p>This card scales up and rotates slightly on hover.</p>
-                    </div>
-                </div>
-            )} */}
     </div>
   )
 }

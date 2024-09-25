@@ -8,6 +8,7 @@ import WindowsImg from '/public/Home/WINDOWS.svg'
 import SonyImg from '/public/Home/SONY.svg'
 import DividerLine from '/public/Blog/VerticalLine.svg'
 import LogoIcon from '../LogoIcons'
+import joshua from '/public/Home/joshua.png'
 
 const ClientStory: React.FC = () => {
   return (
@@ -48,7 +49,7 @@ const ClientStory: React.FC = () => {
                 {/* <div className="h-12 w-12 rounded-full bg-white ml-5"></div> */}
                 <Image
                   className="h-12 w-12 rounded-full bg-white ml-5"
-                  src="https://tikuntech.com/assets/joshua%20.jpg"
+                  src={joshua}
                   alt="Joshua"
                   width={15} // Set the width of the image
                   height={15} // Set the height of the image
