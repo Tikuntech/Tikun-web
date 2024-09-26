@@ -18,17 +18,7 @@ import SonyImg from '/public/Home/SONY.svg'
 import { useDataContext } from '@/context/DataProjectContext'
 import Slider from '@/components/Slider'
 import BreadCrumbProjectdetails from '@/common/BreadCrumb/BreadCrumbProjectdetails'
-const images = [
-  { src: BoxImg, alt: 'Graphic 1', width: 30, height: 40 },
 
-  { src: BoxImg, alt: 'Graphic 3', width: 70, height: 50 },
-  // Add more images as needed
-]
-
-const randomPosition = () => ({
-  top: `${Math.random() * 60 + 10}%`,
-  left: `${Math.random() * 50 + 10}%`,
-})
 
 const Page: React.FC = () => {
   const { data } = useDataContext()

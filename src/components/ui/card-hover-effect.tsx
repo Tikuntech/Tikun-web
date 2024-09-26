@@ -17,6 +17,7 @@ export const HoverEffect = ({
     description: string
     Link: string
     _id: string
+    thumbnail: string,
     images: any[]
   }[]
   className?: string
@@ -35,7 +36,7 @@ export const HoverEffect = ({
 
 
   return (
-    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10', className)}>
+    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-4 p-2', className)}>
       {items.map((item, idx) => (
         <Link
           onClick={() => {
@@ -44,7 +45,7 @@ export const HoverEffect = ({
           href={`/project/${item._id}`}
 
           key={item?.Link}
-          className="relative group block p-2 h-full w-full"
+          // className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
           onTouchStart={() => handleTouchStart(idx)}
@@ -69,15 +70,22 @@ export const HoverEffect = ({
               </div>
             </Card>
           ) : (
-            <Card className={`bg-[url(${item?.images?.length ? item?.images[0] : ""})] bg-cover bg-center`}>
-              <Image
-                src={item?.images?.length ? item?.images[0] : ""}
+            <Card
+            // className='my-4'
+              bgImage={item?.thumbnail ? item?.thumbnail : ""}
+            // className={` relative overflow-hidden bg-[linear-gradient(to_right,#CBD5E1D9,#768190D9,#1E293BD9)] `}
+            >
+              {/* <Image
+            
+                src={item?.thumbnail ? item?.thumbnail : ""}
                 alt="Background Image"
                 layout="fill"
                 objectFit="cover"
                 quality={100}
-                className="z-[-1] opacity-80" // Ensure the image is behind the content
-              />
+              
+                className="z-[0]  absolute  " // Ensure the image is behind the content
+              /> */}
+
               <div className="h-80 flex flex-col justify-end p-4 w-full">
                 <div className="text-black font-normal text-left">
                   <CardDescription>{item.description}</CardDescription>
@@ -95,35 +103,50 @@ export const HoverEffect = ({
 export const Card = ({
   className,
   children,
+  bgImage
 }: {
+  bgImage?: string
   className?: string
   children: React.ReactNode
 }) => {
   const [isHovered, setIsHovered] = useState(false)
   return (
     <div
+
+      style={{
+        // height: 400,
+        // width: 400,
+    
+        backgroundImage: `url(${bgImage})`, // Dynamic background image
+      }}
+      // style={!isHovered?{ backgroundImage: `linear-gradient(to right, url(${"https://images.unsplash.com/photo-1529653762956-b0a27278529c?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"})` }:{}}
+
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       //   className={cn(
       //     "rounded-2xl h-80 w-96 p-4 overflow-hidden bg-gradient-to-b from-slate-300 to-slate-800 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20  hover:bg-custom-blue transition-colors duration-300",
       //     className
       //   )}
+      //  className="h-screen flex items-center justify-center bg-cover bg-center"
       className={
         isHovered
           ? cn(
-            '  text-white md:h-96  px-4 py-2 rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer',
+            '  text-white md:h-96   rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer h-screen flex items-center justify-center bg-cover bg-center  ',
             className
           )
           : cn(
-            ' bg-gradient-to-b from-slate-300 to-slate-800 text-white px-4 py-2 md:h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer ',
+            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
             className
           )
+
       }
 
     >
-      <div className="relative z-50">
-        <div className="p-4">{children}</div>
-      </div>
+      {isHovered ? <div className="">
+        <div className="">{children}</div>
+      </div> : <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
+        <div className="">{children}</div>
+      </div>}
 
     </div>
   )

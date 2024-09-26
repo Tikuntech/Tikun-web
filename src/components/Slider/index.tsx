@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { CarouselState } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
 import './slider.css';
+import CustomSlider from '../CustomSlider';
 type LinksProps = {
   ios: string,
   playstore: string,
@@ -51,19 +52,23 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
 
   const renderThumbs = () => {
     return data?.images.map((image, index) => (
-    
-      <Image
+      <div key={index} >
+        <Image
+        
         src={image}
         alt={`Slide ${currentIndex}`}
-        className={`w-30 h-30 object-cover border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500'
+        className={`w-30 h-30 object-cover border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500 object-contain'
           }`}
         width={100}
-        height={100}
+        height={50}
+        
         loading="lazy" // Optional: adds lazy loading
         placeholder="blur"
         layout="responsive"
         blurDataURL="https://media.istockphoto.com/id/1226328533/vector/black-and-white-loading-circle-indicator-on-white-background.jpg"
       />
+        </div>
+
     ));
   };
 
@@ -100,13 +105,15 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
 
 
 
-          <Carousel
+          {/* <Carousel
+          //  className="h-64"
             onClickThumb={() => { }}
             showArrows={true}
             infiniteLoop={true}
-            dynamicHeight={true}
+            dynamicHeight={false}
             showThumbs={true}
             thumbWidth={100}
+            
            
             
 // animationHandler={myAnimationHandler}
@@ -130,9 +137,14 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
             {data.images?.map((items, index) => {
               return (<div>
                 <Image
+                 style={{
+                  maxWidth: "513px",
+                  objectFit: "contain",
+                  maxHeight: "300px",
+                }}
                   src={items}
                   alt={`Slide ${currentIndex}`}
-                  className="rounded-lg shadow-lg object-cover transition-transform duration-700 ease-in-out"
+                  className="rounded-lg shadow-lg  transition-transform duration-700 ease-in-out object-contain "
                   width={350}
                   height={200}
                   loading="lazy" // Optional: adds lazy loading
@@ -148,7 +160,9 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
 
 
 
-          </Carousel>
+          </Carousel> */}
+
+          <CustomSlider images={data?.images}/>
 
 
         </div>
