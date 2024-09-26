@@ -30,7 +30,7 @@ const Page: React.FC = () => {
         <div className="pt-10 ">
           <div className="pl-4 md:pl-9  md:pt-10">
             {' '}
-            <BreadCrumbProjectdetails />
+            <BreadCrumbProjectdetails  name={data?.title}/>
           </div>
           {
             data?.images?.length &&

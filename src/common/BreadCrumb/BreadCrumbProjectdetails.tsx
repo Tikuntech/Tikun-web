@@ -2,7 +2,12 @@ import React from 'react'
 import Link from 'next/link'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
-const BreadCrumbProjectdetails: React.FC = () => {
+interface BreadCrumbProjectDetailsProps {
+  name?: string; // Optional prop
+}
+
+
+const BreadCrumbProjectDetails: React.FC<BreadCrumbProjectDetailsProps> = ({ name = "" }) => {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
       <ol className="flex items-center space-x-4 text-gray-300">
@@ -20,10 +25,10 @@ const BreadCrumbProjectdetails: React.FC = () => {
         <li>
           <RiArrowRightSLine className="text-gray-500" />
         </li>
-        <li className="text-gray-500 text-sm font-medium">Project Details</li>
+        <li className="text-gray-500 text-sm font-medium">{name}</li>
       </ol>
     </nav>
   )
 }
 
-export default BreadCrumbProjectdetails
+export default BreadCrumbProjectDetails

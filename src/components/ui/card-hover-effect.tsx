@@ -36,7 +36,7 @@ export const HoverEffect = ({
 
 
   return (
-    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 gap-4 p-2', className)}>
+    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-4  ', className)}>
       {items.map((item, idx) => (
         <Link
           onClick={() => {
@@ -70,9 +70,11 @@ export const HoverEffect = ({
               </div>
             </Card>
           ) : (
-            <Card
+            <CardGradient
             // className='my-4'
               bgImage={item?.thumbnail ? item?.thumbnail : ""}
+                className="bg-contain bg-center "
+              // className={`${bg-[url()]}`}
             // className={` relative overflow-hidden bg-[linear-gradient(to_right,#CBD5E1D9,#768190D9,#1E293BD9)] `}
             >
               {/* <Image
@@ -83,7 +85,7 @@ export const HoverEffect = ({
                 objectFit="cover"
                 quality={100}
               
-                className="z-[0]  absolute  " // Ensure the image is behind the content
+                className="z-[0]    " // Ensure the image is behind the content
               /> */}
 
               <div className="h-80 flex flex-col justify-end p-4 w-full">
@@ -92,7 +94,7 @@ export const HoverEffect = ({
                   <CardTitle>{item.title}</CardTitle>
                 </div>
               </div>
-            </Card>
+            </CardGradient>
           )}
         </Link>
       ))}
@@ -119,8 +121,7 @@ export const Card = ({
     
         backgroundImage: `url(${bgImage})`, // Dynamic background image
       }}
-      // style={!isHovered?{ backgroundImage: `linear-gradient(to right, url(${"https://images.unsplash.com/photo-1529653762956-b0a27278529c?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"})` }:{}}
-
+    
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       //   className={cn(
@@ -135,7 +136,7 @@ export const Card = ({
             className
           )
           : cn(
-            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
+            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center p-24  ',
             className
           )
 
@@ -151,6 +152,48 @@ export const Card = ({
     </div>
   )
 }
+
+
+
+
+export const CardGradient = ({
+  className,
+  children,
+  bgImage
+}: {
+  bgImage?: string
+  className?: string
+  children: React.ReactNode
+}) => {
+  
+  return (
+  <div  
+
+  // className='h-96 w-full'
+  // style={{ backgroundImage: `url(${bgImage})` }}
+  >
+      <div
+      // style={{
+      //   backgroundImage: `url(${bgImage})`, // Dynamic background image
+      // }}
+      style={{ backgroundImage: `url(${bgImage})` }}
+      className={
+        cn(
+          '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
+          className
+        )
+
+      }
+    >
+      <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
+        <div className="">{children}</div>
+     </div>
+
+    </div>
+  </div>
+  )
+}
+
 
 export const CardTitle = ({
   className,

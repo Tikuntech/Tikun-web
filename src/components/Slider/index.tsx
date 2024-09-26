@@ -177,7 +177,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
       </div>
 
       {/* Text Content Section */}
-      <div className="text-center md:text-left space-y-4">
+      <div className="text-center md:text-left space-y-4 mt-[100]">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white">
           {data?.title}
         </h2>

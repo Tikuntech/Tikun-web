@@ -105,7 +105,7 @@ const NavbarHeader: React.FC = () => {
                       : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
                   }`}
                 >
-                  PROJECT
+                  PROJECTS
                 </span>
               </Link>
               <Link href="/contactUs">
@@ -181,7 +181,7 @@ const NavbarHeader: React.FC = () => {
             </Link>
             <Link href="/projects">
               <span className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
-                PROJECT
+                PROJECTS
               </span>
             </Link>
             <Link href="/contactUs">

@@ -35,15 +35,15 @@ export default function Project() {
       <div className="bg-[#11112B] p-4">
         <div className="bg-[#11112B]  pl-4 relative">
           <div className="md:pt-20 ">
-            <div className="md:ml-14 pt-16">
+            <div className="md:ml-14 pt-16 pl-5">
               <ProjectBreadCrumb />
             </div>
 
-            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
+            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0 pl-5 pr-5">
               <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-14">
-                Project
+                Projects
               </h1>
-              <div className="relative hidden md:block w-full  ">
+              <div className="relative hidden md:block w-full pl-5 pr-5 ">
                 {images.map((img, index) => (
                   <div
                     key={index}
@@ -63,14 +63,14 @@ export default function Project() {
             </div>
           </div>
         </div>
-        <div className=" ">
+        <div className=" mt-10">
           {/* <ProjectTabs /> */}
           <ProjectCards isHome={false} />
         </div>
 
-        <footer className="md:hidden flex flex-col items-center gap-5  p-4 bg-[#11112B]">
+        <footer className="md:hidden flex flex-col items-center gap-5  p-4 bg-[#11112B] ">
           {/* First Row: 3 logos */}
-          <div className="flex justify-center gap-8 mb-4">
+          <div className="flex justify-center gap-8 mb-4 pr-27 pl-27">
             <div className="w-24 h-12">
               <Image
                 src={SmasungImg}
@@ -79,7 +79,7 @@ export default function Project() {
                 height={50}
               />
             </div>
-            <div className="w-24 h-12">
+            <div className="w-24 h-12 ">
               <Image src={GoogleImg} alt="Google logo" width={70} height={50} />
             </div>
             <div className="w-24 h-12">

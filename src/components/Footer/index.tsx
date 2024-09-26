@@ -126,12 +126,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <Image src={footerline} alt="ServiceLine" className="" />
+        <Image src={footerline} alt="ServiceLine" className="pl-20 pr-20" />
 
-        <div className=" md:flex justify-between md:p-5 pl-2 pt-4 md:pt-5 md:pl-0  ">
-          <p className="md:text-sm text-xs">Copyright © Tikuntech</p>
+        <div className=" md:flex justify-between md:p-5  pt-4 md:pt-5 md:pl-0  pl-20 ">
+          <p className="md:text-sm text-xs pl-20">Copyright © Tikuntech</p>
 
-          <p className="md:text-sm  text-xs">
+          <p className="md:text-sm  text-xs pr-20">
             <Link href={'/termsCondition'}>
               <span className="hover:text-[#92deed]"> Terms & Conditions </span>
               |
