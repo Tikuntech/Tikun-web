@@ -84,7 +84,7 @@ const HeroPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="md:mt-14 p-1  mt-10 md:pl-14">
+        <div className="md:mt-14 p-1  mt-10 md:pl-20">
           <div className=" hidden md:text-left mb-10 md:flex gap-2 md:gap-0 md:flex-col ">
             <p className="text-white md:text-6xl font-bold mb-2   ">
               Why

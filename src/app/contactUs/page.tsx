@@ -26,7 +26,7 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] h-full p-5 md:p-4 relative md:pl-16 md:pr-14 ">
+      <div className="bg-[#11112B] h-full p-5 md:p-4 relative md:pl-20 md:pr-20 ">
         <div className="  md:pt-20 pt-16 pl-2">
           <ContactBreadcrumb />
           <div className="flex flex-col md:flex-row items-start space-y-2 md:space-x-3 md:space-y-0">

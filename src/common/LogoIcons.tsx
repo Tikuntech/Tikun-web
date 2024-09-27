@@ -8,7 +8,7 @@ import SonyImg from '/public/Home/SONY.svg'
 
 const LogoIcon: React.FC = () => {
   return (
-    <div className="bg-[#11112B] grid grid-cols-3 md:pl-14 md:pr-9 md:flex md:flex-wrap gap-10 justify-center md:justify-between items-center px-4 py-10 md:px-5 md:py-20 ">
+    <div className="bg-[#11112B] grid grid-cols-3 md:pl-20 md:pr-16 md:flex md:flex-wrap gap-10 justify-center md:justify-between items-center px-4 py-10 md:px-5 md:py-20 ">
       <Image
         src={SmasungImg}
         alt="Samsung logo"

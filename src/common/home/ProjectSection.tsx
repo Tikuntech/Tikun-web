@@ -20,7 +20,7 @@ const ProjectSection: React.FC = () => {
   }
 
   return (
-    <div className="bg-[#11112B]  p-5 md:h-full md:pl-14 md:pr-10 ">
+    <div className="bg-[#11112B]  p-5 md:h-full md:pl-20 md:pr-20 ">
       <div className="flex flex-col md:flex-row justify-between md:items-center  md:pt-10 p-4  ">
         <h1 className="text-white font-bold text-3xl md:text-6xl  ">
           Projects

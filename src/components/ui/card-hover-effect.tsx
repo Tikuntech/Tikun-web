@@ -7,6 +7,7 @@ import HoverIcon from '/public/Project/ProjectIsHoverd.svg'
 import { FiSlack } from 'react-icons/fi'
 import { useDataContext } from '@/context/DataProjectContext'
 import Image from 'next/image'
+import BackgroundImage from './BackgroundImage'
 
 export const HoverEffect = ({
   items,
@@ -70,11 +71,11 @@ export const HoverEffect = ({
               </div>
             </Card>
           ) : (
-            <CardGradient
-            // className='my-4'
-              bgImage={item?.thumbnail ? item?.thumbnail : ""}
-                className="bg-contain bg-center "
-              // className={`${bg-[url()]}`}
+            <BackgroundImage
+              // className='my-4'
+              url={item?.thumbnail ? item?.thumbnail : ""}
+            // className="bg-contain bg-center "
+            // className={`${bg-[url()]}`}
             // className={` relative overflow-hidden bg-[linear-gradient(to_right,#CBD5E1D9,#768190D9,#1E293BD9)] `}
             >
               {/* <Image
@@ -91,10 +92,10 @@ export const HoverEffect = ({
               <div className="h-80 flex flex-col justify-end p-4 w-full">
                 <div className="text-black font-normal text-left">
                   <CardDescription>{item.description}</CardDescription>
-                  <CardTitle>{item.title}</CardTitle>
+                  <CardTitle className=' mt-2'>{item.title}</CardTitle>
                 </div>
               </div>
-            </CardGradient>
+            </BackgroundImage>
           )}
         </Link>
       ))}
@@ -111,44 +112,17 @@ export const Card = ({
   className?: string
   children: React.ReactNode
 }) => {
-  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <div
-
-      style={{
-        // height: 400,
-        // width: 400,
-    
-        backgroundImage: `url(${bgImage})`, // Dynamic background image
-      }}
-    
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      //   className={cn(
-      //     "rounded-2xl h-80 w-96 p-4 overflow-hidden bg-gradient-to-b from-slate-300 to-slate-800 border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20  hover:bg-custom-blue transition-colors duration-300",
-      //     className
-      //   )}
-      //  className="h-screen flex items-center justify-center bg-cover bg-center"
       className={
-        isHovered
-          ? cn(
-            '  text-white md:h-96   rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer h-screen flex items-center justify-center bg-cover bg-center  ',
-            className
-          )
-          : cn(
-            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center p-24  ',
-            className
-          )
-
+        cn(
+          '  text-white md:h-96   rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center   lg:h-[430px] ',
+          className
+        )
       }
-
     >
-      {isHovered ? <div className="">
-        <div className="">{children}</div>
-      </div> : <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
-        <div className="">{children}</div>
-      </div>}
-
+      <div className="">{children}</div>
     </div>
   )
 }
@@ -165,32 +139,32 @@ export const CardGradient = ({
   className?: string
   children: React.ReactNode
 }) => {
-  
+
   return (
-  <div  
+    <div
 
-  // className='h-96 w-full'
-  // style={{ backgroundImage: `url(${bgImage})` }}
-  >
-      <div
-      // style={{
-      //   backgroundImage: `url(${bgImage})`, // Dynamic background image
-      // }}
-      style={{ backgroundImage: `url(${bgImage})` }}
-      className={
-        cn(
-          '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
-          className
-        )
-
-      }
+    // className='h-96 w-full'
+    // style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
-        <div className="">{children}</div>
-     </div>
+      <div
+        // style={{
+        //   backgroundImage: `url(${bgImage})`, // Dynamic background image
+        // }}
+        // style={{ backgroundImage: `url(${bgImage})` }}
+        className={
+          cn(
+            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
+            className
+          )
 
+        }
+      >
+        <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
+          <div className="">{children}</div>
+        </div>
+
+      </div>
     </div>
-  </div>
   )
 }
 

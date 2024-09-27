@@ -32,14 +32,14 @@ export default function Project() {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] p-4 md:pl-14 md:pr-12">
+      <div className="bg-[#11112B] p-4 md:pl-20 md:pr-20">
         <div className="bg-[#11112B]  pl-4 relative">
           <div className="md:pt-10 ">
-            <div className="pt-16 md:pl-0 pl-5">
+            <div className="pt-16 md:pl-0 ">
               <ProjectBreadCrumb />
             </div>
 
-            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0 md:pl-0  pl-5 pr-5">
+            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0 md:pl-0  pr-5">
               <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 ">
                 Projects
               </h1>
@@ -103,7 +103,7 @@ export default function Project() {
           </div>
         </footer>
 
-        <div className="hidden md:block md:-ml-14 md:-mr-10">
+        <div className="hidden md:block md:-ml-20 md:-mr-14">
           <LogoIcon />
         </div>
        

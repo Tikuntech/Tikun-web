@@ -33,7 +33,7 @@ const Page: React.FC = () => {
   return (
     <div className="bg-[#11112B] ">
       <NavbarHeader />
-      <div className="bg-[#11112B]  pl-4 relative md:pl-16">
+      <div className="bg-[#11112B]  pl-4 relative md:pl-24">
         <div className=" md:pt-28">
           <div className=" ">
             <ServiceBreadCrumb />

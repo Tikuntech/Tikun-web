@@ -32,10 +32,9 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className=' bg-[#11112B]'>
       <div className="bg-[#11112B] md:h-screen  md:p-12  relative p-4">
-        <div className="pt-10 ">
-          <div className="pl-4 md:pt-10">
+        <div className="pt-10  md:pl-7 md:pr-5">
+          <div className="pl-4 md:pt-10 ">
             {' '}
             <AboutBreadcrumbs />
           </div>
@@ -94,7 +93,7 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-10 pb-20 md:pt-20 md:pb-24">
+      <div className="p-10 pb-20 md:pt-20 md:pb-24 md:pl-16 md:pr-10">
         <AboutMain />
       </div>
 
@@ -134,8 +133,6 @@ const Page: React.FC = () => {
         <LogoIcon />
       </div>
       <NeedItSolution />
-      </div>
-     
 
       <Footer />
     </>
