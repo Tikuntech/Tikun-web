@@ -26,18 +26,18 @@ export default function Home() {
     <div className="min-h-screen bg-[#D5D9E5]">
       <LightNavbar />
 
-      <div className="pt-16 md:pt-28 p-5 md:p-0">
-        <div className="md:ml-20">
+      <div className="pt-16 md:pt-20 p-5 md:p-0">
+        <div className="md:ml-28">
           <SoftwareDevlopment />
         </div>
 
         <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-          <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
+          <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-28 mt-5">
             Software Development
           </h1>
         </div>
       </div>
-      <div className="md:mt-14 md:p-10 p-5 ">
+      <div className="md:mt-10 md:p-10 p-5 md:ml-16 md:mr-20 ">
         <Image
           src={SoftwareDevelopmentImg}
           alt="Img "
@@ -45,8 +45,8 @@ export default function Home() {
         />
       </div>
 
-      <div className="md:p-10 p-5">
-        <p className="md:text-base text-xs text-slate-700 mb-4">
+      <div className="md:p-10 p-5 md:ml-16 md:mr-20 " >
+        <p className="md:text-base text-xs text-slate-700 mb-4 ">
           At Tikunteck, we pride ourselves on delivering innovative and
           customized software solutions that drive business success and
           transform operations. Our software development services are
@@ -120,7 +120,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className=" rounded-xl shadow-md p-4 md:p-10">
+        <div className=" rounded-xl shadow-md p-4 md:p-10  md:mr-16 ">
           <h3 className="text-2xl font-bold mb-4 text-gray-800 ">Strategy</h3>
           <ul className="list-disc text-xl text-[#2D646E] p-6">
             <li>Marketing Data Analysis</li>

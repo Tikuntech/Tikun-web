@@ -27,8 +27,8 @@ const HeroPage: React.FC = () => {
   return (
     <>
       {/* <MainHome/> */}
-      <div className="relative  bg-[#11112B] overflow-hidden flex flex-col items-center justify-center ">
-        <div className="text-center pt-48 md:mt-0 md:w-1/2 ">
+      <div className="relative  bg-[#11112B] overflow-hidden p-2 flex flex-col items-center justify-center ">
+        <div className="text-center pt-32 md:mt-0 md:w-1/2 ">
           <div className="relative inline-block w-72 md:w-full ">
             <Image
               src={MainTextImg}
@@ -84,12 +84,12 @@ const HeroPage: React.FC = () => {
           ))}
         </div>
 
-        <div className="md:mt-14   mt-10">
+        <div className="md:mt-14 p-1  mt-10 md:pl-14">
           <div className=" hidden md:text-left mb-10 md:flex gap-2 md:gap-0 md:flex-col ">
-            <p className="text-white md:text-6xl font-bold mb-2 md:pl-20  ">
+            <p className="text-white md:text-6xl font-bold mb-2   ">
               Why
             </p>
-            <p className="text-white md:text-6xl font-bold md:pl-20">
+            <p className="text-white md:text-6xl font-bold ">
               Choose Us?
             </p>
           </div>

@@ -32,15 +32,15 @@ export default function Project() {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] p-4">
+      <div className="bg-[#11112B] p-4 md:pl-14 md:pr-12">
         <div className="bg-[#11112B]  pl-4 relative">
-          <div className="md:pt-20 ">
-            <div className="md:ml-14 pt-16 pl-5">
+          <div className="md:pt-10 ">
+            <div className="pt-16 md:pl-0 pl-5">
               <ProjectBreadCrumb />
             </div>
 
-            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0 pl-5 pr-5">
-              <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 md:ml-14">
+            <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0 md:pl-0  pl-5 pr-5">
+              <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 ">
                 Projects
               </h1>
               <div className="relative hidden md:block w-full pl-5 pr-5 ">
@@ -68,7 +68,7 @@ export default function Project() {
           <ProjectCards isHome={false} />
         </div>
 
-        <footer className="md:hidden flex flex-col items-center gap-5  p-4 bg-[#11112B] ">
+        <footer className="md:hidden flex flex-col items-center gap-5  p-6 pl-12 bg-[#11112B] ">
           {/* First Row: 3 logos */}
           <div className="flex justify-center gap-8 mb-4 pr-27 pl-27">
             <div className="w-24 h-12">
@@ -97,17 +97,18 @@ export default function Project() {
                 height={50}
               />
             </div>
-            <div className="w-24 h-12 pl-4">
+            <div className="w-24 h-12 pl-4 md:pl-0 ">
               <Image src={SonyImg} alt="Sony logo" width={70} height={50} />
             </div>
           </div>
         </footer>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block md:-ml-14 md:-mr-10">
           <LogoIcon />
         </div>
-        <NeedItSolution />
+       
       </div>
+      <NeedItSolution />
       <Footer />
     </>
   )

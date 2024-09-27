@@ -23,19 +23,19 @@ export default function page() {
     <>
       <main className="min-h-screen bg-[#D5D9E5] ">
         <LightNavbar />
-        <div className="pt-16 md:pt-28 p-4">
-          <div className="md:ml-20">
+        <div className="pt-16 md:pt-20 p-4">
+          <div className="md:ml-28">
             <CloudComuputingBread />
           </div>
 
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-2xl md:text-4xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
+            <h1 className="text-2xl md:text-4xl text-[#11112B] font-bold flex-shrink-0 md:ml-[105px] mt-5">
               Cloud Computing: A Game-Changer for Small Businesses
             </h1>
           </div>
         </div>
 
-        <div className="md:flex md:justify-around md:p-20 gap-10 ">
+        <div className="md:flex md:justify-around  md:pl-24 gap-2   ">
           <div className="md:w-full p-4">
             <Image src={CloudImg} alt="img" />
 
@@ -118,7 +118,7 @@ export default function page() {
             </div>
           </div>
 
-          <div className="md:w-1/2 p-4">
+          <div className="p-4 w-1/2 md:pr-28">
             <FlexSection />
           </div>
         </div>

@@ -20,31 +20,31 @@ const ProjectSection: React.FC = () => {
   }
 
   return (
-    <div className="bg-[#11112B]  md:h-full  ">
+    <div className="bg-[#11112B]  p-5 md:h-full md:pl-14 md:pr-10 ">
       <div className="flex flex-col md:flex-row justify-between md:items-center  md:pt-10 p-4  ">
-        <h1 className="text-white font-bold text-3xl md:text-6xl  md:pl-20 ">
+        <h1 className="text-white font-bold text-3xl md:text-6xl  ">
           Projects
         </h1>
-        <p className="text-white w-full md:w-1/2  md:mt-0 text-xs md:text-sm   p-4">
+        <p className="text-white w-full md:w-1/2  md:mt-0 text-xs md:text-sm   pt-4">
           As an IT company, we pride ourselves on delivering customized
           solutions that meet our clients' unique needs. Our projects highlight
           our expertise in web & mobile development, cloud computing,
           cybersecurity, and digital marketing.
         </p>
       </div>
-      <div className=' p-0 lg:pl-20 lg:pr-20'>
+      <div className=' p-0  pt-10'>
       <ProjectCards isHome={true} />
       </div>
 
 
-      <div className="md:flex md:justify-between md:mt-5 md:pl-20 p-5 ">
+      <div className="md:flex md:justify-between md:mt-5 p-5 ">
         <div className=" justify-center text-center">
           <h1 className="text-white md:text-6xl text-2xl md:w-1/2  text-left mt-20 font-medium">
             Got Any Questions?
           </h1>
           <Link href={'/contactUs'}>
             <div className="hidden md:block">
-              <button className="cursor-pointer hover:bg-custom-blue hover:text-black hover:border-black flex mt-5  md:mt-48 text-white p-3 bg-[#11112B]   rounded-lg border border-white  items-center justify-center">
+              <button className="cursor-pointer hover:bg-custom-blue hover:text-black hover:border-black flex mt-5  md:mt-40 text-white p-3 bg-[#11112B]   rounded-lg border border-white  items-center justify-center">
                 ASK A QUESTION
                 <Image
                   src={HomeArrowIcon}
@@ -55,10 +55,10 @@ const ProjectSection: React.FC = () => {
             </div>
           </Link>
         </div>
-        <div className="md:pr-20 md:w-1/2">
+        <div className=" md:w-[500px]">
           {/* Accordion Item 1 */}
           <h1
-            className={`flex mt-20 justify-between font-bold md:mb-10 mb-5 md:pl-2 cursor-pointer ${
+            className={`flex mt-20 justify-between font-bold md:mb-10 mb-5  cursor-pointer ${
               expanded === 1 ? 'text-custom-blue' : 'text-white'
             }`}
             onClick={() => handleToggle(1)}
@@ -94,7 +94,7 @@ const ProjectSection: React.FC = () => {
             )}
           </h1>
           {expanded === 2 && (
-            <div className="text-white text-sm md:pl-2 mb-5">
+            <div className="text-white text-sm  mb-5">
               <p>
                 Our solutions are tailored to fit various business needs.
                 Contact us for a custom recommendation.
@@ -104,7 +104,7 @@ const ProjectSection: React.FC = () => {
 
           {/* Accordion Item 3 */}
           <h1
-            className={`flex mt-5 justify-between font-bold md:pl-2 cursor-pointer md:pt-8 ${
+            className={`flex mt-5 justify-between font-bold cursor-pointer md:pt-8 ${
               expanded === 3 ? 'text-custom-blue' : 'text-white'
             }`}
             onClick={() => handleToggle(3)}

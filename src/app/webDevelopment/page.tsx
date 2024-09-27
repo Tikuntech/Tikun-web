@@ -33,18 +33,18 @@ export default function Page() {
       <main className="min-h-screen bg-[#D5D9E5] md:mt-12">
         <LightNavbar />
         <div className="pt-16 md:pt-10 p-5 md:p-0">
-          <div className="md:ml-20">
+          <div className="md:ml-32">
             <Webdevlopmemnt />
           </div>
 
           <div className="flex flex-col md:flex-row items-start space-y-8 md:space-x-8 md:space-y-0">
-            <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
+            <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-32 mt-5">
               Web Development
             </h1>
           </div>
         </div>
-        <div className="md:flex md:justify-around md:p-20 gap-10 ">
-          <div className="md:w-full mt-10 p-5 md:p-0">
+        <div className="md:flex md:justify-around md:p-20  gap-10 ">
+          <div className="md:w-full mt-10 p-5 md:p-0 md:pl-12">
             <Image src={WebDevImg} alt="Img " className="rounded-lg" />
             <p className="mt-10">
               At Tikunteck, we specialize in creating high-performance,
@@ -90,7 +90,7 @@ export default function Page() {
               solutions are both cutting-edge and reliable.
             </p>
           </div>
-          <div className="md:w-1/2 p-5 md:p-0">
+          <div className="md:w-1/2 p-5 md:p-0 md:mr-12">
             <MobileFlexSection />
           </div>
         </div>
