@@ -28,7 +28,7 @@ const Page: React.FC = () => {
       <NavbarHeader />
       <div className="bg-[#11112B]   md:pl-20 relative p-4">
         <div className="pt-10 ">
-          <div className="pl-4 md:pl-9  md:pt-10">
+          <div className="pl-4 md:pl-0  md:pt-10">
             {' '}
             <BreadCrumbProjectdetails  name={data?.title}/>
           </div>
@@ -49,7 +49,7 @@ const Page: React.FC = () => {
 
       <footer className="md:hidden flex flex-col items-center gap-5  p-10 bg-[#11112B] -mb-10 md:-mb-0 ">
         {/* First Row: 3 logos */}
-        <div className="flex justify-center gap-8 mb-4 ml">
+        <div className="flex justify-center gap-8 mb-4 ">
           <div className="w-24 h-12">
             <Image src={SmasungImg} alt="Samsung logo" width={90} height={70} />
           </div>
@@ -72,7 +72,7 @@ const Page: React.FC = () => {
         </div>
       </footer>
 
-      <div className="hidden md:block md:-mb-20 -mb-20 md:-mt-10">
+      <div className="hidden md:block md:-mb-20 -mb-20 md:-mt-10 ">
         <LogoIcon />
       </div>
       <NeedItSolution />

@@ -44,7 +44,7 @@ export default function Page() {
           </div>
         </div>
         <div className="md:flex md:justify-around md:p-20 gap-10 ">
-          <div className="md:w-full mt-10 p-5 md:p-0">
+          <div className="md:w-full md:pl-12 p-5 md:p-0">
             <Image src={DataAnalysismg} alt="Img " className="rounded-lg" />
             <p className="mt-10">
               Define the Objectives Determine what you want to achieve with the
@@ -88,7 +88,7 @@ export default function Page() {
               about new developments.
             </p>
           </div>
-          <div className="md:w-1/2 p-5 md:p-0">
+          <div className="md:w-1/2 p-5 md:p-0 md:pr-12">
             <MobileFlexSection />
           </div>
         </div>

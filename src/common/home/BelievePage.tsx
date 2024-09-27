@@ -6,7 +6,7 @@ import BelieveLineImg from '../../../public/Home/BelieveLine.svg'
 
 const BelievePage: React.FC = () => {
   return (
-    <main className=" px-6 md:px-12 bg-[#D5D9E5] md:h-screen w-full">
+    <main className=" px-6 md:px-12 bg-[#D5D9E5] md:h-screen w-full ">
       <section className="container mx-auto">
         {/* Logo Section */}
         <div className=" justify-center hidden md:flex  ">
@@ -28,7 +28,7 @@ const BelievePage: React.FC = () => {
             <span className="font-bold">the world.</span>
           </p>
           <div className="flex justify-center items-center">
-            <p className="md:text-lg text-sm text-gray-800 mt-10 md:mt-20 md:w-2/3 text-center">
+            <p className="md:text-lg text-sm text-gray-800 mt-10 md:mt-20 md:w-2/3 text-center p-3">
               That's why we're committed to delivering innovative IT solutions
               to businesses of all sizes. Our team of experienced professionals
               is dedicated to helping you achieve your goals and thrive in a
@@ -38,7 +38,7 @@ const BelievePage: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="flex  md:flex-row items-center justify-center mt-20 pb-10 gap-4 ">
+        <div className="flex  md:flex-row items-center justify-center mt-20 pb-10 gap-4 pl-3 pr-3">
           <div className=" flex-1 text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               500+

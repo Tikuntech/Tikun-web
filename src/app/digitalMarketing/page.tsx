@@ -25,21 +25,21 @@ export default function Home() {
       <LightNavbar />
 
       <div className="pt-16 md:pt-20 p-5 ">
-        <div className="md:ml-20">
+        <div className="md:ml-24">
           <DigitalMarketingBrad />
         </div>
 
         <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0">
-          <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-20 mt-5">
+          <h1 className="text-4xl md:text-6xl text-[#11112B] font-bold flex-shrink-0 md:ml-24 mt-5">
             Digital Marketing
           </h1>
         </div>
       </div>
-      <div className="md:mt-14 md:p-10 p-5">
+      <div className="md:mt-14 md:p-5 md:pl-28 md:pr-28 p-5">
         <Image src={DigitalMarketingImg} alt="Img " />
       </div>
 
-      <div className=" hidden md:flex justify-between pl-12 pr-12">
+      <div className=" hidden md:flex justify-between pl-12 pr-12 md:pl-28 md:pr-28">
         <div>
           <p className="text-xs">Y E A R</p>
           <p className="text-gray-500 font-medium">2022 - 2023</p>
@@ -61,8 +61,8 @@ export default function Home() {
         </div>
       </div>
       <div className="md:p-10 p-5 md:pl-14">
-        <p className="font-bold text-2xl mb-4">Challenge</p>
-        <p className="md:text-base text-xs text-slate-700 mb-4">
+        <p className="font-bold text-2xl mb-4 md:pl-10 md:ml-3">Challenge</p>
+        <p className="md:text-base text-xs text-slate-700 mb-4 md:pl-12 md:pr-12">
           In today's digital age, having a strong online presence is crucial for
           businesses to succeed. CU, a national retail chain, understands the
           importance of expanding their digital footprint to reach a wider
@@ -72,7 +72,7 @@ export default function Home() {
           marketing strategy that utilizes data analysis and paid ads to target
           specific demographics and drive traffic to their website.
         </p>
-        <p className="md:text-base text-xs text-slate-700">
+        <p className="md:text-base text-xs text-slate-700  md:pl-12 md:pr-12">
           One of the main challenges for CU is to stand out from the competition
           in the crowded online marketplace. With so many businesses vying for
           attention, it can be difficult to attract and retain customers. This
@@ -106,7 +106,8 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className=" rounded-xl shadow-md p-4 md:p-10">
+        <div className='md:pr-12'>
+        <div className=" rounded-xl shadow-md p-4 md:p-10 ">
           <h3 className="text-2xl font-bold mb-4 text-gray-800 ">Strategy</h3>
           <ul className="list-disc text-xl text-[#2D646E] p-6">
             <li>Marketing Data Analysis</li>
@@ -115,6 +116,8 @@ export default function Home() {
             <li>Paid Digital Ads</li>
           </ul>
         </div>
+        </div>
+       
       </div>
 
       <main className="container mx-auto ">

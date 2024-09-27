@@ -9,7 +9,7 @@ import HeroPage from '@/components/Home'
 import NavbarHeader from '@/components/Navbar'
 export default function Home() {
   return (
-    <main>
+    <main className='' >
       <NavbarHeader />
       <HeroPage />
       <BelievePage />

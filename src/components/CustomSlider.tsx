@@ -44,14 +44,14 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
 
       {/* Navigation Buttons */}
       <button
-        className="absolute top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:-ml-5 rounded"
+        className="absolute top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:-ml-5  rounded-full"
         onClick={handlePrev}
       >
       <MdKeyboardArrowLeft className='w-6 h-6'/>
       </button>
       <button
         // className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded"
-         className="absolute md:-right-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-1  rounded flex items-center"
+         className="absolute md:-right-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-1  rounded-full flex items-center"
         onClick={handleNext}
       >
         <RiArrowRightSLine className='w-6 h-6'/>

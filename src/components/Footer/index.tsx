@@ -11,8 +11,8 @@ import { FaTwitter } from 'react-icons/fa'
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#11112B] text-white py-8 p-4     ">
-        <div className="container mx-auto md:px-4 flex flex-col items-center md:flex-row md:justify-between">
+      <footer className="bg-[#11112B] text-white    md:pl-20  pl-8 ">
+        <div className="container w-full  flex flex-col items-center md:flex-row md:justify-between">
           <div className="hidden md:flex flex-col items-center md:items-start md:space-y-28 space-y-2 mb-10 md:mb-0">
             <TikcunteckLogo />
 
@@ -28,9 +28,9 @@ export default function Footer() {
           </div>
 
           {/* Links Section */}
-          <div className="flex flex-col md:flex-row md:space-x-10 space-y-8 md:space-y-0 w-full md:w-auto   md:mb-5">
+          <div className="flex flex-col md:flex-row md:space-x-10 space-y- md:space-y-0 w-full md:w-auto   md:mb-5">
             {/* Explore Section */}
-            <div className="flex flex-col w-full md:w-24 mb-8 md:mb-0">
+            <div className="flex flex-col w-full md:w-20 mb-8 md:mb-0 m">
               <h3 className="text-lg font-bold mb-4">Explore</h3>
               <ul className="space-y-3">
                 <li>
@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
 
             {/* Contact Section */}
-            <div className="flex flex-col w-full md:w-80 mb-8 md:mb-0">
+            <div className="flex flex-col w-full md:w-96 mb-8 md:mb-0 md:pl-16">
               <h3 className="text-lg font-bold mb-4">Contact</h3>
               <ul className="space-y-3">
                 <li>
@@ -112,7 +112,7 @@ export default function Footer() {
               </ul>
             </div>
             {/* Newsletter Section */}
-            <div className="flex flex-col w-full md:w-80">
+            <div className="flex flex-col w-full md:w-80 md:pl-10">
               <h3 className="text-lg font-bold mb-4">Newsletter</h3>
               <p className="text-sm mb-4">
                 Subscribe to our newsletter to stay informed about our latest
@@ -125,22 +125,24 @@ export default function Footer() {
             </div>
           </div>
         </div>
+<div className='md:pr-16 pb-5'>
+<Image src={footerline} alt="ServiceLine" className="" />
 
-        <Image src={footerline} alt="ServiceLine" className="pl-20 pr-20" />
+<div className=" md:flex justify-between md:pb-5 pt-4 md:pt-5   ">
+  <p className="md:text-sm text-xs ">Copyright © Tikuntech</p>
 
-        <div className=" md:flex justify-between md:p-5  pt-4 md:pt-5 md:pl-0  pl-20 ">
-          <p className="md:text-sm text-xs pl-20">Copyright © Tikuntech</p>
-
-          <p className="md:text-sm  text-xs pr-20">
-            <Link href={'/termsCondition'}>
-              <span className="hover:text-[#92deed]"> Terms & Conditions </span>
-              |
-            </Link>
-            <Link href={'/privacyPolicy'}>
-              <span className="hover:text-[#92deed]"> Privacy Policy</span>
-            </Link>
-          </p>
-        </div>
+  <p className="md:text-sm  text-xs ">
+    <Link href={'/termsCondition'}>
+      <span className="hover:text-[#92deed]"> Terms & Conditions </span>
+      |
+    </Link>
+    <Link href={'/privacyPolicy'}>
+      <span className="hover:text-[#92deed]"> Privacy Policy</span>
+    </Link>
+  </p>
+</div>
+</div>
+        
       </footer>
     </>
   )

@@ -32,9 +32,10 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] md:h-screen  md:pl-20 relative p-4">
+      <div className=' bg-[#11112B]'>
+      <div className="bg-[#11112B] md:h-screen  md:p-12  relative p-4">
         <div className="pt-10 ">
-          <div className="pl-4 md:pt-20">
+          <div className="pl-4 md:pt-10">
             {' '}
             <AboutBreadcrumbs />
           </div>
@@ -106,33 +107,35 @@ const Page: React.FC = () => {
 
       <footer className="md:hidden flex flex-col items-center gap-5  p-10 bg-[#11112B] -mb-10 md:-mb-0 ">
         {/* First Row: 3 logos */}
-        <div className="flex justify-center gap-8 mb-4 ml">
-          <div className="w-24 h-12">
-            <Image src={SmasungImg} alt="Samsung logo" width={90} height={70} />
+        <div className="flex justify-center gap-8 mb-4 ">
+          <div className="w-20 h-12">
+            <Image src={SmasungImg} alt="Samsung logo"  />
           </div>
-          <div className="w-24 h-12">
-            <Image src={GoogleImg} alt="Google logo" width={90} height={70} />
+          <div className="w-20 h-12">
+            <Image src={GoogleImg} alt="Google logo" />
           </div>
-          <div className="w-24 h-12">
-            <Image src={AmazonImg} alt="Amazon logo" width={90} height={70} />
+          <div className="w-20 h-12">
+            <Image src={AmazonImg} alt="Amazon logo"/>
           </div>
         </div>
 
         {/* Second Row: 2 logos */}
         <div className="flex justify-center gap-8">
-          <div className="w-24 h-12">
-            <Image src={WindowsImg} alt="Windows logo" width={70} height={50} />
+          <div className="w-20 h-12">
+            <Image src={WindowsImg} alt="Windows logo"  />
           </div>
-          <div className="w-24 h-12">
-            <Image src={SonyImg} alt="Sony logo" width={70} height={50} />
+          <div className="w-20 h-12">
+            <Image src={SonyImg} alt="Sony logo"  />
           </div>
         </div>
       </footer>
 
-      <div className="hidden md:block md:-mb-20 -mb-20 md:-mt-10">
+      <div className="hidden md:block md:-mt-10    ">
         <LogoIcon />
       </div>
       <NeedItSolution />
+      </div>
+     
 
       <Footer />
     </>

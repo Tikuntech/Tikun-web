@@ -12,17 +12,18 @@ import joshua from '/public/Home/joshua.png'
 
 const ClientStory: React.FC = () => {
   return (
-    <div className="bg-[#11112B] flex flex-col min-h-screen ">
+    <>
+    <div className="bg-[#11112B] flex flex-col min-h-screen md:pl-9 md:pr-5">
       {/* Header */}
       <header className="text-white flex md:justify-between md:items-center p-8 md:pt-20 md:-mb-20  ">
-        <h1 className="text-4xl md:text-6xl md:pl-7 font-semibold">
+        <h1 className="text-4xl md:text-6xl  font-semibold">
           Client Stories
         </h1>
         {/* <FaArrowRightLong className="hidden md:block text-2xl" /> */}
       </header>
 
       {/* Main Content */}
-      <main className="flex flex-col md:flex-row p-8 md:p-16 gap-8  items-center justify-center">
+      <main className="flex flex-col md:flex-row p-10 md:pt-10  gap-8  items-center justify-center ">
         {/* Story Container */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
           {/* Story 1 */}
@@ -96,35 +97,41 @@ const ClientStory: React.FC = () => {
         </div>
       </main>
 
-      <footer className="md:hidden flex flex-col items-center gap-2 mt-10  bg-[#11112B]">
+      <div className="md:hidden flex flex-col items-center  mt-10 bg-[#11112B]">
         {/* First Row: 3 logos */}
-        <div className="flex justify-center gap-8 mb-4 ml">
-          <div className="w-24 h-12">
-            <Image src={SmasungImg} alt="Samsung logo" width={90} height={70} />
+        <div className='p-10'>
+        <div className="flex justify-center gap-8 mb-4 ">
+          <div className="w-20 h-12 ">
+            <Image src={SmasungImg} alt="Samsung logo"  />
           </div>
-          <div className="w-24 h-12">
-            <Image src={GoogleImg} alt="Google logo" width={90} height={70} />
+          <div className="w-20 h-12">
+            <Image src={GoogleImg} alt="Google logo" />
           </div>
-          <div className="w-24 h-12">
-            <Image src={AmazonImg} alt="Amazon logo" width={90} height={70} />
+          <div className="w-20 h-12">
+            <Image src={AmazonImg} alt="Amazon logo" />
           </div>
         </div>
 
         {/* Second Row: 2 logos */}
         <div className="flex justify-center gap-8">
           <div className="w-24 h-12">
-            <Image src={WindowsImg} alt="Windows logo" width={70} height={50} />
+            <Image src={WindowsImg} alt="Windows logo"  />
           </div>
           <div className="w-24 h-12">
-            <Image src={SonyImg} alt="Sony logo" width={70} height={50} />
+            <Image src={SonyImg} alt="Sony logo" />
           </div>
         </div>
-      </footer>
+        </div>
+       
+      </div>
 
-      <div className="hidden md:block -mt-28">
+     
+    </div>
+
+    <div className="hidden md:block md:-mt-80  ">
         <LogoIcon />
       </div>
-    </div>
+    </>
   )
 }
 
