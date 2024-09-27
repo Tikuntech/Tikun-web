@@ -15,7 +15,7 @@ import Link from 'next/link'
 
 export function ServiceCards() {
   return (
-    <div className="md:p-14 mx-auto px-3 relative md:pl-16 ">
+    <div className="md:p-14 mx-auto px-3 relative md:pl-20 md:pr-20 ">
       <ServiceHoverEffect items={services} />
     </div>
   )

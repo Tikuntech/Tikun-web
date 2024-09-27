@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const ServiceSection: React.FC = () => {
   return (
-    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-8 md:pr-4 pl-7 pr-4 ">
+    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-14 md:pr-14 pl-7 pr-4 ">
       <section className="md:p-10">
         {/* Logo Section */}
         <div className="flex justify-center ">

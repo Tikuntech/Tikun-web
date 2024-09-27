@@ -36,7 +36,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
             <div key={index} className="w-full flex-shrink-0"  >
               <img
                
-                src={image} alt={`Slide ${index}`} className="w-full h-[680px] object-cover" />
+                src={image} alt={`Slide ${index}`} className="w-full h-[700px] object-cover" />
             </div>
           ))}
         </div>
