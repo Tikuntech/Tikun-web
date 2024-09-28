@@ -26,12 +26,13 @@ export const HoverEffect = ({
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+  
 
   const { setData } = useDataContext()
   const handleTouchStart = (index: number) => {
-    setActiveIndex(index)
+    // setActiveIndex(index)
     // Remove active state after touch
-    setTimeout(() => setActiveIndex(null), 2000)
+    // setTimeout(() => setActiveIndex(null), 2000)
   }
 
 

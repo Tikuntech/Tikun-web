@@ -13,23 +13,42 @@ export function ProjectCards({ isHome = false }: ProjectCardProps) {
   const { data, error, isLoading } = useQuery('project', fetchProjects)
 
   const [isTrue, setIsTrue] = useState(false);
+  const [itemsPerRow, setItemsPerRow] = useState(4); // Default to 4 items per row
+
+
+  // useEffect(() => {
+  //   const checkResolution = () => {
+  //     const currentWidth = window.innerWidth; // or use window.screen.width
+  //     setIsTrue(currentWidth === 1536  || currentWidth === 1920 );
+  //   };
+
+  //   // Check the resolution on mount
+  //   checkResolution();
+
+  //   // Add resize event listener to check resolution on window resize
+  //   window.addEventListener('resize', checkResolution);
+
+  //   // Cleanup the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('resize', checkResolution);
+  //   };
+  // }, []);
+
+
+
+  const updateItemsPerRow = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth >= 1200) {
+      setItemsPerRow(4); // Show 5 items for larger screens
+    } else {
+      setItemsPerRow(3); // Show 4 items for smaller screens
+    }
+  };
 
   useEffect(() => {
-    const checkResolution = () => {
-      const currentWidth = window.innerWidth; // or use window.screen.width
-      setIsTrue(currentWidth === 1536  || currentWidth === 1920 );
-    };
-
-    // Check the resolution on mount
-    checkResolution();
-
-    // Add resize event listener to check resolution on window resize
-    window.addEventListener('resize', checkResolution);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener('resize', checkResolution);
-    };
+    updateItemsPerRow();
+    window.addEventListener('resize', updateItemsPerRow); // Update on resize
+    return () => window.removeEventListener('resize', updateItemsPerRow); // Cleanup on unmount
   }, []);
 
 
@@ -41,20 +60,23 @@ export function ProjectCards({ isHome = false }: ProjectCardProps) {
       {/* { <HoverEffect items={data?.data ? data?.data : []} />} */}
 
 
-      {isHome && isTrue &&
+      {/* {isHome && isTrue &&
         <HoverEffect items={data?.data?.slice(0, 4) ? data?.data?.slice(0, 4) : []} />
+      } */}
+
+
+
+      {itemsPerRow && isHome &&
+        <HoverEffect items={data?.data?.slice(0, itemsPerRow) ? data?.data?.slice(0, itemsPerRow) : []} />
       }
-
-
-
-      {isHome && !isTrue &&
-        <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} />
-      }
-
-
-      {!isHome && !isTrue &&
+      {itemsPerRow && !isHome &&
         <HoverEffect items={data?.data ? data?.data : []} />
       }
+
+
+      {/* {!isHome && !isTrue &&
+        <HoverEffect items={data?.data ? data?.data : []} />
+      } */}
 
 
 
