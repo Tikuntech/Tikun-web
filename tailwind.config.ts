@@ -33,7 +33,8 @@ const config: Config = {
       },
       screens: {
         '1366px': '1366px', // Custom screen size for 1366px
-        '1470px': '1470px', // Custom screen size for 1470px
+        '1470px': '1470px',
+        '1536px': '1536px',  // Custom screen size for 1470px
       },
 
       // screens: {

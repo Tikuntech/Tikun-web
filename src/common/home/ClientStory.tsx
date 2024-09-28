@@ -13,7 +13,7 @@ import joshua from '/public/Home/joshua.png'
 const ClientStory: React.FC = () => {
   return (
     <>
-    <div className="bg-[#11112B] flex flex-col min-h-screen md:pl-12 md:pr-12">
+    <div className="bg-[#11112B] flex flex-col min-h-screen md:pl-12 md:pr-12 1470px:pl-14 1366px:pl-16">
       {/* Header */}
       <header className="text-white flex md:justify-between md:items-center p-8 md:pt-20 md:-mb-20  ">
         <h1 className="text-4xl md:text-6xl  font-semibold">
@@ -128,7 +128,7 @@ const ClientStory: React.FC = () => {
      
     </div>
 
-    <div className="hidden md:block md:-mt-80  ">
+    <div className="hidden md:block md:-mt-80 1536px:-mt-[500px]  ">
         <LogoIcon />
       </div>
     </>
