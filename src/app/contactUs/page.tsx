@@ -26,7 +26,7 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] h-full p-5 md:p-4 relative md:pl-20 md:pr-20 ">
+      <div className="bg-[#11112B] h-full p-5 md:p-4 relative md:pl-20 md:pr-20 1366px:pl-24 ">
         <div className="  md:pt-20 pt-8 pl-2">
           <ContactBreadcrumb />
           <div className="flex flex-col md:flex-row items-start space-y-2 md:space-x-3 md:space-y-0">
@@ -74,7 +74,7 @@ const Page: React.FC = () => {
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-full rounded-2xl ">
+              <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-full rounded-2xl 1536px:mr-5 ">
                 <Link href="mailto:business@tikuntech.com">
                   <div className="mt-10 md:mt-0 rounded-2xl shadow-md p-8 hover:bg-custom-blue  h-44 hover:text-black flex flex-col items-start text-white">
                     <EnvelopeIcon className="w-12 h-12 border border-white  hover:border-black rounded-full p-2" />
@@ -89,14 +89,14 @@ const Page: React.FC = () => {
 <div className='h-screen '>
 <div className="relative md:flex md:mt-20   ">
             <ContactLocation />
-            <div className="absolute 1470px:pl-[500px] 1366px:pl-[400px]  md:mt-60    ">
+            <div className="absolute 1470px:pl-[500px] 1366px:pl-[400px] 1536px:pl-[530px]  md:mt-60    ">
               <ContacMassage />
             </div>
           </div>
 </div>
 
         </div>
-<div className='pt-28  md:pt-0 1366px:mt-40'>
+<div className='pt-28  md:pt-0 1366px:mt-40 1536px:-mt-20'>
 <NeedItSolution />
 </div>
        

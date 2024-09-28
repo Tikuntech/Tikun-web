@@ -58,7 +58,7 @@ const Page: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56  ">
+          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56 1366px:pl-5 ">
             <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2   ">
               <Image
                 src={BoxImg}
@@ -93,7 +93,7 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-10 pb-20 md:pt-20 md:pb-24 1366px:pl-12 1470px:pl-14 1366px:pr-12 1470px:pr-14 md:pr-10  ">
+      <div className="p-10 pb-20 md:pt-20 md:pb-24 1366px:pl-16 1470px:pl-14 1366px:pr-12 1470px:pr-14 md:pr-10  ">
         <AboutMain />
       </div>
 

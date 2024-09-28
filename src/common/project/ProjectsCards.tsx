@@ -2,21 +2,62 @@ import { useQuery } from 'react-query'
 import { HoverEffect } from '../../components/ui/card-hover-effect'
 import { fetchProjects } from '@/services/api'
 import Loading from '@/components/Loading/Loading'
+import { useEffect, useState } from 'react'
 
 interface ProjectCardProps {
-  isHome:boolean
+  isHome: boolean
 }
 
 
-export function ProjectCards({isHome=false}:ProjectCardProps) {
+export function ProjectCards({ isHome = false }: ProjectCardProps) {
   const { data, error, isLoading } = useQuery('project', fetchProjects)
 
-  
+  const [isTrue, setIsTrue] = useState(false);
+
+  useEffect(() => {
+    const checkResolution = () => {
+      const currentWidth = window.innerWidth; // or use window.screen.width
+      setIsTrue(currentWidth === 1536  || currentWidth === 1920 );
+    };
+
+    // Check the resolution on mount
+    checkResolution();
+
+    // Add resize event listener to check resolution on window resize
+    window.addEventListener('resize', checkResolution);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', checkResolution);
+    };
+  }, []);
+
+
   return isLoading ? (
     <Loading />
   ) : (
     <div className=" mx-auto px-3">
-      {isHome ? <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} /> : <HoverEffect items={data?.data ? data?.data : []} />}
+      {/* {isHome ? <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} /> : <HoverEffect items={data?.data ? data?.data : []} />} */}
+      {/* { <HoverEffect items={data?.data ? data?.data : []} />} */}
+
+
+      {isHome && isTrue &&
+        <HoverEffect items={data?.data?.slice(0, 4) ? data?.data?.slice(0, 4) : []} />
+      }
+
+
+
+      {isHome && !isTrue &&
+        <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} />
+      }
+
+
+      {!isHome && !isTrue &&
+        <HoverEffect items={data?.data ? data?.data : []} />
+      }
+
+
+
     </div>
   )
 }

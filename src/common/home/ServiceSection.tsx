@@ -9,7 +9,7 @@ import Link from 'next/link'
 
 const ServiceSection: React.FC = () => {
   return (
-    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-20  md:pr-24 pl-5 pr-10 ">
+    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-20  md:pr-24 pl-5 pr-10 1366px:pl-24">
       <section className="">
         {/* Logo Section */}
         <div className="flex justify-center ">
@@ -63,7 +63,7 @@ const ServiceSection: React.FC = () => {
             <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
           </div>
         </Link>
-        <Image src={ServiceLine} alt="Line" className=' w-full mb-5' />
+        <Image src={ServiceLine} alt="Line" className=' w-full ' />
       </section>
     </main>
   )

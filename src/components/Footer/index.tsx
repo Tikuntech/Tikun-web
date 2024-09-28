@@ -138,7 +138,7 @@ export default function Footer() {
 //     </>
 //   )
 
-return(<footer className="bg-[#11112B] text-white px-4 md:px-20">
+return(<footer className="bg-[#11112B] text-white px-4 md:px-20 1366px:pl-24">
   <div className="flex flex-col md:flex-row justify-between">
     <div className="hidden md:flex flex-col items-center md:items-start md:space-y-28 space-y-2 mb-10 md:mb-0">
       <TikcunteckLogo />
