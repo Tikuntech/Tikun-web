@@ -24,7 +24,7 @@ const NavbarHeader: React.FC = () => {
       <div className="container mx-auto md:py-3">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 pl-5 md:pl-0 1366px:pl-24 1470px:pl-20 1470px:ml-3">
+          <div className="flex-shrink-0 pl-5 md:pl-0 1366px:pl-24 1470px:pl-20 1470px:ml-3 1536px:pl-20">
             <Link href="/">
               <TikcunteckIcon />
             </Link>
