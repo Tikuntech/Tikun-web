@@ -43,7 +43,7 @@ export default function Project() {
               <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 ">
                 Projects
               </h1>
-              <div className="relative hidden md:block w-full pl-5 pr-5 ">
+              <div className="relative hidden md:block w-full pl-5 pr-5  ">
                 {images.map((img, index) => (
                   <div
                     key={index}

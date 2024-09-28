@@ -9,6 +9,7 @@ import { useDataContext } from '@/context/DataProjectContext'
 import Image from 'next/image'
 import BackgroundImage from './BackgroundImage'
 
+
 export const HoverEffect = ({
   items,
   className,
@@ -34,10 +35,32 @@ export const HoverEffect = ({
   }
 
 
+  const CardGrid: React.FC = () => {
+    // Array to render
+    const cardItems = [1, 2, 3];
+  
+    return (
+      <div className="container mx-auto p-4">
+      {/* Responsive grid layout for cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 justify-center">
+        {cardItems.map((item) => (
+          <div
+            key={item}
+            className="w-full max-w-[400px] h-[400px] bg-red-500 flex items-center justify-center rounded-lg shadow-md mx-auto"
+          >
+            <h2 className="text-white text-xl">Card {item}</h2>
+          </div>
+        ))}
+      </div>
+    </div>
+    );
+  };
+  
 
 
   return (
-    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3   gap-4  ', className)}>
+    // <CardGrid/>
+    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4 gap-4 lg:gap-5 md:gap-5 sm:gap-5 ', className)}>
       {items.map((item, idx) => (
         <Link
           onClick={() => {
@@ -53,7 +76,7 @@ export const HoverEffect = ({
         >
           {hoveredIndex === idx ? (
             <Card>
-              <h1 className="text-black font-normal mt-4 text-center">
+              <h1 className="text-black font-normal text-center">
                 {item.title}
               </h1>
               <FiSlack className="text-white text-center block mx-auto mt-4" />
@@ -115,9 +138,10 @@ export const Card = ({
 
   return (
     <div
+    //  className="w-full max-w-[400px] h-[400px] bg-red-500 flex items-center justify-center rounded-lg shadow-md mx-auto"
       className={
         cn(
-          '  text-white md:h-96   rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center   lg:h-[430px] ',
+          '  text-white   rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center h-[300px] sm:h-[350px] md:h-[400px] lg:h-[370px] 1366px:h-[370px] 1470px:h-[420px] 2xl:h-[450px]',
           className
         )
       }
@@ -203,3 +227,6 @@ export const CardDescription = ({
     </p>
   )
 }
+
+
+

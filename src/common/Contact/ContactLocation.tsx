@@ -13,8 +13,8 @@ const ContactLocation: React.FC = () => {
         <Image
           src={LocationImg}
           alt="Location"
-          width={700}
-          height={450}
+          width={750}
+          height={350}
           className="object-cover rounded-lg"
         />
 

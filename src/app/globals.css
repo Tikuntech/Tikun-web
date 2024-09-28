@@ -1,21 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities'; */
-button {
-  /* background-color: blue !important;
-  color: white !important; */
-}
+
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -45,4 +35,19 @@ button {
 
 button:disabled {
   cursor: not-allowed; /* Override default disabled behavior */
+}
+
+
+.component-wrapper {
+  @apply px-4 md:px-6 lg:px-8; 
+}
+
+@layer utilities {
+  .line-clamp-3 {
+    @apply overflow-hidden;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
 }

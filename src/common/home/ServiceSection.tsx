@@ -9,8 +9,8 @@ import Link from 'next/link'
 
 const ServiceSection: React.FC = () => {
   return (
-    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-14 md:pr-14 pl-7 pr-4 ">
-      <section className="md:p-10">
+    <main className=" bg-[#D5D9E5]  md:p-0 w-full md:pl-20  md:pr-24 pl-5 pr-10 ">
+      <section className="">
         {/* Logo Section */}
         <div className="flex justify-center ">
           <p className="font-bold md:text-6xl mt-20 text-4xl">Service</p>
@@ -22,12 +22,12 @@ const ServiceSection: React.FC = () => {
                 Web Development
               </h1>
 
-              <div className="text-black pr-3">
+              <div className="text-black ">
                 <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
               </div>
             </div>
           </Link>
-          <Image src={ServiceLine} alt="Line" />
+          <Image src={ServiceLine} alt="Line" className=' w-full' />
         </div>
 
         <div className=''>
@@ -39,7 +39,7 @@ const ServiceSection: React.FC = () => {
               <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
             </div>
           </Link>
-          <Image src={ServiceLine} alt="Line" />
+          <Image src={ServiceLine} alt="Line" className=' w-full' />
         </div>
         <div className="md:flex ' ">
           <div className="md:pt-10">
@@ -53,7 +53,7 @@ const ServiceSection: React.FC = () => {
           </div>
           <Image src={CyberImg} alt="cyberImg" className="mt-5  " />
         </div>
-        <Image src={ServiceLine} alt="Line" className="mt-5 " />
+        <Image src={ServiceLine} alt="Line" className=' w-full mt-4' />
 
         <Link href="/digitalMarketing">
           <div className="flex justify-between md:mt-20 font-extralight  ">
@@ -63,7 +63,7 @@ const ServiceSection: React.FC = () => {
             <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
           </div>
         </Link>
-        <Image src={ServiceLine} alt="Line" className="pb-10 " />
+        <Image src={ServiceLine} alt="Line" className=' w-full mb-5' />
       </section>
     </main>
   )

@@ -62,8 +62,8 @@ const ContacMassage: React.FC = () => {
     <>
       {/* Form Overlay */}
 
-      <div className="inset-0 pt-5 md:p-10 h-full flex flex-col items-center justify-center">
-        <div className="bg-custom-blue p-8 rounded-lg shadow-md md:w-[700px] ">
+      <div className="inset-0 pt-5 md:p-10 md:h-full h-full flex flex-col items-center justify-center ">
+        <div className="bg-custom-blue p-10 rounded-lg shadow-md md:w-[800px] 1366px:w-[750px] md:p-10   1366px:pb-20">
           <h2 className="text-2xl md:text-4xl font-medium mb-6 pl-5 text-black">
             Send Us Message
           </h2>
@@ -71,7 +71,7 @@ const ContacMassage: React.FC = () => {
           {/* Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="md:space-y-4 md:p-5"
+            className="md:space-y-4 md:p-5  "
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -128,7 +128,7 @@ const ContacMassage: React.FC = () => {
                 )}
               />
             </div>
-            <div className="md:flex">
+            <div className="md:flex ">
               <div className="flex items-center gap-3 mt-5">
                 <input
                   type="checkbox"

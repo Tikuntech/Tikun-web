@@ -36,7 +36,7 @@ const StatCard: React.FC<{ number: string; description: string }> = ({
   return (
     <div className="flex-1 md:p-6 text-center md:max-w-full">
       <h2 className="md:text-4xl text-lg font-bold text-[#92DEED]">{number}</h2>
-      <p className="text-white mt-2 md:text-base text-xs md:w-60">
+      <p className="text-white mt-2 md:text-base text-xs 1470px:w-80 1366px:w-72">
         {description}
       </p>
     </div>

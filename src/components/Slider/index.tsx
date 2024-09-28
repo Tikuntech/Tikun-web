@@ -57,7 +57,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
         
         src={image}
         alt={`Slide ${currentIndex}`}
-        className={`w-30 h-30 object-cover border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500 object-contain'
+        className={`w-30 h-30 object-cover 1366px:ml-20 border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500 object-contain'
           }`}
         width={100}
         height={50}
@@ -73,7 +73,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
   };
 
   return data.images.length ? (
-    <div className="bg-gradient-to-br from-[#0A0A23] to-[#11112B] p-6 md:p-12 flex flex-col md:flex-row md:space-x-10 rounded-lg shadow-xl items-center justify-center space-y-6 md:space-y-0">
+    <div className="bg-gradient-to-br from-[#0A0A23] to-[#11112B] p-6  flex flex-col md:flex-row md:space-x-10 rounded-lg shadow-xl items-center justify-center space-y-6 md:space-y-0 ">
       {/* Image Slider Section */}
       <div className="flex items-center justify-between w-full md:w-auto relative">
         {/* <button
@@ -177,7 +177,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
       </div>
 
       {/* Text Content Section */}
-      <div className="text-center md:text-left space-y-4 mt-[100]">
+      <div className="text-center md:text-left space-y-4 mt-[100]   1470px:pr-10 1366px:pr-8">
         <h2 className="text-3xl md:text-4xl font-extrabold text-white">
           {data?.title}
         </h2>

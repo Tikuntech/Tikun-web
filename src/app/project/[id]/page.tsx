@@ -28,7 +28,7 @@ const Page: React.FC = () => {
       <NavbarHeader />
       <div className="bg-[#11112B]   md:pl-20 relative p-4">
         <div className="pt-10 ">
-          <div className="pl-4 md:pl-0  md:pt-10">
+          <div className="pl-4 md:pl-0  md:pt-10 1470px:ml-4 ">
             {' '}
             <BreadCrumbProjectdetails  name={data?.title}/>
           </div>

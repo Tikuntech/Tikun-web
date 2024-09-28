@@ -8,7 +8,7 @@ interface BackgroundProps {
 
 const BackgroundImage: React.FC<BackgroundProps> = ({ children ,url}) => {
   return (
-    <div className="relative w-full  rounded-lg shadow-lg overflow-hidden transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center h-80  md:h-[430px]">
+    <div className="relative  rounded-lg shadow-lg overflow-hidden transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center  h-[300px] sm:h-[350px] md:h-[400px] lg:h-[370px] 1366px:h-[370px] 1470px:h-[420px] 2xl:h-[450px] ">
     {/* Next.js Image Background */}
     <Image
       src={url}
