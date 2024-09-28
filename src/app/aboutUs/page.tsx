@@ -32,14 +32,14 @@ const Page: React.FC = () => {
   return (
     <>
       <NavbarHeader />
-      <div className="bg-[#11112B] md:h-screen  md:p-12  relative p-4">
+      <div className="bg-[#11112B] md:h-screen 1366px:h-full 1366px:pl-14 1366px:pr-14  relative p-4">
         <div className="pt-10  md:pl-7 md:pr-5">
           <div className="pl-4 md:pt-10 ">
             {' '}
             <AboutBreadcrumbs />
           </div>
 
-          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0">
+          <div className="flex flex-col md:flex-row items-start space-y-4 md:space-x-8 md:space-y-0 ">
             <h1 className="text-4xl md:text-7xl text-white font-bold flex-shrink-0 pl-4">
               About Us
             </h1>
@@ -58,8 +58,8 @@ const Page: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56 p-5 ">
-            <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2">
+          <div className="flex flex-col md:flex-row justify-between items-start md:mt-56  ">
+            <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2   ">
               <Image
                 src={BoxImg}
                 alt="Box Image"
@@ -67,7 +67,7 @@ const Page: React.FC = () => {
                 height={40}
                 className="object-contain mb-4 md:mb-2 hidden md:block"
               />
-              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20  ">
+              <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20   ">
                 We believe that technology can change the world.
               </h1>
             </div>
@@ -93,7 +93,7 @@ const Page: React.FC = () => {
         </div>
       </div>
 
-      <div className="p-10 pb-20 md:pt-20 md:pb-24 md:pl-16 md:pr-10">
+      <div className="p-10 pb-20 md:pt-20 md:pb-24 1366px:pl-12 1470px:pl-14 1366px:pr-12 1470px:pr-14 md:pr-10  ">
         <AboutMain />
       </div>
 

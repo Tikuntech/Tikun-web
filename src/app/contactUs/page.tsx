@@ -27,7 +27,7 @@ const Page: React.FC = () => {
     <>
       <NavbarHeader />
       <div className="bg-[#11112B] h-full p-5 md:p-4 relative md:pl-20 md:pr-20 ">
-        <div className="  md:pt-20 pt-16 pl-2">
+        <div className="  md:pt-20 pt-8 pl-2">
           <ContactBreadcrumb />
           <div className="flex flex-col md:flex-row items-start space-y-2 md:space-x-3 md:space-y-0">
             <h1 className="hidden md:block text-4xl md:text-7xl text-white font-bold flex-shrink-0">
@@ -74,7 +74,7 @@ const Page: React.FC = () => {
                 </Link>
               </div>
 
-              <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-5/6 rounded-2xl ">
+              <div className="bg-gradient-to-b from-slate-500 to-slate-800 w-full rounded-2xl ">
                 <Link href="mailto:business@tikuntech.com">
                   <div className="mt-10 md:mt-0 rounded-2xl shadow-md p-8 hover:bg-custom-blue  h-44 hover:text-black flex flex-col items-start text-white">
                     <EnvelopeIcon className="w-12 h-12 border border-white  hover:border-black rounded-full p-2" />
@@ -86,20 +86,24 @@ const Page: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <div className="relative md:flex md:mt-20  h-screen  ">
+<div className='h-screen '>
+<div className="relative md:flex md:mt-20   ">
             <ContactLocation />
-            <div className="absolute md:pl-96 md:mt-40  md:pr-24">
+            <div className="absolute 1470px:pl-[500px] 1366px:pl-[400px]  md:mt-60    ">
               <ContacMassage />
             </div>
           </div>
-        </div>
+</div>
 
-        
-      </div>
-      <div className="mt-64 md:mt-0">
-          <NeedItSolution />
         </div>
+<div className='pt-28  md:pt-0 1366px:mt-40'>
+<NeedItSolution />
+</div>
+       
+      </div>
+
+       
+       
       <Footer />
     </>
   )

@@ -46,7 +46,7 @@ const items = [
 
 const AboutMain: React.FC = () => {
   return (
-    <div className=" md:h-full md:p-1 ">
+    <div className=" md:h-full md:p-1  ">
       <div className="md:pl-4">
         <div className="md:flex md:flex-row flex-wrap justify-between ">
           {items.map((item, index) => (

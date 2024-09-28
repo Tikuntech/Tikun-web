@@ -31,6 +31,10 @@ const config: Config = {
         'custom-blue': '#92DEED', // Define your custom color
         'custom-black': 'rgba(17, 17, 43, 1)',
       },
+      screens: {
+        '1366px': '1366px', // Custom screen size for 1366px
+        '1470px': '1470px', // Custom screen size for 1470px
+      },
 
       // screens: {
       //   mobile: '320px',

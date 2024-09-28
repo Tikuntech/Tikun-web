@@ -9,7 +9,7 @@ import Image from 'next/image'
 const LightNavbar: React.FC = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const drawerRef = useRef<HTMLDivElement>(null) // Reference for the drawer
+  const drawerRef = useRef<HTMLDivElement>(null) 
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
@@ -22,7 +22,7 @@ const LightNavbar: React.FC = () => {
       document.body.classList.remove('overflow-hidden')
     }
     return () => {
-      document.body.classList.remove('overflow-hidden') // Cleanup on unmount
+      document.body.classList.remove('overflow-hidden') 
     }
   }, [isOpen])
 
@@ -58,8 +58,8 @@ const LightNavbar: React.FC = () => {
   }
 
   return (
-    <nav className="bg-[#D5D9E5] text-black fixed top-0 w-full z-50">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <nav className="bg-[#D5D9E5] text-black fixed top-0 w-full z-50 ">
+      <div className=" mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           {/* Mobile menu button */}
           <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
@@ -107,7 +107,7 @@ const LightNavbar: React.FC = () => {
 
           {/* Logo and Navigation Links */}
           <div className="flex-1 flex items-center justify-between sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 md:pl-24 ">
               <Link href="/">
                 <TikcunteckIcon />
               </Link>
@@ -158,7 +158,7 @@ const LightNavbar: React.FC = () => {
                 </span>
               </Link>
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden sm:block md:pr-24">
               <Link href="/contactUs">
                 <span className="text-black flex border border-black hover:bg-[#92DEED] hover:text-black px-3 py-2 rounded-md text-sm font-medium">
                   SCHEDULE CALL

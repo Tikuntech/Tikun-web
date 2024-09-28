@@ -7,18 +7,25 @@ import NeedItSolution from '@/common/NeedItSolution'
 import Footer from '@/components/Footer'
 import HeroPage from '@/components/Home'
 import NavbarHeader from '@/components/Navbar'
+
+
+
 export default function Home() {
   return (
-    <main className='' >
-      <NavbarHeader />
+  <div>
+    <NavbarHeader />
+
+      
       <HeroPage />
       <BelievePage />
       <ClientStory />
       <ServiceSection />
       <ProjectSection />
-      {/* <BlogSection /> */}
+
       <NeedItSolution />
-      <Footer />
-    </main>
+     
+
+    <Footer />
+    </div>
   )
 }

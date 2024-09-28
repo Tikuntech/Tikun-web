@@ -6,7 +6,7 @@ import BelieveLineImg from '../../../public/Home/BelieveLine.svg'
 
 const BelievePage: React.FC = () => {
   return (
-    <main className=" px-6 md:px-12 bg-[#D5D9E5] md:h-screen w-full ">
+    <main className=" px-6 md:px-12 bg-[#D5D9E5] md:h-screen 1366px:h-full w-full ">
       <section className="container mx-auto">
         {/* Logo Section */}
         <div className=" justify-center hidden md:flex  ">
@@ -38,7 +38,7 @@ const BelievePage: React.FC = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="flex  md:flex-row items-center justify-center mt-20 pb-10 gap-4 pl-3 pr-3">
+        <div className="flex  md:flex-row items-center justify-center mt-20 pb-10 gap-4 pl-3 pr-3 ">
           <div className=" flex-1 text-center ">
             <h2 className="md:text-4xl text-2xl font-bold text-gray-800">
               500+
