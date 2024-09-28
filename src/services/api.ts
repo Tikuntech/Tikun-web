@@ -9,10 +9,12 @@ import axios from 'axios'
 const axiosInstance = axios.create({
   // baseURL: 'http://52.165.81.79:5000/api/v1',
   baseURL: 'https://api.bixid.in/api/v1',
-  timeout: 1000,
+  timeout: 5000,
   headers: {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json',
   },
 })
 

@@ -11,13 +11,6 @@ interface IFormInput {
 }
 
 const ContacMassage: React.FC = () => {
-  const [name, setName] = useState<string>('')
-  const [email, setEmail] = useState<string>('')
-  const [message, setMessage] = useState<string>('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submissionStatus, setSubmissionStatus] = useState<
-    'success' | 'error' | null
-  >(null)
   const [isChecked, setIsChecked] = useState(false)
   const {
     control,
@@ -37,7 +30,7 @@ const ContacMassage: React.FC = () => {
     },
     onError: (error) => {
       console.error('Error submitting form:', error)
-      setSubmissionStatus('error')
+   
       toast.error('Failed to submit the form. Please try again.')
     },
   })
@@ -149,27 +142,16 @@ const ContacMassage: React.FC = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
+              
                 className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
-                  isSubmitting
-                    ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-[#11112B] focus:ring-2'
+   
+                  'bg-[#11112B] focus:ring-2'
                 }`}
               >
-                {isSubmitting ? 'Submitting...' : 'Submit'}
+                {'Submit'}
               </button>
             </div>
-            {/* Submission Status */}
-            {submissionStatus === 'success' && (
-              <p className="text-green-500 mt-4" aria-live="polite">
-                Thank you for your message! We will get back to you soon.
-              </p>
-            )}
-            {submissionStatus === 'error' && (
-              <p className="text-red-500 mt-4" aria-live="polite">
-                Something went wrong. Please try again later.
-              </p>
-            )}
+           
           </form>
         </div>
       </div>

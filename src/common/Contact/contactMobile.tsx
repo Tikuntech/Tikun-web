@@ -6,8 +6,8 @@ const ContacMobile: React.FC = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submissionStatus, setSubmissionStatus] = useState(null)
+
+
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -92,25 +92,14 @@ const ContacMobile: React.FC = () => {
             </div>
             <button
               type="submit"
-              disabled={isSubmitting}
+           
               className={`w-full px-4 py-2 text-white font-semibold rounded-lg shadow-md ${
-                isSubmitting
-                  ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-[#11112B] hover:bg-[#11112B] focus:ring-2 focus:ring-blue-500'
+                'bg-[#11112B] hover:bg-[#11112B] focus:ring-2 focus:ring-blue-500'
               }`}
             >
-              {isSubmitting ? 'Submitting...' : 'Submit'}
+              {'Submit'}
             </button>
-            {submissionStatus === 'success' && (
-              <p className="text-green-500 mt-4 text-center">
-                Thank you for your message! We will get back to you soon.
-              </p>
-            )}
-            {submissionStatus === 'error' && (
-              <p className="text-red-500 mt-4 text-center">
-                Something went wrong. Please try again later.
-              </p>
-            )}
+            
           </form>
         </div>
       </div>
