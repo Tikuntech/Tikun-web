@@ -30,7 +30,7 @@ const ContacMassage: React.FC = () => {
     },
     onError: (error) => {
       console.error('Error submitting form:', error)
-   
+
       toast.error('Failed to submit the form. Please try again.')
     },
   })
@@ -142,16 +142,11 @@ const ContacMassage: React.FC = () => {
 
               <button
                 type="submit"
-              
-                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
-   
-                  'bg-[#11112B] focus:ring-2'
-                }`}
+                className={`px-2 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${'bg-[#11112B] focus:ring-2'}`}
               >
                 {'Submit'}
               </button>
             </div>
-           
           </form>
         </div>
       </div>

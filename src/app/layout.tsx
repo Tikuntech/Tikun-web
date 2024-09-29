@@ -29,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-
         <QueryClientProvider client={client}>
           <DataProvider>
             <NextTopLoader
@@ -50,20 +49,13 @@ export default function RootLayout({
 
             <div
             //  className="p-4 md:p-8 lg:p-16"
-             >
+            >
               {children}
             </div>
-
-
-
 
             <ToastContainer />
           </DataProvider>
         </QueryClientProvider>
-
-
-
-
       </body>
     </html>
   )

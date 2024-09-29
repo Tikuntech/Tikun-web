@@ -45,7 +45,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="md:p-10 p-5 md:ml-16 md:mr-20 " >
+      <div className="md:p-10 p-5 md:ml-16 md:mr-20 ">
         <p className="md:text-base text-xs text-slate-700 mb-4 ">
           At Tikunteck, we pride ourselves on delivering innovative and
           customized software solutions that drive business success and

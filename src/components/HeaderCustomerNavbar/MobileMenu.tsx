@@ -1,22 +1,20 @@
-import { useEffect } from "react";
+import { useEffect } from 'react'
 
-import { CgClose } from "react-icons/cg";
+import { CgClose } from 'react-icons/cg'
 // import NavLinkItems from "./NavLinkItems";
 // import VioletButton from "./../UI/VioletButton";
 
-
-
 type MobileMenuProps = {
-  isOpen: boolean;
-  onClose: () => void;
-};
+  isOpen: boolean
+  onClose: () => void
+}
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   useEffect(() => {
     isOpen
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "visible");
-  }, [isOpen]);
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible')
+  }, [isOpen])
 
   return (
     <menu
@@ -55,7 +53,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         Book an Route
       </VioletButton> */}
     </menu>
-  );
-};
+  )
+}
 
-export default MobileMenu;
+export default MobileMenu

@@ -108,23 +108,23 @@ const Page: React.FC = () => {
         {/* First Row: 3 logos */}
         <div className="flex justify-center gap-8 mb-4 ">
           <div className="w-20 h-12">
-            <Image src={SmasungImg} alt="Samsung logo"  />
+            <Image src={SmasungImg} alt="Samsung logo" />
           </div>
           <div className="w-20 h-12">
             <Image src={GoogleImg} alt="Google logo" />
           </div>
           <div className="w-20 h-12">
-            <Image src={AmazonImg} alt="Amazon logo"/>
+            <Image src={AmazonImg} alt="Amazon logo" />
           </div>
         </div>
 
         {/* Second Row: 2 logos */}
         <div className="flex justify-center gap-8">
           <div className="w-20 h-12">
-            <Image src={WindowsImg} alt="Windows logo"  />
+            <Image src={WindowsImg} alt="Windows logo" />
           </div>
           <div className="w-20 h-12">
-            <Image src={SonyImg} alt="Sony logo"  />
+            <Image src={SonyImg} alt="Sony logo" />
           </div>
         </div>
       </footer>

@@ -1,11 +1,6 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -37,9 +32,8 @@ button:disabled {
   cursor: not-allowed; /* Override default disabled behavior */
 }
 
-
 .component-wrapper {
-  @apply px-4 md:px-6 lg:px-8; 
+  @apply px-4 md:px-6 lg:px-8;
 }
 
 @layer utilities {

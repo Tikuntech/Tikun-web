@@ -106,18 +106,17 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className='md:pr-12'>
-        <div className=" rounded-xl shadow-md p-4 md:p-10 ">
-          <h3 className="text-2xl font-bold mb-4 text-gray-800 ">Strategy</h3>
-          <ul className="list-disc text-xl text-[#2D646E] p-6">
-            <li>Marketing Data Analysis</li>
-            <li>Search Engine Optimization</li>
-            <li>Social Media Marketing</li>
-            <li>Paid Digital Ads</li>
-          </ul>
+        <div className="md:pr-12">
+          <div className=" rounded-xl shadow-md p-4 md:p-10 ">
+            <h3 className="text-2xl font-bold mb-4 text-gray-800 ">Strategy</h3>
+            <ul className="list-disc text-xl text-[#2D646E] p-6">
+              <li>Marketing Data Analysis</li>
+              <li>Search Engine Optimization</li>
+              <li>Social Media Marketing</li>
+              <li>Paid Digital Ads</li>
+            </ul>
+          </div>
         </div>
-        </div>
-       
       </div>
 
       <main className="container mx-auto ">

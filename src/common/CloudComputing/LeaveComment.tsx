@@ -14,8 +14,6 @@ const LeaveComment: React.FC = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-
-
   const {
     control,
     reset,
@@ -35,7 +33,7 @@ const LeaveComment: React.FC = () => {
     },
     onError: (error) => {
       console.error('Error submitting form:', error)
-     
+
       toast.error('Failed to submit the form. Please try again.')
     },
   })
@@ -121,7 +119,6 @@ const LeaveComment: React.FC = () => {
                 id="message"
                 placeholder="Enter Your Message ..."
                 value={message}
-             
                 required
                 rows={4}
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
@@ -148,16 +145,12 @@ const LeaveComment: React.FC = () => {
 
               <button
                 type="submit"
-               
-                className={`px-4 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${
-                  'bg-custom-blue focus:ring-2'
-                }`}
+                className={`px-4 py-2 w-full md:w-40  text-white font-semibold rounded-lg shadow-md transition-colors duration-300 mt-5 ${'bg-custom-blue focus:ring-2'}`}
               >
                 {'Submit'}
               </button>
             </div>
             {/* Submission Status */}
-           
           </form>
         </div>
       </div>

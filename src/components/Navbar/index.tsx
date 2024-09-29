@@ -168,19 +168,21 @@ const NavbarHeader: React.FC = () => {
 export default NavbarHeader
 
 const NavLink: React.FC<{
-  href: string;
-  pathname: string;
-  onClick?: () => void;
-  children: React.ReactNode; // Define children prop
+  href: string
+  pathname: string
+  onClick?: () => void
+  children: React.ReactNode // Define children prop
 }> = ({ href, pathname, children, onClick }) => (
   <Link href={href}>
     <span
       className={`block px-3 py-2 rounded-md text-sm font-medium cursor-pointer ${
-        pathname === href ? 'bg-[#92DEED] text-black' : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
+        pathname === href
+          ? 'bg-[#92DEED] text-black'
+          : 'text-gray-300 hover:bg-[#92DEED] hover:text-black'
       }`}
       onClick={onClick}
     >
       {children}
     </span>
   </Link>
-);
+)

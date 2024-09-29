@@ -8,14 +8,11 @@ import Footer from '@/components/Footer'
 import HeroPage from '@/components/Home'
 import NavbarHeader from '@/components/Navbar'
 
-
-
 export default function Home() {
   return (
-  <div>
-    <NavbarHeader />
+    <div>
+      <NavbarHeader />
 
-      
       <HeroPage />
       <BelievePage />
       <ClientStory />
@@ -23,9 +20,8 @@ export default function Home() {
       <ProjectSection />
 
       <NeedItSolution />
-     
 
-    <Footer />
+      <Footer />
     </div>
   )
 }

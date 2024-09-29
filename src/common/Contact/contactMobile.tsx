@@ -7,8 +7,6 @@ const ContacMobile: React.FC = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission logic here
@@ -92,14 +90,10 @@ const ContacMobile: React.FC = () => {
             </div>
             <button
               type="submit"
-           
-              className={`w-full px-4 py-2 text-white font-semibold rounded-lg shadow-md ${
-                'bg-[#11112B] hover:bg-[#11112B] focus:ring-2 focus:ring-blue-500'
-              }`}
+              className={`w-full px-4 py-2 text-white font-semibold rounded-lg shadow-md ${'bg-[#11112B] hover:bg-[#11112B] focus:ring-2 focus:ring-blue-500'}`}
             >
               {'Submit'}
             </button>
-            
           </form>
         </div>
       </div>

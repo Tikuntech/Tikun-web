@@ -9,7 +9,7 @@ import Image from 'next/image'
 const LightNavbar: React.FC = () => {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
-  const drawerRef = useRef<HTMLDivElement>(null) 
+  const drawerRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => setIsOpen(!isOpen)
   const closeMenu = () => setIsOpen(false)
@@ -22,7 +22,7 @@ const LightNavbar: React.FC = () => {
       document.body.classList.remove('overflow-hidden')
     }
     return () => {
-      document.body.classList.remove('overflow-hidden') 
+      document.body.classList.remove('overflow-hidden')
     }
   }, [isOpen])
 

@@ -32,10 +32,9 @@ const ProjectSection: React.FC = () => {
           cybersecurity, and digital marketing.
         </p>
       </div>
-      <div className=' p-0  pt-10'>
-      <ProjectCards isHome={true} />
+      <div className=" p-0  pt-10">
+        <ProjectCards isHome={true} />
       </div>
-
 
       <div className="md:flex md:justify-between md:mt-5 p-5 ">
         <div className=" justify-center text-center">

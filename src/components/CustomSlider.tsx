@@ -35,7 +35,7 @@
 //           {images.map((image, index) => (
 //             <div key={index} className="w-full flex-shrink-0"  >
 //               <img
-               
+
 //                 src={image} alt={`Slide ${index}`} className="w-full h-[700px] object-cover" />
 //             </div>
 //           ))}
@@ -81,42 +81,41 @@
 
 // export default CustomSlider;
 
-
-
-import React, { useState, useRef, useEffect } from 'react';
-import { RiArrowRightSLine } from "react-icons/ri";
-import { MdKeyboardArrowLeft } from "react-icons/md";
+import React, { useState, useRef, useEffect } from 'react'
+import { RiArrowRightSLine } from 'react-icons/ri'
+import { MdKeyboardArrowLeft } from 'react-icons/md'
 
 interface CustomSliderProps {
-  images: string[]; // Array of image URLs
+  images: string[] // Array of image URLs
 }
 
 const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const thumbnailContainerRef = useRef<HTMLDivElement>(null); // Ref for thumbnail container
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null) // Ref for thumbnail container
 
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  };
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+  }
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  };
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+  }
 
   // Scroll thumbnails into view whenever `currentIndex` changes
   useEffect(() => {
     if (thumbnailContainerRef.current) {
-      const activeThumbnail = thumbnailContainerRef.current.children[currentIndex];
+      const activeThumbnail =
+        thumbnailContainerRef.current.children[currentIndex]
       if (activeThumbnail) {
         // Scroll the selected thumbnail into view
         activeThumbnail.scrollIntoView({
           behavior: 'smooth',
           inline: 'center', // Scroll horizontally to the center
-          block: 'nearest'  // No vertical scroll needed
-        });
+          block: 'nearest', // No vertical scroll needed
+        })
       }
     }
-  }, [currentIndex]);
+  }, [currentIndex])
 
   return (
     <div className="relative w-full max-w-3xl mx-auto">
@@ -128,7 +127,11 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
         >
           {images.map((image, index) => (
             <div key={index} className="w-full flex-shrink-0">
-              <img src={image} alt={`Slide ${index}`} className="w-full h-[700px] object-cover" />
+              <img
+                src={image}
+                alt={`Slide ${index}`}
+                className="w-full h-[700px] object-cover"
+              />
             </div>
           ))}
         </div>
@@ -139,13 +142,13 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
         className="absolute top-1/2 transform -translate-y-1/2 bg-white text-black p-1 md:-ml-5 rounded-full"
         onClick={handlePrev}
       >
-        <MdKeyboardArrowLeft className='w-6 h-6' />
+        <MdKeyboardArrowLeft className="w-6 h-6" />
       </button>
       <button
         className="absolute md:-right-5 top-1/2 transform -translate-y-1/2 bg-white text-black p-1 rounded-full flex items-center"
         onClick={handleNext}
       >
-        <RiArrowRightSLine className='w-6 h-6' />
+        <RiArrowRightSLine className="w-6 h-6" />
       </button>
 
       {/* Thumbnail Navigation */}
@@ -159,12 +162,16 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ images }) => {
             onClick={() => setCurrentIndex(index)}
             className={`flex-shrink-0 w-16 h-16 border-4 rounded-md ${index === currentIndex ? 'border-white' : 'border-transparent'}`}
           >
-            <img src={image} alt={`Thumbnail ${index}`} className="w-full h-full object-cover" />
+            <img
+              src={image}
+              alt={`Thumbnail ${index}`}
+              className="w-full h-full object-cover"
+            />
           </button>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CustomSlider;
+export default CustomSlider
