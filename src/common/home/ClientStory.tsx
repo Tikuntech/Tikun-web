@@ -8,7 +8,7 @@ import WindowsImg from '/public/Home/WINDOWS.svg'
 import SonyImg from '/public/Home/SONY.svg'
 import DividerLine from '/public/Blog/VerticalLine.svg'
 import LogoIcon from '../LogoIcons'
-import joshua from '/public/Home/joshua.png'
+import joshua from '/public/Home/joshua.jpg'
 import HomeLogoIcons from './HomeLogoIcons'
 
 const ClientStory: React.FC = () => {
@@ -51,12 +51,17 @@ const ClientStory: React.FC = () => {
                   </div>
                   {/* <div className="h-12 w-12 rounded-full bg-white ml-5"></div> */}
                   <Image
-                    className="h-12 w-12 rounded-full bg-white ml-5"
+                    // className="h-12 w-12 rounded-full  ml-5"
                     src={joshua}
+                    // layout='responsive'
+                    quality={100}
                     alt="Joshua"
                     width={15} // Set the width of the image
                     height={15} // Set the height of the image
-                    quality={90} // Adjust quality if needed
+                    // objectFit="cover"
+                    className="h-12 w-12 rounded-full  ml-5 object-cover object-center"
+                    sizes="15px"
+                    priority
                   />
                 </div>
               </div>
@@ -96,7 +101,7 @@ const ClientStory: React.FC = () => {
                     alt="Joshua"
                     width={15} // Set the width of the image
                     height={15} // Set the height of the image
-                    quality={90} // Adjust quality if needed
+                    quality={100}
                   />
                 </div>
               </div>
