@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="relative mx-auto md:px-4 flex flex-col md:flex-row justify-between md:pl-24 md:pr-24">
           {/* Logo and Call to Action Button */}
           <div className="flex flex-col items-center md:items-start space-y-4 mb-8 md:mb-0 md:space-y-28 ">
-            <h1 className="font-bold text-2xl">Tikcunteck</h1>
+            <h1 className="font-bold text-2xl">Tikuntech</h1>
             <Image
               src={CtaButton}
               alt="CtaButton"

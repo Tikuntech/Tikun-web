@@ -14,7 +14,7 @@ const BackgroundImage: React.FC<BackgroundProps> = ({ children, url }) => {
         src={url}
         alt="Card Background"
         layout="fill"
-        objectFit="cover"
+        // objectFit="cover"
         className="pointer-events-none 
       rounded-lg
       "
