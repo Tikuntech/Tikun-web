@@ -1,11 +1,16 @@
 'use client'
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useState,
+  ReactNode,
+  useEffect,
+} from 'react'
 
 interface DataContextType {
   data: any
   // setData: (data: any) => void,
-  setData: React.Dispatch<React.SetStateAction<any>>;
-  
+  setData: React.Dispatch<React.SetStateAction<any>>
 }
 
 const DataContext = createContext<DataContextType | undefined>(undefined)
@@ -16,7 +21,7 @@ export const DataProvider: React.FC<{ children: ReactNode }> = ({
   const [data, setData] = useState<any>(null)
 
   // useEffect(()=>{
-   
+
   // },[])
   return (
     <DataContext.Provider value={{ data, setData }}>

@@ -9,7 +9,6 @@ import { useDataContext } from '@/context/DataProjectContext'
 import Image from 'next/image'
 import BackgroundImage from './BackgroundImage'
 
-
 export const HoverEffect = ({
   items,
   className,
@@ -19,14 +18,13 @@ export const HoverEffect = ({
     description: string
     Link: string
     _id: string
-    thumbnail: string,
+    thumbnail: string
     images: any[]
   }[]
   className?: string
 }) => {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
-  
 
   const { setData } = useDataContext()
   const handleTouchStart = (index: number) => {
@@ -35,20 +33,20 @@ export const HoverEffect = ({
     // setTimeout(() => setActiveIndex(null), 2000)
   }
 
-
-
-
-
   return (
     // <CardGrid/>
-    <div className={cn('w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4 gap-4 lg:gap-5 md:gap-5 sm:gap-5  flex-wrap', className)}>
+    <div
+      className={cn(
+        'w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  2xl:grid-cols-4 gap-4 lg:gap-5 md:gap-5 sm:gap-5  flex-wrap',
+        className
+      )}
+    >
       {items.map((item, idx) => (
         <Link
           onClick={() => {
             setData(item)
           }}
           href={`/project/${item._id}`}
-
           key={item?.Link}
           // className="relative group block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -77,10 +75,10 @@ export const HoverEffect = ({
           ) : (
             <BackgroundImage
               // className='my-4'
-              url={item?.thumbnail ? item?.thumbnail : ""}
-            // className="bg-contain bg-center "
-            // className={`${bg-[url()]}`}
-            // className={` relative overflow-hidden bg-[linear-gradient(to_right,#CBD5E1D9,#768190D9,#1E293BD9)] `}
+              url={item?.thumbnail ? item?.thumbnail : ''}
+              // className="bg-contain bg-center "
+              // className={`${bg-[url()]}`}
+              // className={` relative overflow-hidden bg-[linear-gradient(to_right,#CBD5E1D9,#768190D9,#1E293BD9)] `}
             >
               {/* <Image
             
@@ -96,7 +94,7 @@ export const HoverEffect = ({
               <div className="h-80 flex flex-col justify-end p-4 w-full">
                 <div className="text-black font-normal text-left">
                   <CardDescription>{item.description}</CardDescription>
-                  <CardTitle className=' mt-2'>{item.title}</CardTitle>
+                  <CardTitle className=" mt-2">{item.title}</CardTitle>
                 </div>
               </div>
             </BackgroundImage>
@@ -110,41 +108,34 @@ export const HoverEffect = ({
 export const Card = ({
   className,
   children,
-  bgImage
+  bgImage,
 }: {
   bgImage?: string
   className?: string
   children: React.ReactNode
 }) => {
-
   return (
     <div
-    //  className="w-full max-w-[400px] h-[400px] bg-red-500 flex items-center justify-center rounded-lg shadow-md mx-auto"
-      className={
-        cn(
-          '  text-white p-4  rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center h-[300px] sm:h-[350px] md:h-[400px] lg:h-[370px] 1366px:h-[370px] 1470px:h-[420px]  2xl:h-[410px]',
-          className
-        )
-      }
+      //  className="w-full max-w-[400px] h-[400px] bg-red-500 flex items-center justify-center rounded-lg shadow-md mx-auto"
+      className={cn(
+        '  text-white p-4  rounded-md  hover:bg-custom-blue transition-colors duration-300 hover:shadow-lg  cursor-pointer  flex items-center justify-center bg-cover bg-center h-[300px] sm:h-[350px] md:h-[400px] lg:h-[370px] 1366px:h-[370px] 1470px:h-[420px]  2xl:h-[410px]',
+        className
+      )}
     >
       <div className="">{children}</div>
     </div>
   )
 }
 
-
-
-
 export const CardGradient = ({
   className,
   children,
-  bgImage
+  bgImage,
 }: {
   bgImage?: string
   className?: string
   children: React.ReactNode
 }) => {
-
   return (
     <div
 
@@ -156,23 +147,18 @@ export const CardGradient = ({
         //   backgroundImage: `url(${bgImage})`, // Dynamic background image
         // }}
         // style={{ backgroundImage: `url(${bgImage})` }}
-        className={
-          cn(
-            '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
-            className
-          )
-
-        }
+        className={cn(
+          '  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 text-white h-96  w-full rounded-md hover:bg-custom-blue transition-colors  hover:shadow-lg cursor-pointer flex items-center justify-center  bg-cover bg-center   ',
+          className
+        )}
       >
         <div className="relative  bg-gradient-to-b from-gray-300/85 via-gray-500/85 to-gray-900/85 w-full h-full rounded-md ">
           <div className="">{children}</div>
         </div>
-
       </div>
     </div>
   )
 }
-
 
 export const CardTitle = ({
   className,
@@ -208,6 +194,3 @@ export const CardDescription = ({
     </p>
   )
 }
-
-
-

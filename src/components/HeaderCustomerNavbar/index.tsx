@@ -1,32 +1,30 @@
-"use client"
-import { useEffect, useState } from "react";
+'use client'
+import { useEffect, useState } from 'react'
 
-
-import { CgMenuRight } from "react-icons/cg";
+import { CgMenuRight } from 'react-icons/cg'
 
 // import DentalistLogo from "../../assets/svg/logo.png";
-import MobileMenu from "./MobileMenu";
-import Link from "next/link";
+import MobileMenu from './MobileMenu'
+import Link from 'next/link'
 
 // import NavLinkItems from "./NavLinkItems";
 // import MobileMenu from "./MobileMenu";
 // import VioletButton from "../UI/VioletButton";
 
-
 const HeaderCustomerNavbar = () => {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const openMobileMenu = () => setMobileMenu(true);
-  const closeMobileMenu = () => setMobileMenu(false);
+  const [mobileMenu, setMobileMenu] = useState(false)
+  const openMobileMenu = () => setMobileMenu(true)
+  const closeMobileMenu = () => setMobileMenu(false)
 
   // to add shadow on Header when scrolling
-  const [showShadow, setShowShadow] = useState(false);
+  const [showShadow, setShowShadow] = useState(false)
   useEffect(() => {
     const scrollHandler = () => {
-      window.scrollY > 20 ? setShowShadow(true) : setShowShadow(false);
-    };
-    window.addEventListener("scroll", scrollHandler);
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [showShadow]);
+      window.scrollY > 20 ? setShowShadow(true) : setShowShadow(false)
+    }
+    window.addEventListener('scroll', scrollHandler)
+    return () => window.removeEventListener('scroll', scrollHandler)
+  }, [showShadow])
 
   return (
     <>
@@ -57,20 +55,20 @@ const HeaderCustomerNavbar = () => {
               className="rounded-full w-20 h-20"
              
             /> */}
-             <svg
-                  className="block h-6 w-6"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
+            <svg
+              className="block h-6 w-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
           </Link>
 
           {/* nav-links */}
@@ -106,7 +104,7 @@ const HeaderCustomerNavbar = () => {
         </nav>
       </header>
     </>
-  );
-};
+  )
+}
 
-export default HeaderCustomerNavbar;
+export default HeaderCustomerNavbar

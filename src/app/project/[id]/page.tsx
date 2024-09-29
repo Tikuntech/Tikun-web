@@ -19,10 +19,9 @@ import { useDataContext } from '@/context/DataProjectContext'
 import Slider from '@/components/Slider'
 import BreadCrumbProjectdetails from '@/common/BreadCrumb/BreadCrumbProjectdetails'
 
-
 const Page: React.FC = () => {
   const { data } = useDataContext()
-  console.log("datadatadatadata",JSON.stringify(data))
+  console.log('datadatadatadata', JSON.stringify(data))
   return (
     <>
       <NavbarHeader />
@@ -30,18 +29,11 @@ const Page: React.FC = () => {
         <div className="pt-10 ">
           <div className="pl-4 md:pl-0  md:pt-10 1470px:ml-4 ">
             {' '}
-            <BreadCrumbProjectdetails  name={data?.title}/>
+            <BreadCrumbProjectdetails name={data?.title} />
           </div>
-          {
-            data?.images?.length &&
-            <Slider data={data} />
-          }
-
-
+          {data?.images?.length && <Slider data={data} />}
         </div>
       </div>
-
-
 
       <div className="relative">
         <AboutVideo />

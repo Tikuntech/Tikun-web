@@ -1,76 +1,66 @@
-'use client';
-import React, { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
-import { CarouselState } from 'react-responsive-carousel/lib/ts/components/Carousel/types';
-import './slider.css';
-import CustomSlider from '../CustomSlider';
+'use client'
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
+import { CarouselState } from 'react-responsive-carousel/lib/ts/components/Carousel/types'
+import './slider.css'
+import CustomSlider from '../CustomSlider'
 type LinksProps = {
-  ios: string,
-  playstore: string,
-  website: string,
+  ios: string
+  playstore: string
+  website: string
 }
 type MyComponentProps = {
   data: {
-    images: string[];
-    title: string;
-    description: string;
-    Links: LinksProps,
+    images: string[]
+    title: string
+    description: string
+    Links: LinksProps
     yearOfProject: string
-  };
-};
+  }
+}
 
 const Slider: React.FC<MyComponentProps> = ({ data }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
-
-
-
-
-
-;
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.images.length);
-  };
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % data.images.length)
+  }
 
   const prevSlide = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + data.images.length) % data.images.length
-    );
-  };
+    )
+  }
 
   const handleChange = (index: number) => {
-    setActiveIndex(index);
-  };
-
-
-
-
+    setActiveIndex(index)
+  }
 
   const renderThumbs = () => {
     return data?.images.map((image, index) => (
-      <div key={index} >
+      <div key={index}>
         <Image
-        
-        src={image}
-        alt={`Slide ${currentIndex}`}
-        className={`w-30 h-30 object-cover 1366px:ml-20 border-5 ${activeIndex === index ? 'border-white' : 'border-gray-500 object-contain'
+          src={image}
+          alt={`Slide ${currentIndex}`}
+          className={`w-30 h-30 object-cover 1366px:ml-20 border-5 ${
+            activeIndex === index
+              ? 'border-white'
+              : 'border-gray-500 object-contain'
           }`}
-        width={100}
-        height={50}
-        
-        loading="lazy" // Optional: adds lazy loading
-        placeholder="blur"
-        layout="responsive"
-        blurDataURL="https://media.istockphoto.com/id/1226328533/vector/black-and-white-loading-circle-indicator-on-white-background.jpg"
-      />
-        </div>
-
-    ));
-  };
+          width={100}
+          height={50}
+          loading="lazy" // Optional: adds lazy loading
+          placeholder="blur"
+          layout="responsive"
+          blurDataURL="https://media.istockphoto.com/id/1226328533/vector/black-and-white-loading-circle-indicator-on-white-background.jpg"
+        />
+      </div>
+    ))
+  }
 
   return data.images.length ? (
     <div className="bg-gradient-to-br from-[#0A0A23] to-[#11112B] p-6  flex flex-col md:flex-row md:space-x-10 rounded-lg shadow-xl items-center justify-center space-y-6 md:space-y-0 ">
@@ -84,9 +74,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
           ❮
         </button> */}
 
-        <div
-          className="w-full md:w-[350px] relative"
-        >
+        <div className="w-full md:w-[350px] relative">
           {/* <Image
           //  loader={localImageLoader}
             src={data.images[currentIndex]}
@@ -102,8 +90,6 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
           <div className="absolute top-2 right-2 bg-white/80 px-2 py-1 text-sm font-semibold text-gray-800 rounded-md shadow">
             {`${currentIndex + 1} / ${data.images.length}`}
           </div> */}
-
-
 
           {/* <Carousel
           //  className="h-64"
@@ -162,9 +148,7 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
 
           </Carousel> */}
 
-          <CustomSlider images={data?.images}/>
-
-
+          <CustomSlider images={data?.images} />
         </div>
 
         {/* <button
@@ -185,29 +169,34 @@ const Slider: React.FC<MyComponentProps> = ({ data }) => {
           {data?.description}
         </p>
 
-
         <p className=" md:text-xl font-extrabold text-white">
           {`Year Of Project   :  ${data?.yearOfProject}`}
         </p>
 
-        {data?.Links?.playstore && <Link href={data?.Links?.playstore}>
-          <button className="border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
-            Android Link
-          </button>
-        </Link>}
-        {data?.Links?.ios && <Link href={data?.Links?.ios}>
-          <button className=" ml-2 border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
-            IOS Link
-          </button>
-        </Link>}
-        {data?.Links?.website && <Link href={data?.Links?.website}>
-          <button className=" ml-2 border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
-            Web Link
-          </button>
-        </Link>}
+        {data?.Links?.playstore && (
+          <Link href={data?.Links?.playstore}>
+            <button className="border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
+              Android Link
+            </button>
+          </Link>
+        )}
+        {data?.Links?.ios && (
+          <Link href={data?.Links?.ios}>
+            <button className=" ml-2 border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
+              IOS Link
+            </button>
+          </Link>
+        )}
+        {data?.Links?.website && (
+          <Link href={data?.Links?.website}>
+            <button className=" ml-2 border border-white hover:bg-custom-blue  mt-10 hover:text-black text-white font-semibold py-2 px-4 md:py-3 md:px-6 rounded-md shadow-lg transition-all">
+              Web Link
+            </button>
+          </Link>
+        )}
       </div>
     </div>
-  ) : null;
-};
+  ) : null
+}
 
-export default Slider;
+export default Slider

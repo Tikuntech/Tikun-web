@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { RiArrowRightSLine } from 'react-icons/ri'
 
 interface BreadCrumbProjectDetailsProps {
-  name?: string; // Optional prop
+  name?: string // Optional prop
 }
 
-
-const BreadCrumbProjectDetails: React.FC<BreadCrumbProjectDetailsProps> = ({ name = "" }) => {
+const BreadCrumbProjectDetails: React.FC<BreadCrumbProjectDetailsProps> = ({
+  name = '',
+}) => {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
       <ol className="flex items-center space-x-4 text-gray-300">

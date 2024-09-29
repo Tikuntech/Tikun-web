@@ -86,24 +86,20 @@ const Page: React.FC = () => {
               </div>
             </div>
           </div>
-<div className='h-screen '>
-<div className="relative md:flex md:mt-20   ">
-            <ContactLocation />
-            <div className="absolute 1470px:pl-[500px] 1366px:pl-[400px] 1536px:pl-[530px]  md:mt-60    ">
-              <ContacMassage />
+          <div className="h-screen ">
+            <div className="relative md:flex md:mt-20   ">
+              <ContactLocation />
+              <div className="absolute 1470px:pl-[500px] 1366px:pl-[400px] 1536px:pl-[530px]  md:mt-60    ">
+                <ContacMassage />
+              </div>
             </div>
           </div>
-</div>
-
         </div>
-<div className='pt-28  md:pt-0 1366px:mt-40 1536px:-mt-20'>
-<NeedItSolution />
-</div>
-       
+        <div className="pt-28  md:pt-0 1366px:mt-40 1536px:-mt-10">
+          <NeedItSolution />
+        </div>
       </div>
 
-       
-       
       <Footer />
     </>
   )

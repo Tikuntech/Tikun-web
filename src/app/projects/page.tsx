@@ -106,7 +106,6 @@ export default function Project() {
         <div className="hidden md:block md:-ml-20 md:-mr-14">
           <LogoIcon />
         </div>
-       
       </div>
       <NeedItSolution />
       <Footer />

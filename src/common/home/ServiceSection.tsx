@@ -15,7 +15,7 @@ const ServiceSection: React.FC = () => {
         <div className="flex justify-center ">
           <p className="font-bold md:text-6xl mt-20 text-4xl">Service</p>
         </div>
-        <div className=''>
+        <div className="">
           <Link href="/webDevelopment">
             <div className="flex justify-between mt-10 font-extralight ">
               <h1 className="md:text-4xl hover:text-custom-blue mb-8 font-thin text-2xl ">
@@ -27,10 +27,10 @@ const ServiceSection: React.FC = () => {
               </div>
             </div>
           </Link>
-          <Image src={ServiceLine} alt="Line" className=' w-full' />
+          <Image src={ServiceLine} alt="Line" className=" w-full" />
         </div>
 
-        <div className=''>
+        <div className="">
           <Link href="/mobileDevelopment">
             <div className="flex justify-between md:mt-14 font-extralight ">
               <h1 className="md:text-4xl text-2xl hover:text-custom-blue  mb-8 ">
@@ -39,7 +39,7 @@ const ServiceSection: React.FC = () => {
               <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
             </div>
           </Link>
-          <Image src={ServiceLine} alt="Line" className=' w-full' />
+          <Image src={ServiceLine} alt="Line" className=" w-full" />
         </div>
         <div className="md:flex ' ">
           <div className="md:pt-10">
@@ -53,7 +53,7 @@ const ServiceSection: React.FC = () => {
           </div>
           <Image src={CyberImg} alt="cyberImg" className="mt-5  " />
         </div>
-        <Image src={ServiceLine} alt="Line" className=' w-full mt-4' />
+        <Image src={ServiceLine} alt="Line" className=" w-full mt-4" />
 
         <Link href="/digitalMarketing">
           <div className="flex justify-between md:mt-20 font-extralight  ">
@@ -63,7 +63,7 @@ const ServiceSection: React.FC = () => {
             <Image src={ServiceArrowIcon} alt="HomeArrowIcon" />
           </div>
         </Link>
-        <Image src={ServiceLine} alt="Line" className=' w-full ' />
+        <Image src={ServiceLine} alt="Line" className=" w-full " />
       </section>
     </main>
   )

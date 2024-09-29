@@ -92,10 +92,10 @@ export default function Page() {
             <MobileFlexSection />
           </div>
         </div>
-        <div className='md:pl-10 md:pr-10'>
-        <PointsSection />
+        <div className="md:pl-10 md:pr-10">
+          <PointsSection />
         </div>
-     
+
         <div className="items-center justify-center p-5 md:p-0">
           <ReadyCard />
         </div>

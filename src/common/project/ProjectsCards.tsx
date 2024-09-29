@@ -8,13 +8,11 @@ interface ProjectCardProps {
   isHome: boolean
 }
 
-
 export function ProjectCards({ isHome = false }: ProjectCardProps) {
   const { data, error, isLoading } = useQuery('project', fetchProjects)
 
-  const [isTrue, setIsTrue] = useState(false);
-  const [itemsPerRow, setItemsPerRow] = useState(4); // Default to 4 items per row
-
+  const [isTrue, setIsTrue] = useState(false)
+  const [itemsPerRow, setItemsPerRow] = useState(4) // Default to 4 items per row
 
   // useEffect(() => {
   //   const checkResolution = () => {
@@ -34,23 +32,20 @@ export function ProjectCards({ isHome = false }: ProjectCardProps) {
   //   };
   // }, []);
 
-
-
   const updateItemsPerRow = () => {
-    const screenWidth = window.innerWidth;
+    const screenWidth = window.innerWidth
     if (screenWidth >= 1200) {
-      setItemsPerRow(4); // Show 5 items for larger screens
+      setItemsPerRow(4) // Show 5 items for larger screens
     } else {
-      setItemsPerRow(3); // Show 4 items for smaller screens
+      setItemsPerRow(3) // Show 4 items for smaller screens
     }
-  };
+  }
 
   useEffect(() => {
-    updateItemsPerRow();
-    window.addEventListener('resize', updateItemsPerRow); // Update on resize
-    return () => window.removeEventListener('resize', updateItemsPerRow); // Cleanup on unmount
-  }, []);
-
+    updateItemsPerRow()
+    window.addEventListener('resize', updateItemsPerRow) // Update on resize
+    return () => window.removeEventListener('resize', updateItemsPerRow) // Cleanup on unmount
+  }, [])
 
   return isLoading ? (
     <Loading />
@@ -59,27 +54,26 @@ export function ProjectCards({ isHome = false }: ProjectCardProps) {
       {/* {isHome ? <HoverEffect items={data?.data?.slice(0, 3) ? data?.data?.slice(0, 3) : []} /> : <HoverEffect items={data?.data ? data?.data : []} />} */}
       {/* { <HoverEffect items={data?.data ? data?.data : []} />} */}
 
-
       {/* {isHome && isTrue &&
         <HoverEffect items={data?.data?.slice(0, 4) ? data?.data?.slice(0, 4) : []} />
       } */}
 
-
-
-      {itemsPerRow && isHome &&
-        <HoverEffect items={data?.data?.slice(0, itemsPerRow) ? data?.data?.slice(0, itemsPerRow) : []} />
-      }
-      {itemsPerRow && !isHome &&
+      {itemsPerRow && isHome && (
+        <HoverEffect
+          items={
+            data?.data?.slice(0, itemsPerRow)
+              ? data?.data?.slice(0, itemsPerRow)
+              : []
+          }
+        />
+      )}
+      {itemsPerRow && !isHome && (
         <HoverEffect items={data?.data ? data?.data : []} />
-      }
-
+      )}
 
       {/* {!isHome && !isTrue &&
         <HoverEffect items={data?.data ? data?.data : []} />
       } */}
-
-
-
     </div>
   )
 }
