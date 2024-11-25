@@ -155,7 +155,7 @@ const HeroPage: React.FC = () => {
         </div>
 
         <div className="hidden md:flex sm:flex">
-          {images.map((image, index) => (
+          {/* {images.map((image, index) => (
             <div key={index} className="absolute" style={getRandomPosition()}>
               <Image
                 src={image.src}
@@ -164,7 +164,7 @@ const HeroPage: React.FC = () => {
                 height={image.height}
               />
             </div>
-          ))}
+          ))} */}
         </div>
 
         <div className="md:mt-14 p-1 mt-10 md:pl-16">

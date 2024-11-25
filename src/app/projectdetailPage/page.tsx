@@ -55,7 +55,7 @@ const Page: React.FC = () => {
               {data?.title ? data?.title : 'Project Details Page'}
             </h1>
             <div className="relative hidden md:block w-full  ">
-              {images.map((img, index) => (
+              {/* {images.map((img, index) => (
                 <div key={index} className="absolute" style={randomPosition()}>
                   <Image
                     src={img.src}
@@ -65,19 +65,19 @@ const Page: React.FC = () => {
                     className="object-contain"
                   />
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-between items-start md:mt-56 p-5 ">
             <div className="flex flex-col items-center md:items-start mb-8  md:w-1/2">
-              <Image
+              {/* <Image
                 src={BoxImg}
                 alt="Box Image"
                 width={40}
                 height={40}
                 className="object-contain mb-4 md:mb-2 hidden md:block"
-              />
+              /> */}
               <h1 className="text-2xl md:text-4xl text-white font-medium md:mt-20   line-clamp-3 ">
                 {data?.description
                   ? data?.description

@@ -68,7 +68,7 @@ const ContactCard = () => {
         </Link>
 
         <div className="relative hidden md:block w-full">
-          {images.map((img, index) => (
+          {/* {images.map((img, index) => (
             <div key={index} className="absolute" style={randomPosition()}>
               <Image
                 src={img.src}
@@ -78,7 +78,7 @@ const ContactCard = () => {
                 className="object-contain"
               />
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>

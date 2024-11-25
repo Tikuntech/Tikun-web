@@ -34,7 +34,7 @@ const Page: React.FC = () => {
               Contact Us
             </h1>
             <div className="relative hidden md:block w-full h-64 md:h-40">
-              {images.map((img, index) => (
+              {/* {images.map((img, index) => (
                 <div key={index} className="absolute" style={randomPosition()}>
                   <Image
                     src={img.src}
@@ -44,7 +44,7 @@ const Page: React.FC = () => {
                     className="object-contain"
                   />
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
 

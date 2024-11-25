@@ -40,7 +40,7 @@ const NeedItSolution: React.FC = () => {
       </h1>
 
       <div className="hidden md:flex sm:flex">
-        {images.map((image, index) => (
+        {/* {images.map((image, index) => (
           <div key={index} className="absolute" style={getRandomPosition()}>
             <Image
               src={image.src}
@@ -49,7 +49,7 @@ const NeedItSolution: React.FC = () => {
               height={image.height}
             />
           </div>
-        ))}
+        ))} */}
       </div>
       <Link href={'/contactUs'}>
         <div className="relative z-10">

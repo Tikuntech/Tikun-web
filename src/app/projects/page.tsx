@@ -44,7 +44,7 @@ export default function Project() {
                 Projects
               </h1>
               <div className="relative hidden md:block w-full pl-5 pr-5  ">
-                {images.map((img, index) => (
+                {/* {images.map((img, index) => (
                   <div
                     key={index}
                     className="absolute"
@@ -58,7 +58,7 @@ export default function Project() {
                       className="object-contain"
                     />
                   </div>
-                ))}
+                ))} */}
               </div>
             </div>
           </div>

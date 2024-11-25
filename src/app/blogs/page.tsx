@@ -38,7 +38,7 @@ export default function page() {
               Blog
             </h1>
             <div className="relative hidden md:block w-full">
-              {images.map((img, index) => (
+              {/* {images.map((img, index) => (
                 <div key={index} className="absolute" style={randomPosition()}>
                   <Image
                     src={img.src}
@@ -48,7 +48,7 @@ export default function page() {
                     className="object-contain"
                   />
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>
