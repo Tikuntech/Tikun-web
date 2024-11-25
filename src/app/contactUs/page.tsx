@@ -50,13 +50,13 @@ const Page: React.FC = () => {
 
           <div className="flex flex-col md:flex-row gap-8  h-full">
             <div className=" flex flex-col items-center md:items-start mb-8 md:mb-0 md:w-1/2">
-              <Image
+              {/* <Image
                 src={BoxImg}
                 alt="Box Image"
                 width={40}
                 height={40}
                 className="object-contain  md:mb-6 hidden md:block"
-              />
+              /> */}
               <h2 className="text-4xl md:text-4xl text-white font-bold mt-4 md:mt-14 text-center md:text-left">
                 Let’s get in touch!
               </h2>
