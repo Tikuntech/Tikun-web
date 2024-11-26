@@ -8,7 +8,7 @@ import WindowsImg from '/public/Home/WINDOWS.svg'
 import SonyImg from '/public/Home/SONY.svg'
 import DividerLine from '/public/Blog/VerticalLine.svg'
 import LogoIcon from '../LogoIcons'
-import joshua from '/public/Home/joshua.jpg'
+import harsha from '/public/Home/Harshag.jpg'
 import kamal from '/public/Home/kamal.png'
 import HomeLogoIcons from './HomeLogoIcons'
 
@@ -80,7 +80,7 @@ const ClientStory: React.FC = () => {
                 <div className="flex items-center justify-end w-full md:gap-2">
                   <div className="text-right ">
                     <span className="block text-lg font-semibold">
-                    Josh M
+                    Harsha G.
                     </span>
                     <span className="block md:text-sm text-xs">
                     CEO Bixcube
@@ -89,10 +89,10 @@ const ClientStory: React.FC = () => {
                   {/* <div className="h-12 w-12 rounded-full bg-white ml-5"></div> */}
                   <Image
                     // className="h-12 w-12 rounded-full  ml-5"
-                    src={joshua}
+                    src={harsha}
                     // layout='responsive'
                     quality={100}
-                    alt="joshua"
+                    alt="harsha"
                     width={15} // Set the width of the image
                     height={15} // Set the height of the image
                     // objectFit="cover"
